@@ -18,12 +18,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Revoking access to &owui;</title>
+    <title>Revoking access to {owui}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
 <!-- <xi:include href="../snippets/openwebui-intro.xml"/> -->
       <para>
-        This topic explains how to revoke access to &owui; for an existing
+        This topic explains how to revoke access to {owui} for an existing
         user account.
       </para>
     </abstract>
@@ -37,14 +37,14 @@
     </itemizedlist>
     <step>
       <para>
-        In the bottom left of the &owui; window, click your avatar icon to open the user menu and select
+        In the bottom left of the {owui} window, click your avatar icon to open the user menu and select
         <guimenu>Admin Panel</guimenu>.
       </para>
     </step>
     <step>
       <para>
         On the <guimenu>Users</guimenu> screen, scroll to the user whose
-        access to &owui; you want to revoke. Use the pager at the bottom if
+        access to {owui} you want to revoke. Use the pager at the bottom if
         the user is not listed on the current screen.
       </para>
     </step>

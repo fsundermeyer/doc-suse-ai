@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&ssecurity; requirements</title>
+    <title>{ssecurity} requirements</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
   </info>
   <section xml:id="ai-reqs-security-hw">
@@ -44,7 +44,7 @@
             </listitem>
             <listitem>
               <para>
-                2 Scanner &amp; Updater instances
+                2 Scanner {amp} Updater instances
               </para>
             </listitem>
           </itemizedlist>
@@ -54,7 +54,7 @@
         <term>RAM</term>
         <listitem>
           <para>
-            A minimum of 2&nbsp;GB of RAM.
+            A minimum of 2{nbsp}GB of RAM.
           </para>
         </listitem>
       </varlistentry>
@@ -70,7 +70,7 @@
         <term>Disk space</term>
         <listitem>
           <para>
-            At least 5&nbsp;GB of storage, preferably SSD.
+            At least 5{nbsp}GB of storage, preferably SSD.
           </para>
         </listitem>
       </varlistentry>
@@ -86,7 +86,7 @@
       <listitem>
         <para>
           <link
-          xlink:href="https://open-docs.neuvector.com/basics/requirements">&ssecurity;
+          xlink:href="https://open-docs.neuvector.com/basics/requirements">{ssecurity}
           system requirements</link>
         </para>
       </listitem>

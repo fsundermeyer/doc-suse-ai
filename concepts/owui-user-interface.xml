@@ -18,12 +18,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&owui; user interface</title>
+    <title>{owui} user interface</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
 <!-- <xi:include href="../snippets/openwebui-intro.xml"/> -->
       <para>
-        The &owui; interface consists of three main parts.
+        The {owui} interface consists of three main parts.
       </para>
     </abstract>
   </info>
@@ -141,7 +141,7 @@
     </varlistentry>
   </variablelist>
   <figure xml:id="fig-openwebui-ui">
-    <title>&owui; user interface</title>
+    <title>{owui} user interface</title>
     <mediaobject>
       <imageobject role="fo">
         <imagedata fileref="openwebui-intro.png" width="75%"/>
@@ -149,7 +149,7 @@
       <imageobject role="html">
         <imagedata fileref="openwebui-intro.png" width="75%"/>
       </imageobject>
-      <textobject role="description"><phrase>&owui; user interface</phrase>
+      <textobject role="description"><phrase>{owui} user interface</phrase>
       </textobject>
     </mediaobject>
   </figure>
@@ -159,7 +159,7 @@
       <xi:include href="../snippets/openwebui-requirement-admin-privileges.xml"/>
     </important>
     <para>
-      The <guimenu>Workspace</guimenu> area of the &owui; is a place where you
+      The <guimenu>Workspace</guimenu> area of the {owui} is a place where you
       can manage important parts of the AI stack. To access it, click
       <guimenu>Workspace</guimenu> at the top of the left panel.
       <guimenu>Workspace</guimenu> consists of the following parts:
@@ -171,7 +171,7 @@
           <para>
             Manage existing AI modules or add your custom AI module based on an
             existing one. Refer to
-            <link xlink:href="&dsc;/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-models"/>
+            <link xlink:href="{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-models"/>
             for more details and related procedures.
           </para>
         </listitem>
@@ -180,10 +180,10 @@
         <term>Knowledge</term>
         <listitem>
           <para>
-            Manage information sources&mdash;such as custom documents&mdash;that
+            Manage information sources{mdash}such as custom documents{mdash}that
             the users can use to enhance the current AI model's knowledge base.
             This helps making the model's responses more contextual. Refer to
-            <link xlink:href="&dsc;/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase"/>
+            <link xlink:href="{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase"/>
             for more details and related procedures.
           </para>
         </listitem>
@@ -194,7 +194,7 @@
           <para>
             Define the system prompts that guide the AI model to respond
             accurately in the style and format that you prefer. Refer to
-            <link xlink:href="&dsc;/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-prompts"/>
+            <link xlink:href="{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-prompts"/>
             for more details and related procedures.
           </para>
         </listitem>
@@ -235,7 +235,7 @@
     </para>
     <para>
       To access the <guimenu>Admin Panel</guimenu>, click your avatar button at
-      the top right of the &owui; screen and select <guimenu>Admin
+      the top right of the {owui} screen and select <guimenu>Admin
       Panel</guimenu>.
     </para>
     <figure xml:id="fig-openwebui-admin-panel">

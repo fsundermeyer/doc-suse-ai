@@ -23,7 +23,7 @@
     <abstract>
 <!-- <xi:include href="../snippets/openwebui-intro.xml"/> -->
       <para>
-        This procedure shows how to modify an existing AI model using &owui;.
+        This procedure shows how to modify an existing AI model using {owui}.
       </para>
     </abstract>
   </info>
@@ -36,7 +36,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the &owui; interface, click <guimenu>Workspace</guimenu> at the top
+        In the {owui} interface, click <guimenu>Workspace</guimenu> at the top
         of the left panel and select <guimenu>Models</guimenu>.
       </para>
     </step>
@@ -54,14 +54,14 @@
     </step>
     <step>
       <para>
-        Save your changes with the <guimenu>Save &amp; Update</guimenu> button.
+        Save your changes with the <guimenu>Save {amp} Update</guimenu> button.
       </para>
     </step>
   </procedure>
   <section xml:id="owui-enabling-default-mcp-services">
-    <title>Enabling the default &mcp; services</title>
+    <title>Enabling the default {mcp} services</title>
     <para>
-      To enable selected &mcp; services so that they are automatically enabled
+      To enable selected {mcp} services so that they are automatically enabled
       for a model, follow these steps:
     </para>
     <procedure>
@@ -69,16 +69,16 @@
         <title>Requirements</title>
         <listitem>
           <para>
-            At least one &mcp; server must be preconfigured. Refer to
+            At least one {mcp} server must be preconfigured. Refer to
             <link
           xlink:href="https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#mcpo-installing">Installing
-            &mcpo;</link> to learn how to configure one.
+            {mcpo}</link> to learn how to configure one.
           </para>
         </listitem>
       </itemizedlist>
       <step>
         <para>
-          In the &owui; interface, click <guimenu>Workspace</guimenu> at the top
+          In the {owui} interface, click <guimenu>Workspace</guimenu> at the top
           of the left panel and select <guimenu>Models</guimenu>.
         </para>
       </step>
@@ -90,11 +90,11 @@
       </step>
       <step>
         <para>
-          In the <guimenu>Tools</guimenu> section, select the &mcp; tools you
+          In the <guimenu>Tools</guimenu> section, select the {mcp} tools you
           want to enable by default and confirm with <guimenu>Save</guimenu>.
         </para>
         <figure xml:id="owui-enabling-default-mcp-services-figure">
-          <title>Enabling the default &mcp; tools</title>
+          <title>Enabling the default {mcp} tools</title>
           <mediaobject>
             <imageobject role="fo">
               <imagedata fileref="owui-tools-modify-mpc.png" width="75%"/>
@@ -102,7 +102,7 @@
             <imageobject role="html">
               <imagedata fileref="owui-tools-modify-mpc.png" width="75%"/>
             </imageobject>
-            <textobject role="description"><phrase>A screenshot of enabling the default &mcp; tools</phrase>
+            <textobject role="description"><phrase>A screenshot of enabling the default {mcp} tools</phrase>
             </textobject>
           </mediaobject>
         </figure>

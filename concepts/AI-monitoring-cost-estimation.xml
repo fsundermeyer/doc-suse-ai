@@ -14,12 +14,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Monitoring &suseai;: cost estimation</title>
+    <title>Monitoring {suseai}: cost estimation</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
   </info>
   <para>
     The cost estimation is calculated for every chat interaction between the
-    &owui; user and the AI model with the following formula:
+    {owui} user and the AI model with the following formula:
   </para>
 <screen>cost = (prompt_tokens / 1000) * model_prompt_multiplier + (completion_tokens / 1000) * model_completion_multiplier</screen>
   <para>

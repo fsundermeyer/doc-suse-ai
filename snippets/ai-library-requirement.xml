@@ -9,8 +9,8 @@
 xmlns:xi="http://www.w3.org/2001/XInclude"
 xmlns:xlink="http://www.w3.org/1999/xlink">
   <para>
-    Before the installation, you need to get user access to the &sappco;, create
-    a &kube; namespace, and log in to the &helm; registry as described in
+    Before the installation, you need to get user access to the {sappco}, create
+    a {kube} namespace, and log in to the {helm} registry as described in
     <xref linkend="suse-ai-deploy-suse-ai"/>.
   </para>
 </tip>

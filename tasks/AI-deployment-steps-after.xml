@@ -14,11 +14,11 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Steps after the &productname; installation is complete</title>
+    <title>Steps after the {productname} installation is complete</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        Once the &productname; installation is finished, follow these tasks to
+        Once the {productname} installation is finished, follow these tasks to
         complete the initial setup and configuration.
       </para>
     </abstract>
@@ -26,13 +26,13 @@
   <procedure>
     <step>
       <para>
-        Log in to &productname; &owui; using the default credentials.
+        Log in to {productname} {owui} using the default credentials.
       </para>
     </step>
     <step>
       <para>
         After you have logged in, update the administrator password for
-        &productname;.
+        {productname}.
       </para>
     </step>
     <step>
@@ -50,14 +50,14 @@
       <para>
         Configure user management with <emphasis>role-base access
         control</emphasis> (RBAC) as described in
-        <link xlink:href="&dsc;/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-user-roles"/>
+        <link xlink:href="{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-user-roles"/>
       </para>
     </step>
     <step>
       <para>
         Integrate <emphasis>single sign-on</emphasis> authentication
-        manager&mdash;such as &okta;&mdash;with &owui; as described in
-        <link xlink:href="&dsc;/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-authentication-via-okta"/>.
+        manager{mdash}such as {okta}{mdash}with {owui} as described in
+        <link xlink:href="{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-authentication-via-okta"/>.
       </para>
     </step>
     <step>

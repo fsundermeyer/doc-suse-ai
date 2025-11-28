@@ -33,7 +33,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the &owui; interface, click <guimenu>Workspace</guimenu> in the
+        In the {owui} interface, click <guimenu>Workspace</guimenu> in the
         upper part of the left panel.
       </para>
     </step>
@@ -71,7 +71,7 @@
     </step>
     <step>
       <para>
-        Confirm with <guimenu>Save &amp; Update</guimenu>.
+        Confirm with <guimenu>Save {amp} Update</guimenu>.
       </para>
     </step>
   </procedure>
@@ -79,7 +79,7 @@
     <title>For more information</title>
     <para>
       Find more details about system prompts in
-      <link xlink:href="&dsc;/suse-ai/1.0/html/AI-system-prompts/index.html"/>.
+      <link xlink:href="{dsc}/suse-ai/1.0/html/AI-system-prompts/index.html"/>.
     </para>
   </section>
 </topic>

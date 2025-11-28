@@ -14,14 +14,14 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &opensearch;</title>
+    <title>Installing {opensearch}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &opensearch; is a community-driven, open source search and analytics
-        suite. It is used to search, visualize and analyze data. &opensearch;
-        consists of a data store and search engine (&opensearch;), a
-        visualization and user interface (&opensearch; Dashboards), and a
+        {opensearch} is a community-driven, open source search and analytics
+        suite. It is used to search, visualize and analyze data. {opensearch}
+        consists of a data store and search engine ({opensearch}), a
+        visualization and user interface ({opensearch} Dashboards), and a
         server-side data collector (Data Prepper). Its functionality can be
         extended by plug-ins that enhance features like search, analytics,
         observability, security or machine learning.
@@ -29,25 +29,25 @@
     </abstract>
   </info>
   <section xml:id="opensearch-installing-app-details">
-    <title>Details about the &opensearch; application</title>
+    <title>Details about the {opensearch} application</title>
     <para>
-      Before deploying &opensearch;, it is important to know more about the
+      Before deploying {opensearch}, it is important to know more about the
       supported configurations and documentation. The following command provides
       the corresponding details:
     </para>
 <screen>helm show values oci://dp.apps.rancher.io/charts/opensearch</screen>
     <para>
-      Alternatively, you can also refer to the &opensearch; &helm; chart page on
-      the &sappco; site at
+      Alternatively, you can also refer to the {opensearch} {helm} chart page on
+      the {sappco} site at
       <link xlink:href="https://apps.rancher.io/applications/opensearch"/>. It
-      contains &opensearch; dependencies, available versions and the link to
-      pull the &opensearch; container image.
+      contains {opensearch} dependencies, available versions and the link to
+      pull the {opensearch} container image.
     </para>
   </section>
   <section xml:id="opensearch-installing-procedure">
-    <title>&opensearch; installation procedure</title>
+    <title>{opensearch} installation procedure</title>
     <para>
-      &opensearch; can operate as a single-node or multi-node cluster. The
+      {opensearch} can operate as a single-node or multi-node cluster. The
       following override file examples outline both scenarios.
     </para>
     <important>
@@ -56,7 +56,7 @@
         <option>vm.max_map_count</option> to at least 262144. To check the
         current value, run the following command:
       </para>
-<screen>&prompt.user;cat /proc/sys/vm/max_map_count</screen>
+<screen>{prompt.user}cat /proc/sys/vm/max_map_count</screen>
       <para>
         To increase the value, add the following to
         <filename>/etc/sysctl.conf</filename>:
@@ -71,7 +71,7 @@
       <step>
         <para>
           Create an <filename>opensearch_custom_overrides.yaml</filename> file
-          to override the default values of the &helm; chart.
+          to override the default values of the {helm} chart.
         </para>
         <para>
           For a single-node cluster, use the following template file:
@@ -172,7 +172,7 @@ config:
           <filename>opensearch_custom_overrides.yaml</filename>, apply its
           configuration with the following command.
         </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   opensearch oci://dp.apps.rancher.io/charts/opensearch \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   -f <replaceable>opensearch_custom_overrides.yaml</replaceable></command></screen>
@@ -181,13 +181,13 @@ config:
         <para>
           Check that the pods and services are running.
         </para>
-<screen>&prompt.user;kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable> | grep "opensearch"
+<screen>{prompt.user}kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable> | grep "opensearch"
 opensearch-cluster-master-0           1/1     Running   0          5h34m</screen>
         <para>
           A multi-node cluster configuration shows that the replicas are
           distributed across multiple nodes.
         </para>
-<screen>&prompt.user;kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable> | grep "opensearch"
+<screen>{prompt.user}kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable> | grep "opensearch"
 opensearch-cluster-master-0 1/1 Running 0 2m30s 10.42.1.32 mgmt-rancher-wkrgpu1
 opensearch-cluster-master-1 1/1 Running 0 2m30s 10.42.1.33 mgmt-rancher-wkrgpu1
 opensearch-cluster-master-2 1/1 Running 0 2m30s 10.42.0.27 mgmt-rancher</screen>
@@ -195,14 +195,14 @@ opensearch-cluster-master-2 1/1 Running 0 2m30s 10.42.0.27 mgmt-rancher</screen>
     </procedure>
   </section>
   <section xml:id="opensearch-owui-integration">
-    <title>Integrating &opensearch; with &owui;</title>
+    <title>Integrating {opensearch} with {owui}</title>
     <para>
-      To integrate &opensearch; with &owui;, follow these steps:
+      To integrate {opensearch} with {owui}, follow these steps:
     </para>
     <procedure>
       <step>
         <para>
-          Edit the override file for &owui;,
+          Edit the override file for {owui},
           <filename>owui_custom_overrides.yaml</filename>, and update the
           <literal>extraEnvVars</literal> section as follows.
         </para>
@@ -220,7 +220,7 @@ opensearch-cluster-master-2 1/1 Running 0 2m30s 10.42.0.27 mgmt-rancher</screen>
           </listitem>
           <listitem>
             <para>
-              Add all the &opensearch;-related environment variables.
+              Add all the {opensearch}-related environment variables.
             </para>
           </listitem>
         </itemizedlist>
@@ -256,9 +256,9 @@ opensearch-cluster-master-2 1/1 Running 0 2m30s 10.42.0.27 mgmt-rancher</screen>
       </step>
       <step>
         <para>
-          Redeploy &owui;.
+          Redeploy {owui}.
         </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   open-webui oci://dp.apps.rancher.io/charts/open-webui \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   -f <replaceable>owui_custom_overrides.yaml</replaceable></command></screen>
@@ -268,7 +268,7 @@ opensearch-cluster-master-2 1/1 Running 0 2m30s 10.42.0.27 mgmt-rancher</screen>
           Verify that <literal>VECTOR_DB</literal> is set to
           <literal>opensearch</literal>.
         </para>
-<screen>&prompt.user;kubectl exec -it open-webui-0 -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
+<screen>{prompt.user}kubectl exec -it open-webui-0 -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   -- sh -c 'echo "VECTOR_DB=$VECTOR_DB"'
 
 Defaulted container "open-webui" out of: open-webui, copy-app-data (init)
@@ -277,35 +277,35 @@ VECTOR_DB=opensearch</screen>
     </procedure>
   </section>
   <section xml:id="opensearch-upgrading" condition="deployment_standard">
-    <title>Upgrading &opensearch;</title>
+    <title>Upgrading {opensearch}</title>
     <para>
-      The &opensearch; chart receives application updates and updates of the
-      &helm; chart templates. New versions may include changes that require
+      The {opensearch} chart receives application updates and updates of the
+      {helm} chart templates. New versions may include changes that require
       manual steps. These steps are listed in the corresponding
-      <filename>README</filename> file. All &opensearch; dependencies are
-      updated automatically during an &opensearch; upgrade.
+      <filename>README</filename> file. All {opensearch} dependencies are
+      updated automatically during an {opensearch} upgrade.
     </para>
     <para>
-      To upgrade &opensearch;, identify the new version number and run the
+      To upgrade {opensearch}, identify the new version number and run the
       following command below:
     </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   opensearch oci://dp.apps.rancher.io/charts/opensearch \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>VERSION_NUMBER</replaceable> \
   -f <replaceable>opensearch_custom_overrides.yaml</replaceable></command></screen>
     <tip>
       <para>
-        If you omit the <option>--version</option> option, &opensearch; gets
+        If you omit the <option>--version</option> option, {opensearch} gets
         upgraded to the latest available version.
       </para>
     </tip>
   </section>
   <section xml:id="opensearch-uninstalling">
-    <title>Uninstalling &opensearch;</title>
+    <title>Uninstalling {opensearch}</title>
     <para>
-      To uninstall &opensearch;, run the following command:
+      To uninstall {opensearch}, run the following command:
     </para>
-<screen>&prompt.user;<command>helm uninstall opensearch -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
+<screen>{prompt.user}<command>helm uninstall opensearch -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
   </section>
 </topic>

@@ -18,33 +18,33 @@
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        To monitor other applications, you can utilize &otelemetry; SDKs or any
-        other instrumentation provider compatible with &otelemetry;'s semantics,
-        for example, &openlit; SDK. For more details, refer to
+        To monitor other applications, you can utilize {otelemetry} SDKs or any
+        other instrumentation provider compatible with {otelemetry}'s semantics,
+        for example, {openlit} SDK. For more details, refer to
         <xref linkend="ai-monitoring-instrument-openlit"/>.
       </para>
     </abstract>
   </info>
   <para>
-    &otelemetry; offers several instrumentation techniques for different
+    {otelemetry} offers several instrumentation techniques for different
     deployment scenarios and applications. You can instrument applications
     either manually, with more detailed control, or automatically for an easier
     starting point.
   </para>
   <tip>
     <para>
-      One of the most straightforward ways of getting started with &otelemetry;
-      is using the &otelemetry; Operator for &kube;, which is available in the
-      &sappco;. Find more information in this
+      One of the most straightforward ways of getting started with {otelemetry}
+      is using the {otelemetry} Operator for {kube}, which is available in the
+      {sappco}. Find more information in this
       <link xlink:href="https://docs.apps.rancher.io/reference-guides/opentelemetry-operator/">extensive
       guide</link> on how to use this operator for instrumenting your
       applications.
     </para>
   </tip>
   <section xml:id="ai-monitoring-telemetry-data-capture">
-    <title>Ensuring that the telemetry data is properly captured by the &sobservability; Extension</title>
+    <title>Ensuring that the telemetry data is properly captured by the {sobservability} Extension</title>
     <para>
-      For the &sobservability; Extension to acknowledge an application as a
+      For the {sobservability} Extension to acknowledge an application as a
       GenAI application, it needs to have a meter configured. It must provide at
       least the <literal>RequestsTotal</literal> metric with the following
       attributes:
@@ -139,7 +139,7 @@
     </variablelist>
     <variablelist>
       <para>
-        The following metrics are utilized in the graphs of the &sobservability;
+        The following metrics are utilized in the graphs of the {sobservability}
         Extension:
       </para>
       <varlistentry>
@@ -241,12 +241,12 @@
           <itemizedlist>
             <listitem>
               <para>
-                Verify the &otelemetry; Collector deployment.
+                Verify the {otelemetry} Collector deployment.
               </para>
             </listitem>
             <listitem>
               <para>
-                Check if the exporter is properly set to the &sobservability;
+                Check if the exporter is properly set to the {sobservability}
                 collector and with the correct API key and endpoint specified.
               </para>
             </listitem>
@@ -273,7 +273,7 @@
             </listitem>
             <listitem>
               <para>
-                Check the &nvidia; DCGM Exporter for errors.
+                Check the {nvidia} DCGM Exporter for errors.
               </para>
             </listitem>
           </itemizedlist>
@@ -282,14 +282,14 @@
       <qandaentry>
         <question>
           <para>
-            No metrics received from &milvus;.
+            No metrics received from {milvus}.
           </para>
         </question>
         <answer>
           <itemizedlist>
             <listitem>
               <para>
-                Verify if &milvus; chart configuration is exposing the metrics
+                Verify if {milvus} chart configuration is exposing the metrics
                 endpoint.
               </para>
             </listitem>
@@ -301,7 +301,7 @@
             <listitem>
               <para>
                 For usage metrics, confirm that requests were actually made to
-                &milvus;.
+                {milvus}.
               </para>
             </listitem>
           </itemizedlist>
@@ -310,14 +310,14 @@
       <qandaentry>
         <question>
           <para>
-            No metrics received from &vllm;.
+            No metrics received from {vllm}.
           </para>
         </question>
         <answer>
           <itemizedlist>
             <listitem>
               <para>
-                Verify if the &vllm; chart configuration is exposing the metrics
+                Verify if the {vllm} chart configuration is exposing the metrics
                 endpoint.
               </para>
             </listitem>
@@ -330,14 +330,14 @@
             <listitem>
               <para>
                 If some metrics are present, but not usage-related ones, verify
-                if you actually made requests to &vllm;.
+                if you actually made requests to {vllm}.
               </para>
             </listitem>
             <listitem>
               <para>
-                If &vllm; was not identified and/or &vllm; metrics have the
+                If {vllm} was not identified and/or {vllm} metrics have the
                 prefix <quote>vllm:</quote>, check the collector configuration.
-                You may be using &sobservability; 2.6.2, which requires
+                You may be using {sobservability} 2.6.2, which requires
                 additional configuration.
               </para>
             </listitem>
@@ -360,7 +360,7 @@
             </listitem>
             <listitem>
               <para>
-                You may need to reinstall the &kube; stackpack.
+                You may need to reinstall the {kube} stackpack.
               </para>
             </listitem>
           </itemizedlist>
@@ -376,12 +376,12 @@
           <itemizedlist>
             <listitem>
               <para>
-                Verify the &otelemetry; Collector deployment.
+                Verify the {otelemetry} Collector deployment.
               </para>
             </listitem>
             <listitem>
               <para>
-                Check if the exporter is properly set to the &sobservability;
+                Check if the exporter is properly set to the {sobservability}
                 collector, with the right API key and endpoint set.
               </para>
             </listitem>
@@ -391,14 +391,14 @@
       <qandaentry>
         <question>
           <para>
-            No tracing data received from &owui;.
+            No tracing data received from {owui}.
           </para>
         </question>
         <answer>
           <itemizedlist>
             <listitem>
               <para>
-                Verify if the &suseai; Observability Filter was installed and
+                Verify if the {suseai} Observability Filter was installed and
                 configured properly.
               </para>
             </listitem>
@@ -419,7 +419,7 @@
         <answer>
           <para>
             Recalculate the multipliers for the <literal>PRICING_JSON</literal>
-            in the &suseai; Observability Filter.
+            in the {suseai} Observability Filter.
           </para>
         </answer>
       </qandaentry>
@@ -431,7 +431,7 @@
         </question>
         <answer>
           <para>
-            Verify if sampling is being applied in the &otelemetry; Collector.
+            Verify if sampling is being applied in the {otelemetry} Collector.
           </para>
         </answer>
       </qandaentry>

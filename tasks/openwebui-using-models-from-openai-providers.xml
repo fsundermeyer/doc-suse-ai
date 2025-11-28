@@ -18,21 +18,21 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Using AI models from &openai;-compatible providers</title>
+    <title>Using AI models from {openai}-compatible providers</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         Instead of downloading AI models locally, you can use
-        &openai;-compatible API to access models from model providers. These
+        {openai}-compatible API to access models from model providers. These
         providers include both local instances of servers, such as
         <link xlink:href="https://localai.io/">LocalAI</link> or
         <link
         xlink:href="https://github.com/Mozilla-Ocho/llamafile">llamafile</link>,
         and cloud providers, such as
         <link xlink:href="https://groq.com/">Groq</link> or
-        <link xlink:href="https://openai.com/api/">&openai;</link>. This
+        <link xlink:href="https://openai.com/api/">{openai}</link>. This
         procedure describes how to configure the Groq provider API from the
-        &owui; interface.
+        {owui} interface.
       </para>
     </abstract>
   </info>
@@ -56,7 +56,7 @@
     </step>
     <step>
       <para>
-        In the bottom left of the &owui; window, click your avatar icon to open
+        In the bottom left of the {owui} window, click your avatar icon to open
         the user menu and select <guimenu>Admin Panel</guimenu>.
       </para>
     </step>
@@ -95,7 +95,7 @@
         </mediaobject>
       </figure>
       <para>
-        &owui; now shows all the available models from Groq in the model
+        {owui} now shows all the available models from Groq in the model
         selector drop-down list.
       </para>
       <figure xml:id="fig-owui-groq-models">

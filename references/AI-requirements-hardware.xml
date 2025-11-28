@@ -14,13 +14,13 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&productname; hardware requirements</title>
+    <title>{productname} hardware requirements</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        For successful deployment and operation, &productname; has the same
+        For successful deployment and operation, {productname} has the same
         hardware prerequisites as an
-        <link xlink:href="https://documentation.suse.com/cloudnative/rancher-manager/latest/en/installation-and-upgrade/requirements/requirements.html#_suse_rancher_prime_rke2_kubernetes">&rke2;
+        <link xlink:href="https://documentation.suse.com/cloudnative/rancher-manager/latest/en/installation-and-upgrade/requirements/requirements.html#_suse_rancher_prime_rke2_kubernetes">{rke2}
         cluster</link>. For requirements of individual applications, refer to
         <xref linkend="ai-requirements-hardware-apps"/>.
       </para>
@@ -33,7 +33,7 @@
         <term>RAM</term>
         <listitem>
           <para>
-            At least 32&nbsp;GB of RAM per node. This is the minimum
+            At least 32{nbsp}GB of RAM per node. This is the minimum
             recommendation for the control plane node. Additional resources may
             be needed for the worker nodes based on workload.
           </para>
@@ -54,7 +54,7 @@
           <itemizedlist>
             <listitem>
               <para>
-                50&nbsp;GB or more is recommended for control plane nodes.
+                50{nbsp}GB or more is recommended for control plane nodes.
               </para>
             </listitem>
             <listitem>
@@ -105,10 +105,10 @@
     </variablelist>
   </section>
   <section xml:id="ai-reqs-hw-ha">
-    <title>Recommended hardware (for &ha;)</title>
+    <title>Recommended hardware (for {ha})</title>
     <important>
       <para>
-        While 32&nbsp;GB of RAM is the minimum for basic functionality, a
+        While 32{nbsp}GB of RAM is the minimum for basic functionality, a
         production-grade deployment with high availability, multi-node clusters,
         or running resource-intensive applications like AI/ML workloads might
         require more.
@@ -119,7 +119,7 @@
         <term>RAM</term>
         <listitem>
           <para>
-            64&nbsp;GB or more per node is recommended for larger clusters or to
+            64{nbsp}GB or more per node is recommended for larger clusters or to
             run applications with high resource demands.
           </para>
         </listitem>
@@ -140,7 +140,7 @@
             <listitem>
               <para>
                 For larger-scale clusters or persistent storage applications,
-                100&nbsp;GB or more of disk space per node might be required.
+                100{nbsp}GB or more of disk space per node might be required.
               </para>
             </listitem>
             <listitem>
@@ -166,9 +166,9 @@
     </variablelist>
     <tip>
       <para>
-        For more detailed hardware recommendations, refer to the official &rke2;
+        For more detailed hardware recommendations, refer to the official {rke2}
         installation requirements documentation at
-        <link xlink:href="&dsc;/cloudnative/rke2/latest/en/install/requirements.html"/>.
+        <link xlink:href="{dsc}/cloudnative/rke2/latest/en/install/requirements.html"/>.
       </para>
     </tip>
   </section>

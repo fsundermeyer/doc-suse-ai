@@ -71,14 +71,14 @@
 <!-- S T R U C T U R E -->
   <structure renderas="article" xml:id="openwebui-using" xml:lang="en">
     <merge>
-      <title>Using &owui; for Effective AI Model Interaction</title>
+      <title>Using {owui} for Effective AI Model Interaction</title>
 <!-- Create revision history to enable versioning; add most recent entries at the top. -->
-<!-- Check &dsc;/style/current/single-html/docu_styleguide/#sec-revhistory for detailed instructions-->
+<!-- Check {dsc}/style/current/single-html/docu_styleguide/#sec-revhistory for detailed instructions-->
       <revhistory xml:id="rh-openwebui-using">
         <revision><date>2024-10-10</date>
           <revdescription>
             <para>
-              Added topic on basic usage of &owui; chat window
+              Added topic on basic usage of {owui} chat window
             </para>
           </revdescription>
         </revision>
@@ -94,21 +94,21 @@
       <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
 <!-- ISO date of last update as YYYY-MM-DD -->
       <meta name="updated" content="2024-08-21" its:translate="no"/>
-      <meta name="architecture"><phrase>&x86-64;</phrase><phrase>&power;</phrase>
+      <meta name="architecture"><phrase>{x86-64}</phrase><phrase>{power}</phrase>
       </meta>
 <!-- enter one or more product names and version -->
-      <meta name="productname" its:translate="no"><productname version="1.0">&productname;</productname>
+      <meta name="productname" its:translate="no"><productname version="1.0">{productname}</productname>
       </meta>
-      <meta name="title" its:translate="yes">&owui; Administration</meta>
-      <meta name="description" its:translate="yes">&owui; is a Web-based application that allows you to interact with AI models</meta>
-      <meta name="social-descr" its:translate="yes">Administering &owui; for AI model interaction</meta>
+      <meta name="title" its:translate="yes">{owui} Administration</meta>
+      <meta name="description" its:translate="yes">{owui} is a Web-based application that allows you to interact with AI models</meta>
+      <meta name="social-descr" its:translate="yes">Administering {owui} for AI model interaction</meta>
 <!-- suitable categories -->
       <meta name="category"><phrase>Systems Management</phrase>
       </meta>
 <!-- Determines "filter by task" filter value -->
       <meta name="task"><phrase>Artificial Intelligence</phrase><phrase>Administration</phrase>
       </meta>
-      <meta name="series">Products &amp; Solutions</meta>
+      <meta name="series">Products {amp} Solutions</meta>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
@@ -124,7 +124,7 @@
             <term>WHAT?</term>
             <listitem>
               <para>
-                &owui; is a Web-based application that allows you to interact
+                {owui} is a Web-based application that allows you to interact
                 with AI models.
               </para>
             </listitem>
@@ -133,7 +133,7 @@
             <term>WHY?</term>
             <listitem>
               <para>
-                To understand what &owui; is and learn how to use it to
+                To understand what {owui} is and learn how to use it to
                 effectively interact with AI models.
               </para>
             </listitem>
@@ -142,7 +142,7 @@
             <term>EFFORT</term>
             <listitem>
               <para>
-                It takes less than an hour to understand the basics of &owui;.
+                It takes less than an hour to understand the basics of {owui}.
               </para>
             </listitem>
           </varlistentry>
@@ -156,24 +156,24 @@
                 </para>
                 <listitem>
                   <para>
-                    You have successfully deployed the &suseai;.
+                    You have successfully deployed the {suseai}.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
-                    You can access the &owui; interface in your Web browser.
+                    You can access the {owui} interface in your Web browser.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
-                    Your &owui; user account has been created, and you have
+                    Your {owui} user account has been created, and you have
                     received the login credentials.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
                     You have navigated your Web browser to the URL of your
-                    instance of &owui; and logged in with your credentials.
+                    instance of {owui} and logged in with your credentials.
                   </para>
                 </listitem>
               </itemizedlist>
@@ -184,7 +184,7 @@
     </merge>
     <module resourceref="_openwebui-introduction" renderas="section">
       <merge>
-        <title>What is &owui;?</title>
+        <title>What is {owui}?</title>
       </merge>
     </module>
     <module renderas="section" resourceref="_owui-user-interface">
@@ -203,7 +203,7 @@
         <abstract>
           <para>
             For a new chat, the chat input field is located at the center of the
-            &owui; chat window. During a chat session, the chat window slides to
+            {owui} chat window. During a chat session, the chat window slides to
             the bottom. Its main purpose is to accept a user prompt so that the
             AI can process it and respond (see
             <xref linkend="openwebui-chat-window-usage"/>). Besides that, the
@@ -225,9 +225,9 @@
   </structure>
   <structure renderas="article" xml:id="openwebui-configuring" xml:lang="en">
     <merge>
-      <title>Configuring &owui; for AI Interaction</title>
+      <title>Configuring {owui} for AI Interaction</title>
 <!-- Create revision history to enable versioning; add most recent entries at the top. -->
-<!-- Check &dsc;/style/current/single-html/docu_styleguide/#sec-revhistory for detailed instructions-->
+<!-- Check {dsc}/style/current/single-html/docu_styleguide/#sec-revhistory for detailed instructions-->
       <revhistory xml:id="rh-openwebui-configuring">
         <revision><date>2024-10-15</date>
           <revdescription>
@@ -241,21 +241,21 @@
       <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
 <!-- ISO date of last update as YYYY-MM-DD -->
       <meta name="updated" content="2024-10-15" its:translate="no"/>
-      <meta name="architecture"><phrase>&x86-64;</phrase><phrase>&power;</phrase>
+      <meta name="architecture"><phrase>{x86-64}</phrase><phrase>{power}</phrase>
       </meta>
 <!-- enter one or more product names and version -->
-      <meta name="productname" its:translate="no"><productname version="1.0">&productname;</productname>
+      <meta name="productname" its:translate="no"><productname version="1.0">{productname}</productname>
       </meta>
-      <meta name="title" its:translate="yes">Configuring &owui; for AI Interaction</meta>
-      <meta name="description" its:translate="yes">&owui; is a Web-based application that allows you to interact with AI models</meta>
-      <meta name="social-descr" its:translate="yes">Configuring &owui; for effective AI interaction</meta>
+      <meta name="title" its:translate="yes">Configuring {owui} for AI Interaction</meta>
+      <meta name="description" its:translate="yes">{owui} is a Web-based application that allows you to interact with AI models</meta>
+      <meta name="social-descr" its:translate="yes">Configuring {owui} for effective AI interaction</meta>
 <!-- suitable categories -->
       <meta name="category"><phrase>Systems Management</phrase>
       </meta>
 <!-- Determines "filter by task" filter value -->
       <meta name="task"><phrase>Artificial Intelligence</phrase><phrase>Configuration</phrase>
       </meta>
-      <meta name="series">Products &amp; Solutions</meta>
+      <meta name="series">Products {amp} Solutions</meta>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:bugtracker>
           <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
@@ -271,7 +271,7 @@
             <term>WHAT?</term>
             <listitem>
               <para>
-                &owui; is a Web-based application that allows you to interact
+                {owui} is a Web-based application that allows you to interact
                 with AI models.
               </para>
             </listitem>
@@ -280,7 +280,7 @@
             <term>WHY?</term>
             <listitem>
               <para>
-                To configure &owui; according to both user and administrator
+                To configure {owui} according to both user and administrator
                 requirements and preferences.
               </para>
             </listitem>
@@ -289,7 +289,7 @@
             <term>EFFORT</term>
             <listitem>
               <para>
-                To understand how to configure selected parts of &owui; takes
+                To understand how to configure selected parts of {owui} takes
                 less than 1 hour.
               </para>
             </listitem>
@@ -304,29 +304,29 @@
                 </para>
                 <listitem>
                   <para>
-                    You have successfully deployed the &suseai;.
+                    You have successfully deployed the {suseai}.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
-                    You can access the &owui; interface in your Web browser.
+                    You can access the {owui} interface in your Web browser.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
-                    Your &owui; user account has been created, and you have
+                    Your {owui} user account has been created, and you have
                     received the login credentials.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
                     You have navigated your Web browser to the URL of your
-                    instance of &owui; and logged in with your credentials.
+                    instance of {owui} and logged in with your credentials.
                   </para>
                 </listitem>
                 <listitem>
                   <para>
-                    Selected tasks require the &owui; administrator privileges.
+                    Selected tasks require the {owui} administrator privileges.
                   </para>
                 </listitem>
               </itemizedlist>
@@ -351,11 +351,11 @@
         <title>Setting base AI models</title>
         <abstract>
           <para>
-            &owui; needs at least one base AI model configured so that you can
+            {owui} needs at least one base AI model configured so that you can
             interact with it or create custom AI models as described in
             <xref linkend="openwebui-managing-models"/>. You can download models
-            from repositories such as &ollama; or &huggingface;, or use models
-            via &openai;-compatible APIs.
+            from repositories such as {ollama} or {huggingface}, or use models
+            via {openai}-compatible APIs.
           </para>
         </abstract>
       </merge>
@@ -368,7 +368,7 @@
         <title>Setting the default system prompt</title>
         <abstract>
           <para>
-            In &owui;, you can set system prompts in several contexts&mdash;for
+            In {owui}, you can set system prompts in several contexts{mdash}for
             the current chat, for the current user, or for a specific AI model.
             While the prompt set for the current chat overrides the user and
             model prompts, the user-specific prompt overrides the model prompt
@@ -406,7 +406,7 @@
         <title>Setting the default AI model</title>
         <abstract>
           <para>
-            In &owui;, you can specify an AI model for the current chat or the
+            In {owui}, you can specify an AI model for the current chat or the
             system default model. The AI model set for the current chat
             overrides the default system model.
           </para>
@@ -434,7 +434,7 @@
         <title>Managing custom AI models</title>
         <abstract>
           <para>
-            In &owui;, you can create custom AI models based on existing models.
+            In {owui}, you can create custom AI models based on existing models.
             Later on, you can modify its settings, or share, clone or delete it.
           </para>
         </abstract>
@@ -480,7 +480,7 @@
         <title>Managing user accounts</title>
         <abstract>
           <para>
-            &owui; provides <emphasis>role-based access control</emphasis>
+            {owui} provides <emphasis>role-based access control</emphasis>
             (RBAC). Each user is assigned one of the available roles. The role
             defines whether the user has privileges to perform administration
             tasks.
@@ -489,7 +489,7 @@
       </merge>
       <module resourceref="_openwebui-user-roles" renderas="section">
         <merge>
-          <title>User roles in &owui;</title>
+          <title>User roles in {owui}</title>
           <abstract>
             <para></para>
           </abstract>
@@ -511,7 +511,7 @@
         </module>
         <module resourceref="_openwebui-user-revoking-access" renderas="section">
           <merge>
-            <title>Revoking access to &owui;</title>
+            <title>Revoking access to {owui}</title>
           </merge>
         </module>
       </module>
@@ -561,7 +561,7 @@
     </module>
     <module renderas="section" resourceref="_openwebui-authentication-via-okta">
       <merge>
-        <title>Authenticating via &okta;</title>
+        <title>Authenticating via {okta}</title>
       </merge>
     </module>
     <module resourceref="_legal"/>

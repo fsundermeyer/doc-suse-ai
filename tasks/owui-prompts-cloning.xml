@@ -31,7 +31,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the &owui; interface, click <guimenu>Workspace</guimenu> in the upper
+        In the {owui} interface, click <guimenu>Workspace</guimenu> in the upper
         part of the left panel and select <guimenu>Prompts</guimenu>.
       </para>
     </step>
@@ -56,7 +56,7 @@
     </step>
     <step>
       <para>
-        Confirm with <guimenu>Save &amp; Create</guimenu>.
+        Confirm with <guimenu>Save {amp} Create</guimenu>.
       </para>
     </step>
   </procedure>

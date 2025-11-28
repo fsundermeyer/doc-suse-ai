@@ -14,11 +14,11 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>What are the benefits of using &productname;?</title>
+    <title>What are the benefits of using {productname}?</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        Running the &productname; service brings the following benefits:
+        Running the {productname} service brings the following benefits:
       </para>
     </abstract>
   </info>
@@ -32,31 +32,31 @@
     </listitem>
     <listitem>
       <para>
-        &productname; provides a user-friendly interface for managing and
+        {productname} provides a user-friendly interface for managing and
         deploying AI models.
       </para>
     </listitem>
     <listitem>
       <para>
-        Pre-built &nvidia; drivers and operator provide increased AI
+        Pre-built {nvidia} drivers and operator provide increased AI
         performance.
       </para>
     </listitem>
     <listitem>
       <para>
-        &productname; components are dynamically scalable, from the Web user
+        {productname} components are dynamically scalable, from the Web user
         interface to the underlying data store.
       </para>
     </listitem>
     <listitem>
       <para>
-        &productname; cares about security&mdash;it uses TLS certificates for
+        {productname} cares about security{mdash}it uses TLS certificates for
         Web UI and API access. Data stored in a database are encrypted as well.
       </para>
     </listitem>
     <listitem>
       <para>
-        High level of &suse; quality control on the whole software production
+        High level of {suse} quality control on the whole software production
         chain used by the AI stack.
       </para>
     </listitem>

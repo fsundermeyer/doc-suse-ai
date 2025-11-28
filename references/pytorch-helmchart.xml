@@ -14,14 +14,14 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Values for the &pytorch; &helm; chart</title>
+    <title>Values for the {pytorch} {helm} chart</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/helm-chart-overrides-intro.xml"/>
     </abstract>
   </info>
   <table>
-    <title>Available options for the &pytorch; &helm; chart</title>
+    <title>Available options for the {pytorch} {helm} chart</title>
     <tgroup cols="4">
       <thead>
         <row>

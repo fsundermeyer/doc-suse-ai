@@ -13,12 +13,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &ranchermanager; in air-gapped environments: collect and publish images to your private registry</title>
+    <title>Installing {ranchermanager} in air-gapped environments: collect and publish images to your private registry</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         This section describes how to set up your private registry so that when
-        you install &ranchera;, it will pull all the required images from this
+        you install {ranchera}, it will pull all the required images from this
         registry.
       </para>
     </abstract>
@@ -26,16 +26,16 @@
   <para>
     By default, all images used to
     <link xlink:href="https://rancher.com/docs/rancher/v2.x/en/cluster-provisioning/">provision
-    &k8s; clusters</link> or launch any tools in &ranchera;, e.g., monitoring,  
-    pipelines or alerts, are pulled from &dhub;. In an air-gapped installation  
-    of &ranchera;, you will need a private registry that is located somewhere  
-    accessible by your &ranchera; server. You will then load every image 
+    {k8s} clusters</link> or launch any tools in {ranchera}, e.g., monitoring,  
+    pipelines or alerts, are pulled from {dhub}. In an air-gapped installation  
+    of {ranchera}, you will need a private registry that is located somewhere  
+    accessible by your {ranchera} server. You will then load every image 
     into the registry.
   </para>
   <para>
     Populating the private registry with images is the same process for
-    installing &ranchera; with &docker; and for installing &ranchera; on a
-    &kube; cluster.
+    installing {ranchera} with {docker} and for installing {ranchera} on a
+    {kube} cluster.
   </para>
   <itemizedlist xml:id="rancher-airgap-images-prerequisites">
     <title>Prerequisites</title>
@@ -51,7 +51,7 @@
         If the registry has certs, follow
         <link xlink:href="https://rancher.com/docs/k3s/latest/en/installation/private-registry/">this
         K3s documentation</link> about adding a private registry. The certs and
-        registry configuration files need to be mounted into the &ranchera;
+        registry configuration files need to be mounted into the {ranchera}
         container.
       </para>
     </listitem>
@@ -100,13 +100,13 @@
     </listitem>
   </itemizedlist>
   <section xml:id="rancher-airgap-linux-find-assets">
-    <title>Find the required assets for your &ranchera; version</title>
+    <title>Find the required assets for your {ranchera} version</title>
     <orderedlist>
       <listitem>
         <para>
           Go to our
           <link xlink:href="https://github.com/rancher/rancher/releases">releases
-          page,</link> find the &ranchera; v2.x.x release that you want to
+          page,</link> find the {ranchera} v2.x.x release that you want to
           install, and click <emphasis role="bold">Assets</emphasis>. Note: Do
           not use releases marked <literal>rc</literal> or
           <literal>Pre-release</literal>, as they are not stable for production
@@ -116,7 +116,7 @@
       <listitem>
         <para>
           From the release's <emphasis role="bold">Assets</emphasis> section,
-          download the following files, which are required to install &ranchera;
+          download the following files, which are required to install {ranchera}
           in an air-gapped environment:
         </para>
         <table>
@@ -132,12 +132,12 @@
               <row>
                 <entry><filename>rancher-images.txt</filename>
                 </entry>
-                <entry>This file contains a list of images needed to install &ranchera;, provision clusters and use &ranchera; tools.</entry>
+                <entry>This file contains a list of images needed to install {ranchera}, provision clusters and use {ranchera} tools.</entry>
               </row>
               <row>
                 <entry><filename>rancher-save-images.sh</filename>
                 </entry>
-                <entry>This script pulls all the images in the <filename>rancher-images.txt</filename> from &dhub; and saves all the images as <filename>rancher-images.tar.gz</filename>.</entry>
+                <entry>This script pulls all the images in the <filename>rancher-images.txt</filename> from {dhub} and saves all the images as <filename>rancher-images.tar.gz</filename>.</entry>
               </row>
               <row>
                 <entry><filename>rancher-load-images.sh</filename>
@@ -151,7 +151,7 @@
     </orderedlist>
   </section>
   <section xml:id="rancher-airgap-linux-collect-cert-manager">
-    <title>Collect the &certmanager; image</title>
+    <title>Collect the {certmanager} image</title>
     <note>
       <para>
         Skip this step if you are using your own certificates, or if you are
@@ -159,7 +159,7 @@
       </para>
     </note>
     <para>
-      In a &kube; Install, if you elect to use the &ranchera; default
+      In a {kube} Install, if you elect to use the {ranchera} default
       self-signed TLS certificates, you must add the
       <link xlink:href="https://artifacthub.io/packages/helm/cert-manager/cert-manager">`cert-manager`</link>
       image to <filename>rancher-images.txt</filename> as well.
@@ -167,13 +167,13 @@
     <procedure>
       <step>
         <para>
-          Fetch the latest <literal>cert-manager</literal> &helm; chart and
+          Fetch the latest <literal>cert-manager</literal> {helm} chart and
           parse the template for image details:
         </para>
         <note>
           <para>
-            Recent changes to &certmanager; require an upgrade. If you are
-            upgrading &ranchera; and using a version of &certmanager; older than
+            Recent changes to {certmanager} require an upgrade. If you are
+            upgrading {ranchera} and using a version of {certmanager} older than
             v0.12.0, please see our
             <link xlink:href="https://rancher.com/docs/rancher/v2.x/en/installation/resources/upgrade-cert-manager/">upgrade
             documentation</link>.
@@ -183,14 +183,14 @@
 helm repo update
 helm fetch jetstack/cert-manager
 helm template ./cert-manager-<replaceable>version</replaceable>.tgz | \
-  awk '$1 ~ /image:/ {print $2}' | sed s/\"//g &gt;&gt; ./rancher-images.txt</screen>
+  awk '$1 ~ /image:/ {print $2}' | sed s/\"//g {gt}{gt} ./rancher-images.txt</screen>
       </step>
       <step>
         <para>
           Sort the image list and deduplicate it to remove any overlap between
           the sources:
         </para>
-<screen>&prompt.user;sort -u rancher-images.txt -o rancher-images.txt</screen>
+<screen>{prompt.user}sort -u rancher-images.txt -o rancher-images.txt</screen>
       </step>
     </procedure>
   </section>
@@ -201,7 +201,7 @@ helm template ./cert-manager-<replaceable>version</replaceable>.tgz | \
         <para>
           Make <filename>rancher-save-images.sh</filename> an executable:
         </para>
-<screen>&prompt.user;chmod +x rancher-save-images.sh</screen>
+<screen>{prompt.user}chmod +x rancher-save-images.sh</screen>
       </listitem>
       <listitem>
         <para>
@@ -209,7 +209,7 @@ helm template ./cert-manager-<replaceable>version</replaceable>.tgz | \
           <filename>rancher-images.txt</filename> image list to create a tarball
           of all the required images:
         </para>
-<screen>&prompt.user;./rancher-save-images.sh --image-list ./rancher-images.txt</screen>
+<screen>{prompt.user}./rancher-save-images.sh --image-list ./rancher-images.txt</screen>
         <para>
           <emphasis role="bold">Result:</emphasis> Docker begins pulling the
           images used for an air-gapped install. Be patient. This process takes
@@ -243,13 +243,13 @@ helm template ./cert-manager-<replaceable>version</replaceable>.tgz | \
         <para>
           Log in to your private registry if required:
         </para>
-<screen>&prompt.user;docker login <replaceable>REGISTRY.YOURDOMAIN.COM:PORT</replaceable></screen>
+<screen>{prompt.user}docker login <replaceable>REGISTRY.YOURDOMAIN.COM:PORT</replaceable></screen>
       </step>
       <step>
         <para>
           Make <filename>rancher-load-images.sh</filename> an executable:
         </para>
-<screen>&prompt.user;chmod +x rancher-load-images.sh</screen>
+<screen>{prompt.user}chmod +x rancher-load-images.sh</screen>
       </step>
       <step>
         <para>
@@ -257,7 +257,7 @@ helm template ./cert-manager-<replaceable>version</replaceable>.tgz | \
           push <filename>rancher-images.txt</filename> and
           <filename>rancher-images.tar.gz</filename> to your private registry:
         </para>
-<screen>&prompt.user;./rancher-load-images.sh --image-list ./rancher-images.txt \
+<screen>{prompt.user}./rancher-load-images.sh --image-list ./rancher-images.txt \
    --registry <replaceable>REGISTRY.YOURDOMAIN.COM:PORT</replaceable></screen>
       </step>
     </procedure>

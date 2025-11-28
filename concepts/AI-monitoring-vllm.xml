@@ -14,13 +14,13 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Monitoring &vllm;</title>
+    <title>Monitoring {vllm}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &vllm; is monitored by scraping its &prometheus;-compatible metrics
-        endpoints. The &sobservability; Extension uses these metrics to
-        visualize &vllm;'s status and activity.
+        {vllm} is monitored by scraping its {prometheus}-compatible metrics
+        endpoints. The {sobservability} Extension uses these metrics to
+        visualize {vllm}'s status and activity.
       </para>
     </abstract>
   </info>
@@ -28,11 +28,11 @@
     <title>Metrics Scraping (recommended)</title>
     <para>
       Add the following job to the <literal>scrape_configs</literal> section of
-      your &otelemetry; Collector's configuration. This configures the collector
-      to scrape the <filename>/metrics</filename> endpoint from all &vllm;
+      your {otelemetry} Collector's configuration. This configures the collector
+      to scrape the <filename>/metrics</filename> endpoint from all {vllm}
       services every 10 seconds. Remember that you can have several jobs
-      defined, so if you defined other jobs&mdash;such as &milvus;&mdash;you can
-      just append the new job to your list. If you have deployed &vllm;'s
+      defined, so if you defined other jobs{mdash}such as {milvus}{mdash}you can
+      just append the new job to your list. If you have deployed {vllm}'s
       services with non-default values, you can easily change the service
       discovery rules.
     </para>
@@ -41,7 +41,7 @@
         Before using the following example, replace the
         <replaceable>VLLM_NAMESPACE</replaceable> and
         <replaceable>VLLM_RELEASE_NAME</replaceable> placeholders with the
-        actual values you used while deploying &vllm;.
+        actual values you used while deploying {vllm}.
       </para>
     </tip>
 <screen>config:

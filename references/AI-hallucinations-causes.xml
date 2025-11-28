@@ -45,8 +45,8 @@
     <listitem>
       <para>
         <emphasis role="bold">No retrieval-augmented process.</emphasis> LLMs
-        without access to external sources&mdash;such as databases or search
-        engines&mdash;can produce errors when they need to generate specific
+        without access to external sources{mdash}such as databases or search
+        engines{mdash}can produce errors when they need to generate specific
         information.
       </para>
     </listitem>

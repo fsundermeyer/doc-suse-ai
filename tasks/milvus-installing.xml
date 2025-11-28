@@ -14,35 +14,35 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &milvus;</title>
+    <title>Installing {milvus}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &milvus; is a scalable, high-performance vector database designed for AI
+        {milvus} is a scalable, high-performance vector database designed for AI
         applications. It enables efficient organization and searching of massive
         unstructured datasets, including text, images and multi-modal content.
-        This procedure walks you through the installation of &milvus; and its
+        This procedure walks you through the installation of {milvus} and its
         dependencies.
       </para>
     </abstract>
   </info>
   <section xml:id="milvus-installing-app-details">
-    <title>Details about the &milvus; application</title>
+    <title>Details about the {milvus} application</title>
     <para>
-      Before deploying &milvus;, it is important to know more about the
+      Before deploying {milvus}, it is important to know more about the
       supported configurations and documentation. The following command provides
       the corresponding details:
     </para>
 <screen>helm show values oci://dp.apps.rancher.io/charts/milvus</screen>
     <para>
-      Alternatively, you can also refer to the &milvus; &helm; chart page on the
-      &sappco; site at
+      Alternatively, you can also refer to the {milvus} {helm} chart page on the
+      {sappco} site at
       <link xlink:href="https://apps.rancher.io/applications/milvus"/>. It
-      contains &milvus; dependencies, available versions and the link to pull
-      the &milvus; container image.
+      contains {milvus} dependencies, available versions and the link to pull
+      the {milvus} container image.
     </para>
     <figure xml:id="milvus-info-appco">
-      <title>&milvus; page in the &sappco;</title>
+      <title>{milvus} page in the {sappco}</title>
       <mediaobject>
         <imageobject role="fo">
           <imagedata fileref="rancher-appco-milvus.png" width="75%"/>
@@ -50,30 +50,30 @@
         <imageobject role="html">
           <imagedata fileref="rancher-appco-milvus.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase >&milvus; page in the &sappco;</phrase>
+        <textobject role="description"><phrase >{milvus} page in the {sappco}</phrase>
         </textobject>
       </mediaobject>
     </figure>
   </section>
   <section xml:id="milvus-installing-procedure">
-    <title>&milvus; installation procedure</title>
+    <title>{milvus} installation procedure</title>
     <procedure>
       <xi:include href="../snippets/ai-library-requirement.xml"/>
       <step>
         <para>
-          When installed as part of &productname;, &milvus; depends on &etcd;,
-          &minio; and Apache Kafka. Because the &milvus; chart uses a
+          When installed as part of {productname}, {milvus} depends on {etcd},
+          {minio} and Apache Kafka. Because the {milvus} chart uses a
           non-default configuration, create an override file
           <filename>milvus_custom_overrides.yaml</filename> with the following
           content.
         </para>
         <tip condition="deployment_standard">
           <para>
-            As a template, you can download the &milvus; &helm; chart that
+            As a template, you can download the {milvus} {helm} chart that
             includes the <filename>values.yaml</filename> file with the default
             configuration by running the following command:
           </para>
-<screen>&prompt.user;<command>helm pull oci://dp.apps.rancher.io/charts/milvus --version 4.2.2</command></screen>
+<screen>{prompt.user}<command>helm pull oci://dp.apps.rancher.io/charts/milvus --version 4.2.2</command></screen>
         </tip>
         <tip condition="deployment_airgap">
           <para>
@@ -141,12 +141,12 @@ extraConfigFiles:<co xml:id="co-llama-otel-extra"/>
           <callout arearefs="co-llama-otel-extra">
             <para>
               The <option>extraConfigFiles</option> section is optional,
-              required only to receive telemetry data from &owui;.
+              required only to receive telemetry data from {owui}.
             </para>
           </callout>
           <callout arearefs="co-milvus-otel">
             <para>
-              The URL of the &otelemetry; Collector installed by the user.
+              The URL of the {otelemetry} Collector installed by the user.
             </para>
           </callout>
         </calloutlist>
@@ -154,33 +154,33 @@ extraConfigFiles:<co xml:id="co-llama-otel-extra"/>
           <para>
             The above example uses local storage. For production environments,
             we recommend using an enterprise class storage solution such as
-            &sstorage; in which case the <option>storageClassName</option>
+            {sstorage} in which case the <option>storageClassName</option>
             option must be set to <literal>longhorn</literal>.
           </para>
         </tip>
       </step>
       <step>
         <para>
-          Install the &milvus; &helm; chart using the
+          Install the {milvus} {helm} chart using the
           <filename>milvus_custom_overrides.yaml</filename> override file.
         </para>
-<screen condition="deployment_standard">&prompt.user;<command>helm upgrade --install \
+<screen condition="deployment_standard">{prompt.user}<command>helm upgrade --install \
   milvus oci://dp.apps.rancher.io/charts/milvus \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version 4.2.2 -f <replaceable>milvus_custom_overrides.yaml</replaceable></command></screen>
-<screen condition="deployment_airgap">&prompt.user;<command>helm upgrade --install \
+<screen condition="deployment_airgap">{prompt.user}<command>helm upgrade --install \
   milvus charts/milvus-<replaceable>X.Y.Z</replaceable>.tgz \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>X.Y.Z</replaceable> -f <replaceable>milvus_custom_overrides.yaml</replaceable></command></screen>
       </step>
     </procedure>
     <section xml:id="milvus-kafka-limitation">
-      <title>Using &akafka; with &sstorage;</title>
+      <title>Using {akafka} with {sstorage}</title>
       <para>
-        When &milvus; is deployed in cluster mode, it uses &akafka; as a message
-        queue. If &akafka; uses &sstorage; as a storage back-end, you need to
-        create an XFS storage class and make it available for the &akafka;
-        deployment. Otherwise deploying &akafka; with a storage class of an Ext4
+        When {milvus} is deployed in cluster mode, it uses {akafka} as a message
+        queue. If {akafka} uses {sstorage} as a storage back-end, you need to
+        create an XFS storage class and make it available for the {akafka}
+        deployment. Otherwise deploying {akafka} with a storage class of an Ext4
         file system fails with the following error:
       </para>
 <screen>"Found directory /mnt/kafka/logs/lost+found, 'lost+found' is not
@@ -216,11 +216,11 @@ parameters:
             Create the new storage class using the <command>kubectl</command>
             command.
           </para>
-<screen>&prompt.user;<command>kubectl apply -f longhorn-xfs.yaml</command></screen>
+<screen>{prompt.user}<command>kubectl apply -f longhorn-xfs.yaml</command></screen>
         </step>
         <step>
           <para>
-            Update the &milvus; overrides YAML file to reference the &akafka;
+            Update the {milvus} overrides YAML file to reference the {akafka}
             storage class, as in the following example:
           </para>
 <screen>
@@ -234,29 +234,29 @@ parameters:
     </section>
   </section>
   <section xml:id="milvus-upgrading" condition="deployment_standard">
-    <title>Upgrading &milvus;</title>
+    <title>Upgrading {milvus}</title>
     <para>
-      The &milvus; chart receives application updates and updates of the &helm;
+      The {milvus} chart receives application updates and updates of the {helm}
       chart templates. New versions may include changes that require manual
       steps. These steps are listed in the corresponding
-      <filename>README</filename> file. All &milvus; dependencies are updated
-      automatically during &milvus; upgrade.
+      <filename>README</filename> file. All {milvus} dependencies are updated
+      automatically during {milvus} upgrade.
     </para>
     <para>
-      To upgrade &milvus;, identify the new version number and run the following
+      To upgrade {milvus}, identify the new version number and run the following
       command below:
     </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   milvus oci://dp.apps.rancher.io/charts/milvus \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>VERSION_NUMBER</replaceable> \
   -f <replaceable>milvus_custom_overrides.yaml</replaceable></command></screen>
   </section>
   <section xml:id="milvus-uninstalling">
-    <title>Uninstalling &milvus;</title>
+    <title>Uninstalling {milvus}</title>
     <para>
-      To uninstall &milvus;, run the following command:
+      To uninstall {milvus}, run the following command:
     </para>
-<screen>&prompt.user;<command>helm uninstall milvus -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
+<screen>{prompt.user}<command>helm uninstall milvus -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
   </section>
 </topic>

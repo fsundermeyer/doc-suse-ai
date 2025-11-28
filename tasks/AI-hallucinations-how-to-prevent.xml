@@ -128,7 +128,7 @@
       </listitem>
       <listitem>
         <para>
-          If using a tool like &milvus; or &chromadb;, structure your prompt to
+          If using a tool like {milvus} or {chromadb}, structure your prompt to
           refer to specific collections or documents. This reduces hallucination
           by grounding the LLM in real data.
         </para>
@@ -145,7 +145,7 @@
       <listitem>
         <para>
           <emphasis role="bold">Prompt with RAG:</emphasis> <quote>Based on the
-          <quote>technical-info</quote> collection in &milvus;, provide details
+          <quote>technical-info</quote> collection in {milvus}, provide details
           about the company's AI product line.</quote>
         </para>
       </listitem>
@@ -249,7 +249,7 @@
       <listitem>
         <para>
           Find good examples of system prompts in
-          <link xlink:href="&dsc;/suse-ai/1.0/html/AI-system-prompts/index.html"/>.
+          <link xlink:href="{dsc}/suse-ai/1.0/html/AI-system-prompts/index.html"/>.
         </para>
       </listitem>
     </itemizedlist>

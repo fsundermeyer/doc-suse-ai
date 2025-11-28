@@ -18,9 +18,9 @@
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        When deploying a containerized application to &kube;, you need to ensure
+        When deploying a containerized application to {kube}, you need to ensure
         that containers requiring GPU resources are run on appropriate worker
-        nodes. For example, &ollama;, a core component of &productname;, can
+        nodes. For example, {ollama}, a core component of {productname}, can
         deeply benefit from the use of GPU acceleration. This topic describes
         how to satisfy this requirement by explicitly requesting GPU resources
         and labeling worker nodes for configuring the node selector.
@@ -31,22 +31,22 @@
     <title>Requirements</title>
     <listitem>
       <para>
-        &kube; cluster&mdash;such as &rke2;&mdash;must be available and
+        {kube} cluster{mdash}such as {rke2}{mdash}must be available and
         configured with more than one worker node in which certain nodes have
-        &nvidia; GPU resources and others do not.
+        {nvidia} GPU resources and others do not.
       </para>
     </listitem>
     <listitem>
       <para>
-        This document assumes that any kind of deployment to the &kube; cluster
-        is done using &helm; charts.
+        This document assumes that any kind of deployment to the {kube} cluster
+        is done using {helm} charts.
       </para>
     </listitem>
   </itemizedlist>
   <section xml:id="ai-gpu-node-labeling">
     <title>Labeling GPU nodes</title>
     <para>
-      To distinguish nodes with the GPU support from non-GPU nodes, &kube; uses
+      To distinguish nodes with the GPU support from non-GPU nodes, {kube} uses
       <emphasis>labels</emphasis>. Labels are used for relevant metadata and
       should not be confused with annotations that provide simple information
       about a resource. It is possible to manipulate labels with the
@@ -57,7 +57,7 @@
     <para>
       To label a single node, use the following command:
     </para>
-<screen>&prompt.user;<command>kubectl label node <replaceable>GPU_NODE_NAME</replaceable> accelerator=nvidia-gpu</command></screen>
+<screen>{prompt.user}<command>kubectl label node <replaceable>GPU_NODE_NAME</replaceable> accelerator=nvidia-gpu</command></screen>
     <para>
       To achieve the same result by tweaking the <filename>node.yaml</filename>
       node configuration, add the following content and apply the changes with
@@ -74,7 +74,7 @@ metadata:
       <para>
         To label multiple nodes, use the following command:
       </para>
-<screen>&prompt.user;<command>kubectl label node \
+<screen>{prompt.user}<command>kubectl label node \
   <replaceable>GPU_NODE_NAME1</replaceable> \
   <replaceable>GPU_NODE_NAME2</replaceable> ... \
   accelerator=nvidia-gpu</command></screen>
@@ -94,33 +94,33 @@ metadata:
     <para>
       To check if the labels are correctly applied, use the following command:
     </para>
-<screen>&prompt.user;<command>kubectl get nodes --show-labels</command></screen>
+<screen>{prompt.user}<command>kubectl get nodes --show-labels</command></screen>
   </section>
   <section xml:id="ai-gpu-node-assign">
     <title>Assigning GPU nodes</title>
     <para>
       The matching between a container and a node is configured by the explicit
       resource allocation and the use of labels and node selectors. The use
-      cases described below focus on &nvidia; GPUs.
+      cases described below focus on {nvidia} GPUs.
     </para>
     <section xml:id="ai-gpu-passthru">
       <title>Enable GPU passthrough</title>
       <para>
         Containers are isolated from the host environment by default. For the
-        containers that rely on the allocation of GPU resources, their &helm;
+        containers that rely on the allocation of GPU resources, their {helm}
         charts must enable GPU passthrough so that the container can access and
         use the GPU resource. Without enabling the GPU passthrough, the
         container may still run, but it can only use the main CPU for all
         computations. Refer to <link
-        xlink:href="https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#ollama-helmchart">&ollama;
-        &helm; chart</link> for an example of the configuration required for GPU
+        xlink:href="https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#ollama-helmchart">{ollama}
+        {helm} chart</link> for an example of the configuration required for GPU
         acceleration.
       </para>
     </section>
     <section xml:id="ai-gpu-assign-request-resources">
       <title>Assignment by resource request</title>
       <para>
-        After the &nvoperator; is configured on a node, you can instantiate
+        After the {nvoperator} is configured on a node, you can instantiate
         applications requesting the resource <literal>nvidia.com/gpu</literal>
         provided by the operator. Add the following content to your
         <filename>values.yaml</filename> file. Specify the number of GPUs
@@ -145,9 +145,9 @@ metadata:
     </section>
   </section>
   <section xml:id="ai-gpu-assign-verify">
-    <title>Verifying &ollama; GPU assignment</title>
+    <title>Verifying {ollama} GPU assignment</title>
     <para>
-      If the GPU is correctly detected, the &ollama; container logs this
+      If the GPU is correctly detected, the {ollama} container logs this
       event:
     </para>
 <screen>

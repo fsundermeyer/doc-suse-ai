@@ -12,39 +12,39 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &sls;</title>
+    <title>Installing {sls}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        Use the following procedures to install &slsa; on all supported hardware
+        Use the following procedures to install {slsa} on all supported hardware
         platforms. They assume you have successfully booted into the
         installation system. For more detailed installation instructions and
         deployment strategies, refer to
-        <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/book-deployment.html">&sls;
+        <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/book-deployment.html">{sls}
         Deployment Guide</link>.
       </para>
     </abstract>
   </info>
   <section xml:id="sec-sle-installquick-unified-installer">
-    <title>The &leanos;</title>
+    <title>The {leanos}</title>
     <para>
-      Starting with &slsa; 15, the installation medium consists only of the
-      &leanos;, a minimal system for installing, updating and registering all
-      &sle; base products. During the installation, you can add functionality by
-      selecting modules and extensions to be installed on top of the &leanos;.
+      Starting with {slsa} 15, the installation medium consists only of the
+      {leanos}, a minimal system for installing, updating and registering all
+      {sle} base products. During the installation, you can add functionality by
+      selecting modules and extensions to be installed on top of the {leanos}.
     </para>
   </section>
   <section xml:id="sec-sle-installquick-install-offline">
     <title>Installing offline or without registration</title>
     <para>
-      The default installation medium &installmedia; is optimized for size and
+      The default installation medium {installmedia} is optimized for size and
       does not contain any modules and extensions. Therefore, the installation
       requires network access to register your product and retrieve repository
       data for the modules and extensions.
     </para>
     <para>
       For installation without registering the system, use the
-      <filename>&packagemedia;</filename> image from
+      <filename>{packagemedia}</filename> image from
       <link xlink:href="https://www.suse.com/download/sles/"/> and refer to
       <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-scc-registration-none">Installing
       without registration</link>.
@@ -55,28 +55,28 @@
         Use the following command to copy the contents of the installation image
         to a removable flash disk.
       </para>
-<screen>&prompt.sudo;dd if=<replaceable>IMAGE</replaceable> of=<replaceable>FLASH_DISK</replaceable> bs=4M &amp;&amp; sync</screen>
+<screen>{prompt.sudo}dd if=<replaceable>IMAGE</replaceable> of=<replaceable>FLASH_DISK</replaceable> bs=4M {amp}{amp} sync</screen>
       <para>
         <replaceable>IMAGE</replaceable> needs to be replaced with the path to
-        the <filename>&installmedia;</filename> or
-        <filename>&packagemedia;</filename> image file.
+        the <filename>{installmedia}</filename> or
+        <filename>{packagemedia}</filename> image file.
         <replaceable>FLASH_DISK</replaceable> needs to be replaced with the
         flash device. To identify the device, insert it and run:
       </para>
-<screen>&prompt.root;grep -Ff &lt;(hwinfo --disk --short) &lt;(hwinfo --usb --short)
+<screen>{prompt.root}grep -Ff {lt}(hwinfo --disk --short) {lt}(hwinfo --usb --short)
 disk:
   /dev/sdc             General USB Flash Disk</screen>
       <para>
         Make sure the size of the device is sufficient for the desired image.
         You can check the size of the device with:
       </para>
-<screen>&prompt.root;fdisk -l /dev/sdc | grep -e "^/dev"
+<screen>{prompt.root}fdisk -l /dev/sdc | grep -e "^/dev"
      /dev/sdc1  *     2048 31490047 31488000  15G 83 Linux</screen>
       <para>
-        In this example, the device has a capacity of 15&nbsp;GB. The command to
-        use for the <filename>&packagemedia;</filename> would be:
+        In this example, the device has a capacity of 15{nbsp}GB. The command to
+        use for the <filename>{packagemedia}</filename> would be:
       </para>
-<screen>dd if=&packagemedia; of=/dev/sdc bs=4M &amp;&amp; sync</screen>
+<screen>dd if={packagemedia} of=/dev/sdc bs=4M {amp}{amp} sync</screen>
       <para>
         The device must not be mounted when running the <command>dd</command>
         command. Note that all data on the partition will be erased.
@@ -86,7 +86,7 @@ disk:
   <section xml:id="sec-sle-installquick-install">
     <title>The installation procedure</title>
     <para>
-      To install &slsa;, boot or IPL into the installer from the &leanos; medium
+      To install {slsa}, boot or IPL into the installer from the {leanos} medium
       and start the installation.
     </para>
     <section xml:id="sec-sle-installquick-install-lang">
@@ -113,7 +113,7 @@ disk:
         text box to test the layout.
       </para>
       <para>
-        Select &sls; &sles-ai-version; for installation. You need to have a
+        Select {sls} {sles-ai-version} for installation. You need to have a
         registration code for the product. Proceed with <guimenu>Next</guimenu>.
       </para>
       <tip>
@@ -149,7 +149,7 @@ disk:
       <figure xml:id="fig-install-license">
         <title>License agreement</title>
         <mediaobject>
-          <textobject role="description"><phrase><guimenu>&slsa; License Agreement</guimenu> screen</phrase>
+          <textobject role="description"><phrase><guimenu>{slsa} License Agreement</guimenu> screen</phrase>
           </textobject>
           <imageobject role="fo">
             <imagedata fileref="install_license_sles.png" width="100%"/>
@@ -164,7 +164,7 @@ disk:
         chosen on the boot screen. Translations are available via the
         <guimenu>License Language</guimenu> drop-down list. You need to accept
         the agreement by checking <guimenu>I Agree to the License
-        Terms</guimenu> to install &slsa;. Proceed with <guimenu>Next</guimenu>.
+        Terms</guimenu> to install {slsa}. Proceed with <guimenu>Next</guimenu>.
       </para>
     </section>
     <section xml:id="sec-sle-installquick-install-network">
@@ -198,18 +198,18 @@ disk:
         network settings</link> and
         <link
         xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-network.html#sec-network-yast">configuring
-        a network connection with &yast;</link> for more information. If you
+        a network connection with {yast}</link> for more information. If you
         prefer to do an installation without network access, skip this step
         without making any changes and proceed with <guimenu>Next</guimenu>.
       </para>
     </section>
     <section arch="zseries" xml:id="sec-sle-installquick-install-hdd">
-      <title>&zseries;: disk activation</title>
+      <title>{zseries}: disk activation</title>
       <para>
-        Skip this step if you are not installing on &zseries; hardware.
+        Skip this step if you are not installing on {zseries} hardware.
       </para>
       <figure xml:id="fig-install-zseries-disk">
-        <title>Disk activation on &zseries;</title>
+        <title>Disk activation on {zseries}</title>
         <mediaobject>
           <textobject role="description"><phrase><guimenu>Disk Activation</guimenu> screen</phrase>
           </textobject>
@@ -223,11 +223,11 @@ disk:
       </figure>
       <para>
         Configure the attached hard disks. Select DASD, Fibre Channel Attached
-        SCSI Disks (zFCP), or &iscsi; for the installation of &slsa;. The DASD
+        SCSI Disks (zFCP), or {iscsi} for the installation of {slsa}. The DASD
         and zFCP configuration buttons are only available if the corresponding
         devices are attached. Proceed with <guimenu>Next</guimenu> to set up the
         selected disk type. For more information, refer to the section on
-        <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-s390-part">&zseries;
+        <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-s390-part">{zseries}
         partitioning</link>.
       </para>
     </section>
@@ -248,7 +248,7 @@ disk:
       </figure>
       <para>
         To get technical support and product updates, you need to register and
-        activate &slsa; with the &scc; or a local registration server.
+        activate {slsa} with the {scc} or a local registration server.
         Registering your product at this stage also grants you immediate access
         to the update repository. This enables you to install the system with
         the latest updates and patches available.
@@ -262,9 +262,9 @@ disk:
           <term><guimenu>Register system at scc.suse.com</guimenu></term>
           <listitem>
             <para>
-              To register at the &scc;, enter the <guimenu>E-mail
-              Address</guimenu> associated with your &scc; account and the
-              <guimenu>Registration Code</guimenu> for &slsa;. Proceed with
+              To register at the {scc}, enter the <guimenu>E-mail
+              Address</guimenu> associated with your {scc} account and the
+              <guimenu>Registration Code</guimenu> for {slsa}. Proceed with
               <guimenu>Next</guimenu>.
             </para>
           </listitem>
@@ -295,13 +295,13 @@ disk:
                 Your system and extensions need to be registered to retrieve
                 updates and to be eligible for support. Skipping the
                 registration is only possible when installing from the
-                <filename>&packagemedia;</filename> image.
+                <filename>{packagemedia}</filename> image.
               </para>
             </important>
             <para>
               If you do not register during the installation, you can do so at
               any time later from the running system. To do so, run
-              <menuchoice><guimenu>&yast;</guimenu> <guimenu>Product
+              <menuchoice><guimenu>{yast}</guimenu> <guimenu>Product
               Registration</guimenu></menuchoice> or the command-line tool
               <command>SUSEConnect</command>.
             </para>
@@ -311,7 +311,7 @@ disk:
       <tip>
         <title>Installing product patches at installation time</title>
         <para>
-          After &slsa; has been successfully registered, you are asked whether
+          After {slsa} has been successfully registered, you are asked whether
           to install the latest available online updates during the
           installation. If choosing <guimenu>Yes</guimenu>, the system will be
           installed with the most current packages without having to apply the
@@ -321,10 +321,10 @@ disk:
       <note>
         <title>Firewall settings for receiving updates</title>
         <para>
-          By default, the firewall on &productname; only blocks incoming
+          By default, the firewall on {productname} only blocks incoming
           connections. If your system is behind another firewall that blocks
           outgoing traffic, make sure to allow connections to
-          <systemitem>&sccurl;</systemitem> and
+          <systemitem>{sccurl}</systemitem> and
           <systemitem>https://updates.suse.com</systemitem> on ports 80 and 443
           to receive updates.
         </para>
@@ -347,9 +347,9 @@ disk:
       </figure>
       <para>
         After the system is successfully registered, the installer lists modules
-        and extensions that are available for &slsa;. Modules are components
+        and extensions that are available for {slsa}. Modules are components
         that allow you to customize the product according to your needs. They
-        are included in your &slsa; subscription. Extensions add functionality
+        are included in your {slsa} subscription. Extensions add functionality
         to your product. They must be purchased separately.
       </para>
       <para>
@@ -357,7 +357,7 @@ disk:
         selected in the first step of the installation. For a description of the
         modules and their lifecycles, select a module to see the accompanying
         text. More detailed information is available in the
-        <link xlink:href="https://documentation.suse.com/sles-15/html/SLES-all/article-modules.html">&modulesquick;</link>.
+        <link xlink:href="https://documentation.suse.com/sles-15/html/SLES-all/article-modules.html">{modulesquick}</link>.
       </para>
       <para>
         The selection of modules indirectly affects the scope of the
@@ -365,18 +365,18 @@ disk:
         are available for installation and in the running system.
       </para>
       <para>
-        The following modules and extensions are available for &sls;:
+        The following modules and extensions are available for {sls}:
       </para>
       <variablelist>
         <varlistentry>
           <term>Basesystem Module</term>
           <listitem>
             <para>
-              This module adds a basic system on top of the &leanos;. It is
+              This module adds a basic system on top of the {leanos}. It is
               required by all other modules and extensions. The scope of an
               installation that only contains the base system is comparable to
               the installation pattern <citetitle>minimal system</citetitle> of
-              previous &slsa; versions. This module is selected for installation
+              previous {slsa} versions. This module is selected for installation
               by default and should not be deselected.
             </para>
             <para>
@@ -444,7 +444,7 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry os="sles">
-          <term>&hpc; (HPC) Module</term>
+          <term>{hpc} (HPC) Module</term>
           <listitem>
             <para>
               Provides specific tools commonly used for high performance,
@@ -460,8 +460,8 @@ disk:
           <listitem>
             <para>
               Helps you with migrating applications from earlier versions of
-              &slsa; and other systems to &slsa; &sles-ai-version; by providing
-              packages which are discontinued on &sle;. Packages in this module
+              {slsa} and other systems to {slsa} {sles-ai-version} by providing
+              packages which are discontinued on {sle}. Packages in this module
               are selected based on the requirements for migration and the level
               of complexity of configuration.
             </para>
@@ -475,17 +475,17 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&nvidia; Compute Module</term>
+          <term>{nvidia} Compute Module</term>
           <listitem>
             <para>
-              Contains the &nvidia; &cuda; (Compute Unified Device Architecture)
+              Contains the {nvidia} {cuda} (Compute Unified Device Architecture)
               drivers.
             </para>
             <para>
-              The software in this module is provided by &nvidia; under the
+              The software in this module is provided by {nvidia} under the
               <link
-          xlink:href="http://docs.nvidia.com/cuda/eula/">&cuda;
-              End User License Agreement</link> and is not supported by &suse;.
+          xlink:href="http://docs.nvidia.com/cuda/eula/">{cuda}
+              End User License Agreement</link> and is not supported by {suse}.
             </para>
             <para>
               <emphasis>Dependencies:</emphasis> Basesystem
@@ -496,9 +496,9 @@ disk:
           <term>Public Cloud Module</term>
           <listitem>
             <para>
-              Contains all tools required to create images for deploying &slsa;
-              in cloud environments such as Amazon Web Services (AWS), &ms;
-              Azure, Google Compute Platform, or &ostack;.
+              Contains all tools required to create images for deploying {slsa}
+              in cloud environments such as Amazon Web Services (AWS), {ms}
+              Azure, Google Compute Platform, or {ostack}.
             </para>
             <para>
               <emphasis>Dependencies:</emphasis> Basesystem, Server Applications
@@ -518,12 +518,12 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&sap; Business One Server</term>
+          <term>{sap} Business One Server</term>
           <listitem>
             <para>
               This module contains packages and system configurations specific
-              to &sap; Business One Server. It is maintained and supported under
-              the &sles; product subscription.
+              to {sap} Business One Server. It is maintained and supported under
+              the {sles} product subscription.
             </para>
             <para>
               <emphasis>Dependencies:</emphasis> Basesystem, Server
@@ -546,10 +546,10 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&sle; &hasi;</term>
+          <term>{sle} {hasi}</term>
           <listitem>
             <para>
-              Adds clustering support for mission-critical setups to &slsa;.
+              Adds clustering support for mission-critical setups to {slsa}.
               This extension requires a separate license key.
             </para>
             <para>
@@ -558,7 +558,7 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&sle; Live Patching</term>
+          <term>{sle} Live Patching</term>
           <listitem>
             <para>
               Adds support for performing critical patching without having to
@@ -571,10 +571,10 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&slewe;</term>
+          <term>{slewe}</term>
           <listitem>
             <para>
-              Extends the functionality of &slsa; with packages from &sled;,
+              Extends the functionality of {slsa} with packages from {sled},
               like additional desktop applications (office suite, e-mail client,
               graphical editor, etc.) and libraries. It allows combining both
               products to create a fully featured workstation. This extension
@@ -587,12 +587,12 @@ disk:
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>&suse; Package Hub</term>
+          <term>{suse} Package Hub</term>
           <listitem>
             <para>
-              Provides access to packages for &slsa; maintained by the
-              &opensuse; community. These packages are delivered without L3
-              support and do not interfere with the supportability of &slsa;.
+              Provides access to packages for {slsa} maintained by the
+              {opensuse} community. These packages are delivered without L3
+              support and do not interfere with the supportability of {slsa}.
               For more information, refer to
               <link
          xlink:href="https://packagehub.suse.com/"/>.
@@ -651,9 +651,9 @@ disk:
       <important>
         <title>Default modules for offline installation</title>
         <para>
-          When performing an offline installation from the &packagemedia;, only
+          When performing an offline installation from the {packagemedia}, only
           the <guimenu>Basesystem Module</guimenu> is selected by default. To
-          install the complete default package set of &sls;, additionally select
+          install the complete default package set of {sls}, additionally select
           the <guimenu>Server Applications Module</guimenu> and the
           <guimenu>Python 3 Module</guimenu>.
         </para>
@@ -677,7 +677,7 @@ disk:
       <para>
         The <guimenu>Add-On Product</guimenu> dialog allows you to add
         additional software sources (called <quote>repositories</quote>) to
-        &slsa; that are not provided by the &scc;. Add-on products may include
+        {slsa} that are not provided by the {scc}. Add-on products may include
         third-party products and drivers as well as additional software for your
         system.
       </para>
@@ -685,9 +685,9 @@ disk:
         <title>Adding drivers during the installation</title>
         <para>
           You can also add driver update repositories via the <guimenu>Add-On
-          Product</guimenu> dialog. Driver updates for &sle; are provided at
+          Product</guimenu> dialog. Driver updates for {sle} are provided at
           <link xlink:href="https://drivers.suse.com/"/>. These drivers have
-          been created through the &suse; SolidDriver Program.
+          been created through the {suse} SolidDriver Program.
         </para>
       </tip>
       <para>
@@ -799,15 +799,15 @@ disk:
           For partitioning purposes, disk space is measured in binary units
           rather than in decimal units. For example, if you enter sizes of
           <literal>1GB</literal>, <literal>1GiB</literal> or
-          <literal>1G</literal>, they all signify 1&nbsp;GiB (Gibibyte), as
-          opposed to 1&nbsp;GB (Gigabyte).
+          <literal>1G</literal>, they all signify 1{nbsp}GiB (Gibibyte), as
+          opposed to 1{nbsp}GB (Gigabyte).
         </para>
         <variablelist>
           <varlistentry>
             <term>Binary</term>
             <listitem>
               <para>
-                1&nbsp;GiB = 1&nbsp;073&nbsp;741&nbsp;824 bytes.
+                1{nbsp}GiB = 1{nbsp}073{nbsp}741{nbsp}824 bytes.
               </para>
             </listitem>
           </varlistentry>
@@ -815,7 +815,7 @@ disk:
             <term>Decimal</term>
             <listitem>
               <para>
-                1&nbsp;GB = 1&nbsp;000&nbsp;000&nbsp;000 bytes.
+                1{nbsp}GB = 1{nbsp}000{nbsp}000{nbsp}000 bytes.
               </para>
             </listitem>
           </varlistentry>
@@ -823,7 +823,7 @@ disk:
             <term>Difference</term>
             <listitem>
               <para>
-                1&nbsp;GiB &asymp; 1.07&nbsp;GB.
+                1{nbsp}GiB {asymp} 1.07{nbsp}GB.
               </para>
             </listitem>
           </varlistentry>
@@ -889,7 +889,7 @@ disk:
         For security reasons, it is also strongly recommended
         <emphasis>not</emphasis> to enable <guimenu>Automatic Login</guimenu>.
         You should also <emphasis>not</emphasis> <guimenu>Use this Password for
-        the System Administrator</guimenu> but provide a separate &rootuser;
+        the System Administrator</guimenu> but provide a separate {rootuser}
         password in the next installation step.
       </para>
       <para>
@@ -924,13 +924,13 @@ disk:
         </mediaobject>
       </figure>
       <para>
-        Type a password for the system administrator (called the &rootuser;
+        Type a password for the system administrator (called the {rootuser}
         user) or provide a public SSH key. If you want, you can use both.
       </para>
       <para>
-        Because the &rootuser; user is equipped with extensive permissions, the
+        Because the {rootuser} user is equipped with extensive permissions, the
         password should be chosen carefully. You should never forget the
-        &rootuser; password. After you entered it here, the password cannot be
+        {rootuser} password. After you entered it here, the password cannot be
         retrieved.
       </para>
       <tip>
@@ -946,7 +946,7 @@ disk:
         from removable media or an existing partition. See the section on
         <link
         xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-user-root">Authentication
-        for the system administrator &rootuser;</link> for more information.
+        for the system administrator {rootuser}</link> for more information.
       </para>
       <para>
         Proceed with <guimenu>Next</guimenu>.
@@ -969,7 +969,7 @@ disk:
       </figure>
       <para>
         Use the <guimenu>Installation Settings</guimenu> screen to review
-        and&mdash;if necessary&mdash;change several proposed installation
+        and{mdash}if necessary{mdash}change several proposed installation
         settings. The current configuration is listed for each setting. To
         change it, click the headline. Certain settings, such as firewall or
         SSH, can be changed directly by clicking the respective links.
@@ -1000,7 +1000,7 @@ disk:
               pattern contains several software packages needed for specific
               functions (for example, <guimenu>KVM Host Server</guimenu>). For a
               more detailed selection based on software packages to install,
-              select <guimenu>Details</guimenu> to switch to the &yast;
+              select <guimenu>Details</guimenu> to switch to the {yast}
               <guimenu>Software Manager</guimenu>. See
               <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-yast-software.html">Installing
               or removing software</link> for more information.
@@ -1014,7 +1014,7 @@ disk:
               This section shows the boot loader configuration. Changing the
               defaults is recommended only if really needed. Refer to
               <link xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-grub2.html">The
-              boot loader &grub;</link> for details.
+              boot loader {grub}</link> for details.
             </para>
           </listitem>
         </varlistentry>
@@ -1033,7 +1033,7 @@ disk:
             </para>
             <para>
               By default, the <guimenu>Firewall</guimenu> is enabled on all
-              configured network interfaces. To disable &firewalld;, click
+              configured network interfaces. To disable {firewalld}, click
               <guimenu>disable</guimenu> (not recommended). Refer to the
               <link
               xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-security-firewall.html">Masquerading
@@ -1042,10 +1042,10 @@ disk:
             <note>
               <title>Firewall settings for receiving updates</title>
               <para>
-                By default, the firewall on &productname; only blocks incoming
+                By default, the firewall on {productname} only blocks incoming
                 connections. If your system is behind another firewall that
                 blocks outgoing traffic, make sure to allow connections to
-                <systemitem>&sccurl;</systemitem> and
+                <systemitem>{sccurl}</systemitem> and
                 <systemitem>https://updates.suse.com</systemitem> on ports 80
                 and 443 to receive updates.
               </para>
@@ -1072,8 +1072,8 @@ disk:
           <term><guimenu>Security Policies</guimenu></term>
           <listitem>
             <para>
-              Click to <guimenu>enable</guimenu> the <literal>&disa;
-              &stiga;</literal> security policy. If any installation settings
+              Click to <guimenu>enable</guimenu> the <literal>{disa}
+              {stiga}</literal> security policy. If any installation settings
               are incompatible with the policy, you will be prompted to modify
               them accordingly. Certain settings can be adjusted automatically
               while others require user input.
@@ -1082,7 +1082,7 @@ disk:
               Enabling a security profile enables a full SCAP remediation on
               first boot. You can also perform a <guimenu>scan only</guimenu> or
               <guimenu>do nothing</guimenu> and manually remediate the system
-              later with &openscap;. For more information, refer to the section
+              later with {openscap}. For more information, refer to the section
               on
               <link
               xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-proposal-security-profile">Security
@@ -1096,21 +1096,21 @@ disk:
             <para>
               Displays the current network configuration. By default,
               <command>wicked</command> is used for server installations and
-              &nm; for desktop workloads. Click <guimenu>Network
+              {nm} for desktop workloads. Click <guimenu>Network
               Configuration</guimenu> to change the settings. For details, see
               the section on
               <link
               xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-network.html#sec-network-yast">Configuring
-              a network connection with &yast;</link>.
+              a network connection with {yast}</link>.
             </para>
             <important>
-              <title>Support for &nm;</title>
+              <title>Support for {nm}</title>
               <para>
-                &suse; only supports &nm; for desktop workloads with &sleda; or
+                {suse} only supports {nm} for desktop workloads with {sleda} or
                 the Workstation extension. All server certifications are done
                 with <command>wicked</command> as the network configuration
-                tool, and using &nm; may invalidate them. &nm; is not supported
-                by &suse; for server workloads.
+                tool, and using {nm} may invalidate them. {nm} is not supported
+                by {suse} for server workloads.
               </para>
             </important>
           </listitem>
@@ -1119,13 +1119,13 @@ disk:
           <term><guimenu>Kdump</guimenu></term>
           <listitem>
             <para>
-              &kdump; saves the memory image (<quote>core dump</quote>) to the
+              {kdump} saves the memory image (<quote>core dump</quote>) to the
               file system in case the kernel crashes. This enables you to find
-              the cause of the crash by debugging the dump file. &kdump; is
+              the cause of the crash by debugging the dump file. {kdump} is
               preconfigured and enabled by default. See the
               <link
               xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-tuning-kexec.html#cha-tuning-kdump-basic">Basic
-              &kdump; configuration</link> for more information.
+              {kdump} configuration</link> for more information.
             </para>
           </listitem>
         </varlistentry>
@@ -1147,7 +1147,7 @@ disk:
             <para>
               View detailed hardware information by clicking
               <guimenu>System</guimenu>. In the resulting screen, you can also
-              change <guimenu>Kernel Settings</guimenu>&mdash;see the section on
+              change <guimenu>Kernel Settings</guimenu>{mdash}see the section on
               <link
               xlink:href="https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-proposal-system">System
               Information</link> for more information.

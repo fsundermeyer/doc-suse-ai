@@ -89,7 +89,7 @@
   <glossentry xml:id="gt-cuda"><glossterm>CUDA, Compute Unified Device Architecture</glossterm>
     <glossdef>
       <para>
-        &nvidia;'s parallel computing platform and programming model used to
+        {nvidia}'s parallel computing platform and programming model used to
         accelerate AI workloads on GPU hardware.
       </para>
     </glossdef>
@@ -145,16 +145,16 @@
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-helm"><glossterm>&helm;</glossterm>
+  <glossentry xml:id="gt-helm"><glossterm>{helm}</glossterm>
     <glossdef>
       <para>
         A package manager for Kubernetes that helps install and manage
-        applications. &helm; uses charts to define, install and upgrade complex
+        applications. {helm} uses charts to define, install and upgrade complex
         Kubernetes applications.
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-helm-chart"><glossterm>&helm; chart</glossterm>
+  <glossentry xml:id="gt-helm-chart"><glossterm>{helm} chart</glossterm>
     <glossdef>
       <para>
         A package format for Kubernetes applications that contains all resource
@@ -178,7 +178,7 @@
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-kubernetes-pods"><glossterm>&kube; pods</glossterm>
+  <glossentry xml:id="gt-kubernetes-pods"><glossterm>{kube} pods</glossterm>
     <glossdef>
       <para>
         The smallest deployable units in Kubernetes that can host one or more
@@ -221,28 +221,28 @@
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-nvidia-gpu-driver"><glossterm>&nvidia; GPU driver</glossterm>
+  <glossentry xml:id="gt-nvidia-gpu-driver"><glossterm>{nvidia} GPU driver</glossterm>
     <glossdef>
       <para>
         Software that enables communication between the operating system and
-        &nvidia; graphics hardware, essential for GPU-accelerated AI workloads.
+        {nvidia} graphics hardware, essential for GPU-accelerated AI workloads.
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-nvidia-gpu-operator"><glossterm>&nvoperator;</glossterm>
+  <glossentry xml:id="gt-nvidia-gpu-operator"><glossterm>{nvoperator}</glossterm>
     <glossdef>
       <para>
-        A Kubernetes operator that automates the management of &nvidia; GPUs in
+        A Kubernetes operator that automates the management of {nvidia} GPUs in
         container environments, handling driver deployment, runtime
         configuration, and monitoring.
       </para>
     </glossdef>
   </glossentry>
-  <glossentry xml:id="gt-ollama"><glossterm>&ollama;</glossterm>
+  <glossentry xml:id="gt-ollama"><glossterm>{ollama}</glossterm>
     <glossdef>
       <para>
         An open source framework for running and serving AI models locally.
-        &ollama; simplifies the process of downloading, running and managing
+        {ollama} simplifies the process of downloading, running and managing
         large language models.
       </para>
     </glossdef>

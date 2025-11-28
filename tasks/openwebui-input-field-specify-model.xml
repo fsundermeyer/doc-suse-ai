@@ -35,7 +35,7 @@
       <title>Requirements</title>
       <listitem>
         <para>
-          At least one AI model must be downloaded and available to &owui;.
+          At least one AI model must be downloaded and available to {owui}.
           Refer to the section
           <link
           xlink:href="https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-setting-base-models">Setting

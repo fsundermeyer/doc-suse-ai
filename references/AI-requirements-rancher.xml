@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&ranchermanager; requirements</title>
+    <title>{ranchermanager} requirements</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
   </info>
   <section xml:id="ai-reqs-rancher-hw">
@@ -32,7 +32,7 @@
         <term>RAM</term>
         <listitem>
           <para>
-            A minimum of 32&nbsp;GB of RAM.
+            A minimum of 32{nbsp}GB of RAM.
           </para>
         </listitem>
       </varlistentry>
@@ -48,7 +48,7 @@
         <term>Disk space</term>
         <listitem>
           <para>
-            At least 200&nbsp;GB of storage, preferably SSD.
+            At least 200{nbsp}GB of storage, preferably SSD.
           </para>
         </listitem>
       </varlistentry>
@@ -64,14 +64,14 @@
       <listitem>
         <para>
           <link
-          xlink:href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements">&ranchermanager;
+          xlink:href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements">{ranchermanager}
           installation requirements</link>
         </para>
       </listitem>
       <listitem>
         <para>
           <link
-          xlink:href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements">&ranchermanager;
+          xlink:href="https://ranchermanager.docs.rancher.com/getting-started/installation-and-upgrade/installation-requirements">{ranchermanager}
           architecture recommendations</link>
         </para>
       </listitem>

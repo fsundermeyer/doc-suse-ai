@@ -14,12 +14,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&productname; known issues</title>
+    <title>{productname} known issues</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         This section lists problems that you may encounter during the
-        &productname; installation process together with their solutions.
+        {productname} installation process together with their solutions.
       </para>
     </abstract>
   </info>

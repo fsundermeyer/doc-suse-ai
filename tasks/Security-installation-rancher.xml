@@ -13,50 +13,50 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing and managing &ssecurity; through &ranchera; Extensions or Apps &amp; Marketplace</title>
+    <title>Installing and managing {ssecurity} through {ranchera} Extensions or Apps {amp} Marketplace</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &ssecurity; can be deployed easily either through &ranchera; Extensions
-        for Prime customers, or &ranchera; Apps and Marketplace. The default
-        (&helm;-based) deployment deploys &ssecurity; containers into the
+        {ssecurity} can be deployed easily either through {ranchera} Extensions
+        for Prime customers, or {ranchera} Apps and Marketplace. The default
+        ({helm}-based) deployment deploys {ssecurity} containers into the
         <literal>cattle-neuvector-system</literal> namespace.
       </para>
     </abstract>
   </info>
   <note>
     <para>
-      Only &ssecurity; deployments through &ranchera; Extensions (&ssecurity;)
-      of &ranchera; version 2.7.0+, or Apps &amp; Marketplace of &ranchera;
-      version 2.6.5+ can be managed directly (single sign-on to the &ssecurity;
-      console) through &ranchera;. If adding clusters to &ranchera; with
-      &ssecurity; already deployed, or where &ssecurity; has been deployed
+      Only {ssecurity} deployments through {ranchera} Extensions ({ssecurity})
+      of {ranchera} version 2.7.0+, or Apps {amp} Marketplace of {ranchera}
+      version 2.6.5+ can be managed directly (single sign-on to the {ssecurity}
+      console) through {ranchera}. If adding clusters to {ranchera} with
+      {ssecurity} already deployed, or where {ssecurity} has been deployed
       directly onto the cluster, these clusters will not be enabled for SSO
       integration.
     </para>
   </note>
   <section xml:id="suse-security-installation-rancher-ui-extension">
-    <title>&ssecurity; UI extension for &ranchera;</title>
+    <title>{ssecurity} UI extension for {ranchera}</title>
     <para>
-      &rancherprime; customers are able to easily deploy &ssecurity; and the
-      &ssecurity; UI Extension for &ranchera;. This will enable Prime users to
-      monitor and manage certain &ssecurity; functions and events directly
-      through the &ranchera; UI. For community users, please see the Deploy
-      &ssecurity; section below to deploy from &ranchera; Apps and Marketplace.
+      {rancherprime} customers are able to easily deploy {ssecurity} and the
+      {ssecurity} UI Extension for {ranchera}. This will enable Prime users to
+      monitor and manage certain {ssecurity} functions and events directly
+      through the {ranchera} UI. For community users, please see the Deploy
+      {ssecurity} section below to deploy from {ranchera} Apps and Marketplace.
     </para>
     <procedure>
       <step>
         <para>
-          The first step is to enable the &ranchera; Extensions capability
+          The first step is to enable the {ranchera} Extensions capability
           globally if it is not already enabled.
         </para>
         <figure xml:id="figure-rancher-extensions">
-          <title>&ranchera; extensions</title>
+          <title>{ranchera} extensions</title>
           <mediaobject>
             <imageobject>
               <imagedata fileref="ui0_extensions.png" width="75%"/>
             </imageobject>
-            <textobject role="description"><phrase>A screenshot of &ranchera; extensions</phrase>
+            <textobject role="description"><phrase>A screenshot of {ranchera} extensions</phrase>
             </textobject>
           </mediaobject>
         </figure>
@@ -73,7 +73,7 @@
       </step>
       <step>
         <para>
-          Install the &ssecurity;-UI-Ext from the <guimenu>Available</guimenu>
+          Install the {ssecurity}-UI-Ext from the <guimenu>Available</guimenu>
           list.
         </para>
         <figure xml:id="figure-install-ui-extension">
@@ -104,26 +104,26 @@
       </step>
       <step>
         <para>
-          On your selected cluster, install the &ssecurity; application from the
-          &ssecurity; tab if the &ssecurity; app is not already installed. This
+          On your selected cluster, install the {ssecurity} application from the
+          {ssecurity} tab if the {ssecurity} app is not already installed. This
           should take you to the application installation steps. For more
           details on this installation process, see
           <xref linkend="suse-security-installation-rancher-deploy"/>.
         </para>
         <figure xml:id="figure-install-neuvector-app">
-          <title>Install &neuvector; application</title>
+          <title>Install {neuvector} application</title>
           <mediaobject>
             <imageobject>
               <imagedata fileref="ui5installnv.png" width="75%"/>
             </imageobject>
-            <textobject role="description"><phrase>A screenshot of install &neuvector; application</phrase>
+            <textobject role="description"><phrase>A screenshot of install {neuvector} application</phrase>
             </textobject>
           </mediaobject>
         </figure>
       </step>
       <step>
         <para>
-          The &ssecurity; dashboard should now be shown from the &ssecurity;
+          The {ssecurity} dashboard should now be shown from the {ssecurity}
           menu for that cluster. From this dashboard, the security health of the
           cluster can be monitored. There are interactive elements in the
           dashboard, such as invoking a wizard to improve your Security Risk
@@ -131,18 +131,18 @@
           vulnerabilities if it is not enabled.
         </para>
         <figure xml:id="figure-neuvector-dashboard">
-          <title>&neuvector; dashboard</title>
+          <title>{neuvector} dashboard</title>
           <mediaobject>
             <imageobject>
               <imagedata fileref="ui6dashboard.png" width="75%"/>
             </imageobject>
-            <textobject role="description"><phrase>A screenshot of &neuvector; dashboard</phrase>
+            <textobject role="description"><phrase>A screenshot of {neuvector} dashboard</phrase>
             </textobject>
           </mediaobject>
         </figure>
         <para>
           The links in the upper right of the dashboard provide convenient
-          single sign-on (SSO) links to the full &ssecurity; console for more
+          single sign-on (SSO) links to the full {ssecurity} console for more
           detailed analysis and configuration.
         </para>
       </step>
@@ -162,54 +162,54 @@
         </figure>
         <note>
           <para>
-            Uninstalling the &ssecurity; UI extension does not uninstall the
-            &ssecurity; app from each cluster. The &ssecurity; menu will revert
-            to providing an SSO link into the &ssecurity; console.
+            Uninstalling the {ssecurity} UI extension does not uninstall the
+            {ssecurity} app from each cluster. The {ssecurity} menu will revert
+            to providing an SSO link into the {ssecurity} console.
           </para>
         </note>
       </step>
     </procedure>
   </section>
   <section xml:id="suse-security-installation-rancher-deploy">
-    <title>Deploy &ssecurity;</title>
+    <title>Deploy {ssecurity}</title>
     <para>
-      First, find the &ssecurity; chart in &ranchera; charts, select it and
+      First, find the {ssecurity} chart in {ranchera} charts, select it and
       review the instructions and configuration values. Optionally, create a
-      project to deploy into if desired, for example, &ssecurity;.
+      project to deploy into if desired, for example, {ssecurity}.
     </para>
     <note>
       <para>
-        If you see more than one &ssecurity; chart, do not select the one that
-        is for upgrading legacy &ssecurity; 4.x &helm; chart deployments.
+        If you see more than one {ssecurity} chart, do not select the one that
+        is for upgrading legacy {ssecurity} 4.x {helm} chart deployments.
       </para>
     </note>
     <figure xml:id="figure-rancher-chart">
-      <title>&ranchera; chart</title>
+      <title>{ranchera} chart</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="rancher_chart.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &ranchera; chart</phrase>
+        <textobject role="description"><phrase>A screenshot of {ranchera} chart</phrase>
         </textobject>
       </mediaobject>
     </figure>
     <para>
-      Deploy the &ssecurity; chart, first configuring appropriate values for a
-      &ranchera; deployment, such as:
+      Deploy the {ssecurity} chart, first configuring appropriate values for a
+      {ranchera} deployment, such as:
     </para>
     <itemizedlist>
       <listitem>
         <para>
-          Container runtime, such as &docker; for &rkea; and &containerd; for
-          &rke2a;, or select the K3s value if using K3s.
+          Container runtime, such as {docker} for {rkea} and {containerd} for
+          {rke2a}, or select the K3s value if using K3s.
         </para>
       </listitem>
       <listitem>
         <para>
           Manager service type: change to LoadBalancer if available on public
-          cloud deployments. If access is only desired through &ranchera;, any
+          cloud deployments. If access is only desired through {ranchera}, any
           allowed value will work here. See the Important note below about
-          changing the default administration password in &ssecurity;.
+          changing the default administration password in {ssecurity}.
         </para>
       </listitem>
       <listitem>
@@ -225,12 +225,12 @@
       </listitem>
     </itemizedlist>
     <figure xml:id="security-neuvector-values">
-      <title>&neuvector; values</title>
+      <title>{neuvector} values</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="rancher_chart_values.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &neuvector; values</phrase>
+        <textobject role="description"><phrase>A screenshot of {neuvector} values</phrase>
         </textobject>
       </mediaobject>
     </figure>
@@ -239,63 +239,63 @@
       chart values.
     </para>
     <para>
-      After a successful &ssecurity; deployment, you will see a summary of the
-      deployments, daemon sets, and cron jobs for &ssecurity;. You will also be
+      After a successful {ssecurity} deployment, you will see a summary of the
+      deployments, daemon sets, and cron jobs for {ssecurity}. You will also be
       able to see the services deployed in the Services Discovery menu on the
       left.
     </para>
     <figure xml:id="figure-neuvector-deployed">
-      <title>&neuvector; deployed</title>
+      <title>{neuvector} deployed</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="nv_deployed.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &neuvector; deployed</phrase>
+        <textobject role="description"><phrase>A screenshot of {neuvector} deployed</phrase>
         </textobject>
       </mediaobject>
     </figure>
   </section>
   <section xml:id="suse-security-installation-rancher-manage">
-    <title>Manage &ssecurity;</title>
+    <title>Manage {ssecurity}</title>
     <para>
-      You will now see a &ssecurity; menu item in the left, and selecting that
-      will show a &ssecurity; tile/button, which when clicked will take you to
-      the &ssecurity; console, in a new tab.
+      You will now see a {ssecurity} menu item in the left, and selecting that
+      will show a {ssecurity} tile/button, which when clicked will take you to
+      the {ssecurity} console, in a new tab.
     </para>
     <figure xml:id="figure-neuvector-console-access">
-      <title>&neuvector; console access</title>
+      <title>{neuvector} console access</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="nv_access.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &neuvector; console access</phrase>
+        <textobject role="description"><phrase>A screenshot of {neuvector} console access</phrase>
         </textobject>
       </mediaobject>
     </figure>
     <para>
       When this Single Sign-On (SSO) access method is used for the first time, a
-      corresponding user in the &ssecurity; cluster is created for the
-      &ranchera; user login. The same user name as the &ranchera; logged-in user
-      will be created in &ssecurity;, with a role of either admin or fedAdmin,
-      and Identity provider as &ranchera;.
+      corresponding user in the {ssecurity} cluster is created for the
+      {ranchera} user login. The same user name as the {ranchera} logged-in user
+      will be created in {ssecurity}, with a role of either admin or fedAdmin,
+      and Identity provider as {ranchera}.
     </para>
     <figure xml:id="figure-neuvector-admin-users">
-      <title>&neuvector; administrator users</title>
+      <title>{neuvector} administrator users</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="nv_admin.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &neuvector; administrator users</phrase>
+        <textobject role="description"><phrase>A screenshot of {neuvector} administrator users</phrase>
         </textobject>
       </mediaobject>
     </figure>
     <para>
-      In the above screenshot, two &ranchera;
-      users&mdash;<literal>admin</literal> and
-      <literal>gkosaka</literal>&mdash;have been automatically created for SSO.
-      If another user is created manually in &ssecurity;, the identity provider
-      would be listed as &ssecurity;, as shown below. This local user can log in
-      directly to the &ssecurity; console without going through &ranchera;.
+      In the above screenshot, two {ranchera}
+      users{mdash}<literal>admin</literal> and
+      <literal>gkosaka</literal>{mdash}have been automatically created for SSO.
+      If another user is created manually in {ssecurity}, the identity provider
+      would be listed as {ssecurity}, as shown below. This local user can log in
+      directly to the {ssecurity} console without going through {ranchera}.
     </para>
     <figure xml:id="figure-local-admin">
       <title>Local admin</title>
@@ -309,26 +309,26 @@
     </figure>
     <important>
       <para>
-        It is recommended to log in directly to the &ssecurity; console as
+        It is recommended to log in directly to the {ssecurity} console as
         admin/admin to manually change the administrator password to a strong
-        password. This will only change the &ssecurity; identity provider
+        password. This will only change the {ssecurity} identity provider
         administrator user password (you may see another administrator user
-        whose identify provider is &ranchera;). Alternatively, include a
+        whose identify provider is {ranchera}). Alternatively, include a
         <link xlink:href="https://ranchermanager.docs.rancher.com/integrations-in-rancher/neuvector/configuration/configmaps#protect-sensitive-data-using-a-secret">ConfigMap
-        as a secret</link> in the initial deployment from &ranchera; (see chart
+        as a secret</link> in the initial deployment from {ranchera} (see chart
         values for ConfigMap settings) to set the default admin password to a
         strong password.
       </para>
     </important>
   </section>
   <section xml:id="suse-security-installation-rancher-sso-permissions">
-    <title>&neuvector;/&ranchera; SSO permission resources</title>
+    <title>{neuvector}/{ranchera} SSO permission resources</title>
     <para>
-      The &ranchera; v2.9.2 UI provides for selecting &neuvector; permission
+      The {ranchera} v2.9.2 UI provides for selecting {neuvector} permission
       resources when creating
       <literal>Global/Cluster/Project/Namespaces</literal> roles. When a
-      &ranchera; user is assigned a role with a &neuvector; permission resource,
-      the user's &neuvector; SSO session is assigned the respective &neuvector;
+      {ranchera} user is assigned a role with a {neuvector} permission resource,
+      the user's {neuvector} SSO session is assigned the respective {neuvector}
       permission accordingly. This is to provide SSO users with custom roles
       other than the reserved <literal>admin/reader/fedAdmin/fedReader</literal>
       roles.
@@ -342,7 +342,7 @@
       <note>
         <para>
           Users will need to manually add * (Verbs) / services/proxy (Resource)
-          to &neuvector;-related <literal>Global/Cluster</literal> Roles.
+          to {neuvector}-related <literal>Global/Cluster</literal> Roles.
         </para>
       </note>
       <para>
@@ -360,7 +360,7 @@
         Resources:
       </para>
       <para>
-        &neuvector;, Cluster Scoped
+        {neuvector}, Cluster Scoped
       </para>
 <screen>AdmissionControl
 Authentication
@@ -369,7 +369,7 @@ Cluster
 Federation
 Vulnerability</screen>
       <para>
-        &neuvector;, Namespaced
+        {neuvector}, Namespaced
       </para>
 <screen>AuditEvents
 Authorization
@@ -387,7 +387,7 @@ SystemConfig</screen>
       <note>
         <para>
           You will need to manually add * (Verbs) / services/proxy (Resource) to
-          &neuvector;-related <literal>Project/Namespace</literal> Roles.
+          {neuvector}-related <literal>Project/Namespace</literal> Roles.
         </para>
       </note>
       <para>
@@ -405,7 +405,7 @@ SystemConfig</screen>
         Resources:
       </para>
       <para>
-        &neuvector;, Namespaced
+        {neuvector}, Namespaced
       </para>
 <screen>AuditEvents
 Authorization
@@ -420,24 +420,24 @@ SystemConfig</screen>
     </section>
   </section>
   <section xml:id="suse-security-installation-rancher-disable-sso">
-    <title>Disabling &ssecurity;/&ranchera; SSO</title>
+    <title>Disabling {ssecurity}/{ranchera} SSO</title>
     <para>
-      To disable the ability to log in to &ssecurity; from &ranchermanager;, go
-      to Settings -&gt; Configuration.
+      To disable the ability to log in to {ssecurity} from {ranchermanager}, go
+      to Settings -{gt} Configuration.
     </para>
     <figure xml:id="figure-rancher-sso">
-      <title>&ranchera; SSO</title>
+      <title>{ranchera} SSO</title>
       <mediaobject>
         <imageobject>
           <imagedata fileref="rancher_sso.png" width="75%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot of &ranchera; SSO</phrase>
+        <textobject role="description"><phrase>A screenshot of {ranchera} SSO</phrase>
         </textobject>
       </mediaobject>
     </figure>
   </section>
   <section xml:id="suse-security-installation-rancher-legacy-deployments">
-    <title>&ranchera; legacy deployments</title>
+    <title>{ranchera} legacy deployments</title>
     <para>
       The sample file will deploy one manager and 3 controllers. It will deploy
       an enforcer on every node. See the bottom section for specifying dedicated
@@ -451,8 +451,8 @@ SystemConfig</screen>
     </note>
     <note>
       <para>
-        Deployment on &ranchera; 2.x/&kube; should follow the &kube; reference
-        section and/or &helm;-based deployment.
+        Deployment on {ranchera} 2.x/{kube} should follow the {kube} reference
+        section and/or {helm}-based deployment.
       </para>
     </note>
     <procedure>
@@ -479,7 +479,7 @@ SystemConfig</screen>
       of the components, just use that section of the file.
     </para>
     <para>
-      &ranchermanager;/Controller/Enforcer Compose Sample File:
+      {ranchermanager}/Controller/Enforcer Compose Sample File:
     </para>
 <screen>manager:
    scale: 1
@@ -521,10 +521,10 @@ enforcer:
     <para>
       On certain systems, deployment without using privileged mode is supported.
       These systems must support the ability to add capabilities using the
-      cap_add setting and to set the &aa; profile.
+      cap_add setting and to set the {aa} profile.
     </para>
     <para>
-      Here is a sample &ranchera; compose file for deployment without privileged
+      Here is a sample {ranchera} compose file for deployment without privileged
       mode:
     </para>
 <screen>manager:

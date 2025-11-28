@@ -14,12 +14,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&productname; air-gapped stack</title>
+    <title>{productname} air-gapped stack</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         The <emphasis>air-gapped stack</emphasis> is a set of scripts that ease
-        the successful air-gap installation of certain &productname; components.
+        the successful air-gap installation of certain {productname} components.
         To use them, you need to clone or download them from the stack's
         <link
         xlink:href="https://github.com/SUSE/suse-ai-stack/tree/SUSEAI-79/air-gapped-install">GitHub
@@ -45,8 +45,8 @@
         <term><filename>SUSE-AI-get-images.sh</filename></term>
         <listitem>
           <para>
-            Downloads &docker; images of &productname; applications from
-            &sappco;.
+            Downloads {docker} images of {productname} applications from
+            {sappco}.
           </para>
         </listitem>
       </varlistentry>
@@ -54,7 +54,7 @@
         <term><filename>SUSE-AI-load-images.sh</filename></term>
         <listitem>
           <para>
-            Loads downloaded &docker; images into a custom &docker; image
+            Loads downloaded {docker} images into a custom {docker} image
             registry.
           </para>
         </listitem>
@@ -64,7 +64,7 @@
   <section xml:id="ai-air-gap-stack-usage">
     <title>Where do the scripts fit into the air-gap installation?</title>
     <para>
-      The scripts are required in several places during the &productname;
+      The scripts are required in several places during the {productname}
       air-gapped installation. The following simplified workflow outlines the
       intended usage:
     </para>
@@ -72,31 +72,31 @@
       <step>
         <para>
           Use <filename>SUSE-AI-mirror-nvidia.sh</filename> on a
-          <emphasis>remote</emphasis> host to download the required &nvidia; RPM
+          <emphasis>remote</emphasis> host to download the required {nvidia} RPM
           packages. Transfer the downloaded content to an air-gapped
-          <emphasis>local</emphasis> host and add it as a &zypper; repository to
-          install &nvidia; drivers on <emphasis>local</emphasis> GPU nodes.
+          <emphasis>local</emphasis> host and add it as a {zypper} repository to
+          install {nvidia} drivers on <emphasis>local</emphasis> GPU nodes.
         </para>
       </step>
       <step>
         <para>
           Use <filename>SUSE-AI-get-images.sh</filename> on a
-          <emphasis>remote</emphasis> host to download &docker; images of
-          required &productname; components. Transfer them to an air-gapped
+          <emphasis>remote</emphasis> host to download {docker} images of
+          required {productname} components. Transfer them to an air-gapped
           <emphasis>local</emphasis> host.
         </para>
       </step>
       <step>
         <para>
           Use <filename>SUSE-AI-load-images.sh</filename> to load the
-          transferred &docker; images of &productname; components into a custom
-          <emphasis>local</emphasis> $&docker; image registry.
+          transferred {docker} images of {productname} components into a custom
+          <emphasis>local</emphasis> ${docker} image registry.
         </para>
       </step>
       <step>
         <para>
-          Install &ailibrary; components on the <emphasis>local</emphasis>
-          &kube; cluster from the <emphasis>local</emphasis> custom &docker;
+          Install {ailibrary} components on the <emphasis>local</emphasis>
+          {kube} cluster from the <emphasis>local</emphasis> custom {docker}
           registry.
         </para>
       </step>

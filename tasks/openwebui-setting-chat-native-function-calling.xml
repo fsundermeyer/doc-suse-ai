@@ -23,8 +23,8 @@
     <abstract>
       <para>
         <emphasis>Native function calling</emphasis> is a process in which a
-        client&mdash;such as the &suseai; chatbot&mdash;instructs its LLM to
-        query an &mcp; server directly, bypassing the &mcpo; proxy.
+        client{mdash}such as the {suseai} chatbot{mdash}instructs its LLM to
+        query an {mcp} server directly, bypassing the {mcpo} proxy.
       </para>
     </abstract>
   </info>
@@ -34,12 +34,12 @@
   <orderedlist>
     <listitem>
       <para>
-        A client LLM connects to an &mcp; server.
+        A client LLM connects to an {mcp} server.
       </para>
     </listitem>
     <listitem>
       <para>
-        The &mcp; server exposes tools (functions) with names, argument schemas
+        The {mcp} server exposes tools (functions) with names, argument schemas
         and returns.
       </para>
     </listitem>
@@ -61,14 +61,14 @@
     <para>
       For this to work effectively, the selected model must support native tool
       calling. Certain models may claim such support but often produce poor
-      results. For the best experience, &owui; recommends using GPT-4o or
-      another &openai; model that supports function calling natively.
+      results. For the best experience, {owui} recommends using GPT-4o or
+      another {openai} model that supports function calling natively.
     </para>
   </note>
   <procedure>
     <step>
       <para>
-        In the top right of the &owui; window, click the <guimenu>Chat
+        In the top right of the {owui} window, click the <guimenu>Chat
         controls</guimenu> icon.
       </para>
     </step>
@@ -106,28 +106,28 @@
     <itemizedlist>
       <listitem>
         <para>
-          <link xlink:href="https://github.com/open-webui/mcpo">&mcpo; homepage
+          <link xlink:href="https://github.com/open-webui/mcpo">{mcpo} homepage
           on GitHub</link>
         </para>
       </listitem>
       <listitem>
         <para>
           <link
-          xlink:href="https://docs.openwebui.com/openapi-servers/open-webui/">&owui;
+          xlink:href="https://docs.openwebui.com/openapi-servers/open-webui/">{owui}
           Integration documentation</link>
         </para>
       </listitem>
       <listitem>
         <para>
           <link
-          xlink:href="https://docs.openwebui.com/openapi-servers/mcp/">&owui;
-          support for &mcp;</link>
+          xlink:href="https://docs.openwebui.com/openapi-servers/mcp/">{owui}
+          support for {mcp}</link>
         </para>
       </listitem>
       <listitem>
         <para>
           <link xlink:href="https://github.com/modelcontextprotocol/servers">The
-          &mcp; servers' GitHub repository</link>
+          {mcp} servers' GitHub repository</link>
         </para>
       </listitem>
     </itemizedlist>

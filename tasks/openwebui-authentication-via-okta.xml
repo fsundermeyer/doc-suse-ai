@@ -18,18 +18,18 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Authenticating &owui; via &okta;</title>
+    <title>Authenticating {owui} via {okta}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &okta; is an identity management service that allows you to manage users
-        and user access to applications. This topic describes how to use &okta;
-        as the identity manager for &owui;.
+        {okta} is an identity management service that allows you to manage users
+        and user access to applications. This topic describes how to use {okta}
+        as the identity manager for {owui}.
       </para>
     </abstract>
   </info>
   <para>
-    The process of enabling &okta; as the identity manager for &owui; consists
+    The process of enabling {okta} as the identity manager for {owui} consists
     of several steps:
   </para>
   <orderedlist>
@@ -52,15 +52,15 @@
   <tip>
     <para>
       This example procedure shows the minimal configuration required to use
-      &okta; with &owui;. Customize the configuration to your specific scenario
-      and refer to the &okta; documentation at
+      {okta} with {owui}. Customize the configuration to your specific scenario
+      and refer to the {okta} documentation at
       <link
         xlink:href="https://help.okta.com/en-us/content/index.htm?cshid=csh-index"/>
       for more information.
     </para>
   </tip>
   <procedure xml:id="owui-config-okta">
-    <title>Configuring &okta;</title>
+    <title>Configuring {okta}</title>
     <important>
       <para>
         You must have administrator privileges to perform the following steps.
@@ -68,10 +68,10 @@
     </important>
     <step>
       <para>
-        Log in to &okta; and access the <guimenu>Admin</guimenu> panel.
+        Log in to {okta} and access the <guimenu>Admin</guimenu> panel.
       </para>
       <figure>
-        <title>&okta; administrator panel</title>
+        <title>{okta} administrator panel</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-okta-admin-panel.png" width="100%"/>
@@ -79,7 +79,7 @@
           <imageobject role="html">
             <imagedata fileref="owui-okta-admin-panel.png" width="100%"/>
           </imageobject>
-          <textobject role="description"><phrase>&okta; administrator panel</phrase>
+          <textobject role="description"><phrase>{okta} administrator panel</phrase>
           </textobject>
         </mediaobject>
       </figure>
@@ -98,7 +98,7 @@
         <guimenu>Next</guimenu> to proceed.
       </para>
       <figure>
-        <title>&okta; configuration window</title>
+        <title>{okta} configuration window</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-okta-configure1.png" width="75%"/>
@@ -106,7 +106,7 @@
           <imageobject role="html">
             <imagedata fileref="owui-okta-configure1.png" width="75%"/>
           </imageobject>
-          <textobject role="description"><phrase>&okta; configuration window</phrase>
+          <textobject role="description"><phrase>{okta} configuration window</phrase>
           </textobject>
         </mediaobject>
       </figure>
@@ -114,7 +114,7 @@
     <step>
       <para>
         In the <guimenu>General Settings</guimenu> section, set the <guimenu>App
-        integration name</guimenu> to <guimenu>&owui;</guimenu>. In the
+        integration name</guimenu> to <guimenu>{owui}</guimenu>. In the
         <guimenu>Grant type</guimenu> section, toggle the <guimenu>Refresh
         token</guimenu> option. Optionally, specify an image for the application
         logo.
@@ -140,15 +140,15 @@
         group assignment for now</guimenu> option. Save changes.
       </para>
       <tip>
-        <title>&owui; application settings</title>
+        <title>{owui} application settings</title>
         <para>
-          After the integration is created, you can access the &owui;
+          After the integration is created, you can access the {owui}
           application settings by clicking the related hyperlink. It is required
           for final configurations and for retrieving the necessary information for
-          the &owui; configuration further on.
+          the {owui} configuration further on.
         </para>
         <figure>
-          <title>&owui; application access in &okta;</title>
+          <title>{owui} application access in {okta}</title>
           <mediaobject>
             <imageobject role="fo">
               <imagedata fileref="owui-okta-app-access.png" width="75%"/>
@@ -156,7 +156,7 @@
             <imageobject role="html">
               <imagedata fileref="owui-okta-app-access.png" width="75%"/>
             </imageobject>
-            <textobject role="description"><phrase>&owui; application access in &okta;</phrase>
+            <textobject role="description"><phrase>{owui} application access in {okta}</phrase>
             </textobject>
           </mediaobject>
         </figure>
@@ -179,14 +179,14 @@
     </step>
   </procedure>
   <procedure xml:id="owui-gather-data">
-    <title>Gathering data for &owui; configuration</title>
+    <title>Gathering data for {owui} configuration</title>
     <step>
       <para>
-        In the top-right menu, copy the &okta; domain. In this example, it is
+        In the top-right menu, copy the {okta} domain. In this example, it is
         <literal>my-domain.okta.com</literal>.
       </para>
       <figure>
-        <title>&okta; domain name</title>
+        <title>{okta} domain name</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-okta-gather-info.png" width="50%"/>
@@ -194,7 +194,7 @@
           <imageobject role="html">
             <imagedata fileref="owui-okta-gather-info.png" width="50%"/>
           </imageobject>
-          <textobject role="description"><phrase>&okta; domain name</phrase>
+          <textobject role="description"><phrase>{okta} domain name</phrase>
           </textobject>
         </mediaobject>
       </figure>
@@ -202,12 +202,12 @@
     <step>
       <para>
         Go to
-        <menuchoice><guimenu>Applications</guimenu><guimenu>&owui;</guimenu></menuchoice>
+        <menuchoice><guimenu>Applications</guimenu><guimenu>{owui}</guimenu></menuchoice>
         and retrieve the <guimenu>Client ID</guimenu> and <guimenu>Client
         Secret</guimenu>.
       </para>
       <figure>
-        <title>Client ID and secret in &okta;</title>
+        <title>Client ID and secret in {okta}</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-okta-clientid.png" width="50%"/>
@@ -215,13 +215,13 @@
           <imageobject role="html">
             <imagedata fileref="owui-okta-clientid.png" width="50%"/>
           </imageobject>
-          <textobject role="description"><phrase>Client ID and secret in &okta;</phrase>
+          <textobject role="description"><phrase>Client ID and secret in {okta}</phrase>
           </textobject>
         </mediaobject>
       </figure>
       <tip>
         <para>
-          The previously gathered values are used by &owui; via the following
+          The previously gathered values are used by {owui} via the following
           environment variables as described in
           <xref linkend="configure-owui-for-okta"/>.
         </para>
@@ -234,17 +234,17 @@ OAUTH_CLIENT_SECRET="<replaceable>CLIENT_SECRET</replaceable>"
     </step>
   </procedure>
   <procedure xml:id="configure-owui-for-okta">
-    <title>Configuring &owui; for &okta; integration</title>
+    <title>Configuring {owui} for {okta} integration</title>
     <para>
-      To configure &owui; to use &okta; as an authentication provider, you must
+      To configure {owui} to use {okta} as an authentication provider, you must
       set up specific environment variables. For more information about OAuth
-      2.0 in &owui; and a complete description of each environment variable,
-      refer to <link xlink:href="https://docs.openwebui.com/features/sso">&owui;
+      2.0 in {owui} and a complete description of each environment variable,
+      refer to <link xlink:href="https://docs.openwebui.com/features/sso">{owui}
       SSO</link> documentation.
     </para>
     <step>
       <para>
-        Add the following environment variables to your &helm; charts
+        Add the following environment variables to your {helm} charts
         <filename>values.yaml</filename> file in the
         <literal>extraEnvVars</literal> section.
       </para>
@@ -271,7 +271,7 @@ OAUTH_SCOPES=openid email profile <co xml:id="co-owui-env-vars-4"/>
         </callout>
         <callout arearefs="co-owui-env-vars-3">
           <para>
-            Variable set for the authentication provider gathered from &okta;.
+            Variable set for the authentication provider gathered from {okta}.
           </para>
         </callout>
         <callout arearefs="co-owui-env-vars-4">
@@ -302,19 +302,19 @@ OAUTH_SCOPES=openid email profile <co xml:id="co-owui-env-vars-4"/>
     </step>
     <step>
       <para>
-        Restart &owui; to apply the changes.
+        Restart {owui} to apply the changes.
       </para>
     </step>
     <step>
       <para>
         If the configuration went well, you should see the <guimenu>Continue
         with Okta</guimenu> button as an option on both sign-in and sign-up
-        pages. After you click the button, you will be redirected to the &okta;
+        pages. After you click the button, you will be redirected to the {okta}
         login page, or automatically signed in if you are already logged in to
-        &okta;.
+        {okta}.
       </para>
       <figure>
-        <title>&owui;</title>
+        <title>{owui}</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-okta-signin.png" width="50%"/>
@@ -322,7 +322,7 @@ OAUTH_SCOPES=openid email profile <co xml:id="co-owui-env-vars-4"/>
           <imageobject role="html">
             <imagedata fileref="owui-okta-signin.png" width="50%"/>
           </imageobject>
-          <textobject role="description"><phrase>&owui;</phrase>
+          <textobject role="description"><phrase>{owui}</phrase>
           </textobject>
         </mediaobject>
       </figure>

@@ -14,34 +14,34 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Monitoring &suseai;: instrument applications with &openlit; SDK</title>
+    <title>Monitoring {suseai}: instrument applications with {openlit} SDK</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &openlit; has a Python and a Typescript SDK available. The following
+        {openlit} has a Python and a Typescript SDK available. The following
         procedures describe examples of instrumentation, one for each language.
       </para>
     </abstract>
   </info>
   <tip>
     <para>
-      For the full list of configuration options for &openlit; SDKs, check
+      For the full list of configuration options for {openlit} SDKs, check
       <link xlink:href="https://docs.openlit.io/latest/sdk-configuration">the
       upstream documentation</link>.
     </para>
   </tip>
   <procedure>
-    <title>Instrumenting using Python &openlit; SDK</title>
+    <title>Instrumenting using Python {openlit} SDK</title>
     <step>
       <para>
-        Open terminal and add a &openlit; dependency.
+        Open terminal and add a {openlit} dependency.
       </para>
-<screen>&prompt.user;<command>pip install openlit</command></screen>
+<screen>{prompt.user}<command>pip install openlit</command></screen>
     </step>
     <step>
       <para>
-        Import &openlit; and initialize it in your code, usually in the main
-        entrypoint. Remember to adjust the &otelemetry; Protocol (OTLP)
+        Import {openlit} and initialize it in your code, usually in the main
+        entrypoint. Remember to adjust the {otelemetry} Protocol (OTLP)
         endpoint.
       </para>
 <screen>import openlit
@@ -51,8 +51,8 @@ openlit.init(otlp_endpoint="http://otel-collector.observability.svc.cluster.loca
     <step>
       <para>
         With this code in place, you will start receiving telemetry data from
-        the libraries currently supported by &openlit;. You can test it with
-        &ollama; by following this example:
+        the libraries currently supported by {openlit}. You can test it with
+        {ollama} by following this example:
       </para>
 <screen>import ollama
 import openlit

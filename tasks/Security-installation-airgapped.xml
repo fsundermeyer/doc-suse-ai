@@ -13,12 +13,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &ssecurity; in air-gapped environments</title>
+    <title>Installing {ssecurity} in air-gapped environments</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         Follow the information in this section to perform an air-gapped
-        deployment of &ssecurity;.
+        deployment of {ssecurity}.
       </para>
     </abstract>
   </info>
@@ -26,12 +26,12 @@
     <title>Required tools</title>
     <para>
       We need to install three tools for downloading all components of
-      &ssecurity;.
+      {ssecurity}.
     </para>
     <itemizedlist>
       <listitem>
         <para>
-          <link xlink:href="https://helm.sh/">&helm;</link> - Application
+          <link xlink:href="https://helm.sh/">{helm}</link> - Application
           Lifecycle Manager
         </para>
       </listitem>
@@ -51,45 +51,45 @@
     <procedure>
       <step>
         <para>
-          Install &helm;.
+          Install {helm}.
         </para>
-<screen> &prompt.user;curl -fsSL \
+<screen> {prompt.user}curl -fsSL \
   https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash </screen>
       </step>
       <step>
         <para>
-          Install &skopeo; and <package>zstd</package>.
+          Install {skopeo} and <package>zstd</package>.
         </para>
-<screen> &prompt.sudo;zypper update &amp;&amp; zypper install zstd skopeo -y</screen>
+<screen> {prompt.sudo}zypper update {amp}{amp} zypper install zstd skopeo -y</screen>
       </step>
     </procedure>
   </section>
   <section xml:id="suse-security-airgapped-get-images-chart">
-    <title>Get images and a &helm; chart</title>
+    <title>Get images and a {helm} chart</title>
     <para>
-      To get all the needed images, use the chart itself. Using &helm;, add the
-      repo and download the chart. Use &skopeo; for downloading and uploading.
+      To get all the needed images, use the chart itself. Using {helm}, add the
+      repo and download the chart. Use {skopeo} for downloading and uploading.
     </para>
     <procedure>
       <step>
         <para>
           Create a directory for the images.
         </para>
-<screen>&prompt.user;&prompt.user;mkdir -p neuvector/images</screen>
+<screen>{prompt.user}{prompt.user}mkdir -p neuvector/images</screen>
       </step>
       <step>
         <para>
-          Add a &neuvector; repository.
+          Add a {neuvector} repository.
         </para>
-<screen>&prompt.user;helm repo add neuvector \
+<screen>{prompt.user}helm repo add neuvector \
   https://neuvector.github.io/neuvector-helm/</screen>
       </step>
       <step>
         <para>
-          Download the latest &neuvector; chart.
+          Download the latest {neuvector} chart.
         </para>
-<screen>&prompt.user;helm repo update \
-  &amp;&amp; helm pull neuvector/core -d neuvector</screen>
+<screen>{prompt.user}helm repo update \
+  {amp}{amp} helm pull neuvector/core -d neuvector</screen>
       </step>
       <step>
         <para>
@@ -97,9 +97,9 @@
           <filename>core-<replaceable>X.Y.Z</replaceable>.tgz</filename>. To
           obtain the list of required images, run the following command:
         </para>
-<screen>&prompt.user;helm template neuvector/core-*.tgz \
+<screen>{prompt.user}helm template neuvector/core-*.tgz \
   | awk '$1 ~ /image:/ {print $2}' | sed -e 's/\"//g' \
-  &gt; neuvector/images/list.txt</screen>
+  {gt} neuvector/images/list.txt</screen>
       </step>
       <step>
         <para>
@@ -113,7 +113,7 @@ done</screen>
         <para>
           Now you have a directory similar to the following one:
         </para>
-<screen>&prompt.user;ls -lR neuvector
+<screen>{prompt.user}ls -lR neuvector
 neuvector:
 total 16
 -rw-r--r--. 1 root root 15892 Jan  8 14:33 core-2.4.0.tgz
@@ -136,7 +136,7 @@ total 953920
       Use <command>tar</command> with the ZST format for maximum compression
       level.
     </para>
-<screen>&prompt.user;tar -I zstd -vcf neuvector_airgap.zst neuvector</screen>
+<screen>{prompt.user}tar -I zstd -vcf neuvector_airgap.zst neuvector</screen>
     <para>
       Move the created <filename>neuvector_airgap.zst</filename> archive to the
       isolated local network.
@@ -148,7 +148,7 @@ total 953920
       Uncompress the images from the archive. The following example leaves them
       in the <literal>neuvector</literal> directory.
     </para>
-<screen>&prompt.user;tar -I zstd -vxf neuvector_airgap.zst</screen>
+<screen>{prompt.user}tar -I zstd -vxf neuvector_airgap.zst</screen>
     <para>
       Loading the images into a local image registry requires you to understand
       your local network. This example uses
@@ -157,13 +157,13 @@ total 953920
       <command>skopeo</command> is installed on the air-gapped local machine.
       You may need to authenticate with <command>skopeo login</command> first.
     </para>
-<screen>&prompt.user; export REGISTRY=registry.awesome.sauce
+<screen>{prompt.user} export REGISTRY=registry.awesome.sauce
 for file in $(ls neuvector/images | grep -v txt ); do
      skopeo copy docker-archive:neuvector/images/$file docker://$(echo $file | sed 's/.tar//g' | awk -F_ '{print "'$REGISTRY'/neuvector/"$1":"$2}')
 done</screen>
     <para>
       With all the images loaded in a local image registry, you can install
-      using &helm;.
+      using {helm}.
     </para>
   </section>
   <section xml:id="suse-security-airgapped-deploy-helm">
@@ -174,9 +174,9 @@ done</screen>
       Also, adjust the <literal>imagePullSecrets</literal> option to include the
       secret for your cluster to authenticate to the registry.
     </para>
-<screen>&prompt.user;export REGISTRY=registry.awesome.sauce
-&prompt.user;export NEU_URL=neuvector.awesome.sauce
-&prompt.user;helm upgrade -i neuvector --namespace neuvector neuvector/core \
+<screen>{prompt.user}export REGISTRY=registry.awesome.sauce
+{prompt.user}export NEU_URL=neuvector.awesome.sauce
+{prompt.user}helm upgrade -i neuvector --namespace neuvector neuvector/core \
 --create-namespace --set imagePullSecrets=regsecret --set k3s.enabled=true \
 --set k3s.runtimePath=/run/k3s/containerd/containerd.sock \
 --set manager.ingress.enabled=true --set controller.pvc.enabled=true \

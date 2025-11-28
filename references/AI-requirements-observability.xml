@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&sobservability; requirements</title>
+    <title>{sobservability} requirements</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
   </info>
   <section xml:id="ai-reqs-observability-hw">
@@ -32,7 +32,7 @@
         <term>RAM</term>
         <listitem>
           <para>
-            A minimum of 32&nbsp;GB of RAM.
+            A minimum of 32{nbsp}GB of RAM.
           </para>
         </listitem>
       </varlistentry>
@@ -48,7 +48,7 @@
         <term>Disk space</term>
         <listitem>
           <para>
-            At least 5&nbsp;GB of storage, preferably SSD.
+            At least 5{nbsp}GB of storage, preferably SSD.
           </para>
         </listitem>
       </varlistentry>
@@ -64,8 +64,8 @@
       <listitem>
         <para>
           <link
-          xlink:href="https://docs.stackstate.com/get-started/k8s-suse-rancher-prime#requirements">&sobservability;
-          requirements for &rancherprime;</link>
+          xlink:href="https://docs.stackstate.com/get-started/k8s-suse-rancher-prime#requirements">{sobservability}
+          requirements for {rancherprime}</link>
         </para>
       </listitem>
     </itemizedlist>

@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Examples of &vllm; &helm; chart override files</title>
+    <title>Examples of {vllm} {helm} chart override files</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/helm-chart-overrides-intro.xml"/>
@@ -23,7 +23,7 @@
   <example xml:id="vllm-helm-overrides-minimal">
     <title>Minimal configuration</title>
     <para>
-      The following override file installs &vllm; using a model that is publicly
+      The following override file installs {vllm} using a model that is publicly
       available.
     </para>
 <screen>global:
@@ -46,16 +46,16 @@ servingEngineSpec:
       <step>
         <para>
           Pulling the images can take a long time. You can monitor the status of
-          the &vllm; installation by running the following command:
+          the {vllm} installation by running the following command:
         </para>
-<screen>&prompt.user;<command>kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command>
+<screen>{prompt.user}<command>kubectl get pods -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command>
   
 NAME                                           READY   STATUS    RESTARTS   AGE
 [...]
 vllm-deployment-router-7588bf995c-5jbkf        1/1     Running   0          8m9s
 vllm-phi3-mini-4k-deployment-vllm-79d6fdc-tx7  1/1     Running   0          8m9s</screen>
         <para>
-          Pods for the &vllm; deployment should transition to the states
+          Pods for the {vllm} deployment should transition to the states
           <literal>Ready</literal> and <literal>Running</literal>.
         </para>
       </step>
@@ -67,23 +67,23 @@ vllm-phi3-mini-4k-deployment-vllm-79d6fdc-tx7  1/1     Running   0          8m9s
           Expose the <literal>vllm-router-service</literal> port to the host
           machine:
         </para>
-<screen>&prompt.user;<command>kubectl port-forward svc/vllm-router-service \
+<screen>{prompt.user}<command>kubectl port-forward svc/vllm-router-service \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> 30080:80</command>
         </screen>
       </step>
       <step>
         <para>
-          Query the &openai;-compatible API to list the available models:
+          Query the {openai}-compatible API to list the available models:
         </para>
-<screen>&prompt.user;<command>curl -o- http://localhost:30080/v1/models</command>
+<screen>{prompt.user}<command>curl -o- http://localhost:30080/v1/models</command>
         </screen>
       </step>
       <step>
         <para>
-          Send a query to the &openai; <filename>/completion</filename> endpoint
+          Send a query to the {openai} <filename>/completion</filename> endpoint
           to generate a completion for a prompt:
         </para>
-<screen>&prompt.user;<command>curl -X POST http://localhost:30080/v1/completions \
+<screen>{prompt.user}<command>curl -X POST http://localhost:30080/v1/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "microsoft/Phi-3-mini-4k-instruct",
@@ -121,13 +121,13 @@ vllm-phi3-mini-4k-deployment-vllm-79d6fdc-tx7  1/1     Running   0          8m9s
   <example xml:id="vllm-helm-overrides-basic">
     <title>Basic configuration</title>
     <para>
-      The following &vllm; override file includes basic configuration options.
+      The following {vllm} override file includes basic configuration options.
     </para>
     <itemizedlist>
       <title>Prerequisites</title>
       <listitem>
         <para>
-          Access to a &huggingface; token (<literal>HF_TOKEN</literal>).
+          Access to a {huggingface} token (<literal>HF_TOKEN</literal>).
         </para>
       </listitem>
       <listitem>
@@ -189,13 +189,13 @@ servingEngineSpec:
       </callout>
       <callout arearefs="co-vllm-basic-registry">
         <para>
-          The &docker; image registry containing the model's serving engine
+          The {docker} image registry containing the model's serving engine
           image.
         </para>
       </callout>
       <callout arearefs="co-vllm-basic-repository">
         <para>
-          The &docker; image repository containing the model's serving engine
+          The {docker} image repository containing the model's serving engine
           image.
         </para>
       </callout>
@@ -206,7 +206,7 @@ servingEngineSpec:
       </callout>
       <callout arearefs="co-vllm-basic-modelURL">
         <para>
-          The URL pointing to the model on &huggingface; or another hosting
+          The URL pointing to the model on {huggingface} or another hosting
           service.
         </para>
       </callout>
@@ -261,13 +261,13 @@ servingEngineSpec:
       </callout>
       <callout arearefs="co-vllm-basic-extraArgs">
         <para>
-          Additional command-line arguments for &vllm;, such as disabling
+          Additional command-line arguments for {vllm}, such as disabling
           request logging or setting GPU memory utilization.
         </para>
       </callout>
       <callout arearefs="co-vllm-basic-hfToken">
         <para>
-          Your &huggingface; token for accessing gated models. Replace
+          Your {huggingface} token for accessing gated models. Replace
           <replaceable>HF_TOKEN</replaceable> with your actual token.
         </para>
       </callout>
@@ -277,10 +277,10 @@ servingEngineSpec:
     <title>Loading prefetched models from persistent storage</title>
     <para>
       Prefetching models to a Persistent Volume Claim (PVC) prevents repeated
-      downloads from &huggingface; during pod startup. The process involves
+      downloads from {huggingface} during pod startup. The process involves
       creating a PVC and a job to fetch the model. This PVC is mounted at
       <filename>/models</filename>, where the prefetch job stores the model
-      weights. Subsequently, the &vllm; <literal>modelURL</literal> is set to
+      weights. Subsequently, the {vllm} <literal>modelURL</literal> is set to
       this path, which ensures that the model is loaded locally instead of being
       downloaded when the pod starts.
     </para>
@@ -308,9 +308,9 @@ spec:
       </step>
       <step>
         <para>
-          Create a secret resource for the &huggingface; token.
+          Create a secret resource for the {huggingface} token.
         </para>
-<screen>&prompt.user;<command>kubectl create secret -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
+<screen>{prompt.user}<command>kubectl create secret -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   generic huggingface-credentials \
   --from-literal=HUGGING_FACE_HUB_TOKEN=<replaceable>HF_TOKEN</replaceable></command></screen>
       </step>
@@ -360,13 +360,13 @@ spec:
         <para>
           Apply the specification with the following commands:
         </para>
-<screen>&prompt.user;<command>kubectl apply -f job-prefetch-llama3.1-8b.yaml</command>
-&prompt.user;<command>kubectl -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
+<screen>{prompt.user}<command>kubectl apply -f job-prefetch-llama3.1-8b.yaml</command>
+{prompt.user}<command>kubectl -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   wait --for=condition=complete job/prefetch-llama3.1-8b</command></screen>
       </step>
       <step>
         <para>
-          Update the custom &vllm; override file with support for PVC.
+          Update the custom {vllm} override file with support for PVC.
         </para>
 <screen># vllm_custom_overrides.yaml
 global:
@@ -423,7 +423,7 @@ servingEngineSpec:
         <para>
           The following example lists mounted PVCs for a pod.
         </para>
-<screen>&prompt.user;<command>kubectl exec -it vllm-llama3-deployment-vllm-858bd967bd-w26f7 \
+<screen>{prompt.user}<command>kubectl exec -it vllm-llama3-deployment-vllm-858bd967bd-w26f7 \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> -- ls -l /models</command>
 drwxr-xr-x 1 root root 608 Aug 22 16:29 llama-3.1-8b-it</screen>
       </step>
@@ -485,9 +485,9 @@ servingEngineSpec:
     <title>CPU offloading</title>
     <para>
       This example demonstrates how to enable KV cache offloading to the CPU
-      using &lmcache; in a &vllm; deployment. You can enable &lmcache; and set
+      using {lmcache} in a {vllm} deployment. You can enable {lmcache} and set
       the CPU offloading buffer size using the <literal>lmcacheConfig</literal>
-      field. In the following example, the buffer is set to 20&nbsp;GB, but you
+      field. In the following example, the buffer is set to 20{nbsp}GB, but you
       can adjust this value based on your workload. Remember to update the
       entries <literal>hf_token</literal> and <literal>storageClass</literal>.
     </para>
@@ -496,7 +496,7 @@ servingEngineSpec:
       <para>
         Setting <literal>lmcacheConfig.enabled</literal> to
         <literal>true</literal> implicitly enables the
-        <literal>LMCACHE_USE_EXPERIMENTAL</literal> flag for &lmcache;. These
+        <literal>LMCACHE_USE_EXPERIMENTAL</literal> flag for {lmcache}. These
         experimental features are only supported on newer GPU generations. It is
         not recommended to enable them without a compelling reason.
       </para>
@@ -532,10 +532,10 @@ servingEngineSpec:
     hf_token: <replaceable>HF_TOKEN</replaceable></screen>
   </example>
   <example xml:id="vllm-helm-overrides-lmcache">
-    <title>Shared remote KV cache storage with &lmcache;</title>
+    <title>Shared remote KV cache storage with {lmcache}</title>
     <para>
-      This example shows how to enable remote KV cache storage using &lmcache;
-      in a &vllm; deployment. The configuration defines a
+      This example shows how to enable remote KV cache storage using {lmcache}
+      in a {vllm} deployment. The configuration defines a
       <literal>cacheserverSpec</literal> and uses two replicas. Remember to
       replace the placeholder values for <literal>hf_token</literal> and
       <literal>storageClass</literal> before applying the configuration.
@@ -545,7 +545,7 @@ servingEngineSpec:
       <para>
         Setting <literal>lmcacheConfig.enabled</literal> to
         <literal>true</literal> implicitly enables the
-        <literal>LMCACHE_USE_EXPERIMENTAL</literal> flag for &lmcache;. These
+        <literal>LMCACHE_USE_EXPERIMENTAL</literal> flag for {lmcache}. These
         experimental features are only supported on newer GPU generations. It is
         not recommended to enable them without a compelling reason.
       </para>
@@ -584,7 +584,7 @@ servingEngineSpec:
         - |
           timeout 60 bash -c '
           while true; do
-            /opt/venv/bin/python3 /workspace/LMCache/examples/kubernetes/health_probe.py $(RELEASE_NAME)-cache-server-service $(LMCACHE_SERVER_SERVICE_PORT) &amp;&amp; exit 0
+            /opt/venv/bin/python3 /workspace/LMCache/examples/kubernetes/health_probe.py $(RELEASE_NAME)-cache-server-service $(LMCACHE_SERVER_SERVICE_PORT) {amp}{amp} exit 0
             echo "Waiting for LMCache server..."
             sleep 2
           done'

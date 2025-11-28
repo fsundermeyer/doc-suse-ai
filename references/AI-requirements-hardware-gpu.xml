@@ -20,29 +20,29 @@
       <para>
         To run AI/ML workloads, such as training machine learning models or
         running inference workloads, deploy cluster nodes with compatible
-        &nvidia; GPUs to gain acceleration.
+        {nvidia} GPUs to gain acceleration.
       </para>
     </abstract>
   </info>
   <section xml:id="ai-reqs-hw-gpu-operator">
-    <title>Using the &nvoperator;</title>
+    <title>Using the {nvoperator}</title>
     <para>
       Configuring and managing nodes with hardware resources can require
       multiple configurations for software components. These include drivers,
-      container runtimes and libraries. To use &nvidia; GPUs in a &kube;
-      cluster, you need to configure the &nvoperator;. Because GPU is a special
+      container runtimes and libraries. To use {nvidia} GPUs in a {kube}
+      cluster, you need to configure the {nvoperator}. Because GPU is a special
       resource in the cluster, you need to install the following components to
       enable deployment of workloads for processing on the GPU.
     </para>
     <itemizedlist>
       <listitem>
         <para>
-          &nvidia; drivers (to enable CUDA)
+          {nvidia} drivers (to enable CUDA)
         </para>
       </listitem>
       <listitem>
         <para>
-          &kube; device plug-in
+          {kube} device plug-in
         </para>
       </listitem>
       <listitem>
@@ -58,30 +58,30 @@
       </listitem>
     </itemizedlist>
     <para>
-      To ensure that the &nvoperator; is installed correctly, the &kube; cluster
+      To ensure that the {nvoperator} is installed correctly, the {kube} cluster
       must meet the following prerequisites:
     </para>
     <itemizedlist>
       <listitem>
         <para>
           All worker nodes must run the same operating system version to use the
-          &nvidia; GPU Driver container.
+          {nvidia} GPU Driver container.
         </para>
       </listitem>
       <listitem>
         <para>
-          Nodes must be configured with a container engine, such as &docker;
-          (CE/EE), &containerd; or &podman;.
+          Nodes must be configured with a container engine, such as {docker}
+          (CE/EE), {containerd} or {podman}.
         </para>
       </listitem>
       <listitem>
         <para>
-          Nodes should be equipped with &nvidia; GPUs.
+          Nodes should be equipped with {nvidia} GPUs.
         </para>
       </listitem>
       <listitem>
         <para>
-          Nodes should have &nvidia; drivers installed.
+          Nodes should have {nvidia} drivers installed.
         </para>
       </listitem>
     </itemizedlist>
@@ -89,9 +89,9 @@
   <section xml:id="ai-reqs-hw-supported-gpus">
     <title>Supported GPUs</title>
     <para>
-      The &nvoperator; is compatible with a range of &nvidia; GPUs. For a full
+      The {nvoperator} is compatible with a range of {nvidia} GPUs. For a full
       list of supported GPUs, refer to
-      <link xlink:href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/platform-support.html">&nvoperator;
+      <link xlink:href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/platform-support.html">{nvoperator}
       Platform Support</link>.
     </para>
   </section>

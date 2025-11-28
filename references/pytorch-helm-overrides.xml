@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Examples of &pytorch; &helm; chart override files</title>
+    <title>Examples of {pytorch} {helm} chart override files</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/helm-chart-overrides-intro.xml"/>
@@ -42,9 +42,9 @@ gpu:
     <calloutlist>
       <callout arearefs="co-pytorch-helm-appco">
         <para>
-          Instructs &helm; to use credentials from the &sappco;. For
+          Instructs {helm} to use credentials from the {sappco}. For
           instructions on how to configure the image pull secrets for the
-          &sappco;, refer to the
+          {sappco}, refer to the
           <link xlink:href="https://docs.apps.rancher.io/get-started/authentication/">
           official documentation</link>.
         </para>
@@ -53,7 +53,7 @@ gpu:
         <para>
           Use <literal>local-path</literal> storage only for testing purposes.
           For production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
     </calloutlist>
@@ -63,7 +63,7 @@ gpu:
     <para>
       To create a ConfigMap, run the following command:
     </para>
-<screen>&prompt.user;<command>kubectl describe configmap \
+<screen>{prompt.user}<command>kubectl describe configmap \
   <replaceable>MY_CONFIG_MAP</replaceable> -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
 <screen># pytorch_custom_overrides.yaml
 runtimeClassName: nvidia
@@ -87,9 +87,9 @@ configMapExtFiles: "my-config-files" <co xml:id="co-pytorch-helm-configmap"/></s
     <calloutlist>
       <callout arearefs="co-pytorch-helm-configmap-appco">
         <para>
-          Instructs &helm; to use credentials from the &sappco;. For
+          Instructs {helm} to use credentials from the {sappco}. For
           instructions on how to configure the image pull secrets for the
-          &sappco;, refer to the
+          {sappco}, refer to the
           <link xlink:href="https://docs.apps.rancher.io/get-started/authentication/">
           official documentation</link>.
         </para>
@@ -98,7 +98,7 @@ configMapExtFiles: "my-config-files" <co xml:id="co-pytorch-helm-configmap"/></s
         <para>
           Use <literal>local-path</literal> storage only for testing purposes.
           For production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
       <callout arearefs="co-pytorch-helm-configmap">
@@ -138,9 +138,9 @@ entrypointscript:
     <calloutlist>
       <callout arearefs="co-pytorch-helm-hostfolder-appco">
         <para>
-          Instructs &helm; to use credentials from the &sappco;. For
+          Instructs {helm} to use credentials from the {sappco}. For
           instructions on how to configure the image pull secrets for the
-          &sappco;, refer to the
+          {sappco}, refer to the
           <link xlink:href="https://docs.apps.rancher.io/get-started/authentication/">
           official documentation</link>.
         </para>
@@ -149,7 +149,7 @@ entrypointscript:
         <para>
           Use <literal>local-path</literal> storage only for testing purposes.
           For production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
       <callout arearefs="co-pytorch-helm-hostfolder-filename">
@@ -192,9 +192,9 @@ gitClone:
     <calloutlist>
       <callout arearefs="co-pytorch-helm-git-public-appco">
         <para>
-          Instructs &helm; to use credentials from the &sappco;. For
+          Instructs {helm} to use credentials from the {sappco}. For
           instructions on how to configure the image pull secrets for the
-          &sappco;, refer to the
+          {sappco}, refer to the
           <link xlink:href="https://docs.apps.rancher.io/get-started/authentication/">
           official documentation</link>.
         </para>
@@ -203,7 +203,7 @@ gitClone:
         <para>
           Use <literal>local-path</literal> storage only for testing purposes.
           For production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
       <callout arearefs="co-pytorch-helm-git-public-repo">
@@ -246,9 +246,9 @@ gitClone:
     <calloutlist>
       <callout arearefs="co-pytorch-helm-git-private-appco">
         <para>
-          Instructs &helm; to use credentials from the &sappco;. For
+          Instructs {helm} to use credentials from the {sappco}. For
           instructions on how to configure the image pull secrets for the
-          &sappco;, refer to the
+          {sappco}, refer to the
           <link xlink:href="https://docs.apps.rancher.io/get-started/authentication/">
           official documentation</link>.
         </para>
@@ -257,7 +257,7 @@ gitClone:
         <para>
           Use <literal>local-path</literal> storage only for testing purposes.
           For production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
       <callout arearefs="co-pytorch-helm-git-private-repo">

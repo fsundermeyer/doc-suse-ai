@@ -14,11 +14,11 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&milvus; requirements</title>
+    <title>{milvus} requirements</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        This topic describes requirements for the &milvus; application.
+        This topic describes requirements for the {milvus} application.
       </para>
     </abstract>
   </info>
@@ -27,7 +27,7 @@
     <section xml:id="ai-reqs-milvus-hw-min">
       <title>Minimum requirements</title>
       <para>
-        The following requirements are for basic &milvus; deployment on a single
+        The following requirements are for basic {milvus} deployment on a single
         node or a small scale.
       </para>
       <variablelist role="tabs">
@@ -35,7 +35,7 @@
           <term>RAM</term>
           <listitem>
             <para>
-              A minimum of 32&nbsp;GB of RAM.
+              A minimum of 32{nbsp}GB of RAM.
             </para>
           </listitem>
         </varlistentry>
@@ -51,7 +51,7 @@
           <term>Disk space</term>
           <listitem>
             <para>
-              At least 100&nbsp;GB of storage, preferably SSD.
+              At least 100{nbsp}GB of storage, preferably SSD.
             </para>
           </listitem>
         </varlistentry>
@@ -59,7 +59,7 @@
           <term>Networking</term>
           <listitem>
             <para>
-              A stable connection with 1&nbsp;Gbps network bandwidth.
+              A stable connection with 1{nbsp}Gbps network bandwidth.
             </para>
           </listitem>
         </varlistentry>
@@ -68,7 +68,7 @@
     <section xml:id="ai-reqs-milvus-hw-rec">
       <title>Recommended hardware for large-scale workloads</title>
       <para>
-        The following requirements are for multi-node &milvus; clusters or heavy
+        The following requirements are for multi-node {milvus} clusters or heavy
         workloads, such as large vector databases.
       </para>
       <variablelist role="tabs">
@@ -76,7 +76,7 @@
           <term>RAM</term>
           <listitem>
             <para>
-              A minimum of 64&nbsp;GB of RAM per node.
+              A minimum of 64{nbsp}GB of RAM per node.
             </para>
           </listitem>
         </varlistentry>
@@ -84,7 +84,7 @@
           <term>CPU</term>
           <listitem>
             <para>
-              8&ndash;16 CPU cores per node or more.
+              8{ndash}16 CPU cores per node or more.
             </para>
           </listitem>
         </varlistentry>
@@ -92,7 +92,7 @@
           <term>Disk space</term>
           <listitem>
             <para>
-              500&nbsp;GB or more of high-speed storage, ideally SSD or NVMe
+              500{nbsp}GB or more of high-speed storage, ideally SSD or NVMe
               SSD.
             </para>
           </listitem>
@@ -101,7 +101,7 @@
           <term>Networking</term>
           <listitem>
             <para>
-              10&nbsp;Gbps Ethernet or faster for high-performance clusters.
+              10{nbsp}Gbps Ethernet or faster for high-performance clusters.
             </para>
           </listitem>
         </varlistentry>
@@ -110,7 +110,7 @@
     <section xml:id="cpu-instruction-set-requirements">
       <title>CPU instruction set requirements</title>
       <para>
-        The following CPU instruction sets are required for &milvus;:
+        The following CPU instruction sets are required for {milvus}:
       </para>
       <itemizedlist>
         <listitem>
@@ -139,19 +139,19 @@
   <section xml:id="ai-reqs-milvus-sw">
     <title>Software requirements</title>
     <para>
-      Running &milvus; requires specific versions of the following software:
+      Running {milvus} requires specific versions of the following software:
     </para>
     <variablelist>
       <varlistentry>
-        <term>&kube;</term>
+        <term>{kube}</term>
         <listitem>
           <para>
-            &suse;-supported versions of &rke2; that use &kube; 1.18 or higher.
+            {suse}-supported versions of {rke2} that use {kube} 1.18 or higher.
           </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>&helm;</term>
+        <term>{helm}</term>
         <listitem>
           <para>
             The recommended version is 3.5.0 or later.
@@ -202,7 +202,7 @@
       For more detailed hardware recommendations, refer to
       the official
       <link
-          xlink:href="https://milvus.io/docs/prerequisite-helm.md">&milvus;</link>
+          xlink:href="https://milvus.io/docs/prerequisite-helm.md">{milvus}</link>
       and
       <link xlink:href="https://milvus.io/docs/v2.1.x/prerequisite-docker.md">prerequisite
       Docker</link> documentation.

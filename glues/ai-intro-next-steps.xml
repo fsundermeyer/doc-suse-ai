@@ -18,7 +18,7 @@
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        After you understand the basics of &productnameshort;, follow these
+        After you understand the basics of {productnameshort}, follow these
         links to study hardware and software requirements and understand the
         installation procedure.
       </para>
@@ -27,14 +27,14 @@
   <itemizedlist>
     <listitem>
       <para>
-        <link xlink:href="&dsc;/suse-ai/1.0/html/AI-requirements/index.html">&productname;
+        <link xlink:href="{dsc}/suse-ai/1.0/html/AI-requirements/index.html">{productname}
         installation requirements</link>
       </para>
     </listitem>
     <listitem>
       <para>
-        <link xlink:href="&dsc;/suse-ai/1.0/html/AI-deployment-intro/index.html">Installing
-        &productname;</link>
+        <link xlink:href="{dsc}/suse-ai/1.0/html/AI-deployment-intro/index.html">Installing
+        {productname}</link>
       </para>
     </listitem>
   </itemizedlist>

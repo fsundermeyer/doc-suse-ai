@@ -26,13 +26,13 @@
   <important>
     <title>File upload size limit</title>
     <para>
-      The default configuration allows file uploads up to 1&nbsp;MB. To enable
+      The default configuration allows file uploads up to 1{nbsp}MB. To enable
       larger file uploads, follow these steps:
     </para>
     <procedure>
       <step>
         <para>
-          Update &ingress; configuration by creating the
+          Update {ingress} configuration by creating the
           <filename>ingress.yaml</filename> file with the following content.
         </para>
 <screen>apiVersion: networking.k8s.io/v1
@@ -49,7 +49,7 @@
 <calloutlist>
   <callout arearefs="ingress-upload-size">
     <para>
-      This example sets the upload file size limit to 100&nbsp;MB. Setting this
+      This example sets the upload file size limit to 100{nbsp}MB. Setting this
       value to <literal>0</literal> allows unlimited upload size (not
       recommended).
     </para>
@@ -60,7 +60,7 @@
         <para>
           Apply the changes so that large file uploads are supported.
         </para>
-<screen>&prompt.user;<command>kubectl apply -f ingress.yaml</command></screen>
+<screen>{prompt.user}<command>kubectl apply -f ingress.yaml</command></screen>
       </step>
     </procedure>
   </important>
@@ -73,7 +73,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the &owui; interface, click <guimenu>Workspace</guimenu> in the upper
+        In the {owui} interface, click <guimenu>Workspace</guimenu> in the upper
         part of the left panel and select the <guimenu>Knowledge</guimenu> tab.
       </para>
     </step>
@@ -123,7 +123,7 @@
             <warning>
               <title>The collection content will be deleted</title>
               <para>
-                Before &owui; starts to synchronize the directory, all existing
+                Before {owui} starts to synchronize the directory, all existing
                 resources in the collection are deleted.
               </para>
             </warning>
@@ -142,10 +142,10 @@
                 If you experience the error saying <quote>Extracted content is
                 not available for this file. Please ensure that the file is
                 processed before proceeding,</quote> during the upload process,
-                you need to enable installing NLTK datasets in the &owui; &helm;
+                you need to enable installing NLTK datasets in the {owui} {helm}
                 chart. Refer to
                 <link
-                xlink:href="&dsc;/suse-ai/1.0/html/AI-deployment-intro/index.html#owui-helm-overrides"/>
+                xlink:href="{dsc}/suse-ai/1.0/html/AI-deployment-intro/index.html#owui-helm-overrides"/>
                 for details.
               </para>
             </warning>

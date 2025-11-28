@@ -14,50 +14,50 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &mcpo;</title>
+    <title>Installing {mcpo}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &mcp; (Model Context Protocol) is an open source standard for connecting
-        AI applications&mdash;such as &suseai;&mdash;to external systems. These
+        {mcp} (Model Context Protocol) is an open source standard for connecting
+        AI applications{mdash}such as {suseai}{mdash}to external systems. These
         external systems can include data sources like databases or local files,
         or tools like calculators or search engines.
       </para>
 
       <para>
-        &mcpo; is the &mcp;-to-OpenAPI proxy server provided by &owui;. It
+        {mcpo} is the {mcp}-to-OpenAPI proxy server provided by {owui}. It
         solves communication compatibility issues, enables cloud and UI
         integrations, and offers increased security and scalability.
       </para>
     </abstract>
   </info>
   <section xml:id="mcpo-installing-app-details">
-    <title>Details about the &mcpo; application</title>
+    <title>Details about the {mcpo} application</title>
     <para>
-      Before deploying &mcpo;, it is important to know more about the supported
+      Before deploying {mcpo}, it is important to know more about the supported
       configurations and documentation. The following command provides the
       corresponding details:
     </para>
 <screen>helm show values oci://dp.apps.rancher.io/charts/open-webui-mcpo</screen>
     <para>
-      Alternatively, you can also refer to the &mcpo; &helm; chart page on the
-      &sappco; site at
+      Alternatively, you can also refer to the {mcpo} {helm} chart page on the
+      {sappco} site at
       <link xlink:href="https://apps.rancher.io/applications/open-webui-mcpo"/>. It
-      contains &mcpo; dependencies, available versions and the link to pull the
-      &mcpo; container image.
+      contains {mcpo} dependencies, available versions and the link to pull the
+      {mcpo} container image.
     </para>
   </section>
   <section xml:id="mcpo-installing-procedure">
-    <title>&mcpo; installation procedure</title>
+    <title>{mcpo} installation procedure</title>
     <procedure>
       <xi:include href="../snippets/ai-library-requirement.xml"/>
       <step>
         <para>
           Create a <filename>mcpo_custom_overrides.yaml</filename> file to
-          override the default values of the &helm; chart. The following file
-          defines multiple &mcp; servers in the
+          override the default values of the {helm} chart. The following file
+          defines multiple {mcp} servers in the
           <literal>config.mcpServers</literal> section. These servers will be
-          added to the &mcpo; configuration file
+          added to the {mcpo} configuration file
           <filename>config.json</filename>.
         </para>
 <screen># mcpo_custom_overrides.yaml
@@ -95,30 +95,30 @@ config:
           <filename>mcpo_custom_overrides.yaml</filename>, apply its
           configuration with the following command.
         </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   mcpo oci://dp.apps.rancher.io/charts/open-webui-mcpo \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   -f <replaceable>mcpo_custom_overrides.yaml</replaceable></command></screen>
       </step>
     </procedure>
     <tip>
-      <title>Installing &mcp; servers</title>
+      <title>Installing {mcp} servers</title>
       <para>
-        You can add new &mcp; servers by including them in the &mcpo;
+        You can add new {mcp} servers by including them in the {mcpo}
         configuration file following the
         <link
         xlink:href="https://github.com/modelcontextprotocol/servers">Claude
-        Desktop &mcp; format</link>. For detailed information on installing
-        &mcp; servers with &mcpo;, refer to the
+        Desktop {mcp} format</link>. For detailed information on installing
+        {mcp} servers with {mcpo}, refer to the
         <link xlink:href="https://github.com/open-webui/mcpo?tab=readme-ov-file#-quick-usage">
-        &mcpo; Quick Usage guide</link>.
+        {mcpo} Quick Usage guide</link>.
       </para>
     </tip>
   </section>
   <section xml:id="mcpo-owui-integration">
-    <title>Integrating &mcpo; with &owui;</title>
+    <title>Integrating {mcpo} with {owui}</title>
     <para>
-      To integrate &mcpo; with &owui;, follow these steps:
+      To integrate {mcpo} with {owui}, follow these steps:
     </para>
     <procedure>
       <itemizedlist>
@@ -129,7 +129,7 @@ config:
       </itemizedlist>
       <step>
         <para>
-          In the bottom left of the &owui; window, click your avatar icon to
+          In the bottom left of the {owui} window, click your avatar icon to
           open the user menu and select <guimenu>Admin Panel</guimenu>.
         </para>
       </step>
@@ -147,7 +147,7 @@ config:
       </step>
       <step>
         <para>
-          For each &mcp; server:
+          For each {mcp} server:
         </para>
         <itemizedlist>
           <listitem>
@@ -172,7 +172,7 @@ config:
           <para>
             The general URL format is:
             <replaceable>MCPO_URL</replaceable>/<replaceable>MCP_SERVER_NAME</replaceable>.
-            For example, if &mcpo; was deployed as <literal>mcpo</literal> in
+            For example, if {mcpo} was deployed as <literal>mcpo</literal> in
             the namespace <literal>suse-ai</literal> with the default port
             configuration, the URL is:
           </para>
@@ -181,52 +181,52 @@ config:
       </step>
     </procedure>
     <para>
-      After you have configured at least one &mcp; server, you can enable them
-      from the &owui; chat input field to make answers more specific. For more
+      After you have configured at least one {mcp} server, you can enable them
+      from the {owui} chat input field to make answers more specific. For more
       information, see
       <link xlink:href="https://documentation.suse.com/suse-ai/1.0/html/openwebui-using/index.html#openwebui-input-field-specify-mcpo-tools">Selecting
-      &mcpo; services from the chat input field</link>.
+      {mcpo} services from the chat input field</link>.
     </para>
     <tip>
-      <title>Enabling &mcp; tools by default</title>
+      <title>Enabling {mcp} tools by default</title>
       <para>
-        To enable selected &mcp; tools by default for a model, refer to
+        To enable selected {mcp} tools by default for a model, refer to
         <link
         xlink:href="https://documentation.suse.com/suse-ai/1.0/html/openwebui-using/index.html#owui-enabling-default-mcp-services">Enabling
-        default &mcp; services</link>.
+        default {mcp} services</link>.
       </para>
     </tip>
   </section>
   <section xml:id="mcpo-upgrading" condition="deployment_standard">
-    <title>Upgrading &mcpo;</title>
+    <title>Upgrading {mcpo}</title>
     <para>
-      The &mcpo; chart receives application updates and updates of the &helm;
+      The {mcpo} chart receives application updates and updates of the {helm}
       chart templates. New versions may include changes that require manual
       steps. These steps are listed in the corresponding
-      <filename>README</filename> file. All &mcpo; dependencies are updated
-      automatically during an &mcpo; upgrade.
+      <filename>README</filename> file. All {mcpo} dependencies are updated
+      automatically during an {mcpo} upgrade.
     </para>
     <para>
-      To upgrade &mcpo;, identify the new version number and run the following
+      To upgrade {mcpo}, identify the new version number and run the following
       command below:
     </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   mcpo oci://dp.apps.rancher.io/charts/open-webui-mcpo \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>VERSION_NUMBER</replaceable> \
   -f <replaceable>mcpo_custom_overrides.yaml</replaceable></command></screen>
     <tip>
       <para>
-        If you omit the <option>--version</option> option, &mcpo; gets upgraded
+        If you omit the <option>--version</option> option, {mcpo} gets upgraded
         to the latest available version.
       </para>
     </tip>
   </section>
   <section xml:id="mcpo-uninstalling">
-    <title>Uninstalling &mcpo;</title>
+    <title>Uninstalling {mcpo}</title>
     <para>
-      To uninstall &mcpo;, run the following command:
+      To uninstall {mcpo}, run the following command:
     </para>
-<screen>&prompt.user;<command>helm uninstall mcpo -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
+<screen>{prompt.user}<command>helm uninstall mcpo -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
   </section>
 </topic>

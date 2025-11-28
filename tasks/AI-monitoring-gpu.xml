@@ -19,8 +19,8 @@
     <abstract>
       <para>
         To effectively monitor the performance and utilization of your GPUs,
-        configure the &otelemetry; Collector to scrape metrics from the &nvidia;
-        DCGM Exporter, which is deployed as part of the &nvoperator;.
+        configure the {otelemetry} Collector to scrape metrics from the {nvidia}
+        DCGM Exporter, which is deployed as part of the {nvoperator}.
       </para>
     </abstract>
   </info>
@@ -29,14 +29,14 @@
     <step>
       <para>
         <emphasis role="bold">Grant permissions (RBAC).</emphasis> The
-        &otelemetry; Collector requires specific permissions to discover the GPU
+        {otelemetry} Collector requires specific permissions to discover the GPU
         metrics endpoint within the cluster.
       </para>
       <para>
         Create a file named <filename>otel-rbac.yaml</filename> with the
         following content. It defines a <literal>Role</literal> with permissions
         to get services and endpoints, and a <literal>RoleBinding</literal> to
-        grant these permissions to the &otelemetry; Collector's service account.
+        grant these permissions to the {otelemetry} Collector's service account.
       </para>
 <screen>---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -70,7 +70,7 @@ subjects:
       <important>
         <para>
           Verify that the <literal>ServiceAccount</literal> name and namespace
-          in the <literal>RoleBinding</literal> match your &otelemetry;
+          in the <literal>RoleBinding</literal> match your {otelemetry}
           Collector's deployment.
         </para>
       </important>
@@ -80,12 +80,12 @@ subjects:
         Apply this configuration to the <literal>gpu-operator</literal>
         namespace.
       </para>
-<screen>&prompt.user;<command>kubectl apply -n gpu-operator -f otel-rbac.yaml</command></screen>
+<screen>{prompt.user}<command>kubectl apply -n gpu-operator -f otel-rbac.yaml</command></screen>
     </step>
     <step>
       <para>
-        <emphasis role="bold">Configure the &otelemetry; Collector.</emphasis>
-        Add the following Prometheus receiver configuration to your &otelemetry;
+        <emphasis role="bold">Configure the {otelemetry} Collector.</emphasis>
+        Add the following Prometheus receiver configuration to your {otelemetry}
         Collector's values file. This tells the collector to scrape metrics from
         any endpoint in the <literal>gpu-operator</literal> namespace every 10
         seconds.

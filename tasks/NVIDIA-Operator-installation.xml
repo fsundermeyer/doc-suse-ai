@@ -15,11 +15,11 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing the &nvoperator; on the &rke2; cluster</title>
+    <title>Installing the {nvoperator} on the {rke2} cluster</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        The &nvidia; operator allows administrators of &k8s; clusters to manage
+        The {nvidia} operator allows administrators of {k8s} clusters to manage
         GPUs just like CPUs. It includes everything needed for pods to be able
         to operate GPUs.
       </para>
@@ -28,15 +28,15 @@
   <section xml:id="nvidia-operator-host-requirements">
     <title>Host OS requirements</title>
     <para>
-      To expose the GPU to the pod correctly, the &nvidia; kernel drivers and
+      To expose the GPU to the pod correctly, the {nvidia} kernel drivers and
       the <filename>libnvidia-ml</filename> library must be correctly installed
-      in the host OS. The &nvidia; Operator can automatically install drivers
-      and libraries on specific operating systems. Check the &nvidia;
+      in the host OS. The {nvidia} Operator can automatically install drivers
+      and libraries on specific operating systems. Check the {nvidia}
       documentation for information on
       <link xlink:href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/platform-support.html#supported-operating-systems-and-kubernetes-platforms">supported
-      operating system releases</link>. Installation of the &nvidia; components
+      operating system releases</link>. Installation of the {nvidia} components
       on your host OS is out of the scope of this document. Refer to the
-      &nvidia; documentation for instructions.
+      {nvidia} documentation for instructions.
     </para>
     <para>
       The following three commands should return a correct output if the kernel
@@ -45,7 +45,7 @@
     <procedure>
       <step>
         <para>
-          <command>lsmod | grep nvidia</command> returns a list of &nvidia;
+          <command>lsmod | grep nvidia</command> returns a list of {nvidia}
           kernel modules. For example:
         </para>
 <screen>nvidia_uvm           2129920  0
@@ -71,7 +71,7 @@ ecc                    45056  1 nvidia</screen>
         </para>
 <screen>/usr/lib64/libnvidia-ml.so</screen>
         <para>
-          This library is used by &kube; components to interact with the kernel
+          This library is used by {kube} components to interact with the kernel
           driver.
         </para>
       </step>
@@ -80,24 +80,24 @@ ecc                    45056  1 nvidia</screen>
   <section xml:id="nvidia-operator-installation-procedure">
     <title>Operator installation</title>
     <para>
-      Once the OS is ready and &rke2a; is running, adjust the &rke2a; nodes:
+      Once the OS is ready and {rke2a} is running, adjust the {rke2a} nodes:
     </para>
     <procedure>
       <step>
         <para>
-          On the agent nodes of &rke2a;, run the following command:
+          On the agent nodes of {rke2a}, run the following command:
         </para>
-<screen>&prompt.root;echo PATH=$PATH:/usr/local/nvidia/toolkit &gt;&gt; /etc/default/rke2-agent</screen>
+<screen>{prompt.root}echo PATH=$PATH:/usr/local/nvidia/toolkit {gt}{gt} /etc/default/rke2-agent</screen>
       </step>
       <step>
         <para>
-          On the server nodes of &rke2a;, run the following command:
+          On the server nodes of {rke2a}, run the following command:
         </para>
-<screen>&prompt.root;echo PATH=$PATH:/usr/local/nvidia/toolkit &gt;&gt; /etc/default/rke2-server</screen>
+<screen>{prompt.root}echo PATH=$PATH:/usr/local/nvidia/toolkit {gt}{gt} /etc/default/rke2-server</screen>
       </step>
     </procedure>
     <para>
-      Then, install the &nvoperator; using the following YAML manifest.
+      Then, install the {nvoperator} using the following YAML manifest.
     </para>
 <screen>apiVersion: helm.cattle.io/v1
 kind: HelmChart
@@ -116,8 +116,8 @@ spec:
         value: /run/k3s/containerd/containerd.sock</screen>
     <warning>
       <para>
-        The &nvidia; operator restarts &containerd; with a hangup call, which
-        restarts &rke2a;.
+        The {nvidia} operator restarts {containerd} with a hangup call, which
+        restarts {rke2a}.
       </para>
     </warning>
     <para>
@@ -130,7 +130,7 @@ spec:
           Assuming the drivers and <filename>libnvidia-ml.so</filename> library
           are installed, check if the operator detects them correctly.
         </para>
-<screen>&prompt.user;kubectl get node <replaceable>NODENAME</replaceable> \
+<screen>{prompt.user}kubectl get node <replaceable>NODENAME</replaceable> \
   -o jsonpath='{.metadata.labels}' | grep "nvidia.com/gpu.deploy.driver"</screen>
         <para>
           You should see the value <literal>pre-installed</literal>. If you see
@@ -142,7 +142,7 @@ spec:
         <para>
           You can also check other driver labels:
         </para>
-<screen>&prompt.user;kubectl get node <replaceable>NODENAME</replaceable> \
+<screen>{prompt.user}kubectl get node <replaceable>NODENAME</replaceable> \
   -o jsonpath='{.metadata.labels}' | jq | grep "nvidia.com"</screen>
         <para>
           You should see labels specifying driver and GPU, for example,
@@ -156,7 +156,7 @@ spec:
           <literal>nvidia-device-plugin-daemonset</literal> as an allocatable
           resource in the node.
         </para>
-<screen>&prompt.user;kubectl get node <replaceable>NODENAME</replaceable> \
+<screen>{prompt.user}kubectl get node <replaceable>NODENAME</replaceable> \
   -o jsonpath='{.status.allocatable}' | jq</screen>
         <para>
           You should see <literal>"nvidia.com/gpu":</literal> followed by the
@@ -169,14 +169,14 @@ spec:
           (in particular, by the
           <literal>nvidia-container-toolkit-daemonset</literal>):
         </para>
-<screen>&prompt.user;ls /usr/local/nvidia/toolkit/nvidia-container-runtime</screen>
+<screen>{prompt.user}ls /usr/local/nvidia/toolkit/nvidia-container-runtime</screen>
       </step>
       <step>
         <para>
-          Verify whether the &containerd; configuration was updated to include
-          the &nvidia; container runtime.
+          Verify whether the {containerd} configuration was updated to include
+          the {nvidia} container runtime.
         </para>
-<screen>&prompt.user;grep nvidia /var/lib/rancher/rke2/agent/etc/containerd/config.toml</screen>
+<screen>{prompt.user}grep nvidia /var/lib/rancher/rke2/agent/etc/containerd/config.toml</screen>
       </step>
       <step>
         <para>
@@ -213,9 +213,9 @@ spec:
       </para>
     </note>
     <para>
-      &rke2a; will now use <envar>PATH</envar> to find alternative container
+      {rke2a} will now use <envar>PATH</envar> to find alternative container
       runtimes, in addition to checking the default paths used by the container
-      runtime packages. To use this feature, you must modify the &rke2a;
+      runtime packages. To use this feature, you must modify the {rke2a}
       service's <envar>PATH</envar> environment variable to add the directories
       containing the container runtime binaries.
     </para>
@@ -238,7 +238,7 @@ spec:
       This example adds the <envar>PATH</envar> in
       <filename>/etc/default/rke2-server</filename>:
     </para>
-<screen>&prompt.user;echo PATH=$PATH &gt;&gt; /etc/default/rke2-server</screen>
+<screen>{prompt.user}echo PATH=$PATH {gt}{gt} /etc/default/rke2-server</screen>
     <warning>
       <para>
         <envar>PATH</envar> changes should be done with care to avoid placing

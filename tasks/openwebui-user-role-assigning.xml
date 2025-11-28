@@ -18,7 +18,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Assigning roles to existing users in &owui;</title>
+    <title>Assigning roles to existing users in {owui}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
 <!-- <xi:include href="../snippets/openwebui-intro.xml"/> -->
@@ -38,7 +38,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the bottom left of the &owui; window, click your avatar icon to open the user menu and select
+        In the bottom left of the {owui} window, click your avatar icon to open the user menu and select
         <guimenu>Admin Panel</guimenu>.
       </para>
     </step>

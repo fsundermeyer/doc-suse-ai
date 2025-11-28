@@ -14,14 +14,14 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Values for the &owui; &helm; chart</title>
+    <title>Values for the {owui} {helm} chart</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/helm-chart-overrides-intro.xml"/>
     </abstract>
   </info>
   <table>
-    <title>Available options for the &owui; &helm; chart</title>
+    <title>Available options for the {owui} {helm} chart</title>
     <tgroup cols="4">
       <thead>
         <row>
@@ -173,7 +173,7 @@
           </entry>
           <entry>
             <para>
-              Environment variables added to the &owui; deployment. Most
+              Environment variables added to the {owui} deployment. Most
               up-to-date environment variables can be found in
               <link xlink:href="https://docs.openwebui.com/getting-started/env-configuration/"/>.
             </para>
@@ -365,7 +365,7 @@
           </entry>
           <entry>
             <para>
-              The source of &owui; TLS keys, see
+              The source of {owui} TLS keys, see
               <xref linkend="owui-tls-sources"/>.
             </para>
           </entry>
@@ -388,7 +388,7 @@
           </entry>
           <entry>
             <para>
-              Image pull policy to use for the &owui; container
+              Image pull policy to use for the {owui} container
             </para>
           </entry>
         </row>
@@ -410,7 +410,7 @@
           </entry>
           <entry>
             <para>
-              Image registry to use for the &owui; container
+              Image registry to use for the {owui} container
             </para>
           </entry>
         </row>
@@ -432,7 +432,7 @@
           </entry>
           <entry>
             <para>
-              Image repository to use for the &owui; container
+              Image repository to use for the {owui} container
             </para>
           </entry>
         </row>
@@ -454,7 +454,7 @@
           </entry>
           <entry>
             <para>
-              Image tag to use for the &owui; container
+              Image tag to use for the {owui} container
             </para>
           </entry>
         </row>
@@ -499,7 +499,7 @@
           </entry>
           <entry>
             <para>
-              Use appropriate annotations for your &ingress; controller, such as
+              Use appropriate annotations for your {ingress} controller, such as
               <literal>nginx.ingress.kubernetes.io/rewrite-target: /</literal>
               for NGINX.
             </para>
@@ -665,11 +665,11 @@
           </entry>
           <entry>
             <para>
-              Automatically install &ollama; &helm; chart from
+              Automatically install {ollama} {helm} chart from
               <link xlink:href="https://otwld.github.io/ollama-helm/"/>.
               Configure the following
               <link
-              xlink:href="https://github.com/otwld/ollama-helm/#helm-values">&helm;
+              xlink:href="https://github.com/otwld/ollama-helm/#helm-values">{helm}
               values</link>.
             </para>
           </entry>
@@ -692,9 +692,9 @@
           </entry>
           <entry>
             <para>
-              If enabling embedded &ollama;, update fullnameOverride to your
-              desired &ollama; name value, or else it will use the default
-              ollama.name value from the &ollama; chart.
+              If enabling embedded {ollama}, update fullnameOverride to your
+              desired {ollama} name value, or else it will use the default
+              ollama.name value from the {ollama} chart.
             </para>
           </entry>
         </row>
@@ -716,8 +716,8 @@
           </entry>
           <entry>
             <para>
-              A list of &ollama; API endpoints. These can be added instead of
-              automatically installing the &ollama; &helm; chart, or in addition
+              A list of {ollama} API endpoints. These can be added instead of
+              automatically installing the {ollama} {helm} chart, or in addition
               to it.
             </para>
           </entry>
@@ -828,7 +828,7 @@
           </entry>
           <entry>
             <para>
-              Use existingClaim to reuse an existing &owui; PVC instead of
+              Use existingClaim to reuse an existing {owui} PVC instead of
               creating a new one.
             </para>
           </entry>
@@ -911,7 +911,7 @@
           </entry>
           <entry>
             <para>
-              Automatically install Pipelines chart to extend &owui;
+              Automatically install Pipelines chart to extend {owui}
               functionality using Pipelines, see
               <link xlink:href="https://github.com/open-webui/pipelines"/>.
             </para>
@@ -1043,7 +1043,7 @@
           </entry>
           <entry>
             <para>
-              Service values to expose &owui; pods to cluster
+              Service values to expose {owui} pods to cluster
             </para>
           </entry>
         </row>
@@ -1097,7 +1097,7 @@
   <section xml:id="owui-tls-sources">
     <title>TLS sources</title>
     <para>
-      There are three recommended options where &owui; can obtain TLS
+      There are three recommended options where {owui} can obtain TLS
       certificates for secure communication.
     </para>
     <variablelist>
@@ -1107,12 +1107,12 @@
           <para>
             This is the default method. You need to install
             <literal>cert-manager</literal> on the cluster to issue and maintain
-            the certificates. This method generates a CA and signs the &owui;
+            the certificates. This method generates a CA and signs the {owui}
             certificate using the CA. <literal>cert-manager</literal> then
             manages the signed certificate.
           </para>
           <para>
-            For this method, use the following &helm; chart option:
+            For this method, use the following {helm} chart option:
           </para>
 <screen>global.tls.source=suse-private-ai</screen>
         </listitem>
@@ -1123,13 +1123,13 @@
           <para>
             This method also uses <literal>cert-manager</literal>, but it is
             combined with a special issuer for Let's Encrypt that performs all
-            actions&mdash;including request and validation&mdash;to get the
+            actions{mdash}including request and validation{mdash}to get the
             Let's Encrypt certificate issued. This configuration uses HTTP
             validation (HTTP-01) and therefore the load balancer must have a
             public DNS record and be accessible from the Internet.
           </para>
           <para>
-            For this method, use the following &helm; chart option:
+            For this method, use the following {helm} chart option:
           </para>
 <screen>global.tls.source=letsEncrypt</screen>
         </listitem>
@@ -1144,7 +1144,7 @@
             <filename>tls.crt</filename> and <filename>tls.key</filename>.
           </para>
           <para>
-            For this method, use the following &helm; chart option:
+            For this method, use the following {helm} chart option:
           </para>
 <screen>global.tls.source=secret</screen>
         </listitem>

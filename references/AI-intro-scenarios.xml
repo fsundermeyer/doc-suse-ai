@@ -14,11 +14,11 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>What are typical scenarios for using &productname;?</title>
+    <title>What are typical scenarios for using {productname}?</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        Your private instance of &productname; can help you with the following
+        Your private instance of {productname} can help you with the following
         tasks:
       </para>
     </abstract>

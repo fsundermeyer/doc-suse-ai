@@ -14,41 +14,41 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &owui;</title>
+    <title>Installing {owui}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/openwebui-intro.xml"/>
     </abstract>
   </info>
   <section xml:id="owui-installing-app-details">
-    <title>Details about the &owui; application</title>
+    <title>Details about the {owui} application</title>
     <para>
-      Before deploying &owui;, it is important to know more about the supported
+      Before deploying {owui}, it is important to know more about the supported
       configurations and documentation. The following command provides the
       corresponding details:
     </para>
 <screen>helm show values oci://dp.apps.rancher.io/charts/open-webui</screen>
     <para>
-      Alternatively, you can also refer to the &owui; &helm; chart page on the
-      &sappco; site at
+      Alternatively, you can also refer to the {owui} {helm} chart page on the
+      {sappco} site at
       <link xlink:href="https://apps.rancher.io/applications/open-webui"/>. It
-      contains available versions and the link to pull the &owui; container
+      contains available versions and the link to pull the {owui} container
       image.
     </para>
   </section>
   <section xml:id="owui-installing-procedure">
-    <title>&owui; installation procedure</title>
+    <title>{owui} installation procedure</title>
     <xi:include href="../snippets/ai-library-requirement.xml"/>
     <procedure>
       <itemizedlist>
         <title>Requirements</title>
         <para>
-          To install &owui;, you need to have the following:
+          To install {owui}, you need to have the following:
         </para>
         <listitem>
           <para>
-            An installed &certmanager;. If &certmanager; is not installed from
-            previous &owui; releases, install it by following the steps in
+            An installed {certmanager}. If {certmanager} is not installed from
+            previous {owui} releases, install it by following the steps in
             <xref
             linkend="cert-manager-installing"/>.
           </para>
@@ -57,10 +57,10 @@
       <step>
         <para>
           Create the <filename>owui_custom_overrides.yaml</filename> file to
-          override the values of the parent &helm; chart. The file contains URLs
-          for &milvus; and &ollama; and specifies whether a stand-alone &ollama;
-          deployment is used or whether &ollama; is installed as part of the
-          &owui; installation. Find more details in
+          override the values of the parent {helm} chart. The file contains URLs
+          for {milvus} and {ollama} and specifies whether a stand-alone {ollama}
+          deployment is used or whether {ollama} is installed as part of the
+          {owui} installation. Find more details in
           <xref linkend="owui-helm-overrides"/>. For a list of all installation
           options with examples, refer to
           <xref linkend="owui-helmchart-values"/>.
@@ -68,10 +68,10 @@
       </step>
       <step>
         <para>
-          Install the &owui; &helm; chart using the
+          Install the {owui} {helm} chart using the
           <filename>owui_custom_overrides.yaml</filename> override file.
         </para>
-<screen>&prompt.user;<command>helm upgrade --install \
+<screen>{prompt.user}<command>helm upgrade --install \
   open-webui charts/open-webui-<replaceable>X.Y.Z</replaceable>.tgz \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>X.Y.Z</replaceable> -f <replaceable>owui_custom_overrides.yaml</replaceable></command></screen>
@@ -79,28 +79,28 @@
     </procedure>
   </section>
   <section xml:id="owui-upgrading" condition="deployment_standard">
-    <title>Upgrading &owui;</title>
+    <title>Upgrading {owui}</title>
     <para>
-      To upgrade &owui; to a specific new version, run the following command:
+      To upgrade {owui} to a specific new version, run the following command:
     </para>
-<screen>&prompt.user;<command>helm upgrade --install open-webui \
+<screen>{prompt.user}<command>helm upgrade --install open-webui \
   oci://dp.apps.rancher.io/charts/open-webui \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   --version <replaceable>VERSION_NUMBER</replaceable> \
   -f <replaceable>owui_custom_overrides.yaml</replaceable></command></screen>
     <para>
-      To upgrade &owui; to the latest version, run the following command:
+      To upgrade {owui} to the latest version, run the following command:
     </para>
-<screen>&prompt.user;<command>helm upgrade --install open-webui \
+<screen>{prompt.user}<command>helm upgrade --install open-webui \
   oci://dp.apps.rancher.io/charts/open-webui \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable> \
   -f <replaceable>owui_custom_overrides.yaml</replaceable></command></screen>
   </section>
   <section xml:id="owui-uninstalling">
-    <title>Uninstalling &owui;</title>
+    <title>Uninstalling {owui}</title>
     <para>
-      To uninstall &owui;, run the following command:
+      To uninstall {owui}, run the following command:
     </para>
-<screen>&prompt.user;<command>helm uninstall open-webui -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
+<screen>{prompt.user}<command>helm uninstall open-webui -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
   </section>
 </topic>

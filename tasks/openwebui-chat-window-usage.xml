@@ -18,7 +18,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Using the &owui; chat window</title>
+    <title>Using the {owui} chat window</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
 <!-- <xi:include href="../snippets/openwebui-intro.xml"/> -->
@@ -31,7 +31,7 @@
   <procedure>
     <para>
       This procedure describes the basic steps for interacting with an AI model
-      using the &owui; chat window.
+      using the {owui} chat window.
     </para>
     <step>
       <para>
@@ -95,7 +95,7 @@
         </listitem>
         <listitem>
           <para>
-            Let &owui; <emphasis role="bold">read</emphasis> the response aloud.
+            Let {owui} <emphasis role="bold">read</emphasis> the response aloud.
           </para>
         </listitem>
         <listitem>

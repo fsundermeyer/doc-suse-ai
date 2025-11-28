@@ -14,39 +14,39 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>&productname; architecture</title>
+    <title>{productname} architecture</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &productname; is a cloud native solution that comprises multiple
+        {productname} is a cloud native solution that comprises multiple
         software building blocks. These blocks include the Linux operating
-        system, &kube; cluster with a Web UI management layer, supportive tools
+        system, {kube} cluster with a Web UI management layer, supportive tools
         to utilize GPU capabilities, and other containerized applications that
-        care for monitoring and security. The &sappco; includes a collection of
-        AI-related applications called <emphasis>&ailibrary;</emphasis>.
+        care for monitoring and security. The {sappco} includes a collection of
+        AI-related applications called <emphasis>{ailibrary}</emphasis>.
       </para>
     </abstract>
   </info>
   <variablelist>
-    <title>&productname; building blocks</title>
+    <title>{productname} building blocks</title>
     <varlistentry>
       <term>Linux operating system</term>
       <listitem>
         <para>
-          The underlying operating system with the optional &nvidia; driver
-          installed. We prefer &sls;
+          The underlying operating system with the optional {nvidia} driver
+          installed. We prefer {sls}
           (<link xlink:href="https://documentation.suse.com/sles"/>). If you
-          require an immutable operating system, &slema; is the recommended
+          require an immutable operating system, {slema} is the recommended
           alternative.
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&kube; cluster</term>
+      <term>{kube} cluster</term>
       <listitem>
         <para>
-          &kube; cluster managed by &ranchermanager; ensuring container and
-          application lifecycle management. We recommend using the &rke2;
+          {kube} cluster managed by {ranchermanager} ensuring container and
+          application lifecycle management. We recommend using the {rke2}
           (<link
           xlink:href="https://documentation.suse.com/cloudnative/rke2/"/>)
           distribution.
@@ -54,16 +54,16 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&nvoperator;</term>
+      <term>{nvoperator}</term>
       <listitem>
         <para>
-          Utilizes the &nvidia; GPU computing power and capabilities for
+          Utilizes the {nvidia} GPU computing power and capabilities for
           processing AI-related tasks.
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&ssecurity; (<link xlink:href="https://www.suse.com/solutions/security/"/>)</term>
+      <term>{ssecurity} (<link xlink:href="https://www.suse.com/solutions/security/"/>)</term>
       <listitem>
         <para>
           For security and compliance.
@@ -71,7 +71,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&sobservability; (<link xlink:href="https://www.suse.com/solutions/observability/"/>)</term>
+      <term>{sobservability} (<link xlink:href="https://www.suse.com/solutions/observability/"/>)</term>
       <listitem>
         <para>
           Provides advanced performance and data monitoring.
@@ -79,7 +79,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&sstorage; (<link xlink:href="https://www.suse.com/solutions/storage/"/>)</term>
+      <term>{sstorage} (<link xlink:href="https://www.suse.com/solutions/storage/"/>)</term>
       <listitem>
         <para>
           Enterprise-grade storage solution.
@@ -87,7 +87,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&svirtualization; (<link xlink:href="https://www.suse.com/solutions/virtualization/"/>)</term>
+      <term>{svirtualization} (<link xlink:href="https://www.suse.com/solutions/virtualization/"/>)</term>
       <listitem>
         <para>
           For virtualized workloads.
@@ -95,7 +95,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&smlm; (<link xlink:href="https://www.suse.com/products/multilinux-manager/"/>)</term>
+      <term>{smlm} (<link xlink:href="https://www.suse.com/products/multilinux-manager/"/>)</term>
       <listitem>
         <para>
           For managing multiple Linux distributions.
@@ -103,32 +103,32 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&sappco; (<link xlink:href="https://www.suse.com/products/rancher/application-collection"/>)</term>
+      <term>{sappco} (<link xlink:href="https://www.suse.com/products/rancher/application-collection"/>)</term>
       <listitem>
         <para>
-          As a source of &helm; charts and container images for the &ailibrary;
+          As a source of {helm} charts and container images for the {ailibrary}
           applications.
         </para>
       </listitem>
     </varlistentry>
   </variablelist>
   <variablelist>
-    <title>&ailibrary; applications</title>
+    <title>{ailibrary} applications</title>
     <para>
-      Following is a list of AI applications that you can find in the &sappco;.
+      Following is a list of AI applications that you can find in the {sappco}.
       For a complete and up-to-date list, refer to
       <link xlink:href="https://apps.rancher.io/stacks/suse-ai"/>.
     </para>
     <varlistentry>
-      <term>&certmanager; (<link xlink:href="https://cert-manager.io/"/>)</term>
+      <term>{certmanager} (<link xlink:href="https://cert-manager.io/"/>)</term>
       <listitem>
         <para>
-          An extensible X.509 certificate controller for &kube; workloads.
+          An extensible X.509 certificate controller for {kube} workloads.
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&opensearch; (<link xlink:href="https://opensearch.org/"/>)</term>
+      <term>{opensearch} (<link xlink:href="https://opensearch.org/"/>)</term>
       <listitem>
         <para>
           A search and analytics suite for analyzing and visualizing search data.
@@ -136,7 +136,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&milvus; (<link xlink:href="https://milvus.io"/>)</term>
+      <term>{milvus} (<link xlink:href="https://milvus.io"/>)</term>
       <listitem>
         <para>
           A vector database built for generative AI applications with minimal
@@ -145,7 +145,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&ollama; (<link xlink:href="https://ollama.com"/>)</term>
+      <term>{ollama} (<link xlink:href="https://ollama.com"/>)</term>
       <listitem>
         <para>
           A platform that simplifies the installation and management of large
@@ -154,15 +154,15 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&owui; (<link xlink:href="https://openwebui.com"/>)</term>
+      <term>{owui} (<link xlink:href="https://openwebui.com"/>)</term>
       <listitem>
         <para>
-          An extensible Web user interface for the &ollama; LLM runner.
+          An extensible Web user interface for the {ollama} LLM runner.
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&vllm; (<link xlink:href="https://github.com/vllm-project/vllm"/></term>
+      <term>{vllm} (<link xlink:href="https://github.com/vllm-project/vllm"/></term>
       <listitem>
         <para>
           A high-performance inference and serving engine for large language
@@ -171,15 +171,15 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&mcpo; (<link xlink:href="https://github.com/open-webui/mcpo"/>)</term>
+      <term>{mcpo} (<link xlink:href="https://github.com/open-webui/mcpo"/>)</term>
       <listitem>
         <para>
-          The &mcp;-to-OpenAPI proxy server provided by &owui;.
+          The {mcp}-to-OpenAPI proxy server provided by {owui}.
         </para>
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&pytorch; (<link xlink:href="https://pytorch.org/"/>)</term>
+      <term>{pytorch} (<link xlink:href="https://pytorch.org/"/>)</term>
       <listitem>
         <para>
           An open source machine learning framework.
@@ -187,7 +187,7 @@
       </listitem>
     </varlistentry>
     <varlistentry>
-      <term>&mlflow; (<link xlink:href="https://mlflow.org"/>)</term>
+      <term>{mlflow} (<link xlink:href="https://mlflow.org"/>)</term>
       <listitem>
         <para>
           An open source platform to manage the machine learning lifecycle,
@@ -198,7 +198,7 @@
     </varlistentry>
   </variablelist>
   <figure xml:id="suse-ai-schema">
-    <title>Basic schema of &productname;</title>
+    <title>Basic schema of {productname}</title>
     <mediaobject>
       <imageobject role="fo">
         <imagedata fileref="ai-schema.png" width="75%"/>
@@ -207,7 +207,7 @@
         <imagedata fileref="ai-schema.png" width="75%"/>
       </imageobject>
       <textobject role="description"><phrase>An image showing a basic structure of
-          &productname;</phrase>
+          {productname}</phrase>
       </textobject>
     </mediaobject>
   </figure>

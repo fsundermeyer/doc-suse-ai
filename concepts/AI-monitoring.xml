@@ -14,12 +14,12 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Monitoring &productname;</title>
+    <title>Monitoring {productname}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
         This document focuses on techniques for gathering telemetry data from
-        all &productname; components.
+        all {productname} components.
       </para>
     </abstract>
   </info>
@@ -32,7 +32,7 @@
       <listitem>
         <para>
           Straightforward configurations designed to utilize the
-          &sobservability; Extension, providing a quick solution for your
+          {sobservability} Extension, providing a quick solution for your
           environment.
         </para>
       </listitem>
@@ -49,18 +49,18 @@
     </varlistentry>
   </variablelist>
   <para>
-    Several setups are specific to the product, while others&mdash;particularly
-    for scraping metrics&mdash;are configured directly within the &otelemetry;
+    Several setups are specific to the product, while others{mdash}particularly
+    for scraping metrics{mdash}are configured directly within the {otelemetry}
     Collector. By implementing the recommended settings, you can visualize the
     complete topology of your services and operations, bringing clarity to your
-    &productname; environment.
+    {productname} environment.
   </para>
   <section xml:id="what-is-ai-monitoring">
-    <title>What is &productname; monitoring?</title>
+    <title>What is {productname} monitoring?</title>
     <para>
-      Monitoring &productname; involves observing and analyzing the behavior,
+      Monitoring {productname} involves observing and analyzing the behavior,
       performance and health of its components. In a complex, distributed system
-      like &productname;, this is achieved by collecting and interpreting
+      like {productname}, this is achieved by collecting and interpreting
       telemetry data. This data is typically categorized into the three pillars
       of observability:
     </para>
@@ -99,14 +99,14 @@
   <section xml:id="how-observability-works">
     <title>How monitoring works</title>
     <para>
-      &productname; uses &otelemetry;, an open-source observability framework,
+      {productname} uses {otelemetry}, an open-source observability framework,
       for instrumenting applications. Instrumentation is the process of adding
-      code to an application to generate telemetry data. By using &otelemetry;,
-      &productname; ensures a standardized, vendor-neutral approach to data
+      code to an application to generate telemetry data. By using {otelemetry},
+      {productname} ensures a standardized, vendor-neutral approach to data
       collection.
     </para>
     <para>
-      The collected data is then sent to &sobservability;, which provides a
+      The collected data is then sent to {sobservability}, which provides a
       comprehensive platform for visualizing, analyzing and alerting on the
       telemetry data. This allows administrators and developers to gain deep
       insights into the system, maintain optimal performance, and troubleshoot

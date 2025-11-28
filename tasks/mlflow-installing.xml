@@ -14,13 +14,13 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Installing &mlflow;</title>
+    <title>Installing {mlflow}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &mlflow; is an open-source platform for managing the end-to-end machine
+        {mlflow} is an open-source platform for managing the end-to-end machine
         learning lifecycle. It provides a centralized model registry to track
-        and manage the entire lifecycle of machine learning models. &mlflow;
+        and manage the entire lifecycle of machine learning models. {mlflow}
         includes tools for experiment tracking, model packaging, versioning and
         deployment. This helps streamline the transition from
         development to production, ensuring reproducibility and collaboration
@@ -29,36 +29,36 @@
     </abstract>
   </info>
   <para>
-    This section describes how to deploy &mlflow; using either &docker; or
-    &helm; on a &kube; cluster.
+    This section describes how to deploy {mlflow} using either {docker} or
+    {helm} on a {kube} cluster.
   </para>
 <!-- 2025-11-26 tbazant: commenting for now as we don't have an mlflow chart in appco
   <section xml:id="mlflow-installing-app-details">
-    <title>Details about the &mlflow; application</title>
+    <title>Details about the {mlflow} application</title>
     <para>
-      Before deploying &mlflow;, it is important to know more about the
+      Before deploying {mlflow}, it is important to know more about the
       supported configurations and documentation. The following command provides
       the corresponding details:
     </para>
 <screen>helm show values oci://dp.apps.rancher.io/charts/mlflow</screen>
     <para>
-      Alternatively, you can also refer to the &mlflow; &helm; chart page on the
-      &sappco; site at
+      Alternatively, you can also refer to the {mlflow} {helm} chart page on the
+      {sappco} site at
       <link xlink:href="https://apps.rancher.io/applications/mlflow"/>. It
-      contains &mlflow; dependencies, available versions and the link to pull
-      the &mlflow; container image.
+      contains {mlflow} dependencies, available versions and the link to pull
+      the {mlflow} container image.
     </para>
   </section>
 -->
   <section xml:id="mlflow-installing-kubernetes">
-    <title>Installing &mlflow; using &helm; on a &kube; cluster</title>
+    <title>Installing {mlflow} using {helm} on a {kube} cluster</title>
     <procedure>
       <xi:include href="../snippets/ai-library-requirement.xml"/>
       <step>
         <para>
-          Create a skeleton for a new <literal>&mlflow;</literal> &helm; chart.
+          Create a skeleton for a new <literal>{mlflow}</literal> {helm} chart.
         </para>
-<screen>&prompt.user;<command>helm create mlflow</command></screen>
+<screen>{prompt.user}<command>helm create mlflow</command></screen>
         <para>
           The command creates an <filename>mlflow</filename> directory with the
           basic file structure for a chart.
@@ -253,16 +253,16 @@ spec:
       </step>
       <step>
         <para>
-          Install &mlflow; using the following command:
+          Install {mlflow} using the following command:
         </para>
-<screen>&prompt.user;<command>helm install mlflow ./mlflow \
+<screen>{prompt.user}<command>helm install mlflow ./mlflow \
   -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
       </step>
       <step>
         <para>
-          Validate that &ingress; is enabled for &mlflow;.
+          Validate that {ingress} is enabled for {mlflow}.
         </para>
-<screen>&prompt.user;<command>kubectl get ingress --all-namespaces</command>
+<screen>{prompt.user}<command>kubectl get ingress --all-namespaces</command>
 NAMESPACE        AME       CLASS HOSTS                ADDRESS     PORTS     AGE
 [...]
 suse-private-ai  mlflow     nginx suse-mlflow         10.0.3.184  80        153m
@@ -270,24 +270,24 @@ suse-private-ai  pen-webui nginx suse-ollama-webui    10.0.3.184  80, 443   8h</
       </step>
     </procedure>
     <section xml:id="mlflow-uninstalling">
-      <title>Uninstalling &mlflow;</title>
+      <title>Uninstalling {mlflow}</title>
       <para>
-        To uninstall &mlflow;, run the following command:
+        To uninstall {mlflow}, run the following command:
       </para>
-<screen>&prompt.user;<command>helm uninstall mlflow -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
+<screen>{prompt.user}<command>helm uninstall mlflow -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
     </section>
   </section>
   <section xml:id="mlflow-installing-docker">
-    <title>Installing &mlflow; using &docker;</title>
+    <title>Installing {mlflow} using {docker}</title>
     <para>
-      There are two ways to install &mlflow; using &docker;:
+      There are two ways to install {mlflow} using {docker}:
     </para>
     <itemizedlist>
       <listitem>
         <para>
           By downloading and running the
           <xref linkend="mlflow-docker-container"
-          xrefstyle="template: &mlflow; container"/>
+          xrefstyle="template: {mlflow} container"/>
           directly.
         </para>
       </listitem>
@@ -295,36 +295,36 @@ suse-private-ai  pen-webui nginx suse-ollama-webui    10.0.3.184  80, 443   8h</
         <para>
           By creating an
           <xref linkend="mlflow-docker-compose"
-          xrefstyle="template: &mlflow; &docker; Compose"/>
+          xrefstyle="template: {mlflow} {docker} Compose"/>
           YAML file.
         </para>
       </listitem>
     </itemizedlist>
     <procedure xml:id="mlflow-docker-container">
-      <title>Installing &mlflow; using a &docker; container</title>
+      <title>Installing {mlflow} using a {docker} container</title>
       <step>
         <para>
-          Download the &mlflow; container. Replace
+          Download the {mlflow} container. Replace
           <replaceable>CHART_VERSION</replaceable> with the current chart
           version.
         </para>
-<screen>&prompt.user;<command>docker pull dp.apps.rancher.io/containers/mlflow:<replaceable>CHART_VERSION</replaceable></command></screen>
+<screen>{prompt.user}<command>docker pull dp.apps.rancher.io/containers/mlflow:<replaceable>CHART_VERSION</replaceable></command></screen>
       </step>
       <step performance="optional">
         <para>
           Verify the downloaded image.
         </para>
-<screen>&prompt.user;<command>docker images</command>
+<screen>{prompt.user}<command>docker images</command>
 REPOSITORY                           TAG    IMAGE ID     CREATED      SIZE
 dp.apps.rancher.io/containers/mlflow 3.6.0  d984124afc22 33 hours ago 715MB</screen>
       </step>
       <step>
         <para>
-          Run the &mlflow; server by starting the container at port 5000.
+          Run the {mlflow} server by starting the container at port 5000.
           Replace <replaceable>CHART_VERSION</replaceable> with the current
           chart version.
         </para>
-<screen>&prompt.user;<command> docker run -p 5000:5000 \
+<screen>{prompt.user}<command> docker run -p 5000:5000 \
   dp.apps.rancher.io/containers/mlflow:<replaceable>CHART_VERSION</replaceable> mlflow server \
   --host 0.0.0.0 --port 5000</command>
 [2025-11-27 18:34:15 +0000] [12] [INFO] Starting gunicorn 23.0.0
@@ -337,7 +337,7 @@ dp.apps.rancher.io/containers/mlflow 3.6.0  d984124afc22 33 hours ago 715MB</scr
       </step>
     </procedure>
     <procedure xml:id="mlflow-docker-compose">
-      <title>Installing &mlflow; using a &docker; Compose YAML file</title>
+      <title>Installing {mlflow} using a {docker} Compose YAML file</title>
       <step>
         <para>
           Create a <filename>docker-compose.yaml</filename> file with the
@@ -360,28 +360,28 @@ dp.apps.rancher.io/containers/mlflow 3.6.0  d984124afc22 33 hours ago 715MB</scr
       </step>
       <step>
         <para>
-          Run &mlflow; using the following command:
+          Run {mlflow} using the following command:
         </para>
-<screen>&prompt.user;<command>docker-compose up -d</command>
+<screen>{prompt.user}<command>docker-compose up -d</command>
 [...]
 [+] Running 2/2
- \u2714 Network &exampleuser_plain;_default  Created                0.0s 
+ \u2714 Network {exampleuser_plain}_default  Created                0.0s 
  \u2714 Container mlflow      Started                         4s</screen>
       </step>
       <step performance="optional">
         <para>
           Verify that the container is running.
         </para>
-<screen><command>(venv) &exampleuser_plain;@localhost:~[] docker ps</command>
+<screen><command>(venv) {exampleuser_plain}@localhost:~[] docker ps</command>
 CONTAINER ID IMAGE    ...     STATUS          PORTS                     NAMES
-1e58723cb3d  mlflow:3.6.0     Up 23 seconds   0.0.0.0:5000-&gt;5000/tcp... mlflow</screen>
+1e58723cb3d  mlflow:3.6.0     Up 23 seconds   0.0.0.0:5000-{gt}5000/tcp... mlflow</screen>
       </step>
       <step performance="optional">
         <para>
-          Follow the logs to ensure that the &mlflow; server has started
+          Follow the logs to ensure that the {mlflow} server has started
           correctly.
         </para>
-<screen>&prompt.user;<command>(venv) &exampleuser_plain;@localhost:~[] docker-compose logs -f</command>
+<screen>{prompt.user}<command>(venv) {exampleuser_plain}@localhost:~[] docker-compose logs -f</command>
 mlflow [2025-11-01 00:56:54 +0000] [3] [INFO] Starting gunicorn 23.0.0
 mlflow [2025-11-01 00:56:54 +0000] [3] [INFO] Listening at: http://0.0.0.0:5000 (3)
 mlflow [2025-11-01 00:56:54 +0000] [3] [INFO] Using worker: sync
@@ -393,17 +393,17 @@ mlflow [2025-11-01 00:56:55 +0000] [7] [INFO] Booting worker with pid: 7</screen
     </procedure>
   </section>
   <section xml:id="mlflow-accessing">
-    <title>Accessing &mlflow; Web UI</title>
+    <title>Accessing {mlflow} Web UI</title>
     <para>
-      After the &mlflow; server is up and running, you can access it from a Web
-      browser either on the local host or exposed via &ingress;.
+      After the {mlflow} server is up and running, you can access it from a Web
+      browser either on the local host or exposed via {ingress}.
     </para>
     <para>
-      To access &mlflow; locally, point your Web browser to
+      To access {mlflow} locally, point your Web browser to
       <literal>http://localhost:5000</literal>.
     </para>
     <para>
-      To access &mlflow; via &ingress;, add a corresponding line to your
+      To access {mlflow} via {ingress}, add a corresponding line to your
       <filename>/etc/hosts</filename>, for example:
     </para>
 <screen>10.0.3.184 suse-mflow</screen>
@@ -411,7 +411,7 @@ mlflow [2025-11-01 00:56:55 +0000] [7] [INFO] Booting worker with pid: 7</screen
       Then point your Web browser to <literal>http://suse-mlflow</literal>.
     </para>
     <figure xml:id="fg-mlflow-webui">
-      <title>&mlflow; Web UI</title>
+      <title>{mlflow} Web UI</title>
       <mediaobject>
         <imageobject role="fo">
           <imagedata fileref="mlflow-webui.png" width="100%"/>
@@ -419,14 +419,14 @@ mlflow [2025-11-01 00:56:55 +0000] [7] [INFO] Booting worker with pid: 7</screen
         <imageobject role="html">
           <imagedata fileref="mlflow-webui.png" width="100%"/>
         </imageobject>
-        <textobject role="description"><phrase>A screenshot showing the &mlflow; Web user interface</phrase>
+        <textobject role="description"><phrase>A screenshot showing the {mlflow} Web user interface</phrase>
         </textobject>
       </mediaobject>
     </figure>
     <tip>
       <title>For more information</title>
       <para>
-        Explore &mlflow; core features, model training, tracing (observability)
+        Explore {mlflow} core features, model training, tracing (observability)
         and more by following the
         <link xlink:href="https://github.com/mlflow/mlflow?tab=readme-ov-file#-core-components">official
         documentation</link>.

@@ -31,7 +31,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the &owui; interface, click <guimenu>Workspace</guimenu> in the upper
+        In the {owui} interface, click <guimenu>Workspace</guimenu> in the upper
         part of the left panel.
       </para>
     </step>
@@ -63,13 +63,13 @@
     </step>
     <step>
       <para>
-        Confirm with <guimenu>Save &amp; Create</guimenu>.
+        Confirm with <guimenu>Save {amp} Create</guimenu>.
       </para>
     </step>
   </procedure>
   <tip>
     <para>
-      You can access preconfigured system prompts from the &owui; chat input
+      You can access preconfigured system prompts from the {owui} chat input
       field by pressing the <literal>/</literal> character as described in
       <link xlink:href="https://documentation.suse.com/suse-ai/1.0/html/openwebui-using/index.html#openwebui-input-field-specify-system-prompt"/>.
     </para>

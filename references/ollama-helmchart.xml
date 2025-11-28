@@ -14,7 +14,7 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Values for the &ollama; &helm; chart</title>
+    <title>Values for the {ollama} {helm} chart</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <xi:include href="../snippets/helm-chart-overrides-intro.xml"/>
@@ -23,29 +23,29 @@
   <important>
     <title>GPU section</title>
     <para>
-      &ollama; can run optimized for &nvidia; GPUs if the following conditions
+      {ollama} can run optimized for {nvidia} GPUs if the following conditions
       are fulfilled:
     </para>
     <itemizedlist>
       <listitem>
         <para>
-          The &nvidia; driver and &nvoperator; are installed as described in
+          The {nvidia} driver and {nvoperator} are installed as described in
           <link
           xlink:href="https://documentation.suse.com/suse-ai/1.0/html/NVIDIA-GPU-driver-on-SLES/index.html">Installing
-          &nvidia; GPU Drivers on &slsa;</link> or
+          {nvidia} GPU Drivers on {slsa}</link> or
           <link xlink:href="https://documentation.suse.com/suse-ai/1.0/html/NVIDIA-GPU-driver-on-SL-Micro/index.html">Installing
-          &nvidia; GPU Drivers on &slm;</link>.
+          {nvidia} GPU Drivers on {slm}</link>.
         </para>
       </listitem>
       <listitem>
         <para>
-          The workloads are set to run on &nvidia;-enabled nodes as described in
+          The workloads are set to run on {nvidia}-enabled nodes as described in
           <link xlink:href="https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#ai-gpu-nodes-assigning"/>.
         </para>
       </listitem>
     </itemizedlist>
     <para>
-      If you do not want to use the &nvidia; GPU, remove the
+      If you do not want to use the {nvidia} GPU, remove the
       <literal>gpu</literal> section from
       <filename>ollama_custom_overrides.yaml</filename> or disable it.
     </para>
@@ -85,7 +85,7 @@ persistentVolume:<co xml:id="co-ollama-persistent"/>
       <callout arearefs="co-ollama-persistent">
         <para>
           Without the <option>persistentVolume</option> option enabled, changes
-          made to &ollama;&mdash;such as downloading other LLM&mdash; are lost
+          made to {ollama}{mdash}such as downloading other LLM{mdash} are lost
           when the container is restarted.
         </para>
       </callout>
@@ -93,13 +93,13 @@ persistentVolume:<co xml:id="co-ollama-persistent"/>
         <para>
           Use <option>local-path</option> storage only for testing purposes. For
           production use, we recommend using a storage solution suitable for
-          persistent storage, such as &sstorage;.
+          persistent storage, such as {sstorage}.
         </para>
       </callout>
     </calloutlist>
   </example>
   <example>
-    <title>Basic override file with &ingress; and no GPU</title>
+    <title>Basic override file with {ingress} and no GPU</title>
 <screen>ollama:
   models:
     pull:
@@ -122,13 +122,13 @@ ingress:
           Use <option>local-path</option> storage (requires installing the
           corresponding provisioner) only for testing purposes. For production
           use, we recommend using a storage solution suitable for persistent
-          storage, such as &sstorage;.
+          storage, such as {sstorage}.
         </para>
       </callout>
     </calloutlist>
   </example>
   <table>
-    <title>Override file options for the &ollama; &helm; chart</title>
+    <title>Override file options for the {ollama} {helm} chart</title>
     <tgroup cols="4">
       <thead>
         <row>
@@ -460,7 +460,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Image pull policy to use for the &ollama; container
+              Image pull policy to use for the {ollama} container
             </para>
           </entry>
         </row>
@@ -482,7 +482,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Image registry to use for the &ollama; container
+              Image registry to use for the {ollama} container
             </para>
           </entry>
         </row>
@@ -504,7 +504,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Image repository to use for the &ollama; container
+              Image repository to use for the {ollama} container
             </para>
           </entry>
         </row>
@@ -526,7 +526,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Image tag to use for the &ollama; container
+              Image tag to use for the {ollama} container
             </para>
           </entry>
         </row>
@@ -570,7 +570,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Additional annotations for the &ingress; resource
+              Additional annotations for the {ingress} resource
             </para>
           </entry>
         </row>
@@ -592,7 +592,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              IngressClass that is used to implement the &ingress; (&kube;
+              IngressClass that is used to implement the {ingress} ({kube}
               1.18+)
             </para>
           </entry>
@@ -615,7 +615,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Enable &ingress; controller resource
+              Enable {ingress} controller resource
             </para>
           </entry>
         </row>
@@ -698,7 +698,7 @@ ingress:
           <entry>
             <para>
               The TLS configuration for host names to be covered with this
-              &ingress; record
+              {ingress} record
             </para>
           </entry>
         </row>
@@ -1094,7 +1094,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Only for &nvidia; cards; change to
+              Only for {nvidia} cards; change to
               <literal>nvidia.com/mig-1g.10gb</literal> to use MIG slice
             </para>
           </entry>
@@ -1212,7 +1212,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              &ollama; server data Persistent Volume access modes. Must match
+              {ollama} server data Persistent Volume access modes. Must match
               those of existing PV or dynamic provisioner, see
               <link xlink:href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/"/>.
             </para>
@@ -1236,7 +1236,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              &ollama; server data Persistent Volume annotations
+              {ollama} server data Persistent Volume annotations
             </para>
           </entry>
         </row>
@@ -1280,7 +1280,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              If you want to bring your own PVC for persisting &ollama; state,
+              If you want to bring your own PVC for persisting {ollama} state,
               pass the name of the created + ready PVC here. If set, this Chart
               does not create the default PVC. Requires
               <literal>server.persistentVolume.enabled: true</literal>
@@ -1305,7 +1305,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              &ollama; server data Persistent Volume size
+              {ollama} server data Persistent Volume size
             </para>
           </entry>
         </row>
@@ -1329,7 +1329,7 @@ ingress:
             <para>
               If persistentVolume.storageClass is present, and is set to either
               a dash (<quote>-</quote>) or empty string
-              (<quote>&nbsp;/</quote>), dynamic provisioning is disabled.
+              (<quote>{nbsp}/</quote>), dynamic provisioning is disabled.
               Otherwise, the storageClassName for persistent volume claim is set
               to the given value specified by persistentVolume.storageClass. If
               persistentVolume.storageClass is absent, the default storage class
@@ -1357,7 +1357,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              Subdirectory of &ollama; server data Persistent Volume to mount.
+              Subdirectory of {ollama} server data Persistent Volume to mount.
               Useful if the volume's root directory is not empty.
             </para>
           </entry>
@@ -1380,7 +1380,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              &ollama; server data Persistent Volume Binding Mode. If empty (the
+              {ollama} server data Persistent Volume Binding Mode. If empty (the
               default) or set to null, no volumeBindingMode specification is
               set, choosing the default mode.
             </para>
@@ -1404,7 +1404,7 @@ ingress:
           </entry>
           <entry>
             <para>
-              &ollama; server Persistent Volume name. It can be used to
+              {ollama} server Persistent Volume name. It can be used to
               force-attach the created PVC to a specific PV.
             </para>
           </entry>

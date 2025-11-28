@@ -18,13 +18,13 @@
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:trans="http://docbook.org/ns/transclusion">
   <info>
-    <title>Downloading AI models from &ollama;</title>
+    <title>Downloading AI models from {ollama}</title>
     <meta name="maintainer" content="tbazant@suse.com" its:translate="no"/>
     <abstract>
       <para>
-        &ollama; (<link xlink:href="https://ollama.com/"/>) is an online
+        {ollama} (<link xlink:href="https://ollama.com/"/>) is an online
         repository that hosts open source AI models. This procedure describes
-        how to download and use these models from the &owui; interface.
+        how to download and use these models from the {owui} interface.
       </para>
     </abstract>
   </info>
@@ -37,7 +37,7 @@
     </itemizedlist>
     <step>
       <para>
-        In the bottom left of the &owui; window, click your avatar icon to open
+        In the bottom left of the {owui} window, click your avatar icon to open
         the user menu and select <guimenu>Admin Panel</guimenu>.
       </para>
     </step>
@@ -54,7 +54,7 @@
         Models</guimenu> screen.
       </para>
       <figure xml:id="fig-owui-dld-ollama-model">
-        <title>Downloading &ollama; AI models</title>
+        <title>Downloading {ollama} AI models</title>
         <mediaobject>
           <imageobject role="fo">
             <imagedata fileref="owui-dld-ollama-model.png" width="100%"/>
@@ -62,14 +62,14 @@
           <imageobject role="html">
             <imagedata fileref="owui-dld-ollama-model.png" width="100%"/>
           </imageobject>
-          <textobject role="description"><phrase>Downloading &ollama; AI models</phrase>
+          <textobject role="description"><phrase>Downloading {ollama} AI models</phrase>
           </textobject>
         </mediaobject>
       </figure>
     </step>
     <step>
       <para>
-        On the <link xlink:href="https://ollama.com/library">&ollama; library
+        On the <link xlink:href="https://ollama.com/library">{ollama} library
         page</link>, identify the model tag of an AI model that you want to
         download, for example, <literal>gemma3:4b</literal>.
       </para>
