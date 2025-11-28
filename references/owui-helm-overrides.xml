@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="owui-helm-overrides"
+<section xml:id="owui-helm-overrides"
  role="reference" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -387,4 +387,4 @@ persistence:
   storageClass: local-path
   size: 10Gi</screen>
   </example>
-</topic>
+</section>

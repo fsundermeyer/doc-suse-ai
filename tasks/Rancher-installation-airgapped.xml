@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- https://github.com/rancher/rancher-product-docs/blob/main/versions/latest/modules/en/pages/installation-and-upgrade/other-installation-methods/air-gapped/air-gapped.adoc -->
-<topic xml:id="rancher-installation-airgapped"
+<section xml:id="rancher-installation-airgapped"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -47,4 +47,4 @@
       </listitem>
     </orderedlist>
   </section>
-</topic>
+</section>

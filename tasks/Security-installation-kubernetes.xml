@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- based on https://documentation.suse.com/cloudnative/security/5.4/en/kubernetes.html -->
-<topic xml:id="suse-security-installation-kubernetes"
+<section xml:id="suse-security-installation-kubernetes"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -1290,4 +1290,4 @@ spec:
             path: /var/vcap/sys/run/docker/docker.sock</screen>
     </note>
   </section>
-</topic>
+</section>

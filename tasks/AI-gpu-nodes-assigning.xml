@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="ai-gpu-nodes-assigning"
+<section xml:id="ai-gpu-nodes-assigning"
  role="concept" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -157,4 +157,4 @@ metadata:
 │ [...] source=gpu.go:204 msg="looking for compatible GPUs"                                                          │
 │ [...] source=types.go:105 msg="inference compute" id=GPU-c9ad37d0-d304-5d2a-c2e6-d3788cd733a7 library=cuda compute │</screen>
   </section>
-</topic>
+</section>

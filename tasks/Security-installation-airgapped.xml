@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- based on https://documentation.suse.com/cloudnative/security/5.4/en/airgap.html -->
-<topic xml:id="suse-security-installation-airgapped"
+<section xml:id="suse-security-installation-airgapped"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -188,4 +188,4 @@ done</screen>
 --set cve.updater.image.repository=neuvector/updater \
 --set manager.ingress.host=$NEU_URL</screen>
   </section>
-</topic>
+</section>

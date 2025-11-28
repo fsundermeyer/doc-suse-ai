@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="owui-knowledgebase-creating"
+<section xml:id="owui-knowledgebase-creating"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -81,4 +81,4 @@
       <link xlink:href="https://documentation.suse.com/suse-ai/1.0/html/openwebui-using/index.html#openwebui-input-field-collections"/>.
     </para>
   </tip>
-</topic>
+</section>

@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="owui-known-issues"
+<section xml:id="owui-known-issues"
  role="reference" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -67,4 +67,4 @@
       to be processed, results in a <literal>504 Gateway Timeout</literal>.
     </para>
   </section>
-</topic>
+</section>

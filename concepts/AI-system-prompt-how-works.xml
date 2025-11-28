@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="ai-system-prompt-how-works"
+<section xml:id="ai-system-prompt-how-works"
  role="concept" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -215,4 +215,4 @@ Divide the report into the following sections:
    steps for the customer.</screen>
     </example>
   </section>
-</topic>
+</section>
