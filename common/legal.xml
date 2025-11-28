@@ -6,7 +6,7 @@
    <!ENTITY % entities SYSTEM "generic-entities.ent"> 
    %entities; 
 ]>
-<topic xml:id="legal-disclaimer"
+<section xml:id="legal-disclaimer"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xlink="http://www.w3.org/1999/xlink" version="5.2">
@@ -32,4 +32,4 @@
     this does not guarantee complete accuracy.  Neither SUSE LLC, its affiliates, the authors, nor
     the translators shall be held liable for possible errors or the consequences thereof.
   </para>
-</topic>
+</section>

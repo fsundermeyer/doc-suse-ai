@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="vllm-installing"
+<section xml:id="vllm-installing"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -227,4 +227,4 @@
     </para>
 <screen>{prompt.user}<command>helm uninstall vllm -n <replaceable>SUSE_AI_NAMESPACE</replaceable></command></screen>
   </section>
-</topic>
+</section>

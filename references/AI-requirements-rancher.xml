@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="ai-requirements-rancher"
+<section xml:id="ai-requirements-rancher"
  role="reference" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -77,4 +77,4 @@
       </listitem>
     </itemizedlist>
   </section>
-</topic>
+</section>

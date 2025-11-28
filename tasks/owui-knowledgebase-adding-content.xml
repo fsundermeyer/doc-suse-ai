@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="owui-knowledgebase-adding-content"
+<section xml:id="owui-knowledgebase-adding-content"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -181,4 +181,4 @@
       </figure>
     </step>
   </procedure>
-</topic>
+</section>

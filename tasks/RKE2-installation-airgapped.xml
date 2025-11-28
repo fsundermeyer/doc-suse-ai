@@ -4,7 +4,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="rke2-installation-airgapped"
+<section xml:id="rke2-installation-airgapped"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -314,4 +314,4 @@ curl -sfL https://get.rke2.io --output install.sh</screen>
       </procedure>
     </section>
   </section>
-</topic>
+</section>

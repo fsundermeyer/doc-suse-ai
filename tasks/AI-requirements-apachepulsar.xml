@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="ai-requirements-apachepulsar"
+<section xml:id="ai-requirements-apachepulsar"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -57,4 +57,4 @@ semodule_package -o pulsar.pp -m pulsar.mod</command></screen>
 <screen>{prompt.sudo}<command>semodule -i pulsar.pp</command></screen>
     </step>
   </procedure>
-</topic>
+</section>

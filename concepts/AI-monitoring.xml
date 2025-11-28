@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities;
 ]>
-<topic xml:id="ai-monitoring-concept"
+<section xml:id="ai-monitoring-concept"
  role="concept" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -113,4 +113,4 @@
       issues effectively.
     </para>
   </section>
-</topic>
+</section>

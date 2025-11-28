@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- based on https://documentation.suse.com/cloudnative/security/5.4/en/rancher.html -->
-<topic xml:id="suse-security-installation-rancher"
+<section xml:id="suse-security-installation-rancher"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -609,4 +609,4 @@ enforcer:
      io.rancher.scheduler.global: true
      io.rancher.scheduler.affinity:host_label_ne: "nvcontroller=true"</screen>
   </section>
-</topic>
+</section>

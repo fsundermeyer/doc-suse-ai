@@ -7,7 +7,7 @@
     %entities;
 ]>
 <!-- https://github.com/rancher/rke2-product-docs/blob/main/versions/latest/modules/en/pages/advanced.adoc#deploy-nvidia-operator -->
-<topic xml:id="nvidia-operator-installation"
+<section xml:id="nvidia-operator-installation"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -246,4 +246,4 @@ spec:
       </para>
     </warning>
   </section>
-</topic>
+</section>

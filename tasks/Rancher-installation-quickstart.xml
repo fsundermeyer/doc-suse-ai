@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- based on https://github.com/rancher/rancher-product-docs/blob/main/versions/latest/modules/en/pages/installation-and-upgrade/install-rancher.adoc -->
-<topic xml:id="rancher-installation-quickstart"
+<section xml:id="rancher-installation-quickstart"
  role="task" xml:lang="en"
  xmlns="http://docbook.org/ns/docbook" version="5.2"
  xmlns:its="http://www.w3.org/2005/11/its"
@@ -650,4 +650,4 @@ rancher   3         3         3            3           3m</screen>
       balancer. Then you should be greeted by the colorful login page.
     </para>
   </section>
-</topic>
+</section>

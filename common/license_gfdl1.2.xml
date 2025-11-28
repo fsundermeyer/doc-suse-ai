@@ -7,7 +7,7 @@
     %entities;
 ]>
 
-<topic version="5.2" role="legal"
+<section version="5.2" role="legal"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -543,4 +543,4 @@ Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.</screen>
   license, such as the GNU General Public License, to permit their use in free
   software.
 </para>
-</topic>
+</section>
