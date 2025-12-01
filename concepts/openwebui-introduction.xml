@@ -2,7 +2,7 @@
 <!-- This file originates from the project https://github.com/openSUSE/doc-kit
 -->
 <!-- This file can be edited downstream. -->
-<!DOCTYPE topic [ <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
+<!DOCTYPE section [ <!ENTITY % entities SYSTEM "../common/generic-entities.ent">
     %entities; ]>
 <section xml:id="openwebui-introduction" role="concept" xml:lang="en"
 xmlns="http://docbook.org/ns/docbook" version="5.2"
