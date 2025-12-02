@@ -18,24 +18,17 @@ endif::[]
 :page-revdate: {revdate}
 
 WHAT?::
-  {productname} is an open generative AI solution. It offers
-  the customers the freedom to run private AI workloads both on
-  premises, in the cloud and even in air-gapped environments.
-  {productnameshort} provides secure, auditable AI capabilities
-  that ensure complete control over data and compliance with
-  regulatory requirements.
+  Hardware, software and networking requirements for successful deployment and operation of {productname}.
 
 WHY?::
-  To learn more about AI and the benefits of running your private
-  AI service inside your company or in the cloud.
+  To ensure efficient operation of {productname}.
 
 EFFORT::
-  To understand the basics and benefits of {productname} requires
-  less than 30 minutes of your time.
+  Less than 30 minutes of reading and a basic knowledge of hardware and {rke2} environment.
 
-GOAL::
-  To make you realize that {productname} is the right choice to
-  run private and secure AI workloads.
+[preface]
+This article describes the software, hardware and networking requirements for the cluster nodes where you plan to install {productname}.
+
 
 include::../references/AI-intro-benefits.adoc[leveloffset=+1]
 include::../references/AI-intro-scenarios.adoc[leveloffset=+1]
