@@ -29,11 +29,36 @@ EFFORT::
 [preface]
 This article describes the software, hardware and networking requirements for the cluster nodes where you plan to install {productname}.
 
+//<module resourceref="_ai-requirements-hardware" renderas="section">
+//      <merge>
+//        <title>Hardware requirements</title>
+//      </merge>
+//    </module>
+//    <module renderas="section" resourceref="_ai-requirements-hardware-gpu">
+//      <merge>
+//        <title>GPU hardware</title>
+//      </merge>
+//    </module>
+//    <module renderas="section" xml:id="ai-requirements-hardware-apps">
+//      <merge>
+//        <title>Application-specific requirements</title>
+//        <abstract>
+//          <para>
+//            The {productname} stack consists of multiple applications. We
+//            recommend running each application on nodes that meet or exceed the
+//            corresponding hardware requirements.
+//          </para>
+//        </abstract>
+//      </merge>
+//      <module renderas="section" resourceref="_ai-requirements-rancher"/>
+//      <module renderas="section" resourceref="_ai-requirements-security"/>
+//      <module renderas="section" resourceref="_ai-requirements-observability"/>
+//      <module renderas="section" resourceref="_ai-requirements-milvus"/>
+//      <module renderas="section" resourceref="_ai-requirements-ollama"/>
+//      <module renderas="section" resourceref="_ai-requirements-openwebui"/>
 
-include::../references/AI-intro-benefits.adoc[leveloffset=+1]
-include::../references/AI-intro-scenarios.adoc[leveloffset=+1]
-include::../concepts/AI-intro-how-works.adoc[leveloffset=+1]
-include::../glues/ai-intro-next-steps.adoc[leveloffset=+1]
+
+include::../references/AI-requirements-hardware.adoc[leveloffset=+1,Hardware requirements]
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]
