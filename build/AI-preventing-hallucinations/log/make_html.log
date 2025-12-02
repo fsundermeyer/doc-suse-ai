@@ -1,3 +1,6 @@
-Tue Dec  2 11:42:53 AM PST 2025
-[32mHTML book built with REMARKS=0, DRAFT=no and META=0:[0m
-[32m/home/yoga/docbookrx/doc-suse-ai/build/AI-preventing-hallucinations/html/AI-preventing-hallucinations/[0m
+Tue Dec  2 03:24:13 PM PST 2025
+[1;31m[ERROR]: The document contains XML errors:[0m
+/home/yoga/docbookrx/doc-suse-ai/build/.profiled/noprofile/AI-preventing-hallucinations.xml:191:11: error: element "section" incomplete; expected element "address", "anchor", "annotation", "bibliolist", "blockquote", "bridgehead", "calloutlist", "caution", "classsynopsis", "cmdsynopsis", "constraintdef", "constructorsynopsis", "destructorsynopsis", "epigraph", "equation", "example", "fieldsynopsis", "figure", "formalpara", "funcsynopsis", "glosslist", "important", "indexterm", "info", "informalequation", "informalexample", "informalfigure", "informaltable", "itemizedlist", "literallayout", "mediaobject", "methodsynopsis", "msgset", "note", "ns:include", "orderedlist", "para", "procedure", "productionset", "programlisting", "programlistingco", "qandaset", "refentry", "refsect1", "remark", "revhistory", "screen", "screenco", "screenshot", "section", "segmentedlist", "sidebar", "simpara", "simplelist", "simplesect", "subtitle", "synopsis", "table", "task", "tip", "titleabbrev", "variablelist" or "warning" (with xmlns:ns="http://www.w3.org/2001/XInclude")
+--------------------------------
+[1;31mDocument does not validate![0m
+make: *** [/usr/share/daps/make/validate.mk:73: validate] Error 1
