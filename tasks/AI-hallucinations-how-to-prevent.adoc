@@ -1,18 +1,15 @@
-
-[[_ai_hallucinations_how_to_prevent]]
-= How can I prevent AI from generating hallucinations?
+[[ai-hallucinations-howt-to-prevent]]
 = How can I prevent AI from generating hallucinations?
 
 [abstract]
 --
 You can help the AI model generate more reliable and precise content by creating effective prompts.
-This process is called __prompt
-        engineering__.
+This process is called __prompt engineering__.
 This section outlines several techniques to create a good prompt with real-life examples. 
 --
 :imagesdir: ./images
 
-[[_ai_clear_expectations]]
+[[ai-clear-expectations]]
 == Set clear expectations
 
 
@@ -35,7 +32,7 @@ A well-defined prompt guides the model toward specific information, reducing the
 * *Clearer prompt: *"`Explain the basic principles of quantum computing, specifically how qubits work compared to classical bits.`"
 
 
-[[_ai_break_complex]]
+[[ai-break-complex]]
 == Break down complex prompts
 
 
@@ -47,7 +44,7 @@ This keeps the language model focused on a narrower scope and reduces the chance
 * *Broken down prompt:*"`What are the most recent advancements in AI? How are these advancements being applied in the healthcare industry?`"
 
 
-[[_ai_rag]]
+[[ai-rag]]
 == Use retrieval-augmented generation (RAG)
 
 
@@ -64,7 +61,7 @@ Integrating a RAG system allows the LLM to query a specific database or resource
 * *Prompt with RAG:*"`Based on the "`technical-info`" collection in {milvus}, provide details about the company's AI product line.`"
 
 
-[[_ai_contrain]]
+[[ai-contrain]]
 == Constrain the output
 
 
@@ -80,7 +77,7 @@ Shorter, more direct answers reduce the chances of the model drifting off-topic 
 * *Prompt with limited output:*"`In 100 words or fewer, explain the main concept of quantum entanglement.`"
 
 
-[[_ai_prompt_verification]]
+[[ai-prompt-verification]]
 == Prompt for verification
 
 
@@ -92,7 +89,7 @@ This leads the model to produce more grounded and reliable responses.
 * "`Verify this answer against known historical facts about the event.`"
 
 
-[[_ai_cot]]
+[[ai-cot]]
 == Use chain-of-thought (CoT) prompting
 
 
@@ -103,7 +100,7 @@ This method is especially helpful when asking the model to explain complex proce
 * *Step-by-step prompt: *"`Explain the following concepts step by step: 1. How do neural networks learn from data? 2. How is backpropagation used in this process?`"
 
 
-[[_ai_prompt_template]]
+[[ai-prompt-template]]
 == Use templates for complex tasks
 
 
@@ -114,7 +111,7 @@ This is achieved by making the desired format and content explicit.
 * "`Based on the document provided, summarize the key technical features of the product. Format the response as: 1. Feature, 2. Benefit, 3. Use case. Use only factual information.`"
 
 
-[[_ai_system_prompts_formoreinfo]]
+[[ai-system-prompts-formoreinfo]]
 == For more information
 
 * Find good examples of system prompts in link:{dsc}/suse-ai/1.0/html/AI-system-prompts/index.html. 

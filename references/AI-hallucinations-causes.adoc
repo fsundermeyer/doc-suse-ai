@@ -1,6 +1,5 @@
 
-[[_ai_hallucinations_causes]]
-= What causes AI hallucinations?
+[[ai-hallucinations-causes]]
 = What causes AI hallucinations?
 
 [abstract]
