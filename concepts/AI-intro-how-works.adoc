@@ -71,4 +71,4 @@ An open source platform to manage the machine learning lifecycle, including expe
 
 [[suse-ai-schema]]
 .Basic schema of {productname}
-image::ai-schema.png[An image showing a basic structure of {productname}]
+image::ai-schema.png[An image showing a basic structure of {productname}, scaledwidth=100%]
