@@ -2,9 +2,9 @@
 // This file can be edited downstream
 
 // PRODUCT NAME AND VERSIONS
-:productname:       PRODUCT
-:productnameshort:  ACRONYM
-:productnumber:     X.Y
+:productname:       SUSE AI
+:productnameshort:  SUSE AI
+:productnumber:     1.0
 
 
 // PROJECT REPOSITORY URL
@@ -19,5 +19,5 @@
 
 
 // START YEAR OF COPYRIGHT
-:copyrightstart:  20XX
+:copyrightstart:  2023
 :copyrightholder: SUSE LLC
