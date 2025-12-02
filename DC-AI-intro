@@ -4,7 +4,7 @@ IMG_SRC_DIR="images"
 
 # ASCIIDoc options
 ADOC_POST=yes
-ADOC_TYPE=book
+ADOC_TYPE=article
 ADOC_ATTRIBUTES=" --attribute env-daps=1"
 
 STYLEROOT="/usr/share/xml/docbook/stylesheet/suse2022-ns"
