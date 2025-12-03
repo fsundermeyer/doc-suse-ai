@@ -2,11 +2,7 @@
 [[ai_data_integrity_maintaining]]
 = Maintaining data integrity of AI applications
 
-[abstract]
---
 This topic describes how to avoid compromising AI applications and keep sensitive data secure. 
---
-:imagesdir: ./images
 
 [[_why_care_about_ai_security]]
 == Why care about the security of AI applications?
@@ -113,4 +109,4 @@ We do not recommend exposing {milvus} and {ollama} without proper network config
 == For more information
 
 * The article at https://cloudsecurityalliance.org/blog/2023/11/22/mitigating-security-risks-in-retrieval-augmented-generation-rag-llm-applications includes a comprehensive overview of security controls. 
-* Specifying external data sources to the AI model knowledge base is described in link:{dsc}/suse-ai/1.0/html/openwebui-using/index.html#openwebui-chat-input-field-usage. 
+* Specifying external data sources to the AI model knowledge base is described in link:{dsc}/suse-ai/1.0/html/openwebui-using/index.html#openwebui-chat-input-field-usage[Open WebUI chat input field usage]. 

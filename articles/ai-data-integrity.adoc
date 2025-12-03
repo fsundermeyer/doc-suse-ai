@@ -34,13 +34,12 @@ GOAL::
   attacks.
 
 include::../concepts/AI-data-integrity.adoc[leveloffset=+1]
-include::../common/legal.adoc[leveloffset=+1]
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]
 
 [appendix]
-include::../common/common_copyright_gfdl.adoc[]
+include::../adoc/common_copyright_gfdl.adoc[]
 
 [appendix]
-include::../common/common_license_gfdl1.2.adoc[]
+include::../adoc/common_license_gfdl1.2.adoc[]
