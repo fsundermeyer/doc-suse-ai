@@ -1,13 +1,10 @@
-[[ai-hallucinations-howt-to-prevent]]
+[[ai-hallucinations-how-to-prevent]]
 = How can I prevent AI from generating hallucinations?
 
-[abstract]
---
 You can help the AI model generate more reliable and precise content by creating effective prompts.
 This process is called __prompt engineering__.
 This section outlines several techniques to create a good prompt with real-life examples. 
---
-:imagesdir: ./images
+
 
 [[ai-clear-expectations]]
 == Set clear expectations
@@ -23,13 +20,14 @@ A well-defined prompt guides the model toward specific information, reducing the
 
 
 .Example
-* *Ambiguous prompt:*"`Tell me about space.`"
-* *Clearer prompt:*"`Give me a summary of NASA's recent Mars missions, including factual details from their official reports.`"
+
+* *Ambiguous prompt:* "`Tell me about space.`"
+* *Clearer prompt:* "`Give me a summary of NASA's recent Mars missions, including factual details from their official reports.`"
 
 
 .Example
-* *Ambiguous prompt:*"`What is quantum computing?`"
-* *Clearer prompt: *"`Explain the basic principles of quantum computing, specifically how qubits work compared to classical bits.`"
+* *Ambiguous prompt:* "`What is quantum computing?`"
+* *Clearer prompt:* "`Explain the basic principles of quantum computing, specifically how qubits work compared to classical bits.`"
 
 
 [[ai-break-complex]]
@@ -40,8 +38,9 @@ Break down complex or broad prompts into manageable pieces.
 This keeps the language model focused on a narrower scope and reduces the chance of hallucination. 
 
 .Example
-* *Complex query:*"`Explain AI and how it can change the world.`"
-* *Broken down prompt:*"`What are the most recent advancements in AI? How are these advancements being applied in the healthcare industry?`"
+
+* *Complex query:* "`Explain AI and how it can change the world.`"
+* *Broken down prompt:* "`What are the most recent advancements in AI? How are these advancements being applied in the healthcare industry?`"
 
 
 [[ai-rag]]
@@ -57,8 +56,9 @@ Integrating a RAG system allows the LLM to query a specific database or resource
 
 
 .Example
-* *Prompt without RAG:*"`Tell me about the company's AI products.`"
-* *Prompt with RAG:*"`Based on the "`technical-info`" collection in {milvus}, provide details about the company's AI product line.`"
+
+* *Prompt without RAG:* "`Tell me about the company's AI products.`"
+* *Prompt with RAG:* "`Based on the "`technical-info`" collection in {milvus}, provide details about the company's AI product line.`"
 
 
 [[ai-contrain]]
@@ -73,9 +73,9 @@ Shorter, more direct answers reduce the chances of the model drifting off-topic 
 
 
 .Example
-* *Unconstrained prompt:*"`Give me a detailed report on quantum mechanics.`"
-* *Prompt with limited output:*"`In 100 words or fewer, explain the main concept of quantum entanglement.`"
 
+* *Unconstrained prompt:* "`Give me a detailed report on quantum mechanics.`"
+* *Prompt with limited output:* "`In 100 words or fewer, explain the main concept of quantum entanglement.`"
 
 [[ai-prompt-verification]]
 == Prompt for verification
@@ -97,7 +97,8 @@ By guiding the model through logical steps, you can control the reasoning path a
 This method is especially helpful when asking the model to explain complex processes. 
 
 .Example
-* *Step-by-step prompt: *"`Explain the following concepts step by step: 1. How do neural networks learn from data? 2. How is backpropagation used in this process?`"
+
+* *Step-by-step prompt:* "`Explain the following concepts step by step: 1. How do neural networks learn from data? 2. How is backpropagation used in this process?`"
 
 
 [[ai-prompt-template]]
