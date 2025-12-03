@@ -1,6 +1,5 @@
 
-[[_legal_disclaimer]]
-= Legal Notice
+[[legal_disclaimer]]
 = Legal Notice
 :imagesdir: ./images
 

@@ -28,163 +28,211 @@ appropriate responses.</para>
 </listitem>
 </varlistentry>
 </variablelist>
-<section xml:id="ai-hallucinations-causes">
-<title>What causes AI hallucinations?</title>
+<section xml:id="ai_system_prompt_benefits">
+<title>Benefits of using system prompts</title>
 
-<itemizedlist>
+<variablelist>
+<varlistentry>
+<term>Maintaining personality</term>
 <listitem>
-<para><emphasis role="strong">Ambiguous prompts.</emphasis> Vague queries can lead to random or inaccurate answers.</para>
+<para>When AI models must act as a specific persona, for example, a virtual assistant or a teacher, maintaining the persona is important for consistent user experience.</para>
 </listitem>
-<listitem>
-<para><emphasis role="strong">Lack of clear context.</emphasis> When the language model lacks context, it can fabricate answers.</para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">Long generation length.</emphasis> The longer the generated response, the higher the chance that hallucinations can happen.</para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">No retrieval-augmented process.</emphasis> LLMs without access to external sources—such as databases or search engines—can produce errors when they need to generate specific information.</para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-hallucinations-howt-to-prevent">
-<title>How can I prevent AI from generating hallucinations?</title>
-
-<section xml:id="ai-clear-expectations">
-<title>Set clear expectations</title>
-<para>The clearer the prompt, the less the LLM relies on assumptions or creativity.
-A well-defined prompt guides the model toward specific information, reducing the likelihood of hallucinations.</para>
-<itemizedlist>
-<title>Techniques:</title>
-<listitem>
-<para>Use <emphasis role="strong">specific language</emphasis> that guides the model.</para>
-</listitem>
-<listitem>
-<para>Focus on <emphasis role="strong">known data sources</emphasis> or real events.</para>
-</listitem>
-<listitem>
-<para>Request <emphasis role="strong">summaries</emphasis> or <emphasis>paraphrasing</emphasis> from established sources.</para>
-</listitem>
-</itemizedlist>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><emphasis role="strong">Ambiguous prompt:</emphasis><quote>Tell me about space.</quote></para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">Clearer prompt:</emphasis><quote>Give me a summary of NASA’s recent Mars missions, including factual details from their official reports.</quote></para>
-</listitem>
-</itemizedlist>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><emphasis role="strong">Ambiguous prompt:</emphasis><quote>What is quantum computing?</quote></para>
-</listitem>
-<listitem>
-<para>*Clearer prompt: *<quote>Explain the basic principles of quantum computing, specifically how qubits work compared to classical bits.</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-break-complex">
-<title>Break down complex prompts</title>
-<para>Break down complex or broad prompts into manageable pieces.
-This keeps the language model focused on a narrower scope and reduces the chance of hallucination.</para>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><emphasis role="strong">Complex query:</emphasis><quote>Explain AI and how it can change the world.</quote></para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">Broken down prompt:</emphasis><quote>What are the most recent advancements in AI? How are these advancements being applied in the healthcare industry?</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-rag">
-<title>Use retrieval-augmented generation (RAG)</title>
-<para>When crafting prompts, encourage the model to retrieve relevant information instead of generating from scratch.
-Integrating a RAG system allows the LLM to query a specific database or resource.</para>
-<itemizedlist>
-<title>Techniques</title>
-<listitem>
-<para>Include context cues, for example, <quote>Based on the following document</quote> or <quote>From the official Web site</quote> to point the model toward facts.</para>
-</listitem>
-<listitem>
-<para>If using a tool like Milvus or ChromaDB, structure your prompt to refer to specific collections or documents. This reduces hallucination by grounding the LLM in real data.</para>
-</listitem>
-</itemizedlist>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><emphasis role="strong">Prompt without RAG:</emphasis><quote>Tell me about the company’s AI products.</quote></para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">Prompt with RAG:</emphasis><quote>Based on the "`technical-info</quote> collection in Milvus, provide details about the company’s AI product line.`"</para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-contrain">
-<title>Constrain the output</title>
-<para>Limit the length or scope of the language model’s response.
-Shorter, more direct answers reduce the chances of the model drifting off-topic or hallucinating extra details.</para>
-<itemizedlist>
-<title>Technique</title>
-<listitem>
-<para>Use <emphasis>tokens</emphasis> or <emphasis>word limits</emphasis> where possible to enforce the output length.</para>
-</listitem>
-</itemizedlist>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><emphasis role="strong">Unconstrained prompt:</emphasis><quote>Give me a detailed report on quantum mechanics.</quote></para>
-</listitem>
-<listitem>
-<para><emphasis role="strong">Prompt with limited output:</emphasis><quote>In 100 words or fewer, explain the main concept of quantum entanglement.</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-prompt-verification">
-<title>Prompt for verification</title>
-<para>You can structure prompts to ask the LLM for clarification or to cite the source of its statements.
-This leads the model to produce more grounded and reliable responses.</para>
-<itemizedlist>
-<title>Examples</title>
-<listitem>
-<para><quote>Where did you find this information?</quote></para>
-</listitem>
-<listitem>
-<para><quote>Verify this answer against known historical facts about the event.</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-cot">
-<title>Use chain-of-thought (CoT) prompting</title>
-<para>By guiding the model through logical steps, you can control the reasoning path and help the model arrive at accurate conclusions.
-This method is especially helpful when asking the model to explain complex processes.</para>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para>*Step-by-step prompt: *<quote>Explain the following concepts step by step: 1. How do neural networks learn from data? 2. How is backpropagation used in this process?</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-prompt-template">
-<title>Use templates for complex tasks</title>
-<para>For complex tasks, for example, answering requests for proposals or technical questions, templates help provide a structure that minimizes hallucinations.
-This is achieved by making the desired format and content explicit.</para>
-<itemizedlist>
-<title>Example</title>
-<listitem>
-<para><quote>Based on the document provided, summarize the key technical features of the product. Format the response as: 1. Feature, 2. Benefit, 3. Use case. Use only factual information.</quote></para>
-</listitem>
-</itemizedlist>
-</section>
-<section xml:id="ai-system-prompts-formoreinfo">
+</varlistentry>
+</variablelist>
+<example>
+<title>Defining persona</title>
+<para>You are an enthusiastic biology teacher named Thomas.
+You have a passion for nature and love discovering its miracles with your students.
+Your communication style is friendly and informative.
+Avoiding attempts to break character::
+In certain cases, users may (intentionally) ask questions that are outside the scope of the AI’s persona and knowledge.
+Without proper guidance, the AI model may generate responses that are inconsistent and inappropriate.</para>
+</example>
+<para>+</para>
+<example>
+<title>Avoiding topics outside expertise</title>
+<para>If a user asks about topics outside your expertise, such as medical advice or legal matters, inform them that you are not qualified to provide relevant responses.
+Suggest that they should consult with the appropriate professionals.
+More creative behavior::
+By prompting the AI model to use varied language, analogies and storytelling techniques, you can guide the AI model towards generating more engaging and creative outputs.</para>
+</example>
+<para>+</para>
+<example>
+<title>Creative writing</title>
+<para>When generating stories or poems, use figurative language with metaphors, similes and personification to make your writing more vivid and engaging.
+Use a wide range of literary techniques, such as symbolism and irony, to create depth and layers of meaning.
+Targeting audiences::
+By specifying the language, tone and approach outlined in the system prompt, you can create AI models that are optimized for particular target audiences.</para>
+</example>
+<para>+</para>
+<example>
+<title>Children’s educational chatbot</title>
+<para>When interacting with young learners, use simple language appropriate to their age.
+Explain complex concepts in a clear and simple manner.
+Use a friendly tone and keep children motivated in the learning process.
+Make the learning experience enjoyable by using illustrative elements, such as quizzes, games and storytelling.</para>
+</example>
+<section xml:id="ai_system_prompts_formoreinfo">
 <title>For more information</title>
 <itemizedlist>
 <listitem>
-<para>Find good examples of system prompts in link:https://documentation.suse.com/suse-ai/1.0/html/AI-system-prompts/index.html.</para>
+<para>Find good examples of user prompts in link:https://documentation.suse.com/suse-ai/1.0/html/AI-preventing-hallucinations/index.html.</para>
 </listitem>
 </itemizedlist>
 </section>
+</section>
+<section xml:id="ai_system_prompt_how_works">
+<title>How does a system prompt work?</title>
+
+<para>System prompts are processed before the user input.
+This placement ensures that the AI has access to the necessary context, instructions and guidelines before processing the user’s prompt.</para>
+<section xml:id="content_of_system_prompt">
+<title>Content of a system prompt</title>
+<para>A typical system prompt contains the following elements:</para>
+<variablelist>
+<varlistentry>
+<term>Context</term>
+<listitem>
+<para>This part sets the scene or provides the necessary information for the AI to understand the situation.</para>
+<para>Example: <quote>You are a travel agent recommending vacation
+destinations.</quote></para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Task</term>
+<listitem>
+<para>A clear instruction on what the AI should do.
+This is the core of the system prompt, directing the AI to perform a specific task.</para>
+<para>Example: <quote>Generate text summaries and annual reports.</quote></para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Guidelines</term>
+<listitem>
+<para>These are rules that the AI must follow.
+They might limit the output format, length, tone or other criteria.</para>
+<para>Example: <quote>The recommendations should be less than 150 words
+each, and they should appeal to adventure travelers.</quote></para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Format</term>
+<listitem>
+<para>If you want the response in a particular structure, the system prompt should mention that.
+It can be a list, a paragraph, a dialogue or a code block.</para>
+<para>Example: <quote>Respond in a bullet point list.</quote></para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Tone</term>
+<listitem>
+<para>You can instruct the AI to generate responses with a particular tone, such as formal, casual, humorous or technical.</para>
+<para>Example: <quote>Write in a friendly, conversational tone.</quote></para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Example</term>
+<listitem>
+<para>System prompts may include examples of expected outputs to guide the AI in the right direction.</para>
+<para>Example: <quote>For example, 'Bali: a tropical paradise with
+beautiful beaches and rich culture. Perfect for relaxation and
+adventure.</quote></para>
+</listitem>
+</varlistentry>
+</variablelist>
+<example>
+<title>A full simple system prompt</title>
+<para><quote>You are an experienced travel guide. Suggest three vacation
+        destinations for a family looking for sunny weather, outdoor activities
+        and cultural experiences. Each suggestion should be 100-150 words,
+        written in a friendly and conversational tone. Present the suggestions
+        as a numbered list.</quote></para>
+</example>
+<example>
+<title>A complex system prompt that uses a template</title>
+<para>Assume your task is to create a customer-facing report that follows these guidelines:</para>
+<itemizedlist>
+<listitem>
+<para><emphasis role="strong">Direction:</emphasis> Set the tone as professional and informative.</para>
+</listitem>
+<listitem>
+<para><emphasis role="strong">Format:</emphasis> Specify output as a formal report.</para>
+</listitem>
+<listitem>
+<para><emphasis role="strong">Examples:</emphasis> Provide a template or previous reports as examples.</para>
+</listitem>
+<listitem>
+<para><emphasis role="strong">Quality:</emphasis> Use a checklist to ensure accuracy and relevance.</para>
+</listitem>
+<listitem>
+<para><emphasis role="strong">Labor:</emphasis> Divide sections into executive summary, detailed findings and conclusions.</para>
+</listitem>
+</itemizedlist>
+<para>The resulting prompt that corresponds to the above guidelines may look similar to the following example.
+You can copy and paste the whole text into an AI-driven chatbot prompt.</para>
+<screen>Direction:
+
+Adopt a professional and informative tone throughout the report. The
+content should be clear, concise, and tailored to a business audience.
+
+Format:
+
+The output should be in the form of a formal report, structured with headings,
+subheadings, and bullet points where necessary. Use professional language
+and adhere to business writing standards.
+
+Examples:
+
+Here is a template of the report structure to follow:
+
+Executive Summary:
+- Overview of key findings and recommendations.
+Detailed Findings:
+- Section 1: [Topic]
+- Section 2: [Topic]
+- Section 3: [Topic]
+Conclusions:
+- Summary of findings and next steps.
+
+Please refer to previous reports, such as [Report A] and [Report B] for style
+and formatting guidelines.
+
+Quality:
+
+Use the following checklist to ensure the report's accuracy and relevance:
+1. Verify all data and statistics are correct and up to date.
+2. Ensure the report is free of grammatical and typographical errors.
+3. Cross-check that all sections are consistent and logically structured.
+4. Validate that the report meets the customer's objectives and addresses
+   their concerns.
+
+Labor:
+
+Divide the report into the following sections:
+1. Executive Summary: Summarize the main findings and key recommendations in a
+   concise manner.
+2. Detailed Findings: Provide in-depth analysis and data for each key area of
+   focus, divided into logical subsections.
+3. Conclusions: Offer a summary of the findings and suggest actionable next
+   steps for the customer.</screen>
+</example>
+</section>
+</section>
+<section xml:id="legal_disclaimer">
+<title>Legal Notice</title>
+<para>Copyright© 2006–
+SUSE LLC and contributors.
+All rights reserved.</para>
+<para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or (at your option) version 1.3; with the Invariant Section being this copyright notice and license.
+A copy of the license version 1.2 is included in the section entitled <quote>GNU Free Documentation License</quote>
+.</para>
+<para>For SUSE trademarks, see <link xmlns:xl="http://www.w3.org/1999/xlink" xl:href="https://www.suse.com/company/legal/">https://www.suse.com/company/legal/</link>.
+All other third-party trademarks are the property of their respective owners.
+Trademark symbols (®, ™ etc.) denote trademarks of SUSE and its affiliates.
+Asterisks (*) denote third-party trademarks.</para>
+<para>All information found in this book has been compiled with utmost attention to detail.
+However, this does not guarantee complete accuracy.
+Neither SUSE LLC, its affiliates, the authors, nor the translators shall be held liable for possible errors or the consequences thereof.</para>
 </section>
 <glossary xml:id="id-glossary">
 <title>Glossary</title>

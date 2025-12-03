@@ -30,8 +30,9 @@ WHY?::
 EFFORT::
   Less than 30 minutes of reading.
 
-include::../references/AI-hallucinations-causes.adoc[leveloffset=+1]
-include::../tasks/AI-hallucinations-how-to-prevent.adoc[leveloffset=+1]
+include::../references/AI-system-prompt-benefits.adoc[leveloffset=+1]
+include::../concepts/AI-system-prompt-how-works.adoc[leveloffset=+1]
+include::../common/legal.adoc[leveloffset=+1]
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]

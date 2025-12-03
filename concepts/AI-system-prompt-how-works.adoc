@@ -1,6 +1,5 @@
 
-[[_ai_system_prompt_how_works]]
-= How does a system prompt work?
+[[ai_system_prompt_how_works]]
 = How does a system prompt work?
 
 [abstract]
@@ -14,7 +13,7 @@ Describing the task, the desired output format, and setting limits to the AI's b
 System prompts are processed before the user input.
 This placement ensures that the AI has access to the necessary context, instructions and guidelines before processing the user's prompt. 
 
-[[_content_of_system_prompt]]
+[[content_of_system_prompt]]
 == Content of a system prompt
 
 

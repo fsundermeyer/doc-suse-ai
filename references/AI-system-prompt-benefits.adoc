@@ -1,6 +1,5 @@
 
-[[_ai_system_prompt_benefits]]
-= Benefits of using system prompts
+[[ai_system_prompt_benefits]]
 = Benefits of using system prompts
 
 [abstract]
@@ -52,7 +51,7 @@ Explain complex concepts in a clear and simple manner.
 Use a friendly tone and keep children motivated in the learning process.
 Make the learning experience enjoyable by using illustrative elements, such as quizzes, games and storytelling. 
 
-[[_ai_system_prompts_formoreinfo]]
+[[ai_system_prompts_formoreinfo]]
 == For more information
 
 * Find good examples of user prompts in link:{dsc}/suse-ai/1.0/html/AI-preventing-hallucinations/index.html. 
