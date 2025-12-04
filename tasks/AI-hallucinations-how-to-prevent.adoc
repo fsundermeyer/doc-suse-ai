@@ -8,31 +8,18 @@ This section outlines several techniques to create a good prompt with real-life 
 [[ai-clear-expectations]]
 == Set clear expectations
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 The clearer the prompt, the less the LLM relies on assumptions or creativity.
 A well-defined prompt guides the model toward specific information, reducing the likelihood of hallucinations. 
 
 .Techniques:
 * Use *specific language* that guides the model. 
 * Focus on *known data sources* or real events. 
-<<<<<<< HEAD
 * Request *summaries* or *paraphrasing* from established sources. 
-=======
-* Request *summaries* or _paraphrasing_ from established sources. 
-
->>>>>>> origin/main
 
 .Example
 * *Ambiguous prompt:* "`Tell me about space.`"
 * *Clearer prompt:* "`Give me a summary of NASA's recent Mars missions, including factual details from their official reports.`"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 .Example
 * *Ambiguous prompt:* "`What is quantum computing?`"
 * *Clearer prompt:* "`Explain the basic principles of quantum computing, specifically how qubits work compared to classical bits.`"
