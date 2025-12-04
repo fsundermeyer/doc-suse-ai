@@ -1,4 +1,3 @@
-
 [[ai_system_prompt_how_works]]
 = How does a system prompt work?
 
@@ -10,7 +9,6 @@ This placement ensures that the AI has access to the necessary context, instruct
 
 [[content_of_system_prompt]]
 == Content of a system prompt
-
 
 A typical system prompt contains the following elements: 
 
@@ -35,7 +33,7 @@ each, and they should appeal to adventure travelers.`"
 
 Format::
 If you want the response in a particular structure, the system prompt should mention that.
-It can be a list, a paragraph, a dialogue or a code block. 
+It can be a list, a paragraph, a dialog or a code block. 
 +
 Example: "`Respond in a bullet point list.`"
 
@@ -54,11 +52,9 @@ adventure.`"
 
 .A full simple system prompt
 [example]
-"`You are an experienced travel guide. Suggest three vacation
-        destinations for a family looking for sunny weather, outdoor activities
-        and cultural experiences. Each suggestion should be 100-150 words,
-        written in a friendly and conversational tone. Present the suggestions
-        as a numbered list.`"
+"You are an experienced travel guide. Suggest three vacation destinations for a family looking for sunny weather, outdoor activities and cultural experiences.
+Each suggestion should be 100-150 words, written in a friendly and conversational tone.
+Present the suggestions as a numbered list."
 
 .A complex system prompt that uses a template
 ====
