@@ -1,4 +1,4 @@
-[[ai_system_prompt_how_works]]
+[[ai-system-prompt-how-works]]
 = How does a system prompt work?
 
 System prompts serve as a map that guides the AI model through the complexities of natural language understanding and generation.
@@ -7,7 +7,7 @@ Describing the task, the desired output format, and setting limits to the AI's b
 System prompts are processed before the user input.
 This placement ensures that the AI has access to the necessary context, instructions and guidelines before processing the user's prompt. 
 
-[[content_of_system_prompt]]
+[[content-of-system-prompt]]
 == Content of a system prompt
 
 A typical system prompt contains the following elements: 
