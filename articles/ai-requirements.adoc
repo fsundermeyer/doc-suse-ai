@@ -29,11 +29,22 @@ EFFORT::
 [preface]
 This article describes the software, hardware and networking requirements for the cluster nodes where you plan to install {productname}.
 
+.Hardware requirements
+include::../references/AI-requirements-hardware.adoc[leveloffset=+1]
 
-include::../references/AI-intro-benefits.adoc[leveloffset=+1]
-include::../references/AI-intro-scenarios.adoc[leveloffset=+1]
-include::../concepts/AI-intro-how-works.adoc[leveloffset=+1]
-include::../glues/ai-intro-next-steps.adoc[leveloffset=+1]
+.GPU hardware
+include::../references/AI-requirements-hardware-gpu.adoc[leveloffset=+1]
+
+[[ai-requirements-hardware-apps]]
+== Application-specific requirements
+The {productname} stack consists of multiple applications. We recommend running each application on nodes that meet or exceed the corresponding hardware requirements.
+
+include::../references/AI-requirements-rancher.adoc[leveloffset=+2]
+include::../references/AI-requirements-security.adoc[leveloffset=+2]
+include::../references/AI-requirements-observability.adoc[leveloffset=+2]
+include::../references/AI-requirements-milvus.adoc[leveloffset=+2]
+include::../references/AI-requirements-ollama.adoc[leveloffset=+2]
+include::../references/AI-requirements-openwebui.adoc[leveloffset=+2]
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]
