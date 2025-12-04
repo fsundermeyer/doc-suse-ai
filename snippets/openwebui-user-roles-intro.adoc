@@ -1,0 +1,4 @@
+
+
+{owui} provides _role-based access control_ (RBAC). Each user is assigned one of the available roles.
+The role defines whether the user has privileges to perform administration tasks. 
