@@ -13,4 +13,8 @@ worktree
 .worktree
 worktrees
 .worktrees
+<<<<<<< HEAD
 build
+=======
+build/
+>>>>>>> origin/main
