@@ -54,5 +54,3 @@ include::../common/common_copyright_gfdl.adoc[]
 
 [appendix]
 include::../common/common_license_gfdl1.2.adoc[]
-
-// TODO: add tabs to files
