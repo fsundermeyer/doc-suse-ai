@@ -2,8 +2,7 @@
 = Monitoring user-managed applications
 
 To monitor other applications, you can utilize {otelemetry} SDKs or any other instrumentation provider compatible with {otelemetry}'s semantics, for example, {openlit} SDK.
-For more details, refer to <<_ai_monitoring_instrument_openlit>>. 
-
+For more details, refer to. 
 
 {otelemetry} offers several instrumentation techniques for different deployment scenarios and applications.
 You can instrument applications either manually, with more detailed control, or automatically for an easier starting point. 
@@ -35,15 +34,14 @@ Both the meter and the tracer must contain the following resource attributes:
 
 service.name::
 The logical name of the service.
-Defaults to ``"My
-App"``. 
+Defaults to ``"My App"``. 
 
 service.version::
 The version of the service.
 Defaults to ``"1.0"``. 
 
 deployment.environment::
-The name of the deployment environment, such as `"production"` or ``"staging"``.
+The name of the deployment environment, such as 'production' or ``"staging"``.
 Defaults to ``"default""``. 
 
 telemetry.sdk.name::

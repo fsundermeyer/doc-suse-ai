@@ -14,12 +14,19 @@ It requires enabling and configuring {owui} Pipelines.
 pipelines:
   enabled: true
   persistence:
-    storageClass: longhorn <1>extraEnvVars: <2>- name: PIPELINES_URLS <3>value: "https://raw.githubusercontent.com/SUSE/suse-ai-observability-extension/refs/heads/main/integrations/oi-filter/suse_ai_filter.py"
-    - name: OTEL_SERVICE_NAME <4>value: "Open WebUI"
-    - name: OTEL_EXPORTER_HTTP_OTLP_ENDPOINT <5>value: "http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"
-    - name: PRICING_JSON <6>value: "https://raw.githubusercontent.com/SUSE/suse-ai-observability-extension/refs/heads/main/integrations/oi-filter/pricing.json"
+    storageClass: longhorn <1>
+  extraEnvVars: <2>
+    - name: PIPELINES_URLS <3>
+      value: "https://raw.githubusercontent.com/SUSE/suse-ai-observability-extension/refs/heads/main/integrations/oi-filter/suse_ai_filter.py"
+    - name: OTEL_SERVICE_NAME <4>
+      value: "Open WebUI"
+    - name: OTEL_EXPORTER_HTTP_OTLP_ENDPOINT <5>
+      value: "http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"
+    - name: PRICING_JSON <6>
+      value: "https://raw.githubusercontent.com/SUSE/suse-ai-observability-extension/refs/heads/main/integrations/oi-filter/pricing.json"
 extraEnvVars:
-- name: OPENAI_API_KEY <7>value: "0p3n-w3bu!"
+- name: OPENAI_API_KEY <7>
+  value: "0p3n-w3bu!"
 ----
 +
 NOTE: In the above example, there are two `extraEnvVars` blocks: one at the root level and another inside the `pipelines` configuration.
@@ -27,13 +34,9 @@ The root-level `extraEnvVars` is fed into {owui} to configure the communication 
 The `extraEnvVars` inside the configuration are injected into the container that acts as a runtime for the ``pipelines``. 
 +
 
-
 +
 <1>
-            `
-longhorn`
- or ``local-path``
-.
+            ` longhorn` or ``local-path``.
           
 <2>
             The environment variables that you are making available for the
@@ -41,10 +44,8 @@ longhorn`
           
 <3>
             A list of pipeline URLs to be downloaded and installed by default.
-            Individual URLs are separated by a semicolon ``;``
-.
+            Individual URLs are separated by a semicolon ``;`` .
           
-
             For air-gapped deployments, you need to provide the pipelines at
             URLs that are accessible from the local host, such as an internal
             GitLab instance.
@@ -68,14 +69,13 @@ longhorn`
           
 <7>
             The value for the API key between {owui} and {owui} Pipelines. The
-            default value is "`0p3n-w3bu!`"
-.
+            default value is '0p3n-w3bu!' .
           
 . After you fill the override file with correct values, install or update {owui}. 
 +
 
 ----
-{prompt.user}helm upgrade \
+> helm upgrade \
   --install open-webui oci://dp.apps.rancher.io/charts/open-webui \
   -n SUSE_AI_NAMESPACE \
   --create-namespace \
@@ -91,18 +91,15 @@ TIP: Make sure to set the version, namespace and other options to the proper val
 After the installation is successful, you can access tracing data in {sobservability} for each chat. 
 +
 TIP: You can verify that a new connection was created with correct credentials in menu:Admin
-          Panel[Settings > Connections]
-. 
+          Panel[Settings > Connections]. 
 
 .New connection added for the pipeline [[_fg_pipeline_connection]]
-
 image::ai-observability-connection.png["Connections settings page within an admin panel, highlighting a newly added Ollama API connection with its URL and an active status",scaledwidth=75%]
 
 +
 
 
-
-[[_ai_monitoring_owui_pipelines_webui]]
+[[ai-monitoring-owui-pipelines-webui]]
 .Procedure: Configuring a pipeline filter in {owui} (recommended)
 
 If you already have a running instance of {owui} with the pipelines enabled and configured, you can set up the {productname} Filter in its Web user interface. 
@@ -122,14 +119,13 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 
 image::ai-observability-filter-pipeline.png[Screenshot showing the detailed configuration and code content for a {suseai} filter pipeline,scaledwidth=100%]
 
-
 [[ai-monitoring-owui-default-metrics]]
 .Procedure: Configuring default {owui} metrics and traces (advanced)
 
 {owui} also offers certain built-in {otelemetry} integration for traces and metrics.
 These signals are related to the API consumption but do not provide details about the GenAI monitoring.
-That is why we need to configure the {productname} filter as described in <<_ai_monitoring_owui_pipelines_cmdline>>. 
-. Append the following environment variables to your `extraEnvVars` section in the [path]``owui_custom_overrides.yaml`` file mentioned in <<_ai_monitoring_owui_pipelines_cmdline>>. 
+That is why we need to configure the {productname} filter as described in 
+. Append the following environment variables to your `extraEnvVars` section in the [path]``owui_custom_overrides.yaml`` file mentioned in. 
 +
 
 ----
@@ -142,34 +138,30 @@ extraEnvVars:
 - name: ENABLE_OTEL_METRICS
   value: "true"
 - name: OTEL_EXPORTER_OTLP_INSECURE
-  value: "false" <8>- name: OTEL_EXPORTER_OTLP_ENDPOINT
-  value:`CUSTOM_OTEL_ENDPOINT` <9>- name: OTEL_SERVICE_NAME
+  value: "false" <8>
+- name: OTEL_EXPORTER_OTLP_ENDPOINT
+  value:`CUSTOM_OTEL_ENDPOINT` <9>
+- name: OTEL_SERVICE_NAME
   value:`CUSTOM_OTEL_IDENTIFYER` <10>
 ----
 +
 <8>
-            Set to `
-"true"`
- for testing or controlled
-            environments, and `"false"`
- for production
+            Set to 'true' for testing or controlled environments, and 'false' for production
             deployments with TLS communication.
           
 <9>
             Enter your custom {otelemetry} collector endpoint URL, such as
-            ``"http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"``
-.
+            ``"http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"``.
           
 <10>
             Specify a custom identifier for the {otelemetry} service, such as
-            ``"OI Core""``
-.
+            ``"OI Core""``.
           
 . Save the enhanced override file and update {owui}: 
 +
 
 ----
-{prompt.user}helm upgrade \
+> helm upgrade \
   --install open-webui oci://dp.apps.rancher.io/charts/open-webui \
   -n SUSE_AI_NAMESPACE \
   --create-namespace \
