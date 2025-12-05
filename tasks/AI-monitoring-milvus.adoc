@@ -1,14 +1,10 @@
-
-[[_ai_monitoring_milvus]]
+[[ai-monitoring-milvus]]
 = Monitoring {milvus}
 
-[abstract]
---
 {milvus} is monitored by scraping its {prometheus}-compatible metrics endpoint.
 The {sobservability} Extension uses these metrics to visualize {milvus}'s status and activity. 
---
 
-[[_ai_monitoring_milvus_scraping_metrics]]
+[[ai-monitoring-milvus-scraping-metrics]]
 == Scraping the metrics (recommended)
 
 Add the following job to the `scrape_configs` section of your {otelemetry} Collector's configuration.
@@ -39,7 +35,7 @@ config:
 //     </calloutlist>
 
 
-[[_ai_monitoring_milvus_tracing]]
+[[ai-monitoring-milvus-tracing]]
 == Tracing (advanced)
 
 {milvus} can also export detailed tracing data. 
