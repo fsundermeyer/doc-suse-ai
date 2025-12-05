@@ -1,4 +1,4 @@
-[[openwebui_input_field_specify_system_prompt]]
+[[openwebui-input-field-specify-system-prompt]]
 = Selecting a preconfigured system prompt from the chat input field
 
 System prompts define the mood, context or style for user interactions.

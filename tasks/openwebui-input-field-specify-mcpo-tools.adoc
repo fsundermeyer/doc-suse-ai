@@ -1,4 +1,4 @@
-[[_openwebui_input_field_specify_mcpo_tools]]
+[[openwebui-input-field-specify-mcpo-tools]]
 = Selecting {mcpo} services from the chat input field
 
 {mcp} servers offer additional services that enhance the AI model responses and make them more specific.

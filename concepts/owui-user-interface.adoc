@@ -70,7 +70,7 @@ include a collection of Python snippets that enhance interaction and expand func
 Tools can, for example, integrate additional data sources into the model knowledge base, such as databases. 
 
 
-[[owui_admin_panel]]
+[[owui-admin-panel]]
 == Admin Panel
 
 [IMPORTANT]
