@@ -49,7 +49,7 @@ IMPORTANT: Verify that the `ServiceAccount` name and namespace in the `RoleBindi
 +
 
 ----
-{prompt.user}kubectl apply -n gpu-operator -f otel-rbac.yaml 
+> kubectl apply -n gpu-operator -f otel-rbac.yaml 
 ----
 . *Configure the {otelemetry} Collector.* Add the following Prometheus receiver configuration to your {otelemetry} Collector's values file. This tells the collector to scrape metrics from any endpoint in the `gpu-operator` namespace every 10 seconds. 
 +

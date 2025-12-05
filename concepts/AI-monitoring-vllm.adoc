@@ -7,7 +7,6 @@ The {sobservability} Extension uses these metrics to visualize {vllm}'s status a
 [[ai-monitoring-vllm-scraping]]
 == Metrics Scraping (recommended)
 
-
 Add the following job to the `scrape_configs` section of your {otelemetry} Collector's configuration.
 This configures the collector to scrape the [path]``/metrics``
  endpoint from all {vllm} services every 10 seconds.

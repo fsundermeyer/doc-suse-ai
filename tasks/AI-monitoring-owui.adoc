@@ -98,7 +98,6 @@ image::ai-observability-connection.png["Connections settings page within an admi
 
 +
 
-
 [[ai-monitoring-owui-pipelines-webui]]
 .Procedure: Configuring a pipeline filter in {owui} (recommended)
 
@@ -125,6 +124,7 @@ image::ai-observability-filter-pipeline.png[Screenshot showing the detailed conf
 {owui} also offers certain built-in {otelemetry} integration for traces and metrics.
 These signals are related to the API consumption but do not provide details about the GenAI monitoring.
 That is why we need to configure the {productname} filter as described in 
+
 . Append the following environment variables to your `extraEnvVars` section in the [path]``owui_custom_overrides.yaml`` file mentioned in. 
 +
 
