@@ -41,7 +41,11 @@ REQUIREMENTS::
   instance of Open WebUI and logged in with your credentials.
 
 include::../concepts/openwebui-introduction.adoc[leveloffset=+1]
+
+:override-title: User interface basics
 include::../concepts/owui-user-interface.adoc[leveloffset=+1]
+
+:override-title: The chat window
 include::../tasks/openwebui-chat-window-usage.adoc[leveloffset=+1]
 
 [[openwebui-chat-input-field-usage]]
@@ -54,6 +58,7 @@ AI can process it and respond (see
 <<openwebui-chat-window-usage>>). Besides that, the
 chat input field provides extended functionality that can help you
 achieve the following tasks.
+
 
 include::../tasks/openwebui-input-field-specify-model.adoc[leveloffset=+2]
 include::../tasks/openwebui-input-field-specify-collections.adoc[leveloffset=+2]
