@@ -20,18 +20,14 @@ The selected model temporarily overrides your default model or the model you sel
 . In the chat input field, type the `@` character. 
 . From the drop-down list that appears, select one of the preconfigured AI models you want to talk to. You can only select one model at a time. 
 +
-
 .Selecting an AI model
-
 image::openwebui-chat-models.png[Selecting an AI model,scaledwidth=75%]
-
 +
 Your selection is confirmed by the menu:Talking to MODEL_NAME[]
 message right above the chat input field. 
 . Type your prompt and confirm with kbd:[Enter] or by clicking the "`up`" arrow to the right of the chat input field. 
 +
-
 .Prompt for a selected model
-
 image::openwebui-chat-models-prompt.png[Prompt for a selected model,scaledwidth=75%]
++
 . To deactivate the previously selected model from the current chat, click the "`cross`" icon to the right of the model name. 

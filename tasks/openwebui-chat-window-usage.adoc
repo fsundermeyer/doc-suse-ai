@@ -6,13 +6,12 @@ The chat window is the primary interface for interacting with the AI, allowing y
 This procedure describes the basic steps for interacting with an AI model using the {owui} chat window. 
 
 . At the top left of the chat window, verify that an AI model is selected. If no model is selected, select the preferred one from the drop-down list. 
-
 +
+--
 include::../snippets/openwebui-tip-default-model.adoc[leveloffset=1]
 include::../snippets/openwebui-tip-multiple-models.adoc[leveloffset=1]
-
+--
 . Enter your prompt that you want AI to process in the chat input field. 
-
 +
 .Audio prompt
 TIP: If you prefer speaking rather than writing, click the small microphone icon to the right of the chat input field.
@@ -20,7 +19,6 @@ Then say your prompt aloud and click the small check mark when finished.
 
 . Confirm with kbd:[Enter] or click the "`up`" arrow on the right of the chat input field so that the AI model can process your prompt. Wait for the response. 
 .AI answering with two models [[_openwebui_2_responses]]
-
 +
 image::openwebui-2-responses.png[AI answering with 2 models,scaledwidth=85%]
 
