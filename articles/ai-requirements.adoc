@@ -29,10 +29,7 @@ EFFORT::
 [preface]
 This article describes the software, hardware and networking requirements for the cluster nodes where you plan to install {productname}.
 
-.Hardware requirements
 include::../references/AI-requirements-hardware.adoc[leveloffset=+1]
-
-.GPU hardware
 include::../references/AI-requirements-hardware-gpu.adoc[leveloffset=+1]
 
 [[ai-requirements-hardware-apps]]
