@@ -17,6 +17,8 @@ endif::[]
 :revdate: 2025-012-02
 :page-revdate: {revdate}
 
+[abstract]
+--
 WHAT?::
   Hardware, software and networking requirements for successful deployment and operation of {productname}.
 
@@ -25,6 +27,7 @@ WHY?::
 
 EFFORT::
   Less than 30 minutes of reading and a basic knowledge of hardware and {rke2} environment.
+--
 
 [preface]
 This article describes the software, hardware and networking requirements for the cluster nodes where you plan to install {productname}.
