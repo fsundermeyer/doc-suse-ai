@@ -4,10 +4,8 @@
 This topic explains how to create a new knowledge base to extend the AI model's context on a specific topic. 
 
 .Requirements
-** {empty}
-+
 
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . In the {owui} interface, click menu:Workspace[] in the upper part of the left panel. 
 . Select menu:Knowledge[] in the top menu and click the "`plus`" sign in the right. 
 . Enter a title and a short description for the knowledge base. 

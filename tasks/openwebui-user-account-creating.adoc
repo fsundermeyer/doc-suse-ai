@@ -6,10 +6,8 @@ This topic explains how to create a new user account with an assigned role in {o
 .Procedure: Creating a single user account
 
 .Requirements
-** {empty}
-+
 
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select menu:Admin Panel[] . 
 . On the menu:Users[] screen, click the '+' sign at the top right. 
 +
@@ -25,10 +23,8 @@ image::openwebui-users-creating.png[Creating new users,scaledwidth=50%]
 
 
 .Requirements
-** {empty}
-+
 
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select menu:Admin Panel[] . 
 . On the menu:Users[] screen, click the '+' sign at the top right. 
 . On the menu:CSV Import[] screen, specify the path to your CSV file with the list of user accounts to be created. 

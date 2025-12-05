@@ -4,10 +4,8 @@
 This procedure shows how to import a system prompt that was previously exported. 
 
 .Requirements
-** {empty}
-+
 
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . In the {owui} interface, click menu:Workspace[] in the upper part of the left panel and select menu:Prompts[] . 
 . Click menu:Import Prompts[] in the bottom right of the prompt list. 
 . Navigate to the JSON file with previously exported prompts and confirm with menu:Open[] . 
