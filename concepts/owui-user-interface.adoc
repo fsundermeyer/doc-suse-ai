@@ -1,5 +1,10 @@
 [[openwebui-ui]]
+ifdef::override-title[]
+= {override-title}
+endif::[]
+ifndef::override-title[]
 = {owui} user interface
+endif::[]
 
 The {owui} interface consists of three main parts. 
 
