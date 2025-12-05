@@ -1,4 +1,3 @@
-
 [[ai-hallucinations-causes]]
 = What causes AI hallucinations?
 
