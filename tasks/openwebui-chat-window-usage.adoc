@@ -1,4 +1,4 @@
-[[openwebui_chat_window_usage]]
+[[openwebui-chat-window-usage]]
 = Using the {owui} chat window
 
 The chat window is the primary interface for interacting with the AI, allowing you to send prompts and receive responses. 
