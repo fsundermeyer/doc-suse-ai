@@ -1,4 +1,4 @@
-[[openwebui_ui]]
+[[openwebui-ui]]
 = {owui} user interface
 
 The {owui} interface consists of three main parts. 
@@ -35,7 +35,7 @@ By using the prompt field at the bottom, you can accomplish the following tasks 
 image::openwebui-intro.png[{owui} user interface,scaledwidth=75%]
 
 
-[[owui_workspace]]
+[[owui-workspace]]
 == Workspace
 
 [IMPORTANT]

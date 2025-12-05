@@ -1,10 +1,10 @@
-[[openwebui_introduction]]
+[[openwebui-introduction]]
 = What is {owui}?
 
 {owui} is a Web-based interface that allows you to interact with AI models, such as _large language models_ (LLM). It simplifies working with AI by providing a graphical user interface (GUI) instead of relying on command-line tools.
 The goal of {owui} is to make AI accessible to a broader audience, including those without technical expertise in AI development. 
 
-[[benefits_of_openwebui]]
+[[benefits-of-openwebui]]
 == What are the key benefits of using {owui}?
 
 *Interaction with AI models*::
@@ -22,7 +22,7 @@ You can deploy {owui} locally or in a private environment.
 Such deployment is required for users concerned about privacy and data security. 
 
 
-[[ai_prompt_answer]]
+[[ai-prompt-answer]]
 == How does an AI chatbot process user queries?
 
 
