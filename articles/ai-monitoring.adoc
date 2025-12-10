@@ -17,28 +17,24 @@ endif::[]
 :revdate: 2025-012-02
 :page-revdate: {revdate}
 
-[abstract]
---
 WHAT?::
   This document focuses on techniques for gathering telemetry data
-  from all SUSE AI components, including metrics, logs and traces. 
+  from all {productname} components, including metrics, logs and traces. 
 
 WHY?::
   To observe, analyze and maintain the behavior, performance and
-  health of your SUSE AI environment, and to troubleshoot issues
+  health of your {productname} environment, and to troubleshoot issues
   effectively. 
 
 EFFORT::
-  Setting up the recommended monitoring configurations with SUSE
-  Observability is straightforward. Advanced setups for more
-  granular control may require additional time for specialized
-  analysis and fine-tuning.
+  Setting up the recommended monitoring configurations with {sobservability} is
+  straightforward. Advanced setups for more granular control may require
+  additional time for specialized analysis and fine-tuning.
 
 GOAL::
   To visualize the complete topology of your services and
   operations, providing deep insights and clarity into your
-  SUSE AI environment.
---
+  {productname} environment.
 
 include::../concepts/AI-monitoring.adoc[leveloffset=+1]
 include::../tasks/AI-monitoring-gpu.adoc[leveloffset=+1]
