@@ -2,7 +2,7 @@
 = Monitoring user-managed applications
 
 To monitor other applications, you can utilize {otelemetry} SDKs or any other instrumentation provider compatible with {otelemetry}'s semantics, for example, {openlit} SDK.
-For more details, refer to. 
+For more details, refer to <<ai-monitoring-instrument-openlit>>. 
 
 {otelemetry} offers several instrumentation techniques for different deployment scenarios and applications.
 You can instrument applications either manually, with more detailed control, or automatically for an easier starting point. 
