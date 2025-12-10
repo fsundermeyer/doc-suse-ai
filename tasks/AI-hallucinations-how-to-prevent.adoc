@@ -8,20 +8,17 @@ This section outlines several techniques to create a good prompt with real-life 
 [[ai-clear-expectations]]
 == Set clear expectations
 
-
 The clearer the prompt, the less the LLM relies on assumptions or creativity.
 A well-defined prompt guides the model toward specific information, reducing the likelihood of hallucinations. 
 
 .Techniques:
 * Use *specific language* that guides the model. 
 * Focus on *known data sources* or real events. 
-* Request *summaries* or _paraphrasing_ from established sources. 
-
+* Request *summaries* or *paraphrasing* from established sources. 
 
 .Example
 * *Ambiguous prompt:* "`Tell me about space.`"
 * *Clearer prompt:* "`Give me a summary of NASA's recent Mars missions, including factual details from their official reports.`"
-
 
 .Example
 * *Ambiguous prompt:* "`What is quantum computing?`"
@@ -110,4 +107,4 @@ This is achieved by making the desired format and content explicit.
 [[ai-system-prompts-formoreinfo]]
 == For more information
 
-* Find good examples of system prompts in link:{dsc}/suse-ai/1.0/html/AI-system-prompts/index.html. 
+* Find good examples of system prompts in link:{dsc}/suse-ai/1.0/html/AI-system-prompts/index.html.
