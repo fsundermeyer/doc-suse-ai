@@ -6,7 +6,7 @@ The preferred way of retrieving relevant telemetry data from {owui} is to use th
 It requires enabling and configuring {owui} Pipelines. 
 
 [[ai-monitoring-owui-pipelines-cmdline]]
-.Procedure: Configuring pipeline filter during {owui} installation (recommended)
+.Configuring pipeline filter during {owui} installation (recommended)
 . Verify that the {owui} installation override file [path]``owui_custom_overrides.yaml`` includes the following content. 
 +
 [source,yaml]
@@ -109,7 +109,7 @@ image::ai-observability-filter-pipeline.png["Screenshot showing the detailed con
 
 {owui} also offers certain built-in {otelemetry} integration for traces and metrics. These signals are related to the API consumption but do not provide details about the GenAI monitoring. That is why we need to configure the {productname} filter as described in <<ai-monitoring-owui-pipelines-cmdline>>.
 
-. Append the following environment variables to your `extraEnvVars` section in the [path]`owui_custom_overrides.yaml` file mentioned in <<ai-monitoring-owui-pipelines-cmdline>>.
+. Append the following environment variables to your `extraEnvVars` section in the `owui_custom_overrides.yaml` file mentioned in <<ai-monitoring-owui-pipelines-cmdline>>.
 +
 [source,yaml]
 ----
@@ -130,7 +130,7 @@ extraEnvVars:
 +
 <.> Set to `"true"` for testing or controlled environments, and `"false"` for production deployments with TLS communication.
 <.> Enter your custom {otelemetry} collector endpoint URL, such as `"http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"`.
-<.> Specify a custom identifier for the {otelemetry} service, such as `"OI Core"`.
+<.> Specify a custom identifier for the {otelemetry} service, such as `OI Core`.
 
 . Save the enhanced override file and update {owui}:
 +
