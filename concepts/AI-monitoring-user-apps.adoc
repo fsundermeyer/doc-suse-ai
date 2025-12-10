@@ -34,18 +34,18 @@ Both the meter and the tracer must contain the following resource attributes:
 
 service.name::
 The logical name of the service.
-Defaults to ``"My App"``. 
+Defaults to 'My App'. 
 
 service.version::
 The version of the service.
-Defaults to ``"1.0"``. 
+Defaults to '1.0'. 
 
 deployment.environment::
-The name of the deployment environment, such as 'production' or ``"staging"``.
-Defaults to ``"default""``. 
+The name of the deployment environment, such as 'production' or 'staging'.
+Defaults to 'default'. 
 
 telemetry.sdk.name::
-The value must be ``"openlit"``. 
+The value must be 'openlit'. 
 
 The following metrics are utilized in the graphs of the {sobservability} Extension: 
 
@@ -91,20 +91,20 @@ Number of tokens processed.
 +
 *Unit:* integer 
 
-
-[[_ai_monitoring_troubleshooting]]
+// TODO change this to real qanda
+[role=qanda]
+[[ai-monitoring-troubleshooting]]
 == Troubleshooting
-[qanda]
 
 No metrics received from any components. ::
-
++
 * Verify the {otelemetry} Collector deployment. 
 * Check if the exporter is properly set to the {sobservability} collector and with the correct API key and endpoint specified. 
 
 
 
 No metrics received from the GPU. ::
-
++
 * Verify if the RBAC rules were applied. 
 * Verify if the metrics receiver scraper is configured. 
 * Check the {nvidia} DCGM Exporter for errors. 

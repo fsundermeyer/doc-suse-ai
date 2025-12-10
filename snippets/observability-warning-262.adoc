@@ -2,13 +2,11 @@
 [WARNING]
 ====
 With {sobservability} version 2.6.2, a change of the standard behavior broke the {vllm} monitoring performed by the extension.
-To fix it, update [path]``otel-values.yaml``
- to include the following additions.
+To fix it, update `otel-values.yaml` to include the following additions.
 No changes are required for people using {sobservability} version 2.6.1 and below. 
 
 * Add a new processor. 
 +
-
 ----
 config:
   processors:
@@ -21,7 +19,6 @@ config:
 ----
 * Modify the metrics pipeline to perform the transformation defined above: 
 +
-
 ----
 config:
   service:

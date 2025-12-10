@@ -8,16 +8,16 @@ The {sobservability} Extension uses these metrics to visualize {vllm}'s status a
 == Metrics Scraping (recommended)
 
 Add the following job to the `scrape_configs` section of your {otelemetry} Collector's configuration.
-This configures the collector to scrape the [path]``/metrics``
- endpoint from all {vllm} services every 10 seconds.
+This configures the collector to scrape the `/metrics` endpoint from all {vllm} services every 10 seconds.
 Remember that you can have several jobs defined, so if you defined other jobs{mdash}such as {milvus}{mdash}you can just append the new job to your list.
 If you have deployed {vllm}'s services with non-default values, you can easily change the service discovery rules. 
 
 [TIP]
 ====
-Before using the following example, replace the [replaceable]``VLLM_NAMESPACE`` and [replaceable]``VLLM_RELEASE_NAME`` placeholders with the actual values you used while deploying {vllm}. 
+Before using the following example, replace the `VLLM_NAMESPACE` and `VLLM_RELEASE_NAME` placeholders with the actual values you used while deploying {vllm}. 
 ====
 
+[source,yaml]
 ----
 config:
   receivers:
@@ -32,11 +32,11 @@ config:
             relabel_configs:
               - source_labels: [__meta_kubernetes_namespace]
                 action: keep
-                regex: '`VLLM_NAMESPACE`'
+                regex: 'VLLM_NAMESPACE'
 
               - source_labels: [__meta_kubernetes_service_name]
                 action: keep
-                regex: '.*`VLLM_RELEASE_NAME`.*'
+                regex: '.*VLLM_RELEASE_NAME.*'
 ----
 
 include::../snippets/observability-warning-262.adoc[leveloffset=2]

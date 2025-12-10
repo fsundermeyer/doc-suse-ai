@@ -11,7 +11,6 @@ Create a file named [path]``otel-rbac.yaml``
 with the following content.
 It defines a `Role` with permissions to get services and endpoints, and a `RoleBinding` to grant these permissions to the {otelemetry} Collector's service account. 
 +
-
 ----
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -39,21 +38,25 @@ roleRef:
   name: suse-observability-otel-scraper
 subjects:
   - kind: ServiceAccount
-    name:`OPENTELEMETRY-COLLECTOR`namespace:`OBSERVABILITY`---
+    name:`OPENTELEMETRY-COLLECTOR`
+    namespace:`OBSERVABILITY`
+---
 ----
 +
-IMPORTANT: Verify that the `ServiceAccount` name and namespace in the `RoleBinding` match your {otelemetry} Collector's deployment. 
+[IMPORTANT]
+====
+Verify that the `ServiceAccount` name and namespace in the `RoleBinding` match your {otelemetry} Collector's deployment. 
+====
 +
-
 . Apply this configuration to the `gpu-operator` namespace. 
 +
-
+[source,bash]
 ----
 > kubectl apply -n gpu-operator -f otel-rbac.yaml 
 ----
 . *Configure the {otelemetry} Collector.* Add the following Prometheus receiver configuration to your {otelemetry} Collector's values file. This tells the collector to scrape metrics from any endpoint in the `gpu-operator` namespace every 10 seconds. 
 +
-
+[source,yaml]
 ----
 config:
   receivers:

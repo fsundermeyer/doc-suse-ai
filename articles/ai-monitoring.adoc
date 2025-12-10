@@ -36,6 +36,7 @@ GOAL::
   operations, providing deep insights and clarity into your
   {productname} environment.
 
+:override-title: Introduction
 include::../concepts/AI-monitoring.adoc[leveloffset=+1]
 include::../tasks/AI-monitoring-gpu.adoc[leveloffset=+1]
 // Removed reference

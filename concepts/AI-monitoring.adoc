@@ -1,5 +1,10 @@
 [[ai-monitoring-concept]]
+ifdef::override-title[]
+= {override-title}
+endif::[]
+ifndef::override-title[]
 = Monitoring {productname}
+endif::[]
 
 This document focuses on techniques for gathering telemetry data from all {productname} components. 
 
