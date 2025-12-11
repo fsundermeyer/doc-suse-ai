@@ -96,6 +96,6 @@ Confirm with menu:Upload[]
 After a resource is added, you can view and edit its extracted textual information by clicking its name. 
 +
 
-.Viewing an extracted resource [[_owui_knowledgebase_viewtext]]
+.Viewing an extracted resource owui_knowledgebase_viewtext
 
 image::owui-knowledgebase-viewtext.png[Viewing an extracted resource,scaledwidth=75%]

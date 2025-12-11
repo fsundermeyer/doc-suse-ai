@@ -19,7 +19,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 . {empty}
 +
 
-.Adding the Groq API [[_fig_owui_add_openai_api]]
+.Adding the Groq API fig_owui_add_openai_api
 
 image::owui-add-openai-api.png[Adding the Groq API,scaledwidth=75%]
 
@@ -27,6 +27,6 @@ image::owui-add-openai-api.png[Adding the Groq API,scaledwidth=75%]
 {owui} now shows all the available models from Groq in the model selector drop-down list. 
 +
 
-.List of AI modules from the Groq API [[_fig_owui_groq_models]]
+.List of AI modules from the Groq API fig_owui_groq_models
 
 image::owui-groq-models.png[List of AI modules from the Groq API,scaledwidth=75%]

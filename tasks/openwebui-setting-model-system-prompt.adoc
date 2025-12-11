@@ -20,10 +20,10 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 .Model system prompt
 
 image::openwebui-workspace-models-sysprompt.png[Model system prompt,scaledwidth=50%]
-. Confirm with menu:Save &amp; Update[] . 
+. Confirm with menu:Save & Update[] . 
 
 
-[[_ai_model_sysprompt_moreinfo]]
+ai_model_sysprompt_moreinfo
 == For more information
 
 

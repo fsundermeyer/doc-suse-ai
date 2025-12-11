@@ -12,10 +12,10 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . Specify whether the knowledge base is public or private and confirm with menu:Create Knowledge[] . 
 +
 
-.Creating a new knowledge base [[_fig_knowledge_base_creating]]
+.Creating a new knowledge base fig_knowledge_base_creating
 
 image::owui-knowledge1.png[Creating a new knowledge base,scaledwidth=75%]
-. Add content to the knowledge base as described in <<_owui_knowledgebase_adding_content>>. 
+. Add content to the knowledge base as described in <<owui-knowledgebase-adding-content>>. 
 
 
 [TIP]

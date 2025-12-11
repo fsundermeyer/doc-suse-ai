@@ -23,7 +23,7 @@ TIP: If you prefer speaking rather than writing, click the small microphone icon
 Then say your prompt aloud and click the small check mark when finished. 
 
 . Confirm with kbd:[Enter] or click the "`up`" arrow on the right of the chat input field so that the AI model can process your prompt. Wait for the response. 
-.AI answering with two models [[_openwebui_2_responses]]
+.AI answering with two models openwebui_2_responses
 +
 image::openwebui-2-responses.png[AI answering with 2 models,scaledwidth=85%]
 

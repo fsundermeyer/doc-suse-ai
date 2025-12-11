@@ -1,0 +1,4 @@
+* convert clumsy path and command markup: replace \[\S+\]`(`\S+`)` with $1
+* check for prompts such as {prompt.user} and replace with > and #
+* remove `` with `
+* remove link:

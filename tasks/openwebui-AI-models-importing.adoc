@@ -13,5 +13,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 . In the file selector, specify the path to the JSON file with the exported models' definitions. Confirm with menu:Open[] . 
 +
 .Models with identical IDs
-IMPORTANT: AI models with IDs identical to existing models will not be imported. 
-+
+IMPORTANT
+====
+AI models with IDs identical to existing models will not be imported. 
+====

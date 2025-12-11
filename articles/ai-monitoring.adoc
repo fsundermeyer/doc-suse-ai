@@ -39,7 +39,6 @@ GOAL::
 :override-title: Introduction
 include::../concepts/AI-monitoring.adoc[leveloffset=+1]
 include::../tasks/AI-monitoring-gpu.adoc[leveloffset=+1]
-// Removed reference
 include::../tasks/AI-monitoring-owui.adoc[leveloffset=+1]
 include::../tasks/AI-monitoring-milvus.adoc[leveloffset=+1]
 include::../concepts/AI-monitoring-vllm.adoc[leveloffset=+1]

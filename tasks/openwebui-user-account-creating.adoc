@@ -12,7 +12,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 . On the menu:Users[] screen, click the '+' sign at the top right. 
 +
 
-.Creating new users [[_fig_creating_new_users]]
+.Creating new users fig_creating_new_users
 
 image::openwebui-users-creating.png[Creating new users,scaledwidth=50%]
 . On the menu:Form[] screen, select the user role and enter the user name, e-mail and password. 

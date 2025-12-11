@@ -1,5 +1,5 @@
 [[openwebui-user-revoking-access]]
-=== Revoking access to {owui}
+= Revoking access to {owui}
 
 This topic explains how to revoke access to {owui} for an existing user account. 
 

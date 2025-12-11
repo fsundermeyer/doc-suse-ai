@@ -12,7 +12,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 . Select menu:Models[] in the top menu and click the small "`plus`" icon in the top-right corner of the screen. 
 +
 
-.Managing AI models [[_openwebui_workspace_models]]
+.Managing AI models openwebui_workspace_models
 
 image::openwebui-workspace-models.png[Managing AI models,scaledwidth=50%]
 . Click the default logo image in the top-left corner of the form to upload an avatar image for your model. 
@@ -38,5 +38,5 @@ TIP: To view the JSON representation of your model, click the small menu:Show[]
 
 
 +
-Save your changes with the menu:Save &amp; Create[]
+Save your changes with the menu:Save & Create[]
 button. 

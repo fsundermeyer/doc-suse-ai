@@ -14,7 +14,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 
 image::owui-prompts-creating.png[Creating a new system prompt,scaledwidth=75%]
 . Enter the title and content of the new system prompt, and optionally, update the command that invokes the prompt from the chat input field. 
-. Confirm with menu:Save {amp} Create[] . 
+. Confirm with menu:Save & Create[] . 
 
 
 [TIP]

@@ -11,11 +11,11 @@ This section details how to enable individual {mcpo} services from the input fie
 . Click the "+" sign to the left of the chat input field. 
 . From the drop-down list that appears, select the {mcp} service that you want to include for the current chat. 
 +
-.Selecting {mcp} services [[_selecting_mcp_services]]
+.Selecting {mcp} services selecting_mcp_services
 image::owui-usage-mcpo.png[A screenshot of selecting {mcp} services from the chat input field,scaledwidth=50%]
 . Enter a prompt that triggers a call to one of the selected {mcp} services. You should see the tool invocation listed below the response. 
 +
-.Response from an {mcp} service [[_selecting_mcp_answer]]
+.Response from an {mcp} service selecting_mcp_answer
 image::owui-usage-mcpo-question.png[A screenshot of a response from an {mcp} service,scaledwidth=50%]
 --
 

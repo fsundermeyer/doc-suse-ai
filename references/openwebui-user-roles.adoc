@@ -6,7 +6,7 @@
  The following  sections provide a detailed description of each role. 
 
 [[openwebui-user-pending]]
-= The 'pending' role
+== The 'pending' role
 
 _Pending_ users can log in but can only view the menu:Account Activation Pending[]
  screen with the administrator name and e-mail.
@@ -19,7 +19,7 @@ image::openwebui-user-pending.png[Pending user screen,scaledwidth=50%]
 
 
 [[owui-user-user]]
-= The 'user' role
+== The 'user' role
 
 
 Users with this role can perform the following tasks: 
@@ -48,7 +48,7 @@ Current user settings::
 
 
 [[owui-user-admin]]
-= The 'admin' role
+== The 'admin' role
 
 
 Administrators have full access to {owui} resources and can control user management and systems settings.

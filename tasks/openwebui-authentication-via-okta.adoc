@@ -6,9 +6,9 @@ This topic describes how to use {okta} as the identity manager for {owui}.
 
 The process of enabling {okta} as the identity manager for {owui} consists of several steps: 
 
-. <<_owui_config_okta>>
-. <<_owui_gather_data>>
-. <<_configure_owui_for_okta>>
+. <<owui-config-okta>>
+. <<owui-gather-data>>
+. <<configure-owui-for-okta>>
 
 [TIP]
 ====
@@ -84,7 +84,7 @@ image::owui-okta-gather-info.png[{okta} domain name,scaledwidth=50%]
 image::owui-okta-clientid.png[Client ID and secret in {okta},scaledwidth=50%]
 
 +
-TIP: The previously gathered values are used by {owui} via the following environment variables as described in <<_configure_owui_for_okta>>. 
+TIP: The previously gathered values are used by {owui} via the following environment variables as described in <<configure-owui-for-okta>>. 
 
 ----
 OPENID_PROVIDER_URL="`OKTA_DOMAIN`/.well-known/openid-configuration"
@@ -150,7 +150,5 @@ extraEnvVars:
 . Restart {owui} to apply the changes. 
 . If the configuration went well, you should see the menu:Continue with Okta[] button as an option on both sign-in and sign-up pages. After you click the button, you will be redirected to the {okta} login page, or automatically signed in if you are already logged in to {okta}. 
 +
-
-.{owui}
-
 image::owui-okta-signin.png[{owui},scaledwidth=50%]
+

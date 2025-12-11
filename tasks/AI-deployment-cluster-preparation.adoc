@@ -1,5 +1,5 @@
 
-[[_suse_ai_deploy_prepare]]
+[[suse-ai-deploy-prepare]]
 = Preparing the cluster for {ailibrary}
 
 [abstract]

@@ -15,6 +15,6 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
 . In the menu:Default Models[] section, select the default system AI model. Confirm with menu:Save[] . 
 +
 
-.Default system AI model [[_openwebui_system_model]]
+.Default system AI model openwebui_system_model
 
 image::openwebui-system-model.png[Default system AI model,scaledwidth=50%]

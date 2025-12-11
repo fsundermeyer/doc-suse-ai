@@ -35,7 +35,7 @@ By using the prompt field at the bottom, you can accomplish the following tasks 
 ** Interrupt the chatbot from answering if you are already satisfied with the provided information 
 
 
-.{owui} user interface [[_fig_openwebui_ui]]
+.{owui} user interface [[fig-openwebui-ui]]
 
 image::openwebui-intro.png[{owui} user interface,scaledwidth=75%]
 
@@ -92,6 +92,6 @@ To access the menu:Admin Panel[]
 , click your avatar button at the top right of the {owui} screen and select menu:Admin Panel[]
 . 
 
-.Admin Panel [[_fig_openwebui_admin_panel]]
+.Admin Panel [[fig-openwebui-admin-panel]]
 
 image::openwebui-admin-panel.png[Admin Panel,scaledwidth=75%]
