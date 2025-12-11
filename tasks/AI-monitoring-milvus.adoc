@@ -1,19 +1,15 @@
-
-[[_ai_monitoring_milvus]]
+[[ai-monitoring-milvus]]
 = Monitoring {milvus}
 
-[abstract]
---
 {milvus} is monitored by scraping its {prometheus}-compatible metrics endpoint.
 The {sobservability} Extension uses these metrics to visualize {milvus}'s status and activity. 
---
 
-[[_ai_monitoring_milvus_scraping_metrics]]
+[[ai-monitoring-milvus-scraping-metrics]]
 == Scraping the metrics (recommended)
 
 Add the following job to the `scrape_configs` section of your {otelemetry} Collector's configuration.
 It instructs the collector to scrape the `/metrics` endpoint of the {milvus} service every 15 seconds. 
-
+[source,yaml]
 ----
 config:
   receivers:
@@ -25,21 +21,14 @@ config:
             metrics_path: '/metrics'
  
             static_configs:
-            - targets: ['milvus.SUSE_AI_NAMESPACE.svc.cluster.local:9091']
+            - targets: ['milvus.SUSE_AI_NAMESPACE.svc.cluster.local:9091'] <.>
 ----
-// <calloutlist>
-//       <callout arearefs="co-static-configs-targets">
-//         <para>
-//           Your {milvus} service metrics endpoint. The example
-//           <literal>milvus.<replaceable>SUSE_AI_NAMESPACE</replaceable>.svc.cluster.local:9091</literal> is a
-//           common default, but you should verify that it matches your
-//           installation service name and namespace.
-//         </para>
-//       </callout>
-//     </calloutlist>
+<.> Your {milvus} service metrics endpoint.
+    The example `milvus.SUSE_AI_NAMESPACE.svc.cluster.local:9091` is a common
+    default, but you should verify that it matches your installation service name and namespace.
 
 
-[[_ai_monitoring_milvus_tracing]]
+[[ai-monitoring-milvus-tracing]]
 == Tracing (advanced)
 
 {milvus} can also export detailed tracing data. 
@@ -52,19 +41,13 @@ We recommend configuring sampling at the collector level to avoid performance is
 ====
 
 To enable tracing, configure the following settings in your {milvus} {helm} chart values: 
-
+[source,yaml]
 ----
 extraConfigFiles:
   user.yaml: |+
     trace:
       exporter: jaeger
       sampleFraction: 1
-      jaeger: url: "http://opentelemetry-collector.observability.svc.cluster.local:14268/api/traces"
+      jaeger: url: "http://opentelemetry-collector.observability.svc.cluster.local:14268/api/traces" <.>
 ----
-// <calloutlist>
-//       <callout arearefs="co-jaeger-url">
-//         <para>
-//           The URL of the {otelemetry} Collector installed by the user.
-//         </para>
-//       </callout>
-//     </calloutlist>
+<.> The URL of the {otelemetry} Collector installed by the user.
