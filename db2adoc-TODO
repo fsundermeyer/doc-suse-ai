@@ -10,7 +10,7 @@
     * {empty}
     +
     include::../snippets/openwebui-requirement-admin-privileges.adoc[]
-
+* remove backticks from verbatim blocks
 
 
 
