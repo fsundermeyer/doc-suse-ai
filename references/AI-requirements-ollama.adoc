@@ -9,7 +9,7 @@ The version of {ollama} provided with {productname} is optimized for {nvidia} GP
 * *Run {ollama} on {nvidia} GPU nodes.*
 Since {ollama} is GPU-optimized, using the power of {nvidia} GPUs is essential for maximum performance. This ensures that the application runs efficiently and fully uses the hardware capabilities.
 * *Assign applications to specific nodes.*
-{productname} provides a mechanism to assign applications, such as {ollama}, to specific nodes. For more details, refer to link:{dsc}/suse-ai/1.0/html/AI-deployment-intro/index.html#ai-gpu-nodes-assigning[].
+{productname} provides a mechanism to assign applications, such as {ollama}, to specific nodes. For more details, refer to {dsc}/suse-ai/1.0/html/AI-deployment-intro/index.html#ai-gpu-nodes-assigning[].
 ====
 
 [[ai-reqs-ollama-hw]]
@@ -25,7 +25,7 @@ Disk space:: At least 50{nbsp}GB of free disk space is recommended for storing t
 [[ai-reqs-ollama-sw]]
 == Software requirements
 
-{nvidia} {docker} (nvidia-docker):: You must install `nvidia-docker` (the {nvidia} Container Toolkit) to allow {docker} containers to use the GPU. Refer to link:{dsc}/cloudnative/rke2/latest/en/advanced.html#_deploy_nvidia_operator[] for more details.
+{nvidia} {docker} (nvidia-docker):: You must install `nvidia-docker` (the {nvidia} Container Toolkit) to allow {docker} containers to use the GPU. Refer to {dsc}/cloudnative/rke2/latest/en/advanced.html#_deploy_nvidia_operator[] for more details.
 CUDA Toolkit:: You must install the CUDA version supported by your GPU model. For most recent GPUs, CUDA 11.0 or later is required. Refer to https://developer.nvidia.com/cuda-toolkit[CUDA Toolkit installation guide] for more details.
 {nvidia} driver::
 Install the {nvidia} driver compatible with your GPU model. Its version must be compatible with the installed CUDA toolkit.

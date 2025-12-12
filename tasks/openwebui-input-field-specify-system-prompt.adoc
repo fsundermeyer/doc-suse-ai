@@ -13,5 +13,5 @@ This section details how to select a preconfigured  system prompt from the input
 .Preconfigured system prompt
 image::openwebui-chat-system-prompt.png[Preconfigured system prompt,scaledwidth=75%]
 +
-. The content of the selected system prompt is pasted to the chat input field. Confirm it with kbd:[Enter] or by clicking the "`up`" arrow to the right of the chat input field. 
+. The content of the selected system prompt is pasted to the chat input field. Confirm it with kbd:[Enter] or by clicking the "up" arrow to the right of the chat input field. 
 --

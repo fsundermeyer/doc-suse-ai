@@ -11,7 +11,7 @@ endif::[]
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 --
 . In the {owui} interface, click menu:Workspace[] in the upper part of the left panel. 
-. Select menu:Prompts[] in the top menu and click the "`plus`" sign on the right. 
+. Select menu:Prompts[] in the top menu and click the "plus" sign on the right. 
 +
 .Creating a new system prompt
 image::owui-prompts-creating.png[Creating a new system prompt,scaledwidth=75%]

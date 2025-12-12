@@ -20,7 +20,7 @@ For the best experience, {owui} recommends using GPT-4o or another {openai} mode
 
 .Enabling native function calling for the current chat
 . In the top right of the {owui} window, click the menu:Chat controls[] icon. 
-. Unfold the menu:Advanced Params[] tab and set the menu:Function Calling[] from `Default` to ``Native``. 
+. Unfold the menu:Advanced Params[] tab and set the menu:Function Calling[] from `Default` to `Native`. 
 +
 
 .Enabling native function calling fig_owui_enabling_nfc

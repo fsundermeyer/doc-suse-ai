@@ -12,11 +12,11 @@ sources for AI answers from the chat input field.
 . Click menu:Upload Files[] and specify the document from your
 disk to process. You can upload multiple documents at the same time.
 . Type your prompt and confirm with kbd:[Enter] or by
-clicking the "`up`" arrow to the right of the chat input
+clicking the "up" arrow to the right of the chat input
 field.
 +
 .Prompt with uploaded documents
 image::openwebui-chat-uploaded-prompt.png[Prompt with uploaded documents,scaledwidth=75%]
 . To deactivate the previously selected document from the current chat,
-hover over its name and click the "`cross`" icon to the right
+hover over its name and click the "cross" icon to the right
 of its name.

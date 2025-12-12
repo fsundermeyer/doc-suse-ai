@@ -39,7 +39,7 @@ image::owui-okta-admin-panel.png[{okta} administrator panel,scaledwidth=100%]
 image::owui-okta-configure1.png[{okta} configuration window,scaledwidth=75%]
 +
 . In the menu:General Settings[] section, set the menu:App integration name[] to menu:{owui}[] . In the menu:Grant type[] section, toggle the menu:Refresh token[] option. Optionally, specify an image for the application logo. 
-. Set menu:Sign-in redirect URIs[] to the callback URI, for example, ``http://localhost:8080/oauth/oidc/callback``. The URI follows this pattern: 
+. Set menu:Sign-in redirect URIs[] to the callback URI, for example, `http://localhost:8080/oauth/oidc/callback`. The URI follows this pattern: 
 +
 ----
 PROTOCOL://OPENWEBUI_DOMAIN:OPTIONAL_PORT_NUMBER/oauth/oidc/callback
@@ -70,7 +70,7 @@ PROTOCOL://OPENWEBUI_DOMAIN:OPTIONAL_PORT_NUMBER/oauth/oidc/callback
 
 [[owui-gather-data]]
 == Gathering data for {owui} configuration
-. In the top-right menu, copy the {okta} domain. In this example, it is ``my-domain.okta.com``. 
+. In the top-right menu, copy the {okta} domain. In this example, it is `my-domain.okta.com`. 
 +
 .{okta} domain name
 image::owui-okta-gather-info.png[{okta} domain name,scaledwidth=50%]
@@ -95,7 +95,7 @@ OAUTH_CLIENT_SECRET="CLIENT_SECRET"
 To configure {owui} to use {okta} as an authentication provider, you must set up specific environment variables.
 For more information about OAuth 2.0 in {owui} and a complete description of each environment variable, refer to https://docs.openwebui.com/features/sso[{owui} SSO] documentation. 
 
-. Add the following environment variables to your {helm} charts [path]``values.yaml`` file in the `extraEnvVars` section. 
+. Add the following environment variables to your {helm} charts `values.yaml` file in the `extraEnvVars` section. 
 +
 ----
 ENABLE_OAUTH_SIGNUP=true <.>
@@ -121,9 +121,9 @@ extraEnvVars:
   - name: OAUTH_MERGE_ACCOUNTS_BY_EMAIL
     value: "True"
   - name: OAUTH_CLIENT_ID
-    value: "`CLIENT_ID`"
+    value: "CLIENT_ID"
   - name: OAUTH_CLIENT_SECRET
-    value: "`CLIENT_SECRET`"
+    value: "CLIENT_SECRET"
   - name: OPENID_PROVIDER_URL
     value: "OKTA_DOMAIN/.well-known/openid-configuration"
   - name: OAUTH_PROVIDER_NAME

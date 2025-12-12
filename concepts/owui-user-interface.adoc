@@ -58,16 +58,16 @@ To access it, click menu:Workspace[]
 
 Models::
 Manage existing AI modules or add your custom AI module based on an existing one.
-Refer to link:{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-models for more details and related procedures. 
+Refer to {dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-models for more details and related procedures. 
 
 Knowledge::
 Manage information sources{mdash}such as custom documents{mdash}that the users can use to enhance the current AI model's knowledge base.
 This helps making the model's responses more contextual.
-Refer to link:{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase for more details and related procedures. 
+Refer to {dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase for more details and related procedures. 
 
 Prompts::
 Define the system prompts that guide the AI model to respond accurately in the style and format that you prefer.
-Refer to link:{dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-prompts for more details and related procedures. 
+Refer to {dsc}/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-prompts for more details and related procedures. 
 
 Tools::
 menu:Tools[]

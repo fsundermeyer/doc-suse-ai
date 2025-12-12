@@ -20,9 +20,9 @@ image::openwebui-chat-collections.png[Selecting documents and collections,scaled
 +
 .Adding a URL source
 image::openwebui-chat-url-prompt.png[Adding a URL source,scaledwidth=65%]
-. Type your prompt and confirm with kbd:[Enter] or by clicking the "`up`" arrow to the right of the chat input field. 
+. Type your prompt and confirm with kbd:[Enter] or by clicking the "up" arrow to the right of the chat input field. 
 +
 .Prompt with selected documents and collections
 image::openwebui-chat-collections-prompt.png[Prompt with selected documents and collections,scaledwidth=75%]
-. To deactivate the previously selected document from the current chat, hover over its name and click the "`cross`" icon to the right of its name. 
+. To deactivate the previously selected document from the current chat, hover over its name and click the "cross" icon to the right of its name. 
 --

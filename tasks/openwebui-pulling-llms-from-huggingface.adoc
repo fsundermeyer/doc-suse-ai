@@ -20,14 +20,14 @@ image::huggingface-selecting-model.png[Finding models on {huggingface},scaledwid
 .{huggingface} model card
 image::huggingface-mode-card.png[{huggingface} model card,scaledwidth=100%]
 +
-. From the menu:How to use[] pop-up, select the full path to the model, for example, ``hf.co/google/gemma-7b``. 
+. From the menu:How to use[] pop-up, select the full path to the model, for example, `hf.co/google/gemma-7b`. 
 +
 .{ollama} download on {huggingface}
 image::huggingface-ollama-download.png[{ollama} download on {huggingface},scaledwidth=50%]
 +
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select menu:Admin Panel[] . 
 . Click the menu:Settings[] tab and select menu:Connections[] from the left menu. 
-. In the menu:Manage Ollama API Connections[] section, click the small "`download`" icon on the right to open the menu:Manage Ollama[] screen. 
+. In the menu:Manage Ollama API Connections[] section, click the small "download" icon on the right to open the menu:Manage Ollama[] screen. 
 +
 .Downloading {ollama} models from {huggingface}
 image::owui-dld-ollama-huggingface.png[Downloading {ollama} models from {huggingface},scaledwidth=100%]

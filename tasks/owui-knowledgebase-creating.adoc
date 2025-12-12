@@ -11,7 +11,7 @@ endif::[]
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] in the upper part of the left panel. 
-. Select menu:Knowledge[] in the top menu and click the "`plus`" sign in the right. 
+. Select menu:Knowledge[] in the top menu and click the "plus" sign in the right. 
 . Enter a title and a short description for the knowledge base. 
 . Specify whether the knowledge base is public or private and confirm with menu:Create Knowledge[] . 
 +

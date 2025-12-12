@@ -19,4 +19,4 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=+1]
 .Assigning user role
 image::openwebui-users-role-assigning.png[Assigning user role,scaledwidth=75%]
 +
-. Click the role button to the left of the user name to cycle through "`pending`" -> "`user`" -> "`admin`" role. 
+. Click the role button to the left of the user name to cycle through "pending" -> "user" -> "admin" role. 

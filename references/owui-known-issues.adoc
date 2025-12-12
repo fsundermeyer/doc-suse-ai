@@ -18,7 +18,7 @@ However, if the user has lost their password and cannot log in to {owui}, the pa
 +
 [source,bash]
 ----
-> htpasswd -bnBC 10 ""`NEW_PASSWORD`| tr -d ':\n'
+> htpasswd -bnBC 10 ""NEW_PASSWORD`| tr -d ':\n'
 ----
 . Identify the Pod where the {owui} application is running. 
 +

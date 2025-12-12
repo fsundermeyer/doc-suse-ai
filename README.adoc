@@ -34,7 +34,7 @@ Welcome to the SUSE AI product documentation repository.
 
 == Editing & Previewing
 
-The documentation is written in Asciidoc(tor). Start with a very basic link:template.adoc[Template].
+The documentation is written in Asciidoc(tor). Start with a very basic template.adoc[Template].
 
 * Sources can be directly edited and previewed in GitHub.
 * If you edit your docs locally

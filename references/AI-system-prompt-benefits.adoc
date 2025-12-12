@@ -44,4 +44,4 @@ Make the learning experience enjoyable by using illustrative elements, such as q
 [[ai-system-prompts-formoreinfo]]
 == For more information
 
-* Find good examples of user prompts in link:{dsc}/suse-ai/1.0/html/AI-preventing-hallucinations/index.html[AI Preventing Hallucinations]. 
+* Find good examples of user prompts in {dsc}/suse-ai/1.0/html/AI-preventing-hallucinations/index.html[AI Preventing Hallucinations]. 

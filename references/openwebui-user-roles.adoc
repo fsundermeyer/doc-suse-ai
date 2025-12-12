@@ -8,7 +8,7 @@
 == The 'pending' role
 
 _Pending_ users can log in but can only view the menu:Account Activation Pending[] screen with the administrator name and e-mail.
-This is the default role for a newly created user account before the administrator accepts it and assigns it the "`user`" role. 
+This is the default role for a newly created user account before the administrator accepts it and assigns it the "user" role. 
 
 .Pending user screen
 image::openwebui-user-pending.png[Pending user screen,scaledwidth=50%]

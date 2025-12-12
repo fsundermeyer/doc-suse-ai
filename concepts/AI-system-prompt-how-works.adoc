@@ -15,39 +15,39 @@ A typical system prompt contains the following elements:
 Context::
 This part sets the scene or provides the necessary information for the AI to understand the situation. 
 +
-Example: "`You are a travel agent recommending vacation
-destinations.`"
+Example: "You are a travel agent recommending vacation
+destinations."
 
 Task::
 A clear instruction on what the AI should do.
 This is the core of the system prompt, directing the AI to perform a specific task. 
 +
-Example: "`Generate text summaries and annual reports.`"
+Example: "Generate text summaries and annual reports."
 
 Guidelines::
 These are rules that the AI must follow.
 They might limit the output format, length, tone or other criteria. 
 +
-Example: "`The recommendations should be less than 150 words
-each, and they should appeal to adventure travelers.`"
+Example: "The recommendations should be less than 150 words
+each, and they should appeal to adventure travelers."
 
 Format::
 If you want the response in a particular structure, the system prompt should mention that.
 It can be a list, a paragraph, a dialog or a code block. 
 +
-Example: "`Respond in a bullet point list.`"
+Example: "Respond in a bullet point list."
 
 Tone::
 You can instruct the AI to generate responses with a particular tone, such as formal, casual, humorous or technical. 
 +
-Example: "`Write in a friendly, conversational tone.`"
+Example: "Write in a friendly, conversational tone."
 
 Example::
 System prompts may include examples of expected outputs to guide the AI in the right direction. 
 +
-Example: "`For example, 'Bali: a tropical paradise with
+Example: "For example, 'Bali: a tropical paradise with
 beautiful beaches and rich culture. Perfect for relaxation and
-adventure.`"
+adventure."
 
 
 .A full simple system prompt

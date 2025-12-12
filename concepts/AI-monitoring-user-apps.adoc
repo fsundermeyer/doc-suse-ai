@@ -124,7 +124,7 @@ No metrics received from {vllm}. ::
 * Verify if the {vllm} chart configuration is exposing the metrics endpoint. 
 * Verify if the metrics receiver scraper is properly configured, in particular, the placeholders. 
 * If some metrics are present, but not usage-related ones, verify if you actually made requests to {vllm}. 
-* If {vllm} was not identified and/or {vllm} metrics have the prefix "`vllm:`" , check the collector configuration. You may be using {sobservability} 2.6.2, which requires additional configuration. 
+* If {vllm} was not identified and/or {vllm} metrics have the prefix "vllm:" , check the collector configuration. You may be using {sobservability} 2.6.2, which requires additional configuration. 
 
 
 

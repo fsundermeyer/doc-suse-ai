@@ -7,7 +7,7 @@ It requires enabling and configuring {owui} Pipelines.
 
 [[ai-monitoring-owui-pipelines-cmdline]]
 .Configuring pipeline filter during {owui} installation (recommended)
-. Verify that the {owui} installation override file [path]``owui_custom_overrides.yaml`` includes the following content. 
+. Verify that the {owui} installation override file `owui_custom_overrides.yaml` includes the following content. 
 +
 [source,yaml]
 ----
@@ -33,7 +33,7 @@ extraEnvVars:
 ====
 In the above example, there are two `extraEnvVars` blocks: one at the root level and another inside the `pipelines` configuration.
 The root-level `extraEnvVars` is fed into {owui} to configure the communication between {owui} and {owui} Pipelines.
-The `extraEnvVars` inside the configuration are injected into the container that acts as a runtime for the ``pipelines``. 
+The `extraEnvVars` inside the configuration are injected into the container that acts as a runtime for the `pipelines`. 
 ====
 +
 <.> `longhorn` or `local-path`.
@@ -128,8 +128,8 @@ extraEnvVars:
   value: CUSTOM_OTEL_IDENTIFYER <.>
 ----
 +
-<.> Set to `"true"` for testing or controlled environments, and `"false"` for production deployments with TLS communication.
-<.> Enter your custom {otelemetry} collector endpoint URL, such as `"http://opentelemetry-collector.suse-observability.svc.cluster.local:4318"`.
+<.> Set to "true" for testing or controlled environments, and "false" for production deployments with TLS communication.
+<.> Enter your custom {otelemetry} collector endpoint URL, such as "http://opentelemetry-collector.suse-observability.svc.cluster.local:4318".
 <.> Specify a custom identifier for the {otelemetry} service, such as `OI Core`.
 
 . Save the enhanced override file and update {owui}:
