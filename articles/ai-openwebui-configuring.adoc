@@ -102,10 +102,12 @@ include::../tasks/openwebui-AI-models-deleting.adoc[leveloffset=+2]
 is assigned one of the available roles. The role defines whether the user has
 privileges to perform administration tasks.
 
-include::../snippets/openwebui-user-roles-intro.adoc[leveloffset=+2]
 include::../references/openwebui-user-roles.adoc[leveloffset=+2]
+:override-title: Creating user accounts
 include::../tasks/openwebui-user-account-creating.adoc[leveloffset=+2]
+:override-title: Assigning roles to existing users
 include::../tasks/openwebui-user-role-assigning.adoc[leveloffset=+2]
+:override-title: Modifying existing user accounts
 include::../tasks/openwebui-user-account-modifying.adoc[leveloffset=+2]
 include::../tasks/openwebui-user-revoking-access.adoc[leveloffset=+2]
 
