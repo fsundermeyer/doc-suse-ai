@@ -1,0 +1,22 @@
+* convert clumsy path and command markup: replace \[\S+\]`(`\S+`)` with $1
+* check for prompts such as {prompt.user} and replace with > and #
+* remove `` with `
+* remove link:
+* remove figure ID after the figure name: .Downloading {ollama} AI models fig_owui_dld_ollama_model
+* replace  "` and `" with "
+* replace \# with #
+* Update requirements to:
+    .Requirements
+    * {empty}
+    +
+    include::../snippets/openwebui-requirement-admin-privileges.adoc[]
+* remove backticks from verbatim blocks
+
+
+
+
+===================================================
+Addings to style guide:
+* how to override topic title from article file
+* how to condition abstract when in article
+

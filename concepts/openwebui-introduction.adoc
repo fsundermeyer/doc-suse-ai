@@ -1,5 +1,10 @@
 [[openwebui-introduction]]
+ifdef::override-title[]
+= {override-title}
+endif::[]
+ifndef::override-title[]
 = What is {owui}?
+endif::[]
 
 {owui} is a Web-based interface that allows you to interact with AI models, such as _large language models_ (LLM). It simplifies working with AI by providing a graphical user interface (GUI) instead of relying on command-line tools.
 The goal of {owui} is to make AI accessible to a broader audience, including those without technical expertise in AI development. 
@@ -21,10 +26,8 @@ It helps them use the power of advanced AI models with no need for technical kno
 You can deploy {owui} locally or in a private environment.
 Such deployment is required for users concerned about privacy and data security. 
 
-
 [[ai-prompt-answer]]
 == How does an AI chatbot process user queries?
-
 
 When you enter a user prompt, several processes happen in the background to generate the response. 
 
