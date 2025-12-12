@@ -2,3 +2,13 @@
 * check for prompts such as {prompt.user} and replace with > and #
 * remove `` with `
 * remove link:
+* remove figure ID after the figure name: .Downloading {ollama} AI models fig_owui_dld_ollama_model
+
+
+
+
+===================================================
+Addings to style guide:
+* how to override topic title from article file
+* how to condition abstract when in article
+

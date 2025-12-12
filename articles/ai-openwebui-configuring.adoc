@@ -4,6 +4,7 @@ include::../common/generic-attributes.adoc[]
 :doctype: article
 :experimental:
 :docinfo:
+:part-of-article:
 
 ifdef::env-github[]
 :imagesdir: ../images/
@@ -46,10 +47,8 @@ include::../glues/owui-more-info.adoc[leveloffset=+2]
 [[openwebui-setting-base-models]]
 == Setting base AI models
 
-{owui} needs at least one base AI model configured so that you can interact with
-it or create custom AI models as described in Section 5, “Managing custom AI
-models”. You can download models from repositories such as {ollama} or
-{huggingface}, or use models via OpenAI-compatible APIs. 
+{owui} needs at least one base AI model configured so that you can interact with it or create custom AI models as described in <<openwebui-managing-models>>.
+You can download models from repositories such as {ollama} or {huggingface}, or use models via OpenAI-compatible APIs. 
 
 include::../tasks/openwebui-pulling-llms-from-ollama.adoc[leveloffset=+2]
 include::../tasks/openwebui-pulling-llms-from-huggingface.adoc[leveloffset=+2]
@@ -64,7 +63,9 @@ the current chat overrides the user and model prompts, the user-specific prompt
 overrides the model prompt only.
 
 include::../tasks/openwebui-setting-chat-system-prompt.adoc[leveloffset=+2]
+:override-title: System prompt for the current user
 include::../tasks/openwebui-setting-user-system-prompt.adoc[leveloffset=+2]
+:override-title: System prompt for an AI model
 include::../tasks/openwebui-setting-model-system-prompt.adoc[leveloffset=+2]
 
 [[openwebui-setting-default-models]]
@@ -74,7 +75,9 @@ In {owui}, you can specify an AI model for the current chat or the system
 default model. The AI model set for the current chat overrides the default
 system model.
 
+:override-title: AI model for the current chat
 include::../tasks/openwebui-setting-chat-model.adoc[leveloffset=+2]
+:override-title: Default system AI model
 include::../tasks/openwebui-setting-system-model.adoc[leveloffset=+2]
 
 [[openwebui-managing-models]]
@@ -86,6 +89,7 @@ you can modify its settings, or share, clone or delete it.
 include::../tasks/openwebui-AI-models-creating.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-modifying.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-cloning.adoc[leveloffset=+2]
+:override-title: Importing exported models
 include::../tasks/openwebui-AI-models-importing.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-exporting.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-exporting-all.adoc[leveloffset=+2]
@@ -94,7 +98,7 @@ include::../tasks/openwebui-AI-models-deleting.adoc[leveloffset=+2]
 [[openwebui-managing-user-roles]]
 == Managing user accounts
 
-{owui} provides <emphasis>role-based access control</emphasis> (RBAC). Each user
+{owui} provides *role-based access control* (RBAC). Each user
 is assigned one of the available roles. The role defines whether the user has
 privileges to perform administration tasks.
 
