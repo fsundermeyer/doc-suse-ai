@@ -6,9 +6,11 @@
 :productnameshort:  SUSE AI
 :productnumber:     1.0
 
+:sles-ai-version:   15 SP6
+:slmicro-ai-version: 6.1
 
 // PROJECT REPOSITORY URL
-:repo-url:          https://github.com/SUSE/doc-[PRODUCT]
+:repo-url:          https://github.com/SUSE/doc-modular
 :repo-readme:       {repo-url}/blob/main/README.adoc
 
 // DOCUMENTATION.SUSE.COM PRODUCT URL
@@ -17,7 +19,9 @@
 // RELEASE NOTES URL
 :rn-url: {sc-rn}/x86_64/[PRODUCT]/[VERSION]
 
-
 // START YEAR OF COPYRIGHT
 :copyrightstart:  2023
 :copyrightholder: SUSE LLC
+
+:installmedia:      {sles-ai-version}-Online-ARCH-GM-media1.iso
+:packagemedia:      {sles-ai-version}-Full-ARCH-GM-media1.iso

@@ -355,7 +355,6 @@ clusterName: <replaceable>OBSERVED_SERVER_NAME</replaceable>
 <screen condition="deployment_airgap">{prompt.user}<command>helm upgrade --install ai-obs \
   charts/suse-ai-observability-extension-<replaceable>X.Y.Z</replaceable>.tgz \
   -f genai_values.yaml --namespace so-extensions --create-namespace</command></screen>
-        <remark>TODO AI: maybe explain the local package ^^^ naming?</remark>
         <note>
           <title>Self-signed certificates not supported</title>
           <para>

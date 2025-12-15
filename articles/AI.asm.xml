@@ -1227,9 +1227,3 @@
     <module resourceref="_gfdl" renderas="appendix"/>
   </structure>
 </assembly>
-<!-- TODO AI: Add a Quickstart Guide
- -->
-<!-- TODO AI: Ensure consistency in terminology and aligning it with product
-  marketing messaging -->
-<!-- TODO AI: The process of SUSE AI entitlements and SCC needs to be clarified
-  in the documentation. -->

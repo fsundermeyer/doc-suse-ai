@@ -5,8 +5,8 @@
 *.orig
 *.swp
 .directory
-.vscode/
 build/
+.vscode/
 .idea/
 *.code-workspace
 .vimrc
@@ -14,4 +14,3 @@ worktree
 .worktree
 worktrees
 .worktrees
-build/
