@@ -6,7 +6,9 @@ It also supports models in the GGUF binary format optimized for quick loading an
 This procedure describes how to download and use these GGUF models from the {owui} interface. 
 
 .Requirements
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . Navigate your Web browser to https://huggingface.co/models and in the left
 menu:Libraries[] section, click menu:GGUF[] to include only GGUF models to

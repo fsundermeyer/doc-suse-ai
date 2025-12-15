@@ -92,7 +92,9 @@ image::ai-observability-connection.png["Connections settings page within an admi
 
 If you already have a running instance of {owui} with the pipelines enabled and configured, you can set up the {productname} Filter in its Web user interface.
 
-.Requirements:
+.Requirements
+* {empty}
++
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select menu:Admin Panel[].

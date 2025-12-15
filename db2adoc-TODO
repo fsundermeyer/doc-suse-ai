@@ -1,10 +1,9 @@
-* remove figure ID after the figure name: .Downloading {ollama} AI models fig_owui_dld_ollama_model
 * Update requirements to:
-    .Requirements
-    * {empty}
-    +
-    include::../snippets/openwebui-requirement-admin-privileges.adoc[]
-* remove backticks from verbatim blocks
+
+.Requirements
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 
 

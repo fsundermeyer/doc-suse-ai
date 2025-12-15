@@ -6,6 +6,8 @@ This procedure shows how to export an existing custom AI model using {owui}.
 endif::[]
 
 .Requirements
+* {empty}
++
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] at the top of the left panel and select menu:Models[] . 

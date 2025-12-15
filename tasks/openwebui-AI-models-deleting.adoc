@@ -4,6 +4,8 @@
 Using the {owui} interface, you can delete previously created AI models. 
 
 .Requirements
+* {empty}
++
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] at the top of the left panel and select menu:Models[] . 

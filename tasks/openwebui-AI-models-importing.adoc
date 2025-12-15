@@ -11,7 +11,9 @@ This procedure shows how to import AI models using {owui}.
 endif::[]
 
 .Requirements
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] at the top of the left panel and select menu:Models[] . 
 . Click the menu:Import Models[] button at the bottom of the screen. 

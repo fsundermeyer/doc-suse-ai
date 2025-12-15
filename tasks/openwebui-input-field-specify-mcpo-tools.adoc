@@ -6,7 +6,7 @@ This section details how to enable individual {mcpo} services from the input fie
 
 
 .Requirements
-** At least one {mcp} server must be preconfigured. Refer to https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#mcpo-installing[Installing {mcpo}] to learn how to configure one.
+* At least one {mcp} server must be preconfigured. Refer to https://documentation.suse.com/suse-ai/1.0/html/AI-deployment-intro/index.html#mcpo-installing[Installing {mcpo}] to learn how to configure one.
 --
 . Click the "+" sign to the left of the chat input field. 
 . From the drop-down list that appears, select the {mcp} service that you want to include for the current chat. 
@@ -21,6 +21,5 @@ image::owui-usage-mcpo-question.png[A screenshot of a response from an {mcp} ser
 
 [TIP]
 ====
-For more details about {mcpo} integration and usage with {owui}, refer to the https://https://docs.openwebui.com/openapi-servers/open-webui/[{owui}
-      integration documentation]. 
+For more details about {mcpo} integration and usage with {owui}, refer to the https://https://docs.openwebui.com/openapi-servers/open-webui/[{owui} integration documentation]. 
 ====

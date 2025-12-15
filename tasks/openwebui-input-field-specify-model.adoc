@@ -16,7 +16,7 @@ The selected model temporarily overrides your default model or the model you sel
 
 
 .Requirements
-** At least one AI model must be downloaded and available to {owui}. Refer to the section https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-setting-base-models[Setting base AI models ] for more details. 
+* At least one AI model must be downloaded and available to {owui}. Refer to the section https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-setting-base-models[Setting base AI models ] for more details. 
 . In the chat input field, type the `@` character. 
 . From the drop-down list that appears, select one of the preconfigured AI models you want to talk to. You can only select one model at a time. 
 +

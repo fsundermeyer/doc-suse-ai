@@ -9,7 +9,7 @@ AI then responds to your prompts based on the specified information sources.
 This procedure describes how to select preconfigured documents, collections of documents, or external URLs as information sources for AI answers from the chat input field. 
 
 .Requirements
-** At least one knowledge base collection needs to be preconfigured. Refer to https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase[Managing a knowledge base] to learn how to create one. 
+* At least one knowledge base collection needs to be preconfigured. Refer to https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#openwebui-managing-knowledgebase[Managing a knowledge base] to learn how to create one. 
 --
 . In the chat input field, type the `#` character. 
 . From the drop-down list that appears, select one of the preconfigured documents or a collection of documents whose content you want AI to use as an information source. You can select multiple documents, one by one. 

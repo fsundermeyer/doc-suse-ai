@@ -38,8 +38,8 @@ roleRef:
   name: suse-observability-otel-scraper
 subjects:
   - kind: ServiceAccount
-    name:`OPENTELEMETRY-COLLECTOR`
-    namespace:`OBSERVABILITY`
+    name: OPENTELEMETRY-COLLECTOR
+    namespace: OBSERVABILITY
 ---
 ----
 +

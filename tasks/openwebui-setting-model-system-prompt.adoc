@@ -12,7 +12,9 @@ The system prompt is then used for new chats if not overridden by specifying a s
 endif::[]
 
 .Requirements
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] in the upper part of the left panel. 
 . Select menu:Models[] in the top menu and scroll to the AI model whose system prompt you want to set. Use the pager at the bottom if the model is not listed on the current screen. 

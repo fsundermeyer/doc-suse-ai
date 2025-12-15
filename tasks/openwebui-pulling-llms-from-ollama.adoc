@@ -5,7 +5,9 @@
 This procedure describes how to download and use these models from the {owui} interface. 
 
 .Requirements
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select menu:Admin Panel[] . 
 . Click the menu:Settings[] tab and select menu:Models[] from the left menu. 

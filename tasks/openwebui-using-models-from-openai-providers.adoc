@@ -6,7 +6,9 @@ These providers include both local instances of servers, such as https://localai
 This procedure describes how to configure the Groq provider API from the {owui} interface. 
 
 .Requirements
-include::../snippets/openwebui-requirement-admin-privileges.adoc[leveloffset=1]
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . Create a Groq cloud account at https://console.groq.com/. 
 . Create an API key at https://console.groq.com/keys. 

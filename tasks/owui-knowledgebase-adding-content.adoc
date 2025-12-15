@@ -18,7 +18,7 @@ apiVersion: networking.k8s.io/v1
   kind: Ingress
   metadata:
     name: open-webui
-    namespace:SUSE_AI_NAMESPACE
+    namespace: SUSE_AI_NAMESPACE
     annotations:
       nginx.ingress.kubernetes.io/proxy-body-size: 100m <.>
       nginx.ingress.kubernetes.io/proxy-connect-timeout: "360"
@@ -31,6 +31,7 @@ apiVersion: networking.k8s.io/v1
 +
 . Apply the changes so that large file uploads are supported. 
 +
+[source,bash]
 ----
 > kubectl apply -f ingress.yaml 
 ----
