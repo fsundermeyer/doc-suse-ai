@@ -43,14 +43,77 @@ For hardware, software and application-specific requirements, refer to
 link:{dsc}/suse-ai/1.0/html/AI-requirements/index.html[{productname}requirements].
 ====
 
+// introduction
 :override-title: Installation overview
 include::../references/AI-installation-flowchart.adoc[leveloffset=+1]
+// OS to Kube deployment
 include::../tasks/AI-deployment-kube-installing.adoc[leveloffset=+1]
 include::../tasks/SLES-installation-quickstart.adoc[leveloffset=+2]
 include::../glues/NVIDIA-GPU-driver-intro.adoc[leveloffset=+2]
 include::../tasks/NVIDIA-GPU-driver-installation-SLES.adoc[leveloffset=+3]
 include::../tasks/NVIDIA-GPU-driver-installation-SLMicro.adoc[leveloffset=+3]
 include::../tasks/RKE2-installation-quickstart.adoc[leveloffset=+2]
+// Kube cluster preparation
+include::../tasks/AI-deployment-cluster-preparation.adoc[leveloffset=+1]
+include::../tasks/Rancher-installation-quickstart.adoc[leveloffset=+2]
+include::../tasks/NVIDIA-Operator-installation.adoc[leveloffset=+2]
+:override-title: Registering existing clusters
+include::../tasks/Rancher-register-clusters.adoc[leveloffset=+2]
+include::../tasks/AI-gpu-nodes-assigning.adoc[leveloffset=+2]
+include::../glues/ai-ssecurity-intro.adoc[leveloffset=+2]
+include::../tasks/Security-installation-rancher.adoc[leveloffset=+3]
+include::../tasks/Security-installation-kubernetes.adoc[leveloffset=+3]
+include::../tasks/observability-settingup-ai.adoc[leveloffset=+2]
+
+// <module renderas="section" xml:id="ai-library-installing">
+//       <merge>
+//         <title>Installing applications from {ailibrary}</title>
+//         <abstract>
+//           <para>
+//             {productname} is delivered as a set of components that you can
+//             combine to meet specific use cases. To enable the full integrated
+//             stack, you need to deploy multiple applications in sequence.
+//             Applications with the fewest dependencies must be installed first,
+//             followed by dependent applications once their required dependencies
+//             are in place within the cluster.
+//           </para>
+
+//           <para condition="deployment_standard">
+//             You can either install required {ailibrary} components manually
+//             using their {helm} charts, or use {saideployer} to include all the
+//             dependencies in one step.
+//           </para>
+//         </abstract>
+//       </merge>
+//       <module renderas="section" resourceref="_ai-deployment-ailibrary-installing">
+//         <merge>
+//           <title>Installation procedure</title>
+//           <abstract>
+//             <para></para>
+//           </abstract>
+//         </merge>
+//       </module>
+//       <module renderas="section" resourceref="_ai-cert-manager-installing"/>
+//       <module renderas="section" resourceref="_ai-opensearch-installing"/>
+//       <module renderas="section" resourceref="_ai-milvus-installing"/>
+//       <module renderas="section" resourceref="_ai-ollama-installing">
+//         <module renderas="section" resourceref="_ai-ollama-helmchart"/>
+//       </module>
+//       <module renderas="section" resourceref="_ai-owui-installing">
+//         <module renderas="section" resourceref="_ai-owui-helm-overrides"/>
+//         <module renderas="section" resourceref="_ai-owui-helmchart"/>
+//       </module>
+//       <module renderas="section" resourceref="_ai-vllm-installing">
+//         <module renderas="section" resourceref="_ai-vllm-helm-overrides"/>
+//       </module>
+//       <module renderas="section" resourceref="_ai-mcpo-installing"/>
+//       <module renderas="section" resourceref="_ai-pytorch-installing">
+//         <module renderas="section" resourceref="_ai-pytorch-helm-overrides"/>
+//         <module renderas="section" resourceref="_ai-pytorch-helmchart"/>
+//       </module>
+//       <module renderas="section" resourceref="_ai-mlflow-installing"/>
+//       <module renderas="section" resourceref="_ai-deployment-ailibrary-deployer"/>
+//     </module>
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]

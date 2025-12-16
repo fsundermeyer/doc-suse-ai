@@ -334,7 +334,7 @@ From inside the container, you can continue to run any other {cuda}
 workload—such as compilers—to run further tests. When
 finished, you can exit the container.
 +
-[source,bash]
+[source,bash,subs="+attributes"]
 ----
 {prompt_root}exit
 ----
