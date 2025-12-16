@@ -64,56 +64,26 @@ include::../glues/ai-ssecurity-intro.adoc[leveloffset=+2]
 include::../tasks/Security-installation-rancher.adoc[leveloffset=+3]
 include::../tasks/Security-installation-kubernetes.adoc[leveloffset=+3]
 include::../tasks/observability-settingup-ai.adoc[leveloffset=+2]
-
-// <module renderas="section" xml:id="ai-library-installing">
-//       <merge>
-//         <title>Installing applications from {ailibrary}</title>
-//         <abstract>
-//           <para>
-//             {productname} is delivered as a set of components that you can
-//             combine to meet specific use cases. To enable the full integrated
-//             stack, you need to deploy multiple applications in sequence.
-//             Applications with the fewest dependencies must be installed first,
-//             followed by dependent applications once their required dependencies
-//             are in place within the cluster.
-//           </para>
-
-//           <para condition="deployment_standard">
-//             You can either install required {ailibrary} components manually
-//             using their {helm} charts, or use {saideployer} to include all the
-//             dependencies in one step.
-//           </para>
-//         </abstract>
-//       </merge>
-//       <module renderas="section" resourceref="_ai-deployment-ailibrary-installing">
-//         <merge>
-//           <title>Installation procedure</title>
-//           <abstract>
-//             <para></para>
-//           </abstract>
-//         </merge>
-//       </module>
-//       <module renderas="section" resourceref="_ai-cert-manager-installing"/>
-//       <module renderas="section" resourceref="_ai-opensearch-installing"/>
-//       <module renderas="section" resourceref="_ai-milvus-installing"/>
-//       <module renderas="section" resourceref="_ai-ollama-installing">
-//         <module renderas="section" resourceref="_ai-ollama-helmchart"/>
-//       </module>
-//       <module renderas="section" resourceref="_ai-owui-installing">
-//         <module renderas="section" resourceref="_ai-owui-helm-overrides"/>
-//         <module renderas="section" resourceref="_ai-owui-helmchart"/>
-//       </module>
-//       <module renderas="section" resourceref="_ai-vllm-installing">
-//         <module renderas="section" resourceref="_ai-vllm-helm-overrides"/>
-//       </module>
-//       <module renderas="section" resourceref="_ai-mcpo-installing"/>
-//       <module renderas="section" resourceref="_ai-pytorch-installing">
-//         <module renderas="section" resourceref="_ai-pytorch-helm-overrides"/>
-//         <module renderas="section" resourceref="_ai-pytorch-helmchart"/>
-//       </module>
-//       <module renderas="section" resourceref="_ai-mlflow-installing"/>
-//       <module renderas="section" resourceref="_ai-deployment-ailibrary-deployer"/>
-//     </module>
+// AI library
+include::../glues/ai-library-intro.adoc[leveloffset=+1]
+:override-title: Installation procedure
+include::../tasks/AI-deployment-ailibrary-installing.adoc[leveloffset=+2]
+include::../tasks/cert-manager-installing.adoc[leveloffset=+2]
+include::../tasks/opensearch-installing.adoc[leveloffset=+2]
+include::../tasks/milvus-installing.adoc[leveloffset=+2]
+include::../tasks/ollama-installing.adoc[leveloffset=+2]
+include::../references/ollama-helmchart.adoc[leveloffset=+3]
+include::../tasks/owui-installing.adoc[leveloffset=+2]
+include::../references/owui-helm-overrides.adoc[leveloffset=+3]
+include::../references/owui-helmchart.adoc[leveloffset=+3]
+include::../tasks/vllm-installing.adoc[leveloffset=+2]
+include::../references/vllm-helm-overrides.adoc[leveloffset=+3]
+include::../tasks/mcpo-installing.adoc[leveloffset=+2]
+include::../tasks/pytorch-installing.adoc[leveloffset=+2]
+include::../tasks/pytorch-helm-overrides.adoc[leveloffset=+3]
+include::../tasks/pytorch-helmchart.adoc[leveloffset=+3]
+include::../tasks/mlflow-installing.adoc[leveloffset=+2]
+include::../tasks/ai-deployment-ailibrary-deployer.adoc[leveloffset=+2]
 
 [appendix]
 include::../references/AI-glossary.adoc[leveloffset=+1]
