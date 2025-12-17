@@ -27,7 +27,7 @@ It contains available versions and the link to pull the {certmanager} container 
 
 include::../snippets/ai-library-requirement.adoc[]
 
-. Install the {certmanager} chart.
+* Install the {certmanager} chart.
 +
 ifdef::deployment_standard[]
 [source,bash,subs="+attributes"]

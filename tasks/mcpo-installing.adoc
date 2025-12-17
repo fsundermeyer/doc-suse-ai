@@ -29,6 +29,7 @@ include::../snippets/ai-library-requirement.adoc[]
 . Create a `mcpo_custom_overrides.yaml` file to override the default values of the {helm} chart.
 The following file defines multiple {mcp} servers in the `config.mcpServers` section.
 These servers will be added to the {mcpo} configuration file `config.json`.
++
 [source,yaml]
 ----
 # mcpo_custom_overrides.yaml
@@ -62,6 +63,7 @@ config:
 ----
 
 . After saving the override file as `mcpo_custom_overrides.yaml`, apply its configuration with the following command.
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm upgrade --install \
@@ -81,10 +83,12 @@ For detailed information on installing {mcp} servers with {mcpo}, refer to the l
 == Integrating {mcpo} with {owui}
 
 To integrate {mcpo} with {owui}, follow these steps:
-
+--
 .Requirements
-* include::../snippets/openwebui-requirement-admin-privileges.adoc[]
-
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
+--
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select btn:[Admin Panel].
 . Click the btn:[Settings] tab and select btn:[Tools] from the left menu.
 . Under btn:[Manage Tool Servers], click the `plus` icon to add a new connection.
@@ -107,8 +111,8 @@ After you have configured at least one {mcp} server, you can enable them from th
 For more information, see link:https://documentation.suse.com/suse-ai/1.0/html/openwebui-using/index.html#openwebui-input-field-specify-mcpo-tools[Selecting {mcpo} services from the chat input field].
 
 [TIP]
-====
 .Enabling {mcp} tools by default
+====
 To enable selected {mcp} tools by default for a model, refer to link:https://documentation.suse.com/suse-ai/1.0/html/openwebui-configuring/index.html#owui-enabling-default-mcp-services[Enabling default {mcp} services].
 ====
 

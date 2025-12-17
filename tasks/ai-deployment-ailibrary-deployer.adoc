@@ -8,6 +8,7 @@ It assumes that you already completed steps described in xref:suse-ai-deploy-sus
 
 . Pull the {saideployer} {helm} chart with the relevant chart version and untar it.
 You can find the latest of the chart on the {sappco} page at link:https://apps.rancher.io/applications/suse-ai-deployer[].
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm pull oci://dp.apps.rancher.io/charts/suse-ai-deployer \
@@ -15,11 +16,13 @@ You can find the latest of the chart on the {sappco} page at link:https://apps.r
 {prompt_user}cd suse-ai-deployer
 ----
 . Inspect the downloaded chart and its default values.
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm show chart .
 {prompt_user}helm show values .
 ----
++
 [TIP]
 ====
 To see default values for the charts of the individual components within the meta chart, run the following commands.
@@ -41,6 +44,7 @@ The examples use self-signed certificates for TLS communication.
 To use other option (see xref:owui-tls-sources[]), copy the `global` section from the `values.yaml` file into your `custom-overrides.yaml` and update its `tls` section as needed.
 . Install the {saideployer} {helm} chart with while overriding values from the `custom-overrides.yaml` file.
 Use the appropriate `RELEASE_NAME` and `SUSE_AI_NAMESPACE` based the configuration in `custom-overrides.yaml`.
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm upgrade --install \

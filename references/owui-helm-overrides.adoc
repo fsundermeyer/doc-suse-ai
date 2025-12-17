@@ -165,7 +165,10 @@ extraEnvVars:
 ----
 <.> Use `local-path` storage only for testing purposes.
 For production use, we recommend using a storage solution suitable for persistent storage, such as {sstorage}.
+<.> Use `local-path` storage only for testing purposes.
+For production use, we recommend using a storage solution suitable for persistent storage, such as {sstorage}.
 <.> Specifies the default LLM for {ollama}.
+<.> These values are optional, required only to receive telemetry data from {owui}.
 <.> These values are optional, required only to receive telemetry data from {owui}.
 <.> The URL of the {otelemetry} Collector installed by the user.
 ====
@@ -177,9 +180,9 @@ The following override file installs {ollama} separately and enables {owui} pipe
 This simple filter adds a limit to the number of question and answer turns during the LLM chat.
 
 [TIP]
-====
+=====
 Pipelines normally require additional configuration provided either via environment variables or specified in the {owui} Web UI.
-====
+=====
 
 [source,yaml]
 ----
@@ -227,9 +230,9 @@ The following example shows how to extend the `extraEnvVars` section of the {owu
 Replace `SUSE_AI_NAMESPACE` with your {kube} namespace.
 
 [TIP]
-====
+=====
 Find more details about installing {vllm} in xref:vllm-installing[].
-====
+=====
 
 [source,yaml]
 ----

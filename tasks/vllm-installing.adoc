@@ -64,9 +64,12 @@ Find examples of override files in xref:vllm-helm-overrides[].
 You can integrate {vllm} in {owui} either using the {owui} Web user interface, or updating {owui} override file during {owui} deployment (see xref:owui-ollama-deploy-vllm[]).
 
 .Integrating {vllm} with {owui} via the Web user interface
+--
 .Requirements
-* include::../snippets/openwebui-requirement-admin-privileges.adoc[]
-
+* {empty}
++
+include::../snippets/openwebui-requirement-admin-privileges.adoc[]
+--
 . In the bottom left of the {owui} window, click your avatar icon to open the user menu and select btn:[Admin Panel].
 . Click the btn:[Settings] tab and select btn:[Connections] from the left menu.
 . In the btn:[Manage OpenAI API Connections] section, add a new connection URL to the {vllm} router service, for example:

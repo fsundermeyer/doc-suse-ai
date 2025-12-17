@@ -43,6 +43,7 @@ vllm-phi3-mini-4k-deployment-vllm-79d6fdc-tx7  1/1     Running   0          8m9s
 +
 Pods for the {vllm} deployment should transition to the states `Ready` and `Running`.
 
+[.procedure]
 .Validating the stack
 . Expose the `vllm-router-service` port to the host machine:
 +
@@ -310,10 +311,10 @@ Remember to update the entries `hf_token` and `storageClass`.
 
 [NOTE]
 .Ray is not supported
-====
+=====
 Ray is currently not supported.
 Therefore, sharding a single large model across multiple GPUs is not supported.
-====
+=====
 
 [source,yaml]
 ----
@@ -367,11 +368,11 @@ Remember to update the entries `hf_token` and `storageClass`.
 
 [WARNING]
 .Experimental Features
-====
+=====
 Setting `lmcacheConfig.enabled` to `true` implicitly enables the `LMCACHE_USE_EXPERIMENTAL` flag for {lmcache}.
 These experimental features are only supported on newer GPU generations.
 It is not recommended to enable them without a compelling reason.
-====
+=====
 
 [source,yaml]
 ----
@@ -416,11 +417,11 @@ Remember to replace the placeholder values for `hf_token` and `storageClass` bef
 
 [WARNING]
 .Experimental features
-====
+=====
 Setting `lmcacheConfig.enabled` to `true` implicitly enables the `LMCACHE_USE_EXPERIMENTAL` flag for {lmcache}.
 These experimental features are only supported on newer GPU generations.
 It is not recommended to enable them without a compelling reason.
-====
+=====
 
 [source,yaml]
 ----

@@ -29,6 +29,7 @@ This section describes how to deploy {mlflow} using either {docker} or {helm} on
 include::../snippets/ai-library-requirement.adoc[]
 
 . Create a skeleton for a new `{mlflow}` {helm} chart.
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm create mlflow
@@ -36,6 +37,7 @@ include::../snippets/ai-library-requirement.adoc[]
 The command creates an `mlflow` directory with the basic file structure for a chart.
 . Replace `mlflow/values.yaml` with the following content.
 Replace `CONTAINER_VERSION` with the current chart version.
++
 [source,yaml]
 ----
 # values.yaml
@@ -124,6 +126,7 @@ tolerations: []
 affinity: {}</screen>
 ----
 . Replace `mlflow/template/deployment.yaml` with the following content:
++
 [source,yaml]
 ----
 apiVersion: apps/v1
@@ -203,12 +206,14 @@ spec:
       {{- end }}
 ----
 . Install {mlflow} using the following command:
++
 [source,subs="+attributes"]
 ----
 {prompt_user}helm install mlflow ./mlflow \
   -n SUSE_AI_NAMESPACE
 ----
 . Validate that {ingress} is enabled for {mlflow}.
++
 [source,subs="+attributes"]
 ----
 {prompt_user}kubectl get ingress --all-namespaces
@@ -323,7 +328,7 @@ mlflow [2025-11-01 00:56:55 +0000] [7] [INFO] Booting worker with pid: 7
 
 After the {mlflow} server is up and running, you can access it from a Web browser either on the local host or exposed via {ingress}.
 
-To access {mlflow} locally, point your Web browser to `http://localhost:5000`.
+To access {mlflow} locally, point your Web browser to `\http://localhost:5000`.
 
 To access {mlflow} via {ingress}, add a corresponding line to your `/etc/hosts`, for example:
 
@@ -332,14 +337,14 @@ To access {mlflow} via {ingress}, add a corresponding line to your `/etc/hosts`,
 10.0.3.184 suse-mflow
 ----
 
-Then point your Web browser to `http://suse-mlflow`.
+Then point your Web browser to `\http://suse-mlflow`.
 
 [#fg-mlflow-webui]
 .{mlflow} Web UI
 image::mlflow-webui.png[A screenshot showing the {mlflow} Web user interface,width=100%]
 
 [TIP]
-====
 .For more information
+====
 Explore {mlflow} core features, model training, tracing (observability) and more by following the link:https://github.com/mlflow/mlflow?tab=readme-ov-file#-core-components[official documentation].
 ====

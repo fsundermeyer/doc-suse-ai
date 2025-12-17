@@ -23,13 +23,12 @@ It contains available versions and the link to pull the {owui} container image.
 include::../snippets/ai-library-requirement.adoc[]
 
 .Requirements
-To install {owui}, you need to have the following:
 
 * An installed {certmanager}.
 If {certmanager} is not installed from previous {owui} releases, install it by following the steps in xref:cert-manager-installing[].
-
+--
 . Create the `owui_custom_overrides.yaml` file to override the values of the parent {helm} chart.
-The file contains URLs for {milvus} and {ollama} and specifies whether a stand-alone {ollama} deployment is used or whether {ollama} is installed as part of the {owui} installation.
+The file contains URLs for {milvus} and {ollama}, and specifies whether a stand-alone {ollama} deployment is used or whether {ollama} is installed as part of the {owui} installation.
 Find more details in xref:owui-helm-overrides[].
 For a list of all installation options with examples, refer to xref:owui-helmchart-values[].
 . Install the {owui} {helm} chart using the `owui_custom_overrides.yaml` override file.
@@ -41,6 +40,7 @@ For a list of all installation options with examples, refer to xref:owui-helmcha
   -n <SUSE_AI_NAMESPACE> \
   --version <X.Y.Z> -f <owui_custom_overrides.yaml>
 ----
+--
 
 ifdef::deployment_standard[]
 [#owui-upgrading]
