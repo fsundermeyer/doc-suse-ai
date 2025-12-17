@@ -9,7 +9,7 @@ endif::[]
 The cost estimation is calculated for every chat interaction between the
 {owui} user and the AI model with the following formula:
 
-[source,text]
+[source]
 ----
 cost = (prompt_tokens / 1000) * model_prompt_multiplier + (completion_tokens / 1000) * model_completion_multiplier
 ----

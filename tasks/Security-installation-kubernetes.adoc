@@ -209,7 +209,7 @@ Apply the read permissions via the following `create clusterrole` commands:
 +
 Sample output:
 +
-[source,text]
+[source]
 ----
 NAME                                                ROLE                                                            AGE   USERS   GROUPS   SERVICEACCOUNTS
 neuvector-binding-app                               ClusterRole/neuvector-binding-app                               66d                    neuvector/controller
@@ -237,7 +237,7 @@ And this command:
 +
 Sample output:
 +
-[source,text]
+[source]
 ----
 NAME                              ROLE                                   AGE    USERS   GROUPS   SERVICEACCOUNTS
 neuvector-binding-scanner         Role/neuvector-binding-scanner         8m8s                    neuvector/controller, neuvector/updater
@@ -325,7 +325,7 @@ To see which port is open on the host nodes, please run the following commands:
 
 And you will see something like:
 
-[source,text]
+[source]
 ----
 NAME                          CLUSTER-IP      EXTERNAL-IP   PORT(S)                                          AGE
 neuvector-service-webui     10.100.195.99     <nodes>       8443:30257/TCP                                   15m

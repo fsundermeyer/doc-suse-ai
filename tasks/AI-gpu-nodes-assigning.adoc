@@ -54,7 +54,7 @@ To label multiple nodes, use the following command:
 ====
 If Terraform is being used as an IaC tool, you can add labels to a group of nodes by editing the `.tf` files and adding the following values to a resource:
 
-[source,terraform]
+[source]
 ----
 resource "node_group" "example" {
   labels = {
@@ -118,7 +118,7 @@ nodeSelector:
 
 If the GPU is correctly detected, the {ollama} container logs this event:
 
-[source,text]
+[source]
 ----
 | [...] source=routes.go:1172 msg="Listening on :11434 (version 0.0.0)"                                              │
 │ [...] source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama2502346830/runners                       │

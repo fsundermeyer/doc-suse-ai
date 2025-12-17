@@ -143,7 +143,7 @@ When {milvus} is deployed in cluster mode, it uses {akafka} as a message queue.
 If {akafka} uses {sstorage} as a storage back-end, you need to create an XFS storage class and make it available for the {akafka} deployment.
 Otherwise deploying {akafka} with a storage class of an Ext4 file system fails with the following error:
 
-[source,text]
+[source]
 ----
 "Found directory /mnt/kafka/logs/lost+found, 'lost+found' is not
   in the form of topic-partition or topic-partition.uniqueId-delete

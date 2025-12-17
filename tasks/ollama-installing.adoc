@@ -130,7 +130,7 @@ ollama:
 
 Without this change you may experience the following error when trying to upgrade from 0.x.x to 1.x.x.
 
-[source,text]
+[source]
 ----
 coalesce.go:286: warning: cannot overwrite table with non table for
 ollama.ollama.models (map[pull:[] run:[]])

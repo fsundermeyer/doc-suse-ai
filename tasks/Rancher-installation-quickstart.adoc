@@ -188,7 +188,7 @@ helm install cert-manager jetstack/cert-manager \
 
 Once you have installed {certmanager}, you can verify it is deployed correctly by checking the {certmanager} namespace for running pods:
 
-[source,text]
+[source]
 ----
 kubectl get pods --namespace cert-manager
 

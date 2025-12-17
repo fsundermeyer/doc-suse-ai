@@ -135,7 +135,7 @@ API Groups:
 
 Verbs:
 
-[source,text]
+[source]
 ----
 get    // for read-only(i.e. view)
 *      // for read/write(i.e. modify)
@@ -145,7 +145,7 @@ Resources:
 
 {neuvector}, Cluster Scoped
 
-[source,text]
+[source]
 ----
 AdmissionControl
 Authentication
@@ -157,7 +157,7 @@ Vulnerability
 
 {neuvector}, Namespaced
 
-[source,text]
+[source]
 ----
 AuditEvents
 Authorization
@@ -185,7 +185,7 @@ API Groups:
 
 Verbs:
 
-[source,text]
+[source]
 ----
 get    // for read-only(i.e. view)
 *      // for read/write(i.e. modify)
@@ -195,7 +195,7 @@ Resources:
 
 {neuvector}, Namespaced
 
-[source,text]
+[source]
 ----
 AuditEvents
 Authorization

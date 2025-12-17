@@ -18,7 +18,7 @@ The following three commands should return a correct output if the kernel driver
 . `lsmod | grep nvidia` returns a list of {nvidia} kernel modules.
 For example:
 +
-[source,text]
+[source]
 ----
 nvidia_uvm           2129920  0
 nvidia_drm            131072  0
@@ -30,7 +30,7 @@ ecc                    45056  1 nvidia
 . `cat /proc/driver/nvidia/version` returns the NVRM and GCC versions of the driver.
 For example:
 +
-[source,text]
+[source]
 ----
 NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  555.42.06
   Release Build  (abuild@host)  Thu Jul 11 12:00:00 UTC 2024
@@ -39,7 +39,7 @@ NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  555.42.06
 . `find /usr/ -iname libnvidia-ml.so` returns a path to the `libnvidia-ml.so` library.
 For example:
 +
-[source,text]
+[source]
 ----
 /usr/lib64/libnvidia-ml.so
 ----

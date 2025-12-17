@@ -231,7 +231,7 @@ The Windows Server Containers feature needs to be enabled for the
 
 . Open a new PowerShell window with administrator privileges.
 +
-[source,powershell]
+[source]
 ----
 powershell -Command "Start-Process PowerShell -Verb RunAs"
 ----
@@ -239,7 +239,7 @@ powershell -Command "Start-Process PowerShell -Verb RunAs"
 . In the new PowerShell window, run the following command to install the
   containers feature.
 +
-[source,powershell]
+[source]
 ----
 Enable-WindowsOptionalFeature -Online -FeatureName containers –All
 ----
@@ -249,7 +249,7 @@ feature to function properly.
 
 . Download the install script.
 +
-[source,powershell]
+[source]
 ----
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/rancher/rke2/master/install.ps1 -Outfile install.ps1
 ----
@@ -259,7 +259,7 @@ binary onto your machine.
 
 . Configure the rke2-agent for Windows.
 +
-[source,powershell]
+[source]
 ----
 $ sudo New-Item -Type Directory c:/etc/rancher/rke2 -Force
 Set-Content -Path c:/etc/rancher/rke2/config.yaml -Value @"
@@ -274,7 +274,7 @@ link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/configura
 
 . Configure the PATH.
 +
-[source,powershell]
+[source]
 ----
 $ sudo $env:PATH+=";c:\var\lib\rancher\rke2\bin;c:\usr\local\bin"
 
@@ -286,14 +286,14 @@ $ sudo $env:PATH+=";c:\var\lib\rancher\rke2\bin;c:\usr\local\bin"
 
 . Run the installer.
 +
-[source,powershell]
+[source]
 ----
 $ sudo ./install.ps1
 ----
 
 . Start the Windows `RKE2` Service.
 +
-[source,powershell]
+[source]
 ----
 $ sudo rke2.exe agent service --add
 ----
@@ -305,7 +305,7 @@ Each machine must have a unique host name.
 +
 Do not forget to start the `RKE2` service with:
 +
-[source,powershell]
+[source]
 ----
 Start-Service rke2
 ----
@@ -313,7 +313,7 @@ Start-Service rke2
 If you would prefer to use CLI parameters only instead, run the binary
 with the desired parameters.
 +
-[source,powershell]
+[source]
 ----
 rke2.exe agent --token _TOKEN_ --server _SERVER_URL_
 ----

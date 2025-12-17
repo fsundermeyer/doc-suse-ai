@@ -158,7 +158,7 @@ nvidia-persistenced=$\{version}
 The output of this command should show you something similar to the
 following output. In the example below, the system has one GPU.
 +
-[source,text]
+[source]
 ----
 Fri Aug  1 14:53:26 2025       
 +------------------------------------------------------------------------------+
@@ -282,7 +282,7 @@ underlying host.
   example of the same version, which comprehensively validates GPU
   access via {cuda} and from within the container itself.
 +
-[source,text]
+[source]
 ----
 {prompt_root}/usr/local/cuda-12.9/extras/demo_suite/deviceQuery Starting...
 

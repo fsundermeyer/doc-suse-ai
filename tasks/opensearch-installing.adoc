@@ -38,7 +38,7 @@ To check the current value, run the following command:
 
 To increase the value, add the following to `/etc/sysctl.conf`:
 
-[source,text]
+[source]
 ----
 vm.max_map_count=262144
 ----

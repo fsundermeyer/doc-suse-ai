@@ -71,7 +71,7 @@ You can integrate {vllm} in {owui} either using the {owui} Web user interface, o
 . Click the btn:[Settings] tab and select btn:[Connections] from the left menu.
 . In the btn:[Manage OpenAI API Connections] section, add a new connection URL to the {vllm} router service, for example:
 +
-[source,text]
+[source]
 ----
 http://vllm-router-service.<SUSE_AI_NAMESPACE>.svc.cluster.local:80/v1
 ----
