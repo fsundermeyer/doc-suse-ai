@@ -1222,10 +1222,9 @@ spec:
 [NOTE]
 ====
 PKS is field-tested and requires enabling privileged containers to the plan/tile, and changing the YAML hostPath as follows for All-in-One and Enforcer:
-====
-
 [source,yaml]
 ----
       hostPath:
             path: /var/vcap/sys/run/docker/docker.sock
 ----
+====

@@ -19,29 +19,36 @@ For community users, please see the Deploy {ssecurity} section below to deploy f
 
 . The first step is to enable the {ranchera} Extensions capability globally if it is not already enabled.
 +
+.{ranchera} extensions
 image::ui0_extensions.png[A screenshot of {ranchera} extensions,width=75%]
 +
+.Enable extensions
 image::ui1_enable.png[A screenshot of enabling extensions,width=75%]
 . Install the {ssecurity}-UI-Ext from the btn:[Available] list.
 +
+.Install UI extension
 image::ui2_installext.png[A screenshot of install UI extension,width=75%]
 . Reload the extension after installation is complete.
 +
+.Reload extension
 image::ui3reload.png[A screenshot of reload extension,width=75%]
 . On your selected cluster, install the {ssecurity} application from the {ssecurity} tab if the {ssecurity} app is not already installed.
 This should take you to the application installation steps.
 For more details on this installation process, see xref:suse-security-installation-rancher-deploy[].
 +
+.Install {ssecurity} application
 image::ui5installnv.png[A screenshot of install {neuvector} application,width=75%]
 . The {ssecurity} dashboard should now be shown from the {ssecurity} menu for that cluster.
 From this dashboard, the security health of the cluster can be monitored.
 There are interactive elements in the dashboard, such as invoking a wizard to improve your Security Risk Score, including being able to turn on automated scanning for vulnerabilities if it is not enabled.
 +
+.{ssecurity} dasboard
 image::ui6dashboard.png[A screenshot of {neuvector} dashboard,width=75%]
 +
 The links in the upper right of the dashboard provide convenient single sign-on (SSO) links to the full {ssecurity} console for more detailed analysis and configuration.
 . To uninstall the extension, go back to the Extensions page.
 +
+.Uninstalling extension
 image::ui7uninstall.png[A screenshot of uninstalling extension,width=75%]
 +
 [NOTE]

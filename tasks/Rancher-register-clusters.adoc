@@ -112,7 +112,7 @@ link:https://documentation.suse.com/cloudnative/k3s/latest/en/introduction.html[
 link:https://documentation.suse.com/cloudnative/rke2/latest/en/introduction.html[{rke2a}] is {ranchera}'s next-generation {kube} distribution for data center and cloud installations.
 
 When an {rke2a} or {k3s} cluster is registered in {ranchera}, {ranchera} will recognize it.
-The {ranchera} UI will expose features available to xref:rancher-register-features-all[], along with the following options for editing and upgrading the cluster:
+The {ranchera} UI will expose features available to xref:rancher-register-features-all[all registered clusters], along with the following options for editing and upgrading the cluster:
 
 * Enable or disable xref:rancher-register-configure-version-management[version management].
 * link:https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/manage-clusters/back-up-restore-and-disaster-recovery/back-up-rancher-launched-kubernetes-clusters[Upgrade the {kube} version] when version management is enabled.

@@ -1,5 +1,10 @@
 [#suse-ai-deploy-suse-ai]
+ifdef::override-title[]
+= {override-title}
+endif::[]
+ifndef::override-title[]
 = Installing {ailibrary}
+endif::[]
 
 ifdef::deployment_standard[]
 This procedure includes steps to install {ailibrary} applications.
