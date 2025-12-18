@@ -51,7 +51,7 @@ method, do the following:
 +
 [source,bash]
 ----
-$ sudo curl -sfL https://get.rke2.io/ | \
+> sudocurl -sfL https://get.rke2.io/ | \
   sudo INSTALL_RKE2_ARTIFACT_URL=_PRIME-ARTIFACTS-URL_/rke2 \
   INSTALL_RKE2_CHANNEL="latest" sh -
 ----
@@ -61,7 +61,7 @@ To specify a version, set the
 +
 [source,bash]
 ----
-$ sudo curl -sfL https://get.rke2.io/ | \
+> sudocurl -sfL https://get.rke2.io/ | \
 sudo INSTALL_RKE2_ARTIFACT_URL=_PRIME-ARTIFACTS-URL_/rke2 \
   INSTALL_RKE2_VERSION="_VERSION_" ./install.sh
 ----
@@ -77,7 +77,7 @@ it will fail unless it runs as the {rootuser} user or through
 +
 [source,bash]
 ----
-$ sudo systemctl enable rke2-server.service
+> sudosystemctl enable rke2-server.service
 ----
 
 . To pull images from the {ranchera} Prime registry, set the following
@@ -96,14 +96,14 @@ the cluster.
 +
 [source,bash]
 ----
-$ sudo systemctl start rke2-server.service
+> sudosystemctl start rke2-server.service
 ----
 
 . Follow the logs with the following command:
 +
 [source,bash]
 ----
-$ sudo journalctl -u rke2-server -f
+> sudojournalctl -u rke2-server -f
 ----
 
 After running this installation:
@@ -150,7 +150,7 @@ The steps on this section requires {rootuser}-level access or
 +
 [source,bash]
 ----
-$ sudo curl -sfL https://get.rke2.io | INSTALL_RKE2_TYPE="agent" sh -
+> sudocurl -sfL https://get.rke2.io | INSTALL_RKE2_TYPE="agent" sh -
 ----
 +
 This will install the
@@ -163,7 +163,7 @@ it will fail unless it runs as the root user or through
 +
 [source,bash]
 ----
-$ sudo systemctl enable rke2-agent.service
+> sudosystemctl enable rke2-agent.service
 ----
 
 . Configure the `rke2-agent`
@@ -171,7 +171,7 @@ $ sudo systemctl enable rke2-agent.service
 +
 [source,bash]
 ----
-$ sudo mkdir -p /etc/rancher/rke2/
+> sudomkdir -p /etc/rancher/rke2/
 vim /etc/rancher/rke2/config.yaml
 ----
 +
@@ -179,7 +179,7 @@ Content for `config.yaml`:
 +
 [source,yaml]
 ----
-$ sudo server: https://_SERVER_IP_OR_DNS_:9345
+> sudoserver: https://_SERVER_IP_OR_DNS_:9345
 token: _TOKEN_FROM_SERVER_NODE_
 ----
 +
@@ -195,14 +195,14 @@ normal.
 +
 [source,bash]
 ----
-$ sudo systemctl start rke2-agent.service
+> sudosystemctl start rke2-agent.service
 ----
 
 . Follow the logs with the following command:
 +
 [source,bash]
 ----
-$ sudo journalctl -u rke2-agent -f
+> sudojournalctl -u rke2-agent -f
 ----
 
 [NOTE]
@@ -221,14 +221,13 @@ link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/configura
 Windows Support works with Calico or Flannel as the CNI for the {rke2a}
 cluster.
 
-.Prepare the {mswin} agent node
-
 [NOTE]
 ====
 The Windows Server Containers feature needs to be enabled for the
 {rke2a} agent to work.
 ====
-
+[.procedure]
+.Prepare the {mswin} agent node
 . Open a new PowerShell window with administrator privileges.
 +
 [source]
@@ -261,7 +260,7 @@ binary onto your machine.
 +
 [source]
 ----
-$ sudo New-Item -Type Directory c:/etc/rancher/rke2 -Force
+> sudoNew-Item -Type Directory c:/etc/rancher/rke2 -Force
 Set-Content -Path c:/etc/rancher/rke2/config.yaml -Value @"
 server: https://_SERVER_IP_OR_DNS_:9345
 token: _TOKEN_FROM_SERVER_NODE_
@@ -276,7 +275,7 @@ link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/configura
 +
 [source]
 ----
-$ sudo $env:PATH+=";c:\var\lib\rancher\rke2\bin;c:\usr\local\bin"
+> sudo$env:PATH+=";c:\var\lib\rancher\rke2\bin;c:\usr\local\bin"
 
 [Environment]::SetEnvironmentVariable(
     "Path",
@@ -288,14 +287,14 @@ $ sudo $env:PATH+=";c:\var\lib\rancher\rke2\bin;c:\usr\local\bin"
 +
 [source]
 ----
-$ sudo ./install.ps1
+> sudo./install.ps1
 ----
 
 . Start the Windows `RKE2` Service.
 +
 [source]
 ----
-$ sudo rke2.exe agent service --add
+> sudorke2.exe agent service --add
 ----
 +
 [NOTE]

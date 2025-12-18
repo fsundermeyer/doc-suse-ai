@@ -44,7 +44,7 @@ include::../references/owui-known-issues.adoc[leveloffset=+2]
 
 include::../glues/owui-more-info.adoc[leveloffset=+2]
 
-[[openwebui-setting-base-models]]
+[#openwebui-setting-base-models]]
 == Setting base AI models
 
 {owui} needs at least one base AI model configured so that you can interact with it or create custom AI models as described in <<openwebui-managing-models>>.

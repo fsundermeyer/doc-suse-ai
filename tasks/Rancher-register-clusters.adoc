@@ -38,6 +38,7 @@ If you do not, grant these privileges to your user by running:
 ----
 
 [#rancher-register-cluster]
+[.procedure]
 == Registering a cluster
 
 . Click btn:[☰] > btn:[Cluster Management].

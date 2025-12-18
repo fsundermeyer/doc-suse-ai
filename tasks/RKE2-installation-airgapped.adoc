@@ -2,6 +2,7 @@
 = Installing {rke2} in air-gapped environments
 
 This guide will help you quickly launch a cluster with default options.
+
 {rke2} can be installed in an air-gapped environment with two different methods.
 You can either deploy via the `rke2-airgap-images` tarball artifact or by using a private registry.
 
@@ -31,7 +32,7 @@ See our link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/m
 Even a black-hole route via a dummy interface will suffice.
 {rke2} requires a default route to auto-detect the node's primary IP and for kube-proxy ClusterIP routing to function correctly.
 To add a dummy route, do the following:
-
++
 [source, subs="+attributes"]
 ----
 {prompt_sudo}ip link add dummy0 type dummy
@@ -65,12 +66,12 @@ Private registry support honors all settings from the link:https://documentation
 . Add all the required system images to your private registry.
 A list of images can be obtained from the `.txt` file corresponding to each tarball referenced above.
 Alternatively, you can `docker load` the air-gap image tarballs, then tag and push the loaded images.
-. xref:rke2-airgapped-install-rke2[title] using the `system-default-registry` parameter, or use the link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/containerd_registry_configuration.html[{containerd} registry configuration] to use your registry as a mirror for docker.io.
+. xref:rke2-airgapped-install-rke2[Install {rke2}] using the `system-default-registry` parameter, or use the link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/containerd_registry_configuration.html[{containerd} registry configuration] to use your registry as a mirror for docker.io.
 
 [#rke2-airgapped-install-rke2]
 == Install {rke2}
 
-The following options to install {rke2} should only be performed after completing either the xref:rke2-airgapped-tarball-method[title] or xref:rke2-airgapped-private-registry-method[title].
+The following options to install {rke2} should only be performed after completing either the xref:rke2-airgapped-tarball-method[tarball method] or xref:rke2-airgapped-private-registry-method[private registry method].
 {rke2} can be installed either by running the xref:rke2-airgapped-binary-install[binary] directly or by using the xref:rke2-airgapped-script-install[install.sh script].
 
 [#rke2-airgapped-binary-install]
@@ -83,16 +84,19 @@ Ensure it is executable.
 * If you are using the {ranchera} Prime registry, set the following values in `config.yaml`:
 ** Set `system-default-registry: registry.rancher.com`.
 ** If you are not using the default CNI, Canal, set `cni: CNI`.
++
 [source]
 ----
 system-default-registry: registry.rancher.com
 cni: CNI
 ----
 * If using the Private Registry Method, set the following values in `config.yaml`:
++
 [source]
 ----
 system-default-registry: "registry.example.com:5000"
 ----
++
 [NOTE]
 ====
 The `system-default-registry` parameter must specify only valid RFC 3986 URI authorities, i.e. a host and optional port.
@@ -105,6 +109,7 @@ The `system-default-registry` parameter must specify only valid RFC 3986 URI aut
 This will run through a standard install, including creating systemd units.
 
 . Download the install script, {rke2} binaries, {rke2} images, and SHA256 checksum archives from the link:https://scc.suse.com/rancher-docs/rancherprime/latest/en/reference-guide.html#prime-artifacts-url[Prime Artifacts URL] into the `/rke2-artifacts` directory, as in the example below:
++
 [source]
 ----
 mkdir /rke2-artifacts && cd /rke2-artifacts/
@@ -114,6 +119,7 @@ curl -OLs PRIME-ARTIFACTS-URL/rke2/VERSION/sha256sum-ARCH.txt
 curl -sfL https://get.rke2.io --output install.sh
 ----
 . Run `install.sh` using the directory, as in the example below:
++
 [source]
 ----
 INSTALL_RKE2_ARTIFACT_PATH=/rke2-artifacts sh install.sh

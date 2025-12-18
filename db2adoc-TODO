@@ -9,6 +9,9 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 * replace  [[]] with [#]]
 * replace <<>> with xref:
 * check for .. and add [.procedure]
+* check for [title] and replace with real title
+* replace $ sudo  with > sudo
+* check for (optional) and replace with _(Optional)_
 
 ===================================================
 Addings to style guide:

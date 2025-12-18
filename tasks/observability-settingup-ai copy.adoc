@@ -429,8 +429,6 @@ Then apply the configuration by running the following command.
 . *Install {productname}.*
 Refer to xref:ai-library-installing[] for the complete procedure.
 
-include::../snippets/observability-warning-262.adoc[]
-
 [#ai-observability-openlit]
 == Instrument applications
 

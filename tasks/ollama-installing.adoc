@@ -50,8 +50,9 @@ ifdef::deployment_airgap[]
   -n <SUSE_AI_NAMESPACE> \
   -f ollama_custom_overrides.yaml
 ----
-[IMPORTANT]
++
 .Downloading AI models
+[IMPORTANT]
 ====
 {ollama} normally needs to have an active Internet connection to download AI models.
 In an air-gapped environment, you must download the models manually and copy them to your local {ollama} instance, for example:

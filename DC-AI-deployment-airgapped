@@ -1,4 +1,4 @@
-MAIN="ai-deployment.adoc"
+MAIN="ai-deployment-airgapped.adoc"
 SRC_DIR="articles"
 IMG_SRC_DIR="images"
 

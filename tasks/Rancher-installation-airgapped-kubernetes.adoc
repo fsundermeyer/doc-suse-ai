@@ -115,6 +115,7 @@ For more information, refer to the xref:rke2-installation-airgapped[].
 
 When you installed {rke2a} on each {ranchera} server node, a `kubeconfig` file was created on the node at `/etc/rancher/rke2/rke2.yaml`.
 This file contains credentials for full access to the cluster, and you should save this file in a secure location.
+
 To use this `kubeconfig` file:
 
 . Install link:https://{kube}.io/docs/tasks/tools/install-kubectl/#install-kubectl[kubectl], the {kube} command-line tool.
@@ -123,7 +124,7 @@ To use this `kubeconfig` file:
 Configure the server as the DNS for your load balancer, referring to port 6443.
 (The {kube} API server will be reached at port 6443, while the {ranchera} server will be reached at ports 80 and 443.)
 Here is an example `rke2.yaml`:
-
++
 [source]
 ----
 apiVersion: v1

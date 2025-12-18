@@ -107,7 +107,7 @@ ifdef::deployment_airgap[]
   pulling in additional utilities, for example,
   `nvidia-smi`.
 +
-[source,bash]
+[source,bash,subs="+attributes"]
 ----
 {prompt_tr-up}zypper ar --no-gpgcheck \
   file:///LOCAL_MIRROR_DIRECTORY \
@@ -282,7 +282,7 @@ underlying host.
   example of the same version, which comprehensively validates GPU
   access via {cuda} and from within the container itself.
 +
-[source]
+[source,subs="+attributes"]
 ----
 {prompt_root}/usr/local/cuda-12.9/extras/demo_suite/deviceQuery Starting...
 

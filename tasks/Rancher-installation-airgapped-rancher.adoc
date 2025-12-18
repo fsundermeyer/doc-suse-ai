@@ -37,17 +37,20 @@ Refer to the link:https://rancher.com/docs/rancher/v2.x/en/installation/requirem
 . Fetch the {ranchera} Prime chart.
 This will pull down the chart and save it in the current directory as a `.tgz` file.
 * To fetch the latest version:
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm fetch rancher-prime/rancher
 ----
 * To fetch a specific version:
 Check to see which version of {ranchera} Prime are available.
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm search repo --versions rancher-prime
 ----
 Fetch a specific version by specifying the `--version` parameter:
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm fetch rancher-prime/rancher --version=version
@@ -124,17 +127,20 @@ If you are upgrading {ranchera} and using a version of {certmanager} older than 
 ====
 
 . From a system connected to the internet, add the {certmanager} repo to {helm}:
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm repo add jetstack https://charts.jetstack.io
 helm repo update
 ----
 . Fetch the latest {certmanager} chart available from the link:https://artifacthub.io/packages/helm/cert-manager/cert-manager[{helm} chart repository].
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm fetch jetstack/cert-manager --version v1.11.0
 ----
 . Download the required CRD file for {certmanager}:
++
 [source, subs="+attributes"]
 ----
 {prompt_user}curl -L -o cert-manager-crd.yaml https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
@@ -159,16 +165,19 @@ To see options on how to customize the {certmanager} install (including for case
 If you are using self-signed certificates, install {certmanager}:
 
 . Create the namespace for {certmanager}.
++
 [source, subs="+attributes"]
 ----
 {prompt_user}kubectl create namespace cert-manager
 ----
 . Create the {certmanager} CustomResourceDefinitions (CRDs).
++
 [source, subs="+attributes"]
 ----
 {prompt_user}kubectl apply -f cert-manager-crd.yaml
 ----
 . Install {certmanager}.
++
 [source, subs="+attributes"]
 ----
 {prompt_user}helm install cert-manager ./cert-manager-v1.11.0.tgz \
