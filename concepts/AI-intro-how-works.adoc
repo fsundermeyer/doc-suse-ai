@@ -1,5 +1,5 @@
 
-[[ai-intro-how-works]]
+[#ai-intro-how-works]
 = {productname} architecture
 
 [abstract]
@@ -69,6 +69,6 @@ An open source machine learning framework.
 {mlflow} (https://mlflow.org)::
 An open source platform to manage the machine learning lifecycle, including experimentation, reproducibility, deployment and a central model registry. 
 
-[[suse-ai-schema]]
+[#suse-ai-schema]
 .Basic schema of {productname}
 image::ai-schema.png[An image showing a basic structure of {productname}, scaledwidth=100%]

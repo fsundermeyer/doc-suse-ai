@@ -1,4 +1,4 @@
-[[rke2-installation-quickstart]]
+[#rke2-installation-quickstart]
 = Installing {rke2}
 
 This guide will help you quickly launch a cluster with default options.
@@ -19,7 +19,7 @@ link:https://scc.suse.com/home[{scc} (SCC)]
 credentials to log in.
 ====
 
-[[rke2-prerequisites]]
+[#rke2-prerequisites]
 == Prerequisites
 
 * Make sure your environment fulfills the
@@ -33,7 +33,7 @@ credentials to log in.
 * The {rke2a} installation process must be run as the {rootuser} user or
   through `sudo`.
 
-[[rke2-server-node-installation]]
+[#rke2-server-node-installation]
 == Server node installation
 
 {rke2} provides an installation script that is a convenient way to install
@@ -140,7 +140,7 @@ in total. An odd number is needed to maintain a quorum. See the
 link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/ha.html[{ha} documentation] for more details.
 ====
 
-[[rke2-linux-agent-installation]]
+[#rke2-linux-agent-installation]
 == Linux agent (worker) node installation
 
 The steps on this section requires {rootuser}-level access or
@@ -215,7 +215,7 @@ about the config.yaml file, refer to the
 link:https://documentation.suse.com/cloudnative/rke2/latest/en/install/configuration.html#_configuration-file[Configuration options documentation].
 ====
 
-[[rke2-windows-agent-installation]]
+[#rke2-windows-agent-installation]
 == {mswin} agent (worker) node installation
 
 Windows Support works with Calico or Flannel as the CNI for the {rke2a}

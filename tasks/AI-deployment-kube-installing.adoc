@@ -1,4 +1,4 @@
-[[ai-deployment-kube-installing]]
+[#ai-deployment-kube-installing]
 = Installing the Linux and {kube} distribution
 
 This procedure includes the steps to install the base Linux operating

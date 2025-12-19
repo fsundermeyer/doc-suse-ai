@@ -1,4 +1,4 @@
-[[owui-knowledgebase-adding-content]]
+[#owui-knowledgebase-adding-content]
 = Adding content to a knowledge base
 
 ifndef::part-of-article[]

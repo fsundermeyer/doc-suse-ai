@@ -1,4 +1,4 @@
-[[openwebui-downloading-ai-models-from-huggingface]]
+[#openwebui-downloading-ai-models-from-huggingface]
 = Downloading AI models from {huggingface}
 
 {huggingface} (https://huggingface.co/models) is an online repository for AI models.

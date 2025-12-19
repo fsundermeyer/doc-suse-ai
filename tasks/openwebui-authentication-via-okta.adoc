@@ -1,4 +1,4 @@
-[[openwebui-authentication-via-okta]]
+[#openwebui-authentication-via-okta]
 ifdef::override-title[]
 = {override-title}
 endif::[]
@@ -20,7 +20,7 @@ The process of enabling {okta} as the identity manager for {owui} consists of se
 This example procedure shows the minimal configuration required to use {okta} with {owui}. Customize the configuration to your specific scenario and refer to the {okta} documentation at https://help.okta.com/en-us/content/index.htm?cshid=csh-index for more information. 
 ====
 
-[[owui-config-okta]]
+[#owui-config-okta]
 == Configuring {okta}
 
 [IMPORTANT]
@@ -68,7 +68,7 @@ PROTOCOL://OPENWEBUI_DOMAIN:OPTIONAL_PORT_NUMBER/oauth/oidc/callback
 ----
 . In the menu:Login initiated by[] section, select menu:App Only[] . Confirm with menu:Save[] . 
 
-[[owui-gather-data]]
+[#owui-gather-data]
 == Gathering data for {owui} configuration
 . In the top-right menu, copy the {okta} domain. In this example, it is `my-domain.okta.com`. 
 +
@@ -81,7 +81,7 @@ image::owui-okta-clientid.png[Client ID and secret in {okta},scaledwidth=50%]
 +
 [TIP]
 ====
-The previously gathered values are used by {owui} via the following environment variables as described in <<configure-owui-for-okta>>.
+The previously gathered values are used by {owui} via the following environment variables as described in xref:configure-owui-for-okta[].
 ----
 OPENID_PROVIDER_URL="OKTA_DOMAIN/.well-known/openid-configuration"
 OAUTH_CLIENT_ID="CLIENT_ID"
@@ -89,7 +89,7 @@ OAUTH_CLIENT_SECRET="CLIENT_SECRET"
 ----
 ====
 
-[[configure-owui-for-okta]]
+[#configure-owui-for-okta]
 == Configuring {owui} for {okta} integration
 
 To configure {owui} to use {okta} as an authentication provider, you must set up specific environment variables.
@@ -108,7 +108,7 @@ OAUTH_SCOPES=openid email profile <.>
 ----
 +
 <.> Allow account creation when logging in with OAuth 2.0.
-<.> Allow logging into an account that matches the e-mail address provided by the OAuth 2.0 provider (optional).
+<.> Allow logging into an account that matches the e-mail address provided by the OAuth 2.0 provider  _(Optional)_.
 <.> Variable set for the authentication provider gathered from {okta}.
 <.> Specify scopes to request (optional, defaults to `openid email profile` ).
 +

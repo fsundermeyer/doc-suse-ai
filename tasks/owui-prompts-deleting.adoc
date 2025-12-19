@@ -1,4 +1,4 @@
-[[owui-prompts-deleting]]
+[#owui-prompts-deleting]
 = Deleting existing system prompts
 
 ifndef::part-of-article[]

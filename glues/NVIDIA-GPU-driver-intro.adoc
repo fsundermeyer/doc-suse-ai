@@ -1,4 +1,4 @@
-[[ai-nvidia-gpu-driver]]
+[#ai-nvidia-gpu-driver]
 = Installing {nvidia} GPU drivers
 
 This article demonstrates how to implement host-level {nvidia} GPU

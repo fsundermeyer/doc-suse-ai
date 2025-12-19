@@ -1,5 +1,5 @@
 
-[[ai-intro-benefits]]
+[#ai-intro-benefits]
 = What are the benefits of using {productname}?
 
 [abstract]

@@ -89,6 +89,7 @@ More details are provided in the respective instructions.
 ====
 
 [#ai-observability-observability-cluster]
+[.procedure]
 == Setting up the {sobservability} cluster
 
 This initial step is identical for both single-cluster and multi-cluster deployments.

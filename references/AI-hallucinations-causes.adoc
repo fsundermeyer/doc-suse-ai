@@ -1,4 +1,4 @@
-[[ai-hallucinations-causes]]
+[#ai-hallucinations-causes]
 = What causes AI hallucinations?
 
 The most common causes of hallucinations are: 

@@ -1,4 +1,4 @@
-[[openwebui-introduction]]
+[#openwebui-introduction]
 ifdef::override-title[]
 = {override-title}
 endif::[]
@@ -9,7 +9,7 @@ endif::[]
 {owui} is a Web-based interface that allows you to interact with AI models, such as _large language models_ (LLM). It simplifies working with AI by providing a graphical user interface (GUI) instead of relying on command-line tools.
 The goal of {owui} is to make AI accessible to a broader audience, including those without technical expertise in AI development. 
 
-[[benefits-of-openwebui]]
+[#benefits-of-openwebui]
 == What are the key benefits of using {owui}?
 
 *Interaction with AI models*::
@@ -26,7 +26,7 @@ It helps them use the power of advanced AI models with no need for technical kno
 You can deploy {owui} locally or in a private environment.
 Such deployment is required for users concerned about privacy and data security. 
 
-[[ai-prompt-answer]]
+[#ai-prompt-answer]
 == How does an AI chatbot process user queries?
 
 When you enter a user prompt, several processes happen in the background to generate the response. 
@@ -36,4 +36,4 @@ When you enter a user prompt, several processes happen in the background to gene
 . **Knowledge retrieval**. The AI retrieves information from its pre-trained knowledge base. This database includes facts, data and concepts that the AI has been trained on. AI models can also utilize retrieval-augmented generation (RAG) systems to get contextual information from the data provided by the organization. If the AI has access to real-time data, it can search for the latest information online to provide an up-to-date response. 
 . **Response generation**. Using natural language generation (NLG) techniques, the AI constructs a coherent and grammatically correct response based on the information it retrieved. 
 . **Output**. The AI delivers the response in a requested form, usually in a human-readable format. This can be a detailed explanation, a step-by-step guide, or a customized image, depending on the complexity of your query. 
-. *Feedback Loop* (optional). In specific AI systems, your feedback or follow-up questions can help refine future responses, allowing the AI to improve its answers over time. 
+. *Feedback Loop*  _(Optional)_. In specific AI systems, your feedback or follow-up questions can help refine future responses, allowing the AI to improve its answers over time. 

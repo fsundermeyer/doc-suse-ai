@@ -1,7 +1,7 @@
-[[ai-requirements-security]]
+[#ai-requirements-security]
 = {ssecurity} requirements
 
-[[ai-reqs-security-hw]]
+[#ai-reqs-security-hw]
 == Minimum hardware requirements
 
 Nodes for HA setup::
@@ -19,7 +19,7 @@ RAM:: A minimum of 2{nbsp}GB of RAM.
 CPU:: At least 2 CPU cores.
 Disk space:: At least 5{nbsp}GB of storage, preferably SSD.
 
-[[ai-req-security-moreinfo]]
+[#ai-req-security-moreinfo]
 == For more information
 
 For more detailed recommendations, refer to the following official documentation:

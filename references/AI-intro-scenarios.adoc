@@ -1,5 +1,5 @@
 
-[[ai-intro-scenarios]]
+[#ai-intro-scenarios]
 = What are typical scenarios for using {productname}?
 
 [abstract]

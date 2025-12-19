@@ -1,10 +1,10 @@
-[[openwebui-user-roles]]
+[#openwebui-user-roles]
 = User roles in {owui}
 
 {owui} offers three user roles: 'pending,' 'user' and 'admin.'
  The following  sections provide a detailed description of each role. 
 
-[[openwebui-user-pending]]
+[#openwebui-user-pending]
 == The 'pending' role
 
 _Pending_ users can log in but can only view the menu:Account Activation Pending[] screen with the administrator name and e-mail.
@@ -13,7 +13,7 @@ This is the default role for a newly created user account before the administrat
 .Pending user screen
 image::openwebui-user-pending.png[Pending user screen,scaledwidth=50%]
 
-[[owui-user-user]]
+[#owui-user-user]
 == The 'user' role
 
 Users with this role can perform the following tasks: 
@@ -41,7 +41,7 @@ Current user settings::
 * View the installed {owui} and {ollama} version. 
 
 
-[[owui-user-admin]]
+[#owui-user-admin]
 == The 'admin' role
 
 Administrators have full access to {owui} resources and can control user management and systems settings.

@@ -1,4 +1,4 @@
-[[ai-monitoring-cost-estimation]]
+[#ai-monitoring-cost-estimation]
 ifdef::override-title[]
 = {override-title}
 endif::[]

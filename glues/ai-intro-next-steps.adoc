@@ -1,5 +1,5 @@
 
-[[ai-intro-next-steps]]
+[#ai-intro-next-steps]
 = Next steps
 
 [abstract]

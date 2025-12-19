@@ -1,4 +1,4 @@
-[[sles-installation-quickstart]]
+[#sles-installation-quickstart]
 = Installing {sls}
 
 Use the following procedures to install {slsa} on all supported hardware
@@ -7,7 +7,7 @@ installation system. For more detailed installation instructions and
 deployment strategies, refer to
 link:https://documentation.suse.com/sles/15-SP6/html/SLES-all/book-deployment.html[{sls} Deployment Guide].
 
-[[sec-sle-installquick-unified-installer]]
+[#sec-sle-installquick-unified-installer]
 == The {leanos}
 
 Starting with {slsa} 15, the installation medium consists only of the
@@ -15,7 +15,7 @@ Starting with {slsa} 15, the installation medium consists only of the
 {sle} base products. During the installation, you can add functionality by
 selecting modules and extensions to be installed on top of the {leanos}.
 
-[[sec-sle-installquick-install-offline]]
+[#sec-sle-installquick-install-offline]
 == Installing offline or without registration
 
 The default installation medium {installmedia} is optimized for size and
@@ -47,7 +47,7 @@ flash device. To identify the device, insert it and run:
 
 [source,bash]
 ----
-# grep -Ff <(hwinfo --disk --short) <(hwinfo --usb --short)
+{prompt_root}grep -Ff <(hwinfo --disk --short) <(hwinfo --usb --short)
 disk:
   /dev/sdc             General USB Flash Disk
 ----
@@ -57,7 +57,7 @@ You can check the size of the device with:
 
 [source]
 ----
-# fdisk -l /dev/sdc | grep -e "^/dev"
+{prompt_root}fdisk -l /dev/sdc | grep -e "^/dev"
      /dev/sdc1  *     2048 31490047 31488000  15G 83 Linux
 ----
 
@@ -73,13 +73,13 @@ The device must not be mounted when running the `dd`
 command. Note that all data on the partition will be erased.
 ====
 
-[[sec-sle-installquick-install]]
+[#sec-sle-installquick-install]
 == The installation procedure
 
 To install {slsa}, boot or IPL into the installer from the {leanos} medium
 and start the installation.
 
-[[sec-sle-installquick-install-lang]]
+[#sec-sle-installquick-install-lang]
 === Language, keyboard and product selection
 
 .Language, keyboard and product selection
@@ -110,7 +110,7 @@ switches to the color scheme for vision-impaired users. Press the
 buttons again to switch back to the default scheme.
 ====
 
-[[sec-sle-installquick-install-license]]
+[#sec-sle-installquick-install-license]
 === License agreement
 
 .License agreement
@@ -121,7 +121,7 @@ chosen on the boot screen. Translations are available via the
 menu:License Language[] drop-down list. You need to accept
 the agreement by checking menu:I Agree to the License Terms[] to install {slsa}. Proceed with menu:Next[].
 
-[[sec-sle-installquick-install-network]]
+[#sec-sle-installquick-install-network]
 === Network settings
 
 .Network settings
@@ -140,7 +140,7 @@ link:https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-network.html#s
 prefer to do an installation without network access, skip this step
 without making any changes and proceed with menu:Next[].
 
-[[sec-sle-installquick-install-register]]
+[#sec-sle-installquick-install-register]
 === Registration
 
 .Registration
@@ -206,7 +206,7 @@ outgoing traffic, make sure to allow connections to
 to receive updates.
 ====
 
-[[sec-sle-installquick-install-modules]]
+[#sec-sle-installquick-install-modules]
 === Extension and module selection
 
 .Extension and module selection
@@ -397,7 +397,7 @@ the menu:Server Applications Module[] and the
 menu:Python 3 Module[].
 ====
 
-[[sec-sle-installquick-install-add-on]]
+[#sec-sle-installquick-install-add-on]
 === Add-on product
 
 .Add-on product
@@ -430,7 +430,7 @@ license agreements. Proceed with menu:Next[]. If you have
 chosen an add-on product requiring a registration key, you will be asked
 to enter it before proceeding to the next step.
 
-[[sec-sle-installquick-install-roles]]
+[#sec-sle-installquick-install-roles]
 === System role
 
 .System role
@@ -451,7 +451,7 @@ From this point on, the Release Notes can be viewed from any screen
 during the installation process by selecting menu:Release Notes[].
 ====
 
-[[sec-sle-installquick-install-partitioner]]
+[#sec-sle-installquick-install-partitioner]
 === Suggested partitioning
 
 .Suggested partitioning
@@ -501,7 +501,7 @@ Difference::
 To accept the proposed setup without any changes, choose
 menu:Next[] to proceed.
 
-[[sec-sle-installquick-install-time]]
+[#sec-sle-installquick-install-time]
 === Clock and time zone
 
 .Clock and time zone
@@ -513,7 +513,7 @@ menu:Other Settings[]. See the section on
 link:https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-date-time[Clock and Time Zone] for detailed information. Proceed with
 menu:Next[].
 
-[[sec-sle-installquick-install-user]]
+[#sec-sle-installquick-install-user]
 === Local user
 
 .Local user creation
@@ -542,7 +542,7 @@ or LDAP), you can skip the creation of local users. Select menu:Skip User Creati
 
 Proceed with menu:Next[].
 
-[[sec-sle-installquick-install-root]]
+[#sec-sle-installquick-install-root]
 === Authentication for the system administrator `root`
 
 .Password for the system administrator `root`
@@ -570,7 +570,7 @@ link:https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#s
 
 Proceed with menu:Next[].
 
-[[sec-sle-installquick-install-inst-settings]]
+[#sec-sle-installquick-install-inst-settings]
 === Installation settings
 
 .Installation settings
@@ -697,7 +697,7 @@ menu:System[]. In the resulting screen, you can also
 change menu:Kernel Settings[]—see the section on
 link:https://documentation.suse.com/sles/15-SP6/html/SLES-all/cha-install.html#sec-yast-install-proposal-system[System Information] for more information.
 
-[[sec-sle-installquick-install-confirm]]
+[#sec-sle-installquick-install-confirm]
 === Start the installation
 
 .Confirm installation
@@ -711,7 +711,7 @@ confirmation screen pops up. Up to this point, no changes have been made
 to your system. After you click menu:Install[] a second
 time, the installation process starts.
 
-[[sec-sle-installquick-install-inst-process]]
+[#sec-sle-installquick-install-inst-process]
 === The installation process
 
 .Performing the installation

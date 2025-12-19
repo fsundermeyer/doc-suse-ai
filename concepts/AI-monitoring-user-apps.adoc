@@ -1,8 +1,8 @@
-[[ai-monitoring-user-apps]]
+[#ai-monitoring-user-apps]
 = Monitoring user-managed applications
 
 To monitor other applications, you can utilize {otelemetry} SDKs or any other instrumentation provider compatible with {otelemetry}'s semantics, for example, {openlit} SDK.
-For more details, refer to <<ai-monitoring-instrument-openlit>>. 
+For more details, refer to xref:ai-monitoring-instrument-openlit[]. 
 
 {otelemetry} offers several instrumentation techniques for different deployment scenarios and applications.
 You can instrument applications either manually, with more detailed control, or automatically for an easier starting point. 
@@ -13,7 +13,7 @@ One of the most straightforward ways of getting started with {otelemetry} is usi
       guide] on how to use this operator for instrumenting your applications. 
 ====
 
-[[ai-monitoring-telemetry-data-capture]]
+[#ai-monitoring-telemetry-data-capture]
 == Ensuring that the telemetry data is properly captured by the {sobservability} Extension
 
 
@@ -93,7 +93,7 @@ Number of tokens processed.
 
 // TODO change this to real qanda
 [role=qanda]
-[[ai-monitoring-troubleshooting]]
+[#ai-monitoring-troubleshooting]
 == Troubleshooting
 
 No metrics received from any components. ::

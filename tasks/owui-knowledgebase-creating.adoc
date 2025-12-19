@@ -1,4 +1,4 @@
-[[owui-knowledgebase-creating]]
+[#owui-knowledgebase-creating]
 = Creating a knowledge base
 
 ifndef::part-of-article[]
@@ -18,7 +18,7 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 .Creating a new knowledge base
 image::owui-knowledge1.png[Creating a new knowledge base,scaledwidth=75%]
 +
-. Add content to the knowledge base as described in <<owui-knowledgebase-adding-content>>. 
+. Add content to the knowledge base as described in xref:owui-knowledgebase-adding-content[]. 
 
 [TIP]
 ====

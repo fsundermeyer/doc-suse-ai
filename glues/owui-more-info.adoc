@@ -1,4 +1,4 @@
-[[owui-more-info]]
+[#owui-more-info]
 = For more information
 
 * The upstream {owui} documentation is hosted at https://docs.openwebui.com/. 

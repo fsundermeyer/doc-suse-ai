@@ -1,4 +1,4 @@
-[[ai-monitoring-instrument-openlit]]
+[#ai-monitoring-instrument-openlit]
 ifdef::override-title[]
 = {override-title}
 endif::[]

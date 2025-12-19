@@ -12,8 +12,8 @@ It consists of the following components:
 
 * *Serving Engine* runs the model inference.
 * *Router* handles OpenAI-compatible API requests.
-* *{lmcache}* (optional) improves caching efficiency.
-* *CacheServer* (optional) is a distributed KV cache back-end.
+* *{lmcache}*  _(Optional)_ improves caching efficiency.
+* *CacheServer*  _(Optional)_ is a distributed KV cache back-end.
 
 [#vllm-installing-app-details]
 == Details about the {vllm} application

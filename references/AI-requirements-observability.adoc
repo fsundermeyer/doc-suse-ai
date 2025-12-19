@@ -1,7 +1,7 @@
-[[ai-requirements-observability]]
+[#ai-requirements-observability]
 = {sobservability} requirements
 
-[[ai-reqs-observability-hw]]
+[#ai-reqs-observability-hw]
 == Minimum hardware requirements
 
 [role="tabs"]
@@ -10,7 +10,7 @@ RAM:: A minimum of 32{nbsp}GB of RAM.
 CPU:: At least 16 CPU cores.
 Disk space:: At least 5{nbsp}GB of storage, preferably SSD.
 
-[[ai-req-observability-moreinfo]]
+[#ai-req-observability-moreinfo]
 == For more information
 
 For more detailed recommendations, refer to the following official documentation:

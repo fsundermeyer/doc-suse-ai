@@ -44,17 +44,17 @@ include::../references/owui-known-issues.adoc[leveloffset=+2]
 
 include::../glues/owui-more-info.adoc[leveloffset=+2]
 
-[#openwebui-setting-base-models]]
+[#openwebui-setting-base-models]
 == Setting base AI models
 
-{owui} needs at least one base AI model configured so that you can interact with it or create custom AI models as described in <<openwebui-managing-models>>.
+{owui} needs at least one base AI model configured so that you can interact with it or create custom AI models as described in xref:openwebui-managing-models[].
 You can download models from repositories such as {ollama} or {huggingface}, or use models via OpenAI-compatible APIs. 
 
 include::../tasks/openwebui-pulling-llms-from-ollama.adoc[leveloffset=+2]
 include::../tasks/openwebui-pulling-llms-from-huggingface.adoc[leveloffset=+2]
 include::../tasks/openwebui-using-models-from-openai-providers.adoc[leveloffset=+2]
 
-[[openwebui-setting-default-prompt]]
+[#openwebui-setting-default-prompt]
 == Setting the default system prompt
 
 In {owui}, you can set system prompts in several contexts{mdash}for the current
@@ -68,7 +68,7 @@ include::../tasks/openwebui-setting-user-system-prompt.adoc[leveloffset=+2]
 :override-title: System prompt for an AI model
 include::../tasks/openwebui-setting-model-system-prompt.adoc[leveloffset=+2]
 
-[[openwebui-setting-default-models]]
+[#openwebui-setting-default-models]
 == Setting the default AI model
 
 In {owui}, you can specify an AI model for the current chat or the system
@@ -80,7 +80,7 @@ include::../tasks/openwebui-setting-chat-model.adoc[leveloffset=+2]
 :override-title: Default system AI model
 include::../tasks/openwebui-setting-system-model.adoc[leveloffset=+2]
 
-[[openwebui-managing-models]]
+[#openwebui-managing-models]
 == Managing custom AI models
 
 In {owui}, you can create custom AI models based on existing models. Later on,
@@ -95,7 +95,7 @@ include::../tasks/openwebui-AI-models-exporting.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-exporting-all.adoc[leveloffset=+2]
 include::../tasks/openwebui-AI-models-deleting.adoc[leveloffset=+2]
 
-[[openwebui-managing-user-roles]]
+[#openwebui-managing-user-roles]
 == Managing user accounts
 
 {owui} provides *role-based access control* (RBAC). Each user
@@ -111,7 +111,7 @@ include::../tasks/openwebui-user-role-assigning.adoc[leveloffset=+2]
 include::../tasks/openwebui-user-account-modifying.adoc[leveloffset=+2]
 include::../tasks/openwebui-user-revoking-access.adoc[leveloffset=+2]
 
-[[openwebui-managing-knowledgebase]]
+[#openwebui-managing-knowledgebase]
 == Managing a knowledge base
 
 Knowledge base is a custom collection of resources on a specific topic. It can
@@ -124,7 +124,7 @@ include::../tasks/owui-knowledgebase-deleting.adoc[leveloffset=+2]
 include::../tasks/owui-knowledgebase-adding-content.adoc[leveloffset=+2]
 include::../tasks/owui-knowledgebase-removing-content.adoc[leveloffset=+2]
 
-[[openwebui-managing-prompts]]
+[#openwebui-managing-prompts]
 == Managing system prompts
 
 System prompts are a powerful core component that shapes AI model behavior. They

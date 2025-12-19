@@ -250,7 +250,7 @@ Replace `CONTAINER_VERSION` with the current container version.
 ----
 {prompt_user}docker pull dp.apps.rancher.io/containers/mlflow:CONTAINER_VERSION
 ----
-. (Optional) Verify the downloaded image.
+.  _(Optional)_ Verify the downloaded image.
 [source,subs="+attributes"]
 ----
 {prompt_user}docker images
@@ -303,14 +303,14 @@ services:
  \u2714 Network {exampleuser_plain}_default  Created                0.0s 
  \u2714 Container mlflow      Started                         4s
 ----
-. (Optional) Verify that the container is running.
+.  _(Optional)_ Verify that the container is running.
 [source,subs="+attributes"]
 ----
 (venv) {exampleuser_plain}@localhost:~[] docker ps
 CONTAINER ID IMAGE    ...     STATUS          PORTS                     NAMES
 1e58723cb3d  mlflow:3.6.0     Up 23 seconds   0.0.0.0:5000->5000/tcp... mlflow
 ----
-. (Optional) Follow the logs to ensure that the {mlflow} server has started correctly.
+.  _(Optional)_ Follow the logs to ensure that the {mlflow} server has started correctly.
 [source,subs="+attributes"]
 ----
 {prompt_user}(venv) {exampleuser_plain}@localhost:~[] docker-compose logs -f

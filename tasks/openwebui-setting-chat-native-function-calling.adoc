@@ -1,4 +1,4 @@
-[[openwebui-setting-chat-native-function-calling]]
+[#openwebui-setting-chat-native-function-calling]
 = Enabling native function calling
 
 _Native function calling_ is a process in which a client{mdash}such as the {suseai} chatbot{mdash}instructs its LLM to query an {mcp} server directly, bypassing the {mcpo} proxy. 
@@ -28,7 +28,7 @@ For the best experience, {owui} recommends using GPT-4o or another {openai} mode
 image::owui-tools-nfc.png[A screenshot showing how to enable native function calling,scaledwidth=50%]
 . Close the menu:Chat controls[] window to apply the change. 
 
-[[owui-nfc-for-more-info]]
+[#owui-nfc-for-more-info]
 == For more information
 
 You may find the following information sources useful: 

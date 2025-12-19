@@ -83,7 +83,7 @@ Asciidoctor automatically generates IDs/anchors to which you can link to:
 == Usage
 ...
 
-Refer to <<usage>> for more information. 
+Refer to xref:usage[] for more information. 
 ----
 
 It is not recommended using this feature, because every time you change the respective headline, you would need to change the reference(s), too.
@@ -96,7 +96,7 @@ Rather use explicit IDs/anchors:
 == Usage
 ...
 
-Refer to <<usage>> for more information. 
+Refer to xref:usage[] for more information. 
 ----
 
 === Always use block delimiters

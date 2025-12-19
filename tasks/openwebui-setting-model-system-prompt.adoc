@@ -1,4 +1,4 @@
-[[openwebui-setting-model-syste-prompt]]
+[#openwebui-setting-model-syste-prompt]
 ifdef::override-title[]
 = {override-title}
 endif::[]
@@ -26,7 +26,7 @@ image::openwebui-workspace-models-sysprompt.png[Model system prompt,scaledwidth=
 +
 . Confirm with menu:Save & Update[] . 
 
-[[ai_model_sysprompt_moreinfo]]
+[#ai_model_sysprompt_moreinfo]
 == For more information
 
 Find more details about system prompts in {dsc}/suse-ai/1.0/html/AI-system-prompts/index.html. 

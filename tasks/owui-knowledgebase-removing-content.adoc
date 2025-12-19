@@ -1,4 +1,4 @@
-[[owui-knowledgebase-removing-content]]
+[#owui-knowledgebase-removing-content]
 = Removing content from a knowledge base
 
 ifndef::part-of-article[]

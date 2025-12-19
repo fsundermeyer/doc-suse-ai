@@ -1,4 +1,4 @@
-[[openwebui-user-revoking-access]]
+[#openwebui-user-revoking-access]
 = Revoking access to {owui}
 
 ifndef::part-of-article[]

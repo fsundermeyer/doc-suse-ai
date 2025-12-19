@@ -1,4 +1,4 @@
-[[openwebui-ai-models-exporting-all]]
+[#openwebui-ai-models-exporting-all]
 = Exporting all existing AI models
 
 ifndef::part-of-article[]

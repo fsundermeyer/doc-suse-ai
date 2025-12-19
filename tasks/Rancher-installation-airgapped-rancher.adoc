@@ -231,7 +231,7 @@ Use the reference table below to replace each placeholder.
   --set useBundledSystemChart=true # Use the packaged {ranchera} system charts
 ----
 
-*(Optional)*: to install a specific {ranchera} version, set the `rancherImageTag` value, for example: `--set rancherImageTag=v2.5.8`
+* _(Optional)_*: to install a specific {ranchera} version, set the `rancherImageTag` value, for example: `--set rancherImageTag=v2.5.8`
 
 [#rancher-airgap-certs-from-files]
 ==== Option B: certificates from files using {k8s} secrets

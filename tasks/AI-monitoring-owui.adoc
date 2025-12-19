@@ -1,11 +1,11 @@
-[[ai-monitoring-owui]]
+[#ai-monitoring-owui]
 = Monitoring {owui}
 
 The preferred way of retrieving relevant telemetry data from {owui} is to use the https://github.com/SUSE/suse-ai-observability-extension/blob/main/integrations/oi-filter/suse_ai_filter.py[{productname}
         Filter].
 It requires enabling and configuring {owui} Pipelines. 
 
-[[ai-monitoring-owui-pipelines-cmdline]]
+[#ai-monitoring-owui-pipelines-cmdline]
 .Configuring pipeline filter during {owui} installation (recommended)
 . Verify that the {owui} installation override file `owui_custom_overrides.yaml` includes the following content. 
 +
@@ -82,12 +82,12 @@ After the installation is successful, you can access tracing data in {sobservabi
 You can verify that a new connection was created with correct credentials in menu:Admin Panel[Settings > Connections]. 
 ====
 +
-[[fg-pipeline-connection]]
+[#fg-pipeline-connection]
 .New connection added for the pipeline
 image::ai-observability-connection.png["Connections settings page within an admin panel, highlighting a newly added Ollama API connection with its URL and an active status",scaledwidth=75%]
 ---
 
-[[ai-monitoring-owui-pipelines-webui]]
+[#ai-monitoring-owui-pipelines-webui]
 == Configuring a pipeline filter in {owui} (recommended)
 
 If you already have a running instance of {owui} with the pipelines enabled and configured, you can set up the {productname} Filter in its Web user interface.
@@ -102,16 +102,16 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 . In the menu:Install from Github URL[] section, enter `https://raw.githubusercontent.com/SUSE/suse-ai-observability-extension/refs/heads/main/integrations/oi-filter/suse_ai_filter.py` and click the upload button on the right to upload the pipeline from the URL.
 . After the upload is finished, you can review the configuration of the pipeline. Confirm with menu:Save[].
 +
-[[fig-ai-monitoring-owui-pipelines-webui]]
+[#fig-ai-monitoring-owui-pipelines-webui]
 .Adding {suseai} filter pipeline
 image::ai-observability-filter-pipeline.png["Screenshot showing the detailed configuration and code content for a {suseai} filter pipeline",width=100%]
 
-[[ai-monitoring-owui-default-metrics]]
+[#ai-monitoring-owui-default-metrics]
 == Configuring default {owui} metrics and traces (advanced)
 
-{owui} also offers certain built-in {otelemetry} integration for traces and metrics. These signals are related to the API consumption but do not provide details about the GenAI monitoring. That is why we need to configure the {productname} filter as described in <<ai-monitoring-owui-pipelines-cmdline>>.
+{owui} also offers certain built-in {otelemetry} integration for traces and metrics. These signals are related to the API consumption but do not provide details about the GenAI monitoring. That is why we need to configure the {productname} filter as described in xref:ai-monitoring-owui-pipelines-cmdline[].
 
-. Append the following environment variables to your `extraEnvVars` section in the `owui_custom_overrides.yaml` file mentioned in <<ai-monitoring-owui-pipelines-cmdline>>.
+. Append the following environment variables to your `extraEnvVars` section in the `owui_custom_overrides.yaml` file mentioned in xref:ai-monitoring-owui-pipelines-cmdline[].
 +
 [source,yaml]
 ----

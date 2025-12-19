@@ -1,10 +1,10 @@
-[[ai-monitoring-vllm]]
+[#ai-monitoring-vllm]
 = Monitoring {vllm}
 
 {vllm} is monitored by scraping its {prometheus}-compatible metrics endpoints.
 The {sobservability} Extension uses these metrics to visualize {vllm}'s status and activity. 
 
-[[ai-monitoring-vllm-scraping]]
+[#ai-monitoring-vllm-scraping]
 == Metrics Scraping (recommended)
 
 Add the following job to the `scrape_configs` section of your {otelemetry} Collector's configuration.

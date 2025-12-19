@@ -1,4 +1,4 @@
-[[openwebui-setting-system-model]]
+[#openwebui-setting-system-model]
 ifdef::override-title[]
 = {override-title}
 endif::[]

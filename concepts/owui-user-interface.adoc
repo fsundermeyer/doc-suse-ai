@@ -1,4 +1,4 @@
-[[openwebui-ui]]
+[#openwebui-ui]
 ifdef::override-title[]
 = {override-title}
 endif::[]
@@ -35,12 +35,12 @@ By using the prompt field at the bottom, you can accomplish the following tasks 
 ** Interrupt the chatbot from answering if you are already satisfied with the provided information 
 
 
-.{owui} user interface [[fig-openwebui-ui]]
+.{owui} user interface [#fig-openwebui-ui]
 
 image::openwebui-intro.png[{owui} user interface,scaledwidth=75%]
 
 
-[[owui-workspace]]
+[#owui-workspace]
 == Workspace
 
 [IMPORTANT]
@@ -75,7 +75,7 @@ include a collection of Python snippets that enhance interaction and expand func
 Tools can, for example, integrate additional data sources into the model knowledge base, such as databases. 
 
 
-[[owui-admin-panel]]
+[#owui-admin-panel]
 == Admin Panel
 
 [IMPORTANT]
@@ -92,6 +92,6 @@ To access the menu:Admin Panel[]
 , click your avatar button at the top right of the {owui} screen and select menu:Admin Panel[]
 . 
 
-.Admin Panel [[fig-openwebui-admin-panel]]
+.Admin Panel [#fig-openwebui-admin-panel]
 
 image::openwebui-admin-panel.png[Admin Panel,scaledwidth=75%]

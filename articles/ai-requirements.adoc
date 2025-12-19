@@ -35,7 +35,7 @@ This article describes the software, hardware and networking requirements for th
 include::../references/AI-requirements-hardware.adoc[leveloffset=+1]
 include::../references/AI-requirements-hardware-gpu.adoc[leveloffset=+1]
 
-[[ai-requirements-hardware-apps]]
+[#ai-requirements-hardware-apps]
 == Application-specific requirements
 The {productname} stack consists of multiple applications. We recommend running each application on nodes that meet or exceed the corresponding hardware requirements.
 

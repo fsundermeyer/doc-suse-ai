@@ -1,4 +1,4 @@
-[[owui-prompts-cloning]]
+[#owui-prompts-cloning]
 = Cloning existing system prompts
 
 ifndef::part-of-article[]

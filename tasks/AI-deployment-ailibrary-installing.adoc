@@ -21,6 +21,7 @@ The isolated _local_ part is always be specified.
 ====
 endif::[]
 
+[.procedure]
 . Purchase the {productname} entitlement.
 It is a separate entitlement from {rancherprime}.
 . Access {productname} via the {sappco} at link:https://apps.rancher.io/[] to perform the check for the {productname} entitlement.
@@ -91,7 +92,7 @@ ifdef::deployment_standard[]
 .. Install an application with vector database capabilities.
 {owui} supports either xref:opensearch-installing[{opensearch}] or xref:milvus-installing[{milvus}].
 endif::[]
-.. (Optional) Install {ollama} as described in xref:ollama-installing[].
+..  _(Optional)_ Install {ollama} as described in xref:ollama-installing[].
 .. Install {owui} as described in xref:owui-installing[].
 ifdef::deployment_standard[]
 .. Install {vllm} as described in xref:vllm-installing[].

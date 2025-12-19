@@ -1,7 +1,7 @@
-[[nvidia-gpu-driver-installation-slmicro]]
+[#nvidia-gpu-driver-installation-slmicro]
 = Installing {nvidia} GPU drivers on {slem}
 
-[[nvidia-gpu-requirements-slmicro]]
+[#nvidia-gpu-requirements-slmicro]
 == Requirements
 
 If you are following this guide, it assumes that you have the following
@@ -17,10 +17,10 @@ already available:
 * Access to the {rootuser} user—these instructions assume you are
   the {rootuser} user, and not escalating your privileges via `sudo`.
 
-[[nvidia-gpu-pre-install-slmicro]]
+[#nvidia-gpu-pre-install-slmicro]
 == Considerations before the installation
 
-[[nvidia-gpu-install-generation-slmicro]]
+[#nvidia-gpu-install-generation-slmicro]
 === Select the driver generation
 
 You must verify the driver generation for the {nvidia} GPU that your
@@ -31,7 +31,7 @@ link:https://en.opensuse.org/SDB:NVIDIA_drivers#Install[the support database].
 This section details the installation of the `G06`
 generation of the driver.
 
-[[nvidia-gpu-pre-install-additional-components-slmicro]]
+[#nvidia-gpu-pre-install-additional-components-slmicro]
 === Additional {nvidia} components
 
 Besides the {nvidia} open-driver provided by {suse} as part of {slem},
@@ -44,7 +44,7 @@ how to configure additional repositories that give you access to these
 components and provides examples of using these tools to achieve a fully
 functional system.
 
-[[nvidia-gpu-pre-install-procedure-slmicro]]
+[#nvidia-gpu-pre-install-procedure-slmicro]
 == The installation procedure
 
 ifdef::deployment_airgap[]
@@ -182,7 +182,7 @@ Fri Aug  1 14:53:26 2025
 +------------------------------------------------------------------------------+
 ----
 
-[[nvidia-gpu-validation-slmicro]]
+[#nvidia-gpu-validation-slmicro]
 == Validation of the driver installation
 
 Running the `nvidia-smi` command has verified that, at

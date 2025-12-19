@@ -52,14 +52,14 @@ include::../concepts/owui-user-interface.adoc[leveloffset=+1]
 :override-title: The chat window
 include::../tasks/openwebui-chat-window-usage.adoc[leveloffset=+1]
 
-[[openwebui-chat-input-field-usage]]
+[#openwebui-chat-input-field-usage]
 == The chat input field
 
 For a new chat, the chat input field is located at the center of the
 {owui} chat window. During a chat session, the chat window slides to
 the bottom. Its main purpose is to accept a user prompt so that the
 AI can process it and respond (see
-<<openwebui-chat-window-usage>>). Besides that, the
+xref:openwebui-chat-window-usage[]). Besides that, the
 chat input field provides extended functionality that can help you
 achieve the following tasks.
 

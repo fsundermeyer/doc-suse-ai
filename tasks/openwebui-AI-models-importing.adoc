@@ -1,4 +1,4 @@
-[[openwebui-ai-models-importing]]
+[#openwebui-ai-models-importing]
 ifdef::override-title[]
 = {override-title}
 endif::[]

@@ -1,9 +1,9 @@
-[[ai-monitoring-gpu]]
+[#ai-monitoring-gpu]
 = Monitoring GPU usage
 
 To effectively monitor the performance and utilization of your GPUs, configure the {otelemetry} Collector to scrape metrics from the {nvidia} DCGM Exporter, which is deployed as part of the {nvoperator}. 
 
-[[ai-monitoring-gpu-metrics]]
+[#ai-monitoring-gpu-metrics]
 .Collect GPU metrics (recommended)
 . *Grant permissions (RBAC).* The {otelemetry} Collector requires specific permissions to discover the GPU metrics endpoint within the cluster. 
 + 

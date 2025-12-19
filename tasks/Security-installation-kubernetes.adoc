@@ -64,7 +64,7 @@ If deploying from the {ranchermanager} 2.6.5+ {ssecurity} chart, images are pull
 {prompt_user}kubectl create sa registry-adapter -n neuvector
 {prompt_user}kubectl create sa cert-upgrader -n neuvector
 ----
-. (Optional) Create the {ssecurity} Pod Security Admission (PSA) or Pod Security Policy (PSP).
+.  _(Optional)_ Create the {ssecurity} Pod Security Admission (PSA) or Pod Security Policy (PSP).
 If you have enabled Pod Security Admission (aka Pod Security Standards) in {kube} 1.25+, or Pod Security Policies (prior to 1.25) in your {kube} cluster, add the following for {ssecurity} (for example, `nv_psp.yaml`).
 +
 [NOTE]
@@ -246,7 +246,7 @@ neuvector-binding-job-creation    Role/neuvector-binding-job-creation    8m8s   
 neuvector-binding-lease           Role/neuvector-binding-lease           8m8s                    neuvector/controller, neuvector/cert-upgrader
 neuvector-binding-secret          Role/neuvector-binding-secret          8m8s                    neuvector/controller, neuvector/enforcer, neuvector/scanner, neuvector/registry-adapter
 ----
-. (Optional) Create the Federation Master and/or Remote Multi-Cluster Management Services.
+.  _(Optional)_ Create the Federation Master and/or Remote Multi-Cluster Management Services.
 If you plan to use the multi-cluster management functions in {ssecurity}, one cluster must have the Federation Master service deployed, and each remote cluster must have the Federation Worker service.
 For flexibility, you may choose to deploy both Master and Worker services on each cluster so any cluster can be a master or remote.
 +

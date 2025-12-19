@@ -1,4 +1,4 @@
-[[openwebui-ai-models-delete]]
+[#openwebui-ai-models-delete]
 = Deleting existing AI models
 
 Using the {owui} interface, you can delete previously created AI models. 

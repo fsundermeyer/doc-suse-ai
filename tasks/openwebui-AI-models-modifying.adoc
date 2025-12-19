@@ -1,4 +1,4 @@
-[[openwebui-ai-models-modify]]
+[#openwebui-ai-models-modify]
 = Modifying existing AI models
 
 ifndef::part-of-article[]
@@ -12,12 +12,12 @@ include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
 . In the {owui} interface, click menu:Workspace[] at the top of the left panel and select menu:Models[] . 
 . In the list of AI models, hover the mouse over the model that you want to modify and click the pen icon on its right. 
-. On the model editing screen, you can modify the settings that are described in <<openwebui-ai-models-creating>>. 
+. On the model editing screen, you can modify the settings that are described in xref:openwebui-ai-models-creating[]. 
 . On the model editing screen, you can modify the settings that are described in. 
 . Save your changes with the menu:Save & Update[] button. 
 
 
-[[owui-enabling-default-mcp-services]]
+[#owui-enabling-default-mcp-services]
 == Enabling the default {mcp} services
 
 To enable selected {mcp} services so that they are automatically enabled for a model, follow these steps: 

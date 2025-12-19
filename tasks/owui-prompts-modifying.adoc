@@ -1,4 +1,4 @@
-[[owui-prompts-modifying]]
+[#owui-prompts-modifying]
 = Modifying existing system prompts
 
 ifndef::part-of-article[]

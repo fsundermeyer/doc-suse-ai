@@ -1,7 +1,7 @@
-[[nvidia-gpu-driver-installation-sles]]
+[#nvidia-gpu-driver-installation-sles]
 = Installing {nvidia} GPU drivers on {sles}
 
-[[nvidia-gpu-requirements-sles]]
+[#nvidia-gpu-requirements-sles]
 == Requirements
 
 If you are following this guide, it assumes that you have the following
@@ -16,10 +16,10 @@ already available:
 * Access to the {rootuser} user—these instructions assume you are
   the {rootuser} user, and not escalating your privileges via `sudo`.
 
-[[nvidia-gpu-pre-install-sles]]
+[#nvidia-gpu-pre-install-sles]
 == Considerations before the installation
 
-[[nvidia-gpu-install-generation-sles]]
+[#nvidia-gpu-install-generation-sles]
 === Select the driver generation
 
 You must verify the driver generation for the {nvidia} GPU that your
@@ -30,7 +30,7 @@ link:https://en.opensuse.org/SDB:NVIDIA_drivers#Install[the support database].
 This section details the installation of the `G06`
 generation of the driver.
 
-[[nvidia-gpu-pre-install-additional-components-sles]]
+[#nvidia-gpu-pre-install-additional-components-sles]
 === Additional {nvidia} components
 
 Besides the {nvidia} open-driver provided by {suse} as part of {slsa},
@@ -43,7 +43,7 @@ how to configure additional repositories that give you access to these
 components and provides examples of using these tools to achieve a fully
 functional system.
 
-[[nvidia-gpu-pre-install-procedure-sles]]
+[#nvidia-gpu-pre-install-procedure-sles]
 == The installation procedure
 
 ifdef::deployment_airgap[]
@@ -72,20 +72,20 @@ For the {x86-64} architecture, run:
 +
 [source,bash,subs="+attributes"]
 ----
-# zypper ar \
+{prompt_root}zypper ar \
   https://developer.download.nvidia.com/compute/cuda/repos/sles15/x86_64/ \
   cuda-sle15
-# zypper --gpg-auto-import-keys refresh
+{prompt_root}zypper --gpg-auto-import-keys refresh
 ----
 +
 For the {arm64} architecture, run:
 +
 [source,bash,subs="+attributes"]
 ----
-# zypper ar \
+{prompt_root}zypper ar \
   https://developer.download.nvidia.com/compute/cuda/repos/sles15/sbsa/ \
   cuda-sle15
-transactional update # zypper --gpg-auto-import-keys refresh
+transactional update {prompt_root}zypper --gpg-auto-import-keys refresh
 ----
 endif::[]
 
@@ -93,9 +93,9 @@ endif::[]
 +
 [source,bash]
 ----
-# zypper install -y --auto-agree-with-licenses \
+{prompt_root}zypper install -y --auto-agree-with-licenses \
   nv-prefer-signed-open-driver
-# version=$(rpm -qa --queryformat '%{VERSION}\n' \
+{prompt_root}version=$(rpm -qa --queryformat '%{VERSION}\n' \
   nv-prefer-signed-open-driver | cut -d "_" -f1 | sort -u | tail -n 1)
 ----
 
@@ -104,7 +104,7 @@ endif::[]
 +
 [source,bash]
 ----
-# zypper install -y --auto-agree-with-licenses \
+{prompt_root}zypper install -y --auto-agree-with-licenses \
 nvidia-compute-utils-G06=${version} \
 nvidia-persistenced=${version}
 ----
@@ -113,7 +113,7 @@ nvidia-persistenced=${version}
 +
 [source,bash,subs="+attributes"]
 ----
-# reboot
+{prompt_root}reboot
 ----
 
 . Log back in and use the `nvidia-smi` tool to verify
@@ -122,7 +122,7 @@ nvidia-persistenced=${version}
 +
 [source,bash,subs="+attributes"]
 ----
-# nvidia-smi
+{prompt_root}nvidia-smi
 ----
 +
 The output of this command should show you something similar to the
@@ -152,7 +152,7 @@ Fri Aug  1 15:32:10 2025
 +------------------------------------------------------------------------------+
 ----
 
-[[nvidia-gpu-validation-sles]]
+[#nvidia-gpu-validation-sles]
 == Validation of the driver installation
 
 Running the `nvidia-smi` command has verified that, at
@@ -169,10 +169,10 @@ modification to the host OS by installing
 +
 [source,bash,subs="+attributes"]
 ----
-# zypper ar \
+{prompt_root}zypper ar \
 "https://nvidia.github.io/libnvidia-container/stable/rpm/"\
 nvidia-container-toolkit.repo
-# zypper --gpg-auto-import-keys install \
+{prompt_root}zypper --gpg-auto-import-keys install \
   -y nvidia-container-toolkit
 ----
 +
@@ -189,7 +189,7 @@ disabled by default.
 +
 [source,bash,subs="+attributes"]
 ----
-# nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+{prompt_root}nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ----
 +
 This ensures that any container started on the machine can employ
@@ -206,7 +206,7 @@ care of by the previous command and simply run the
 +
 [source,bash,subs="+attributes"]
 ----
-# podman run --rm --device nvidia.com/gpu=all \
+{prompt_root}podman run --rm --device nvidia.com/gpu=all \
   --security-opt=label=disable \
   -it registry.suse.com/bci/bci-base:latest bash
 ----
@@ -225,11 +225,11 @@ underlying host.
 +
 [source,bash,subs="+attributes"]
 ----
-# zypper ar \
+{prompt_root}zypper ar \
   http://developer.download.nvidia.com/compute/cuda/repos/sles15/x86_64/ \
   cuda-sle15-sp6
-# zypper --gpg-auto-import-keys refresh
-# zypper install -y cuda-libraries-13-0 cuda-demo-suite-12-9
+{prompt_root}zypper --gpg-auto-import-keys refresh
+{prompt_root}zypper install -y cuda-libraries-13-0 cuda-demo-suite-12-9
 ----
 
 . Inside the container, run the `deviceQuery` {cuda}
@@ -238,7 +238,7 @@ underlying host.
 +
 [source,subs="+attributes"]
 ----
-# /usr/local/cuda-12.9/extras/demo_suite/deviceQuery Starting...
+{prompt_root}/usr/local/cuda-12.9/extras/demo_suite/deviceQuery Starting...
 
  CUDA Device Query (Runtime API)
 
@@ -290,7 +290,7 @@ finished, you can exit the container.
 +
 [source,bash,subs="+attributes"]
 ----
-# exit
+{prompt_root}exit
 ----
 +
 [IMPORTANT]

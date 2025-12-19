@@ -1,9 +1,9 @@
-[[ai-data-integrity-maintaining]]
+[#ai-data-integrity-maintaining]
 = Maintaining data integrity of AI applications
 
 This topic describes how to avoid compromising AI applications and keep sensitive data secure. 
 
-[[why-care-about-ai-security]]
+[#why-care-about-ai-security]
 == Why care about the security of AI applications?
 
 
@@ -11,7 +11,7 @@ AI applications use AI-driven chatbots to interact with users.
 These chatbots are powered by large language models (LLMs) and can process external data sources (RAGs). Such applications are prone to cyber attacks as any other software solutions.
 Attackers may impersonate users and apply a series of techniques to steal data and to corrupt the responses provided by AI models. 
 
-[[ai-components-prone-to-attacks]]
+[#ai-components-prone-to-attacks]
 == Which {productname} components are prone to attacks
 
 
@@ -44,7 +44,7 @@ Therefore, {ollama}'s API should not be exposed without a an element providing I
 In {productname}, user interacts with {ollama} via {owui}, which is able to configure and secure {ollama}. 
 
 
-[[ai-attacks-and-risks]]
+[#ai-attacks-and-risks]
 == What are common attacks and security risks?
 
 
@@ -63,7 +63,7 @@ Prompt leaks::
 User prompts may contain sensitive data, so chat caches and system logs need to be protected against attackers. 
 
 
-[[ai-safety-measures]]
+[#ai-safety-measures]
 == What safety measures should my organization follow?
 
 
@@ -104,7 +104,7 @@ Make sure that there are components enforcing authentication and authorization r
 We do not recommend exposing {milvus} and {ollama} without proper network configurations. 
 
 
-[[ai-data-integrity-formoreinfo]]
+[#ai-data-integrity-formoreinfo]
 == For more information
 
 * The article at https://cloudsecurityalliance.org/blog/2023/11/22/mitigating-security-risks-in-retrieval-augmented-generation-rag-llm-applications includes a comprehensive overview of security controls. 

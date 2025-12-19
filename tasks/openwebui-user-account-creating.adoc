@@ -1,4 +1,4 @@
-[[openwebui-user-account-creating]]
+[#openwebui-user-account-creating]
 ifdef::override-title[]
 = {override-title}
 endif::[]

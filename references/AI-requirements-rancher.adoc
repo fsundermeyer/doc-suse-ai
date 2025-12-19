@@ -1,7 +1,7 @@
-[[ai-requirements-rancher]]
+[#ai-requirements-rancher]
 = {ranchermanager} requirements
 
-[[ai-reqs-rancher-hw]]
+[#ai-reqs-rancher-hw]
 == Minimum hardware requirements
 
 [role="tabs"]
@@ -10,7 +10,7 @@ RAM:: A minimum of 32{nbsp}GB of RAM.
 CPU:: At least 8 CPU cores.
 Disk space:: At least 200{nbsp}GB of storage, preferably SSD.
 
-[[ai-req-rancher-moreinfo]]
+[#ai-req-rancher-moreinfo]
 == For more information
 
 For more detailed recommendations, refer to the following official documentation:

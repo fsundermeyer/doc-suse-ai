@@ -1,4 +1,4 @@
-[[openwebui-chat-input]]
+[#openwebui-chat-input]
 = The chat input field
 
 For a new chat, the chat input field is located at the center of
@@ -8,7 +8,7 @@ so that the AI can process it and respond. Besides that, the chat input
 field provides extended functionality that can help you achieve
 the following tasks.
 
-[[openwebui-input-field-model]]
+[#openwebui-input-field-model]
 == Selecting an AI model from the chat input field
 
 You can specify which model you want the AI to use when responding to the prompts in your current chat.

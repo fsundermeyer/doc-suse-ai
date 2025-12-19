@@ -1,4 +1,4 @@
-[[owui-prompts-exporting]]
+[#owui-prompts-exporting]
 = Exporting existing system prompts
 
 ifndef::part-of-article[]

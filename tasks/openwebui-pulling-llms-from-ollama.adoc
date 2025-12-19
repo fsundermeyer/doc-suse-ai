@@ -1,4 +1,4 @@
-[[openwebui-downloading-ai-models-from-ollama]]
+[#openwebui-downloading-ai-models-from-ollama]
 = Downloading AI models from {ollama}
 
 {ollama} (https://ollama.com/) is an online repository that hosts open source AI models.

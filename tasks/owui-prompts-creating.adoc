@@ -1,4 +1,4 @@
-[[owui-prompts-creating]]
+[#owui-prompts-creating]
 = Creating a system prompt
 
 ifndef::part-of-article[]

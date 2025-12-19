@@ -5,16 +5,8 @@
 +
 include::../snippets/openwebui-requirement-admin-privileges.adoc[]
 
-* check callouts
-* replace  [[]] with [#]]
-* replace <<>> with xref:
-* check for .. and add [.procedure]
-* check for [title] and replace with real title
-* replace $ sudo  with > sudo
-* check for (optional) and replace with _(Optional)_
-
 ===================================================
-Addings to style guide:
+Additions to style guide:
 * how to override topic title from article file
 * how to condition abstract when in article
 * multi-level ordered lists with [.procedure]

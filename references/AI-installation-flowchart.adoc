@@ -1,4 +1,4 @@
-[[ai-installation-flowchart]]
+[#ai-installation-flowchart]
 ifdef::override-title[]
 = {override-title}
 endif::[]

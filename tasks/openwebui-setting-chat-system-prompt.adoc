@@ -1,4 +1,4 @@
-[[openwebui-setting-chat-system-prompt]]
+[#openwebui-setting-chat-system-prompt]
 = Setting a system prompt for the current chat
 
 ifndef::part-of-article[]

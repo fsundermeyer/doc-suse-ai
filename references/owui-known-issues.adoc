@@ -1,4 +1,4 @@
-[[owui-known-issues]]
+[#owui-known-issues]
 ifdef::override-title[]
 = {override-title}
 endif::[]
@@ -8,7 +8,7 @@ endif::[]
 
 This section lists the known issues with the {owui} and their solutions. 
 
-[[owui-reset-password]]
+[#owui-reset-password]
 == User password reset
 
 An {owui} user can only reset their own password if they are logged in to {owui} and have an active Web browser session.
@@ -35,7 +35,7 @@ However, if the user has lost their password and cannot log in to {owui}, the pa
   con.cursor().execute("UPDATE auth SET password=\"PASSWORD_HASH\" WHERE email=\"admin@example.org\""); con.commit()'
 ----
 
-[[owui-audio-processing]]
+[#owui-audio-processing]
 == Audio processing stops after several minutes
 
 When the voice recorder is used as described in the section {dsc}/suse-ai/1.0/html/openwebui-using/index.html#openwebui-chat-window-usage[Chat window], {owui} tries to process the audio, but it times out without any warning and no text is generated.

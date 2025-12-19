@@ -1,4 +1,4 @@
-[[openwebui-chat-window-usage]]
+[#openwebui-chat-window-usage]
 ifdef::override-title[]
 = {override-title}
 endif::[]

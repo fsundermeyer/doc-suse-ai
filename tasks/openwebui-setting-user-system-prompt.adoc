@@ -1,4 +1,4 @@
-[[openwebui-setting-user-system-prompt]]
+[#openwebui-setting-user-system-prompt]
 ifdef::override-title[]
 = {override-title}
 endif::[]

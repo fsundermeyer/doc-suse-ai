@@ -1,4 +1,4 @@
-[[openwebui-using-models-from-openai-providers]]
+[#openwebui-using-models-from-openai-providers]
 = Using AI models from {openai}-compatible providers
 
 Instead of downloading AI models locally, you can use {openai}-compatible API to access models from model providers.
